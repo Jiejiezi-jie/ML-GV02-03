@@ -1,58 +1,55 @@
-# GvpA 候选序列多目标评价
+# GV02-03：GvpA 候选序列的多目标评价与筛选
 
-本项目对应教师要求 **GV02-03：多目标候选评价**。任务是评价和筛选 GvpA 候选序列，研究约束满足度、保守性、新颖性、多样性四个目标之间的冲突，并比较不同筛选策略及其稳定性。**多样性只是其中一个维度；本项目不要求训练新模型。**
+本项目属于教师指南 [project-pool(1).pdf](project-pool(1).pdf) 的 **Track 1：GV（气囊蛋白）／GV02-03**。我们接收已有候选，评价域约束满足度、关键位点保守性、新颖性和多样性，并比较筛选策略、开展消融及鲁棒性分析。多样性是四个目标之一；本项目不要求训练新生成模型。
 
-教师原始要求保留在 [机器学习要求.md](机器学习要求.md)，原文未修改。
+**候选入口：[T05 生成候选集](data/candidates/t05/generated_gvp.fasta)，共 200 条。** 这些序列来自混合 Gvp 数据训练的生成模型，尚未被核验为纯 GvpA。天然序列用于建立参考集，不能当作生成候选混入评价。
 
-整理期间新增的 [课程项目指南](project-pool(1).pdf) 包含 GV02-03 的完整要求，保留在原位；它不计入下面的原始473个文件清单。
+## 当前阶段
 
-## 当前目录
+本轮完成 M1 问题分析：理解背景、分析数据特点、抽象和定义任务，形成 [功能需求分析与任务建模报告](reports/M1_功能需求分析与任务建模报告.md)（[PDF](reports/M1_功能需求分析与任务建模报告.pdf)）。输入统计是实际审计结果；域扫描、序列比对、正式四目标评分和筛选实验属于后续工作。
+
+[机器学习要求.md](机器学习要求.md) 保留原始任务记录。任务范围以课程指南的 GV02-03 为准，T05 原报告用于追溯输入来源。
+
+## 项目目录
 
 ```text
 machine/
-├── 机器学习要求.md
-├── project-pool(1).pdf             # 整理期间新增的课程项目指南
-├── README.md
+├── project-pool(1).pdf              # 教师课程指南
+├── 机器学习要求.md                  # 原始任务记录
 ├── data/
-│   ├── README.md                  # 数据来源、数量、用途和质量问题
-│   ├── raw/design/                # design 的天然 GvpA 名义来源
-│   ├── raw/t05/                   # T05 混合家族真实序列及 GvpA 原始采集文件
-│   └── candidates/                # T05 的200条生成序列、design 的10条已筛选候选
-├── references/
-│   ├── README.md                  # 参考代码的适用范围与已知限制
-│   ├── design/                    # 教师论文、候选来源表、相关生成及评价代码
-│   └── t05/                       # 教师报告、生成代码、已有权重、预处理与EDA参考
-├── preprocessing/
-│   └── audit_fasta.py             # 只读数据清点，可直接运行
+│   ├── README.md                   # 六份 FASTA 的用途和风险
+│   ├── candidates/t05/             # 200 条生成候选
+│   ├── raw/t05/gvpa/               # 三份名义 GvpA 天然来源
+│   ├── raw/t05/real_gvp.fasta       # 混合 Gvp 来源和训练背景
+│   └── raw/design/GvpA.fasta        # 有独有序列的天然参考来源
+├── references/t05/                # 原始报告、方法说明及生成资源
+├── preprocessing/                 # 输入审计脚本
+├── results/input_audit/            # 当前统计摘要和逐候选审计表
+├── reports/                        # M1 报告
 └── docs/
-    ├── 整理说明.md                # 整理结果、发现的问题、后续任务
-    └── cleanup/                   # 逐文件去向、删除记录及数据统计
+    ├── 整理说明.md                  # 目录整理说明
+    └── cleanup/                    # 两轮清理与校验记录
 ```
 
-## 已完成的整理
+第二轮删除 32 个无关或重复文件，共 6,811,715 字节。design 工程、design 的 10 条旧候选和评分、T05 重复演示材料及旧处理/分析脚本已删除。design 天然 FASTA 因有 30 条其余三份天然来源未覆盖的完整序列而保留。详见 [整理说明](docs/整理说明.md)。
 
-已检查原有 473 个文件，保留 46 个原始文件（其中 45 个迁移、任务要求留在原位），删除 427 个无关或冗余文件，释放约 **812.1 MB**。保留的原始文件约 **22.5 MB**，另有少量新增说明和审计文件。迁移文件经过 SHA256 校验，内容未改动。
+## 数据风险
 
-保留数据共 7 个 FASTA 文件。它们仍是来源数据：T05 候选尚未确认 GvpA 家族归属，名为 GvpA 的天然文件也存在混入其他家族、重复或不完整条目的情况。详见 [数据说明](data/README.md)。
+- 当前有 **6 个 FASTA 文件**。四份名义 GvpA 来源的不同完整序列并集为 1252 条，尚未完成家族和质量过滤。
+- T05 候选长 66–512 aa，中位数 103 aa，全部使用标准氨基酸且无完整序列重复。两条长度恰为生成上限 512 aa，需要核查是否截断。
+- 天然来源存在重复、未知残基 `X`、不完整注释和 GvpJ 等其他家族条目。不能仅按长度判断 GvpA 身份；没有精确重复也不能证明高新颖性。
+- 原任务记录中的 **PF01132 是 EFP（EF-P 的 OB 域），不能作为 GvpA 域标识**。相关的 PF00741／Gas_vesicle 家族也包含 GvpJ，因此命中不足以单独确定 GvpA 亚家族；后续需结合参考注释、比对与覆盖度核查，并固定数据库版本。[NCBI PF01132](https://www.ncbi.nlm.nih.gov/Structure/cdd/pfam01132)、[NCBI PF00741](https://www.ncbi.nlm.nih.gov/Structure/cdd/pfam00741)
 
-后续工作以 **T05 的生成候选** `data/candidates/t05/generated_gvp.fasta` 为入口，先识别其中适用于 GvpA 评价的序列。天然 GvpA 数据用于保守性和新颖性评价的参照；design 暂作方法参考，其10条候选不自动并入正式候选池。
+## 复核输入
 
-## 下一阶段
-
-1. 整理并核验 GvpA 天然参考集，确定完整候选池；保留每条序列的来源。
-2. 建立可靠的多序列比对和 Pfam 扫描流程，明确四维指标的定义与方向。
-3. 完成探索性分析及四维评价代码。
-4. 比较加权求和、Pareto 排序、各维度 Top-k 至少三种策略；完成维度消融和权重、阈值扰动实验。
-5. 整理报告、筛选结果和答辩材料。
-
-正式评价、实验和结果目录待对应实现时建立。教师参考代码尚有缺失依赖、旧绝对路径和模拟评分，不能直接作为本项目的实验实现或结果。
-
-## 目前可运行的检查
-
-在本目录执行以下命令，使用 Python 3.8 或以上版本即可，无第三方依赖：
+在项目根目录运行（Python 3.8 及以上，无第三方依赖）：
 
 ```powershell
-python -X utf8 preprocessing/audit_fasta.py
+python -B -X utf8 preprocessing/analyze_inputs.py
 ```
 
-该命令只读取 `data/` 下的 FASTA，输出记录数、唯一序列数、长度、非标准字符和头信息中的家族标签，不修改、筛选或生成序列。整理时的统计保存在 [fasta_inventory.json](docs/cleanup/fasta_inventory.json)。
+命令读取原始 FASTA，更新 [summary.json](results/input_audit/summary.json) 和 [candidate_records.tsv](results/input_audit/candidate_records.tsv)，不修改原始序列，不执行域扫描、比对或家族判定。具体来源见 [数据说明](data/README.md)，原生成资源的缺失依赖见 [参考材料说明](references/README.md)。
+
+`docs/cleanup/` 第一轮 `fasta_inventory.json` 等文件是历史快照，包含当时的七份 FASTA；**当前统计以 `results/input_audit/summary.json` 为准**。后续清洗参考集、评分表、筛选名单和实验结果应另行输出，保持原始输入不变。
+
+报告正文可直接编辑 Markdown。重新生成 PDF 和长度分布图需要 Python 的 `reportlab`、Poppler 的 `pdftoppm`，以及 Windows 宋体和黑体字体：运行 `python -B reports/build_report.py --pdftoppm "pdftoppm.exe的实际路径"`。输入审计无需这些额外依赖。

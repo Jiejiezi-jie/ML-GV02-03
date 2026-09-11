@@ -1,47 +1,53 @@
 # 数据来源与使用说明
 
-这里保留的是教师材料中的原始数据与候选数据，迁移未改动文件内容。文件名中的 GvpA 是来源命名，不代表已经完成家族和质量核验。
+**候选入口：[candidates/t05/generated_gvp.fasta](candidates/t05/generated_gvp.fasta)，共 200 条。** 本项目围绕 T05 候选开展 GV02-03 四目标评价与筛选。目前尚未从中单独筛出并核验纯 GvpA 生成候选。
 
-**当前候选入口：`candidates/t05/generated_gvp.fasta`。** 后续围绕 T05 的这200条生成序列识别 GvpA 候选并开展评价；`raw/` 中的天然序列用于参照，design 候选暂不并入正式候选池。目前还没有从T05中单独筛出并验证的纯GvpA生成候选文件。
+这里保留六份原始 FASTA，内容未经修改。`raw/` 是天然参考来源；文件名中的 GvpA 和头信息标签属于来源注释，不代表已验证家族或功能。
 
-## 文件清单
+## 当前六份文件
 
-| 文件 | 记录数 | 不同序列数 | 长度范围（aa） | 用途 |
+| 文件 | 记录数 | 不同完整序列数 | 长度范围（aa） | 用途 |
 | --- | ---: | ---: | ---: | --- |
-| `raw/design/GvpA.fasta` | 856 | 856 | 60–100 | 天然参考集来源之一 |
-| `raw/t05/gvpa/GvpA_NotPartial.fasta` | 2000 | 1196 | 61–160 | T05 原始采集来源，保留头信息及重复条目 |
-| `raw/t05/gvpa/GvpA_RefSeq.fasta` | 862 | 862 | 54–177 | T05 RefSeq 来源 |
-| `raw/t05/gvpa/rescued_GvpA_candidates.fasta` | 2 | 2 | 73–83 | 天然序列补救来源，文件名中的 candidates 不代表模型生成 |
-| `raw/t05/real_gvp.fasta` | 4379 | 4379 | 54–757 | 混合 Gvp 家族真实序列，保留已有训练基准及来源 |
-| `candidates/t05/generated_gvp.fasta` | 200 | 200 | 66–512 | Transformer 生成的混合来源候选，尚未验证家族 |
-| `candidates/design/candidates.fasta` | 10 | 10 | 83–99 | 原工程已经筛选过的小集合，可用于流程试跑 |
+| [candidates/t05/generated_gvp.fasta](candidates/t05/generated_gvp.fasta) | 200 | 200 | 66–512 | Transformer 生成候选，家族待核验 |
+| [raw/t05/gvpa/GvpA_NotPartial.fasta](raw/t05/gvpa/GvpA_NotPartial.fasta) | 2000 | 1196 | 61–160 | T05 天然采集来源，保留注释与重复记录 |
+| [raw/t05/gvpa/GvpA_RefSeq.fasta](raw/t05/gvpa/GvpA_RefSeq.fasta) | 862 | 862 | 54–177 | T05 RefSeq 来源 |
+| [raw/t05/gvpa/rescued_GvpA_candidates.fasta](raw/t05/gvpa/rescued_GvpA_candidates.fasta) | 2 | 2 | 73–83 | 天然序列补救来源，名称中的 candidates 不表示模型生成 |
+| [raw/design/GvpA.fasta](raw/design/GvpA.fasta) | 856 | 856 | 60–100 | 天然参考来源，在其余三份来源之外有 30 条独有序列 |
+| [raw/t05/real_gvp.fasta](raw/t05/real_gvp.fasta) | 4379 | 4379 | 54–757 | 混合 Gvp 来源和原训练背景，用于来源核查及家族对照 |
 
-“不同序列数”按完整序列精确相同统计，不代表已经按序列相似度去冗余。
+“不同完整序列数”按序列字符串精确相同统计，不能替代按相似度聚类去冗余。四份名义 GvpA 来源的完整序列并集为 **1252 条**，尚未输出过滤后的正式参考集。
 
-## 需要先处理的问题
+## 数据特点与评价边界
 
-- `raw/design/GvpA.fasta` 的头信息中，824 条标为 GvpA、30 条标为 GvpJ、2 条未明确标出上述家族；19 条含 `partial`。这些统计可能互相重叠，不能把 856 条直接视为高质量 GvpA。
-- `GvpA_NotPartial.fasta` 有精确重复，部分序列含未知残基 `X`；名称里的 NotPartial 不能替代质量检查。`real_gvp.fasta` 也含 `X`。
-- 四份名义 GvpA 来源按完整序列合并为 **1252 条不同序列**，这是尚未过滤的并集数量。四个文件分别都有其他三份未覆盖的信息，均予以保留，尚未生成正式合并参考集。
-- T05 的 `real_gvp.fasta` 包含多种 Gvp 家族。其中头信息标有 GvpA 的 507 条已被上述四份来源覆盖；整个混合集有 532 条序列与四份来源并集完全一致。头信息只提供注释线索，不是家族确认结果。
-- T05 的 200 条候选没有家族标签。应先明确 GvpA 候选池的构建和约束评价方案，不能把全体直接当作已通过家族核验的 GvpA。
-- design 的 10 条候选由 8 条 Transformer、2 条 Diffusion 序列组成，是已筛选子集。完整生成池和模型权重不在材料中；只在这 10 条上比较策略会受到此前筛选的影响。
-- design 候选与 T05 候选之间没有完全相同的序列；这不等同于已证明它们具有高新颖性或高多样性。
+200 条候选均只含标准 20 种氨基酸，无空序列、重复 ID 或完全重复序列。长度均值 138.93 aa、中位数 103 aa，第一和第三四分位数为 93 和 114 aa。两条恰为生成上限 512 aa，应标记为可能截断，不能直接断定其截断或家族归属。
 
-## 来源与副本处理
+候选与四份名义 GvpA 来源并集、4379 条混合 Gvp 来源都没有完整序列完全相同的记录。这只排除了精确复制，尚未计算最大序列相似度、近重复簇或候选间多样性。当前无湿实验功能标签，不能据此计算功能预测准确率。
 
-原始路径到新路径的完整映射见 [file_manifest.json](../docs/cleanup/file_manifest.json)。
+- `GvpA_NotPartial.fasta` 含 804 条重复序列记录，存在未知残基 `X`；NotPartial 命名不能替代质量核验。
+- `raw/design/GvpA.fasta` 的头信息标注 GvpA 824 条、GvpJ 30 条、未标明上述家族 2 条，19 条含 `partial` 或 `fragment`。家族与完整性计数可重叠，不能将全部 856 条直接视为高质量 GvpA。
+- 四份名义 GvpA 来源分别有其他三份未覆盖的完整序列：design 30、NotPartial 354、RefSeq 9、rescued 1。需保留来源与完整头信息，再进行可追溯的合并、去重和核验。
+- design 独有的30条中，头信息标注 GvpA 3条、GvpJ 25条、未明确2条；保留价值包括潜在 GvpA 补充和注释溯源，不能把30条全部计作新增 GvpA。
+- `real_gvp.fasta` 混合 GvpA、GvpC、GvpJ、GvpN 等家族，含 `X` 及不完整条目。其中头信息标注 GvpA 的 507 条序列已被四份来源覆盖；不能将全部 4379 条作为 GvpA 保守位点参考集。
+- T05 候选只有生成编号，无亚家族标签。后续应保留全部输入的审计记录，为不合格或待定序列记录原因，再形成正式 GvpA 筛选候选池。
 
-- `design/data/natural_gvp.fasta` 与保留的 `raw/design/GvpA.fasta` 字节完全一致，已删除副本。
-- T05 的 `deduplicated.fasta`、A-Prot 输入中的 `real_gvp.fasta` 与保留的 `raw/t05/real_gvp.fasta` 字节完全一致，已删除副本。
-- A-Prot 输入中的 `generated_gvp.fasta` 与保留的 T05 候选字节完全一致，已删除副本。
-- 原 `design/data/*_msa.a3m` 全部由原序列截成统一长度产生。GvpA 文件把 856 条序列全部截至 60 aa，不能作为可靠的 MSA，已经删除。后续应从保留的原始序列建立真正的比对。
-- T05 的混合家族结构预测输入及其衍生对齐已删除。它们不应作为 GvpA 关键位点的参考比对。
+## 域标识修正
 
-## 生成方法与旧分数
+原任务记录中的 **PF01132 是 EFP（EF-P 的 OB 域），不是 GvpA 域**。相关的 **PF00741／Gas_vesicle** 家族也包含 GvpJ，因此命中只能支持相关家族证据，不能单独确认 GvpA 身份。后续应记录数据库版本、域得分与覆盖度，并结合天然参考注释和比对核查。[NCBI PF01132](https://www.ncbi.nlm.nih.gov/Structure/cdd/pfam01132)、[NCBI PF00741](https://www.ncbi.nlm.nih.gov/Structure/cdd/pfam00741)
 
-T05 的来源代码与已有权重位于 `../references/t05/src/model_training/`，原文说明位于 `../references/t05/doc/model_training.md`。脚本使用 temperature=0.8、top-k=10、最大长度512、生成200条；缺失依赖和绝对路径尚未修复，未验证重新生成能否复现现存文件。
+## 来源与生成方法
 
-design 的候选来源表位于 `../references/design/candidate_metadata/candidates_detailed.csv`。其中旧分数使用另一套五维体系，包含启发式计算，保留用于追溯，不作为本项目四维指标。详细限制见 [参考说明](../references/README.md)。
+T05 原代码和权重位于 [references/t05/src/model_training/](../references/t05/src/model_training/)，说明见 [model_training.md](../references/t05/doc/model_training.md)。生成设置为 temperature=0.8、top-k=10、最大长度 512、批量 200 条。缺失词表等依赖与 AutoDL 绝对路径尚未修复；当前未运行训练、补充生成或加载权重。
 
-可从根目录运行 `python -X utf8 preprocessing/audit_fasta.py` 重新核对单文件统计。完整快照见 [fasta_inventory.json](../docs/cleanup/fasta_inventory.json)。
+design 的 10 条旧候选和评分表已删除，不纳入候选池。design 天然 FASTA 因有独有序列而保留。原无效 MSA、结构预测输入和重复 FASTA 已删除；后续须从原始天然来源建立可靠比对。
+
+最早来源路径映射见 [第一轮文件清单](../docs/cleanup/file_manifest.json)，第二轮删除记录见 [round2/deletions.json](../docs/cleanup/round2/deletions.json)。第一轮清单和 `fasta_inventory.json` 是历史记录，不能用作当前六份文件的清单。
+
+## 更新审计结果
+
+在项目根目录执行：
+
+```powershell
+python -B -X utf8 preprocessing/analyze_inputs.py
+```
+
+输出 [summary.json](../results/input_audit/summary.json) 与 [candidate_records.tsv](../results/input_audit/candidate_records.tsv)，包括文件数量、长度、SHA256、字符及注释审计和逐候选记录。脚本不清洗或覆盖原始 FASTA；当前尚未执行域扫描、比对、家族判定和正式评分。

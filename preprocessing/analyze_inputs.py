@@ -5,6 +5,7 @@ from collections import Counter
 import csv
 import json
 from pathlib import Path
+import re
 from statistics import mean, median
 
 from audit_fasta import audit, read_fasta, STANDARD_AA
@@ -38,6 +39,16 @@ def main():
         name: len(sequences - set().union(*(other for other_name, other in source_sets.items() if other_name != name)))
         for name, sequences in source_sets.items()
     }
+    unique_header_labels = {}
+    for path in source_paths:
+        name = path.relative_to(root).as_posix()
+        others = set().union(*(values for other, values in source_sets.items() if other != name))
+        labels = Counter()
+        for header, sequence in read_fasta(path):
+            if sequence not in others:
+                matches = set(re.findall(r'\bgvp([acfgijklmnsuvwyz])\b', header, flags=re.I))
+                labels.update({'Gvp' + suffix.upper() for suffix in matches} or {'unlabelled'})
+        unique_header_labels[name] = dict(sorted(labels.items()))
     summary = {
         'stage': 'M1 input audit; no domain scan, alignment, family assignment or functional validation performed',
         'candidate_file': candidates_path.relative_to(root).as_posix(),
@@ -57,6 +68,7 @@ def main():
         'nominal_gvpa_union_unique_sequences': len(reference_union),
         'nominal_gvpa_union_length_counts': dict(sorted(Counter(map(len, reference_union)).items())),
         'nominal_gvpa_source_unique_contributions': unique_contributions,
+        'source_exclusive_sequence_record_header_labels': unique_header_labels,
         'files': [audit(p, root) for p in sorted((root / 'data').rglob('*.fasta'))],
     }
     out = root / 'results/input_audit'

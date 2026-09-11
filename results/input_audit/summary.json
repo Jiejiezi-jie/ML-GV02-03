@@ -191,6 +191,22 @@
     "data/raw/t05/gvpa/GvpA_RefSeq.fasta": 9,
     "data/raw/t05/gvpa/rescued_GvpA_candidates.fasta": 1
   },
+  "source_exclusive_sequence_record_header_labels": {
+    "data/raw/design/GvpA.fasta": {
+      "GvpA": 3,
+      "GvpJ": 25,
+      "unlabelled": 2
+    },
+    "data/raw/t05/gvpa/GvpA_NotPartial.fasta": {
+      "GvpA": 592
+    },
+    "data/raw/t05/gvpa/GvpA_RefSeq.fasta": {
+      "GvpA": 9
+    },
+    "data/raw/t05/gvpa/rescued_GvpA_candidates.fasta": {
+      "GvpA": 1
+    }
+  },
   "files": [
     {
       "path": "data/candidates/t05/generated_gvp.fasta",

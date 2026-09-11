@@ -1,0 +1,384 @@
+{
+  "verified_at_utc": "2026-09-11T06:45:29.651790+00:00",
+  "workspace": "E:\\machine",
+  "scope": "Round 2 deletion absence and retained original integrity verification; only listed project files are read. This is not a backup or validation of scientific results.",
+  "result": "passed_with_authorized_documentation_changes",
+  "summary": {
+    "deleted_files": 32,
+    "deleted_bytes": 6811715,
+    "all_deleted_paths_absent": true,
+    "retained_original_data_and_t05_files": 13,
+    "retained_original_sha256_verified": true,
+    "teacher_source_files": 2,
+    "teacher_source_sha256_verified": true,
+    "current_fasta_files": 6,
+    "current_t05_source_files": 7,
+    "authorized_readme_rewrites_with_baseline": 2,
+    "git_operations_performed": false
+  },
+  "deletion_checks": [
+    {
+      "path": "references/design/candidate_metadata/candidates_detailed.csv",
+      "expected_deleted_bytes": 10354,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/aggrescan3d.py",
+      "expected_deleted_bytes": 1000,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/candidate_explainer.py",
+      "expected_deleted_bytes": 37400,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/cross_species_analysis.py",
+      "expected_deleted_bytes": 23922,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/data_loader.py",
+      "expected_deleted_bytes": 9320,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/deeploc2/_init__.py",
+      "expected_deleted_bytes": 0,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/deeploc2/predict.py",
+      "expected_deleted_bytes": 1139,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/generate_and_evaluate.py",
+      "expected_deleted_bytes": 15041,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/models/__init__.py",
+      "expected_deleted_bytes": 0,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/models/diffusion_gvp.py",
+      "expected_deleted_bytes": 13606,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/models/esm2_gvp.py",
+      "expected_deleted_bytes": 12209,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/models/transformer_gvp.py",
+      "expected_deleted_bytes": 11011,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/models/vae_gvp.py",
+      "expected_deleted_bytes": 13987,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/score/__init__.py",
+      "expected_deleted_bytes": 0,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/score/score_assembly.py",
+      "expected_deleted_bytes": 16978,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/score/score_conserv.py",
+      "expected_deleted_bytes": 4456,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/score/score_fold.py",
+      "expected_deleted_bytes": 3821,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/score/score_mock.py",
+      "expected_deleted_bytes": 1623,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/score/score_net.py",
+      "expected_deleted_bytes": 3917,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/score/score_novel.py",
+      "expected_deleted_bytes": 3941,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/src/score/score_toxic.py",
+      "expected_deleted_bytes": 2534,
+      "exists_now": false
+    },
+    {
+      "path": "references/design/毕业论文.pdf",
+      "expected_deleted_bytes": 1951241,
+      "exists_now": false
+    },
+    {
+      "path": "references/t05/src/raw_data_processing/analyze_fasta.py",
+      "expected_deleted_bytes": 6357,
+      "exists_now": false
+    },
+    {
+      "path": "references/t05/src/raw_data_processing/deduplicate_fasta.py",
+      "expected_deleted_bytes": 4589,
+      "exists_now": false
+    },
+    {
+      "path": "references/t05/src/raw_data_processing/merge_fasta.py",
+      "expected_deleted_bytes": 1132,
+      "exists_now": false
+    },
+    {
+      "path": "references/t05/src/analysis_transformer_lm/analysis_aa_freq.py",
+      "expected_deleted_bytes": 3368,
+      "exists_now": false
+    },
+    {
+      "path": "references/t05/src/analysis_transformer_lm/analysis_divergence.py",
+      "expected_deleted_bytes": 2347,
+      "exists_now": false
+    },
+    {
+      "path": "references/t05/src/analysis_transformer_lm/analysis_length.py",
+      "expected_deleted_bytes": 2543,
+      "exists_now": false
+    },
+    {
+      "path": "data/candidates/design/candidates.fasta",
+      "expected_deleted_bytes": 1452,
+      "exists_now": false
+    },
+    {
+      "path": "references/t05/T05-report.pptx",
+      "expected_deleted_bytes": 4640704,
+      "exists_now": false
+    },
+    {
+      "path": "references/t05/doc/ana_transformer_lm.md",
+      "expected_deleted_bytes": 3885,
+      "exists_now": false
+    },
+    {
+      "path": "references/t05/README_original.md",
+      "expected_deleted_bytes": 7838,
+      "exists_now": false
+    }
+  ],
+  "retained_original_checks": [
+    {
+      "path": "data/candidates/t05/generated_gvp.fasta",
+      "baseline_sha256": "4be37ab575f7285035669955ed713dbcefb8fe2a1c2790de7ecd48e89cee9776",
+      "current_sha256": "4be37ab575f7285035669955ed713dbcefb8fe2a1c2790de7ecd48e89cee9776",
+      "baseline_bytes": 30076,
+      "current_bytes": 30076,
+      "exists_now": true,
+      "sha256_matches": true,
+      "status": "unchanged"
+    },
+    {
+      "path": "data/raw/design/GvpA.fasta",
+      "baseline_sha256": "c58b00e8198049e299d10fcf5b20ed76898052b48eb67943dbc9ea596d8352e3",
+      "current_sha256": "c58b00e8198049e299d10fcf5b20ed76898052b48eb67943dbc9ea596d8352e3",
+      "baseline_bytes": 137374,
+      "current_bytes": 137374,
+      "exists_now": true,
+      "sha256_matches": true,
+      "status": "unchanged"
+    },
+    {
+      "path": "data/raw/t05/gvpa/GvpA_NotPartial.fasta",
+      "baseline_sha256": "534b05d2d9a4cd3698960ace4633ee5e70c124908d32ee1df02fc741e594b1f6",
+      "current_sha256": "534b05d2d9a4cd3698960ace4633ee5e70c124908d32ee1df02fc741e594b1f6",
+      "baseline_bytes": 254328,
+      "current_bytes": 254328,
+      "exists_now": true,
+      "sha256_matches": true,
+      "status": "unchanged"
+    },
+    {
+      "path": "data/raw/t05/gvpa/GvpA_RefSeq.fasta",
+      "baseline_sha256": "8f03d5b7bff9a23af7a27244dc1c51fcb583995d60b207517a3e5419788df6b8",
+      "current_sha256": "8f03d5b7bff9a23af7a27244dc1c51fcb583995d60b207517a3e5419788df6b8",
+      "baseline_bytes": 99011,
+      "current_bytes": 99011,
+      "exists_now": true,
+      "sha256_matches": true,
+      "status": "unchanged"
+    },
+    {
+      "path": "data/raw/t05/gvpa/rescued_GvpA_candidates.fasta",
+      "baseline_sha256": "86bb5af8e161668ca3282972ae40ce1c340583912aaf36339a36f8008e3a069b",
+      "current_sha256": "86bb5af8e161668ca3282972ae40ce1c340583912aaf36339a36f8008e3a069b",
+      "baseline_bytes": 292,
+      "current_bytes": 292,
+      "exists_now": true,
+      "sha256_matches": true,
+      "status": "unchanged"
+    },
+    {
+      "path": "data/raw/t05/real_gvp.fasta",
+      "baseline_sha256": "2a9badfe7c3bbb80089b5948aa104cca1b6bd0800fe9946283e25bc69bf7edf9",
+      "current_sha256": "2a9badfe7c3bbb80089b5948aa104cca1b6bd0800fe9946283e25bc69bf7edf9",
+      "baseline_bytes": 950158,
+      "current_bytes": 950158,
+      "exists_now": true,
+      "sha256_matches": true,
+      "status": "unchanged"
+    },
+    {
+      "path": "references/t05/doc/dataset.md",
+      "baseline_sha256": "c91b24f527a23dde2b62e0a623fe45757812a487d6e8e7bd42937d993c669e82",
+      "current_sha256": "c91b24f527a23dde2b62e0a623fe45757812a487d6e8e7bd42937d993c669e82",
+      "baseline_bytes": 5648,
+      "current_bytes": 5648,
+      "exists_now": true,
+      "sha256_matches": true,
+      "status": "unchanged"
+    },
+    {
+      "path": "references/t05/doc/model_training.md",
+      "baseline_sha256": "b10257de882f99fe14dc475f7cfcc70012682d0a4ae9994461536a5eaa52a6ab",
+      "current_sha256": "b10257de882f99fe14dc475f7cfcc70012682d0a4ae9994461536a5eaa52a6ab",
+      "baseline_bytes": 3717,
+      "current_bytes": 3717,
+      "exists_now": true,
+      "sha256_matches": true,
+      "status": "unchanged"
+    },
+    {
+      "path": "references/t05/src/model_training/generate.py",
+      "baseline_sha256": "5e5f83eac40ad6a3c615026c961d74d352589660f3da29562abddc1777fdd3c8",
+      "current_sha256": "5e5f83eac40ad6a3c615026c961d74d352589660f3da29562abddc1777fdd3c8",
+      "baseline_bytes": 2483,
+      "current_bytes": 2483,
+      "exists_now": true,
+      "sha256_matches": true,
+      "status": "unchanged"
+    },
+    {
+      "path": "references/t05/src/model_training/gvp_ckpt/model.pt",
+      "baseline_sha256": "b3cc6c89da97591ac3a4033f8086e5579e9561d1d5582d273b3a76d84ea5c33f",
+      "current_sha256": "b3cc6c89da97591ac3a4033f8086e5579e9561d1d5582d273b3a76d84ea5c33f",
+      "baseline_bytes": 13749898,
+      "current_bytes": 13749898,
+      "exists_now": true,
+      "sha256_matches": true,
+      "status": "unchanged"
+    },
+    {
+      "path": "references/t05/src/model_training/model.py",
+      "baseline_sha256": "2d0ec1e9ef04a11ee8127abd7e4ff14c117baaf317c4fd889aaebb2b2729b436",
+      "current_sha256": "2d0ec1e9ef04a11ee8127abd7e4ff14c117baaf317c4fd889aaebb2b2729b436",
+      "baseline_bytes": 1097,
+      "current_bytes": 1097,
+      "exists_now": true,
+      "sha256_matches": true,
+      "status": "unchanged"
+    },
+    {
+      "path": "references/t05/src/model_training/train.py",
+      "baseline_sha256": "c703871a2fe7bb901b06c4b90d4e5d96f7d576430b1ced28fbd90f77ffeb0b3e",
+      "current_sha256": "c703871a2fe7bb901b06c4b90d4e5d96f7d576430b1ced28fbd90f77ffeb0b3e",
+      "baseline_bytes": 1155,
+      "current_bytes": 1155,
+      "exists_now": true,
+      "sha256_matches": true,
+      "status": "unchanged"
+    },
+    {
+      "path": "references/t05/T05-report.docx",
+      "baseline_sha256": "a8c4a3492c2367f18438d6b964ac495d42fca9caf26e85aa05335e2cffb96a91",
+      "current_sha256": "a8c4a3492c2367f18438d6b964ac495d42fca9caf26e85aa05335e2cffb96a91",
+      "baseline_bytes": 473144,
+      "current_bytes": 473144,
+      "exists_now": true,
+      "sha256_matches": true,
+      "status": "unchanged"
+    }
+  ],
+  "teacher_source_checks": [
+    {
+      "path": "机器学习要求.md",
+      "baseline_source": "docs/cleanup/file_manifest.json",
+      "baseline_sha256": "31eae9cf7d5c9ca0e70f033c4b71ab8fa129a4aebdade70fb81d8ec5d9d1bd6d",
+      "current_sha256": "31eae9cf7d5c9ca0e70f033c4b71ab8fa129a4aebdade70fb81d8ec5d9d1bd6d",
+      "baseline_bytes": 7128,
+      "current_bytes": 7128,
+      "exists_now": true,
+      "sha256_matches": true
+    },
+    {
+      "path": "project-pool(1).pdf",
+      "baseline_source": "docs/cleanup/additional_materials.json",
+      "baseline_sha256": "c0005f6a003ce8a4ceba2cae726d41a46ef44a15febfc3fa9f0d3cd22ba05942",
+      "current_sha256": "c0005f6a003ce8a4ceba2cae726d41a46ef44a15febfc3fa9f0d3cd22ba05942",
+      "baseline_bytes": 625073,
+      "current_bytes": 625073,
+      "exists_now": true,
+      "sha256_matches": true
+    }
+  ],
+  "authorized_documentation_changes": [
+    {
+      "path": "data/README.md",
+      "baseline_sha256": "418e6036f97f3781611158a3f85e3cc70ba6a575c68f430cb32f47086f4ce5ff",
+      "current_sha256": "eddddae25742211c69c893a4a21f6dcb0dce21f530b6228d6fedf45f81e87ca7",
+      "baseline_bytes": 4599,
+      "current_bytes": 5206,
+      "exists_now": true,
+      "sha256_matches": false,
+      "status": "authorized_documentation_rewrite",
+      "reason": "README was explicitly authorized for replacement to describe the current project; content equality is not required."
+    },
+    {
+      "path": "references/README.md",
+      "baseline_sha256": "331611db6bbb0940fc7ab3130ea51da395a0e585bc51f8e7c4bf6be9f3ebcb4a",
+      "current_sha256": "536fb4908f18831d5471eb855aef7e3f3a59cf0b597a33fb0bebbc7b706526d2",
+      "baseline_bytes": 2807,
+      "current_bytes": 3706,
+      "exists_now": true,
+      "sha256_matches": false,
+      "status": "authorized_documentation_rewrite",
+      "reason": "README was explicitly authorized for replacement to describe the current project; content equality is not required."
+    }
+  ],
+  "exceptions": [
+    {
+      "path": "README.md",
+      "status": "authorized_documentation_rewrite_without_round2_hash_baseline",
+      "reason": "Root README was explicitly rewritten and existing conflict markers were removed; it was not included in retained_before.json. No equality claim is made."
+    }
+  ],
+  "current_fasta_paths": [
+    "data/candidates/t05/generated_gvp.fasta",
+    "data/raw/design/GvpA.fasta",
+    "data/raw/t05/gvpa/GvpA_NotPartial.fasta",
+    "data/raw/t05/gvpa/GvpA_RefSeq.fasta",
+    "data/raw/t05/gvpa/rescued_GvpA_candidates.fasta",
+    "data/raw/t05/real_gvp.fasta"
+  ],
+  "current_t05_source_paths": [
+    "references/t05/T05-report.docx",
+    "references/t05/doc/dataset.md",
+    "references/t05/doc/model_training.md",
+    "references/t05/src/model_training/generate.py",
+    "references/t05/src/model_training/gvp_ckpt/model.pt",
+    "references/t05/src/model_training/model.py",
+    "references/t05/src/model_training/train.py"
+  ],
+  "errors": []
+}
