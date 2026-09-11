@@ -1,0 +1,9 @@
+[
+  {
+    "path": "project-pool(1).pdf",
+    "bytes": 625073,
+    "sha256": "c0005f6a003ce8a4ceba2cae726d41a46ef44a15febfc3fa9f0d3cd22ba05942",
+    "action": "keep_in_place",
+    "reason": "课程项目指南，整理期间新增，含GV02-03要求；不属于初始473文件快照。"
+  }
+]

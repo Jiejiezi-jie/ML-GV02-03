@@ -1,0 +1,3786 @@
+[
+  {
+    "source": "design/.DS_Store",
+    "destination": "",
+    "action": "delete",
+    "bytes": 8196,
+    "sha256": "fa8490b2cb0031528e7b14ef90fc066f7dfd85c36cd4eb70687062aa3092afeb",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/.vscode/settings.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 174,
+    "sha256": "d76e7bc01ebb96cad803755bd4af58440842e7f6693c001033d073666e9e1175",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/data/GvpA.fasta",
+    "destination": "data/raw/design/GvpA.fasta",
+    "action": "move",
+    "bytes": 137374,
+    "sha256": "c58b00e8198049e299d10fcf5b20ed76898052b48eb67943dbc9ea596d8352e3",
+    "reason": "GvpA天然参考序列来源"
+  },
+  {
+    "source": "design/data/GvpA_msa.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 67624,
+    "sha256": "8a8a9be3b6bb11ddfdf9a9dea888ff7c465c096069b6e06f1b33c0563870301a",
+    "reason": "逐条验证为原序列截至最短长度的前缀，非真正MSA；原始GvpA已保留"
+  },
+  {
+    "source": "design/data/GvpC.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 766677,
+    "sha256": "5a9e9a3d166f1862730732a7aef897564e86f35127fa85bad46b50f49518bb30",
+    "reason": "其他Gvp家族数据，超出本次GvpA候选评价范围"
+  },
+  {
+    "source": "design/data/GvpC_msa.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 390225,
+    "sha256": "4256e47c504e1693629e457d3923451753a94a9615b6de06f21f85e8144acbe7",
+    "reason": "逐条验证为原序列截至最短长度的前缀，非真正MSA；原始GvpA已保留"
+  },
+  {
+    "source": "design/data/GvpF.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 70579,
+    "sha256": "23bd24fe01c0d98a2b68af1f4339e8c60499b2ac27aaf9877374cb637dd767bf",
+    "reason": "其他Gvp家族数据，超出本次GvpA候选评价范围"
+  },
+  {
+    "source": "design/data/GvpF_msa.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 24839,
+    "sha256": "c533135d4c9022ca4ebdd92946240ef1eaea203ddb830433f3db0f6a0de843cc",
+    "reason": "逐条验证为原序列截至最短长度的前缀，非真正MSA；原始GvpA已保留"
+  },
+  {
+    "source": "design/data/GvpG.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 223447,
+    "sha256": "2fd897285000dce5517429b1f00d04ee5e91d1ed67217d1eae7363128fce4c74",
+    "reason": "其他Gvp家族数据，超出本次GvpA候选评价范围"
+  },
+  {
+    "source": "design/data/GvpG_msa.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 74529,
+    "sha256": "19f76a1c278fb6b1288d707b1774fed20a48e6ddcb32d5596a158aa9d91e309f",
+    "reason": "逐条验证为原序列截至最短长度的前缀，非真正MSA；原始GvpA已保留"
+  },
+  {
+    "source": "design/data/GvpJ.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 176177,
+    "sha256": "2e9ce02e4a5a96b91c06ead913147c53700f1bafa9d0c626bce9cf92d487f930",
+    "reason": "其他Gvp家族数据，超出本次GvpA候选评价范围"
+  },
+  {
+    "source": "design/data/GvpJ_msa.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 68947,
+    "sha256": "7cfd7094008f62d0375178333606adec060091bf32675aae531b4f802aa6c1a2",
+    "reason": "逐条验证为原序列截至最短长度的前缀，非真正MSA；原始GvpA已保留"
+  },
+  {
+    "source": "design/data/GvpK.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 475388,
+    "sha256": "9aaaf6019a755a5969a19330160ded876c426a02231425e65928587042e9882c",
+    "reason": "其他Gvp家族数据，超出本次GvpA候选评价范围"
+  },
+  {
+    "source": "design/data/GvpK_msa.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 171926,
+    "sha256": "4a3ecef77047d7d562362b34a17193b839cc733952b0ae88f579ee0015ad5b14",
+    "reason": "逐条验证为原序列截至最短长度的前缀，非真正MSA；原始GvpA已保留"
+  },
+  {
+    "source": "design/data/GvpL.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 80933,
+    "sha256": "8396c68ca8b5bc357958a34edf76738e38b46d6ccf5b820bd1411585e48dd012",
+    "reason": "其他Gvp家族数据，超出本次GvpA候选评价范围"
+  },
+  {
+    "source": "design/data/GvpL_msa.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 31698,
+    "sha256": "8a7278a75963fce1d8a5b805a9230e1ef9e574d87006c6339332e4444e79795c",
+    "reason": "逐条验证为原序列截至最短长度的前缀，非真正MSA；原始GvpA已保留"
+  },
+  {
+    "source": "design/data/GvpM.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 62844,
+    "sha256": "ec85fc057cbd9ec896a8fd03b6dfca9511e950c2230e0e891e1e124f272e63b5",
+    "reason": "其他Gvp家族数据，超出本次GvpA候选评价范围"
+  },
+  {
+    "source": "design/data/GvpM_msa.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 29851,
+    "sha256": "e8ccabbadb375e13058e3f060750e62cd79d34168555599ae75cef6f9571b6fd",
+    "reason": "逐条验证为原序列截至最短长度的前缀，非真正MSA；原始GvpA已保留"
+  },
+  {
+    "source": "design/data/GvpN.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1319222,
+    "sha256": "babf8f8aaf03a82ab85598d84f86121954452777d6664b1c167070fb50fb525e",
+    "reason": "其他Gvp家族数据，超出本次GvpA候选评价范围"
+  },
+  {
+    "source": "design/data/GvpN_msa.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 238287,
+    "sha256": "38184ecbc8fba64561741d54cef9c2c2795ce643b391d0ca937285dc6534e431",
+    "reason": "逐条验证为原序列截至最短长度的前缀，非真正MSA；原始GvpA已保留"
+  },
+  {
+    "source": "design/data/GvpS.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 745269,
+    "sha256": "48ebe9e7feedbba6e5cfbc9af77108ac3d7d309ef2505a46853588ac240078c4",
+    "reason": "其他Gvp家族数据，超出本次GvpA候选评价范围"
+  },
+  {
+    "source": "design/data/GvpS_msa.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 120074,
+    "sha256": "22e47b5aef57ea1c6cffcf0d15df7d0b9b12bca10ea5b5e3863399015282b958",
+    "reason": "逐条验证为原序列截至最短长度的前缀，非真正MSA；原始GvpA已保留"
+  },
+  {
+    "source": "design/data/GvpU.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1440949,
+    "sha256": "1ff9a9abbd51fc2dc2f42b1c5420143814e3869c557e6dfe8877a671434a42b9",
+    "reason": "其他Gvp家族数据，超出本次GvpA候选评价范围"
+  },
+  {
+    "source": "design/data/GvpU_msa.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 342380,
+    "sha256": "c2ca4211ebef244944da24c33fbb2ef1c73e00b6a43be4bad37001099452fb18",
+    "reason": "逐条验证为原序列截至最短长度的前缀，非真正MSA；原始GvpA已保留"
+  },
+  {
+    "source": "design/data/GvpV.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 4187,
+    "sha256": "6dd1c9e874434dacb17bcc038ef111a1d205a14419572b8901e90ff33f6b0109",
+    "reason": "其他Gvp家族数据，超出本次GvpA候选评价范围"
+  },
+  {
+    "source": "design/data/GvpV_msa.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 2691,
+    "sha256": "65e33d218cd5aace93bf5e274a2f87b73f8fb987d4e6cc380c0110c90ceedac4",
+    "reason": "逐条验证为原序列截至最短长度的前缀，非真正MSA；原始GvpA已保留"
+  },
+  {
+    "source": "design/data/GvpW.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 30139,
+    "sha256": "5004f97e328e3f16c1163f0ae89fa4430a7f2388d6d8a6b43eff06dafb99a0e8",
+    "reason": "其他Gvp家族数据，超出本次GvpA候选评价范围"
+  },
+  {
+    "source": "design/data/GvpW_msa.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 15698,
+    "sha256": "c6ddab5676a727c7e5eedd96f80087ce023a9f4f9c551193cb4c16416c41a328",
+    "reason": "逐条验证为原序列截至最短长度的前缀，非真正MSA；原始GvpA已保留"
+  },
+  {
+    "source": "design/data/GvpY.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 244,
+    "sha256": "c94dd95f4bf8101c491ae77e93d877a52230dbbcfc24d2949d7a42aef6ff3533",
+    "reason": "其他Gvp家族数据，超出本次GvpA候选评价范围"
+  },
+  {
+    "source": "design/data/GvpY_msa.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 213,
+    "sha256": "9a91caa12c7c3c835d27f7309f8dedea0c0d8ef045aad101141fac4183c119dc",
+    "reason": "逐条验证为原序列截至最短长度的前缀，非真正MSA；原始GvpA已保留"
+  },
+  {
+    "source": "design/data/GvpZ.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 780,
+    "sha256": "a2261bfde46a4a4b60ac88023a1b0dc1ca94ec5c9133e75b51d6647e9109bf25",
+    "reason": "其他Gvp家族数据，超出本次GvpA候选评价范围"
+  },
+  {
+    "source": "design/data/GvpZ_msa.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 757,
+    "sha256": "46c44ca470ebd1efdb4aeaf495f3f881407928e415cb76ec525c084b39ff3065",
+    "reason": "逐条验证为原序列截至最短长度的前缀，非真正MSA；原始GvpA已保留"
+  },
+  {
+    "source": "design/data/natural_gvp.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 137374,
+    "sha256": "c58b00e8198049e299d10fcf5b20ed76898052b48eb67943dbc9ea596d8352e3",
+    "reason": "字节级重复，已保留相同内容于 data/raw/design/GvpA.fasta"
+  },
+  {
+    "source": "design/src/.DS_Store",
+    "destination": "",
+    "action": "delete",
+    "bytes": 6148,
+    "sha256": "5a67fb699e3dedc68a71a6a08defbc1b081dd64b82b8bf22f0ed3a3aff45a2a2",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/1.sh",
+    "destination": "",
+    "action": "delete",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "额外训练、诊断、展示或错误截断MSA工具；本任务不训练新模型，问题已记入审计说明"
+  },
+  {
+    "source": "design/src/aggrescan3d.py",
+    "destination": "references/design/src/aggrescan3d.py",
+    "action": "move",
+    "bytes": 1000,
+    "sha256": "e8effbf4d4b5090877dae9d275ca00792e62b682710fdf53f8bd05f62986cf74",
+    "reason": "候选生成、评分或筛选方法参考；保留依赖布局，非本项目正式实现"
+  },
+  {
+    "source": "design/src/analysis_output/conservation_landscape.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 583939,
+    "sha256": "0520a14e652851642a779f1fc58c0b6b092ce4d7dd4ad33163bfcd421dbb6501",
+    "reason": "旧实验图表或截断比对的衍生分析；后续须以本项目数据重算"
+  },
+  {
+    "source": "design/src/analysis_output/cross_species_report.txt",
+    "destination": "",
+    "action": "delete",
+    "bytes": 2118,
+    "sha256": "34bf233d26821edb7d7b0d5ca83bf4ffe584d2d842cec79c91e9ff229bf9eec3",
+    "reason": "旧实验图表或截断比对的衍生分析；后续须以本项目数据重算"
+  },
+  {
+    "source": "design/src/analysis_output/functional_regions.csv",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1174,
+    "sha256": "aa384846c1dda0cbf9473141253be0888f566f159c88dea696304485a3ba6cc8",
+    "reason": "旧实验图表或截断比对的衍生分析；后续须以本项目数据重算"
+  },
+  {
+    "source": "design/src/candidate_explainer.py",
+    "destination": "references/design/src/candidate_explainer.py",
+    "action": "move",
+    "bytes": 37400,
+    "sha256": "13e7e3e052dbd4193c1f26adf2f336fab91dd23ebbba9d19a504d6f6924ca80e",
+    "reason": "候选生成、评分或筛选方法参考；保留依赖布局，非本项目正式实现"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_01_esm2_gen_22.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 316389,
+    "sha256": "31824eadbc5c18410090e0808aad8d91e69d5bd3cdca607a07308afb20974e2e",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_01_transformer_gen_30.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 322383,
+    "sha256": "4b9b1dae35dc2959d8aeaf1c4f7f23e2da0ab4f99a1c5b127476a6ccce939ccb",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_02_transformer_gen_33.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 321914,
+    "sha256": "cef5efa9df5ad0d4b168e861ae57a6cf3dbc9efeab84f32b2bbae4c3ee25f32b",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_02_transformer_gen_85.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 320985,
+    "sha256": "1bb96ced1d348434979e681806a33bd59e404affa4ff6e819292fc3791b5a9a6",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_03_esm2_gen_59.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 328570,
+    "sha256": "93b5e7798289050a1fbec21ea7a29926d5be4c3114d4e6e0765046c587b4d079",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_03_transformer_gen_14.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 316236,
+    "sha256": "f1705807a72471386ba7026460bbdc32b573ac0835b14618d33a5e14f8c1e8fd",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_04_transformer_gen_21.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 314871,
+    "sha256": "d897657c22eeaa3cb80a8a717a5760b6891e30eef3d135bdc9fecd29f0e8d740",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_04_transformer_gen_69.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 315779,
+    "sha256": "b43392c992d17c2133643acd385a847c372eb416a2b259ac9172424fa1779907",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_05_transformer_gen_28.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 316061,
+    "sha256": "5f6d163eee5be069b30ac567242aa69788130772ea1e68076f0bf97216eaadf7",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_05_transformer_gen_31.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 321054,
+    "sha256": "bbdb0134a716be4348c4f80bd3be59366d6f43654eea7b613d756f22e173ea94",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_06_diffusion_gen_4.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 311732,
+    "sha256": "8960b489e5181a8b49a133ad048ca27a8ec3de2f7865393b82d330d0f2e51455",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_06_transformer_gen_48.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 315579,
+    "sha256": "74c3cb1474fbc783d64875dfbad15f0c8c513cd4c77d4cb10eef6bdc2b916c17",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_07_transformer_gen_45.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 318864,
+    "sha256": "a94725876fb6484b20f8b533036068f1ac581003b233013a7374348a0e3ba09a",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_07_transformer_gen_77.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 315559,
+    "sha256": "220f66ef0a186a6ff624a7fd1aa4e6bc451533bb6f6eb454c9ff909ad0c09d20",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_08_esm2_gen_64.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 313515,
+    "sha256": "4387e3e61a69f15b775a3cfff3f34ac6f823989c183424ae13dadf1ff72cc3d1",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_08_transformer_gen_69.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 319296,
+    "sha256": "93439f1dc06f320981513fc013ad50de53bf65696b3a17e06694c4e30125a38e",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_09_transformer_gen_45.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 329577,
+    "sha256": "986aff089b816089bf2cd482b9d140bc49502d278b2b57fec6a00c40a9d7f048",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_09_transformer_gen_85.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 309147,
+    "sha256": "5cda6abc62fe6dc41c27b3c94fe88d72f41007bbc410d3235e59370463a9b837",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_10_diffusion_gen_21.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 303536,
+    "sha256": "a1e06de84113be812ecca4f30cb5637a36d8c71751ac13c7da154ae5bf467b62",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_10_esm2_gen_52.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 308878,
+    "sha256": "1f0dc8387bdfcb4929caaf79f240d36dad7766a57e8afa34f6b0e5e03574a0c8",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidate_comparison.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 562732,
+    "sha256": "70b187b7b8da559e8fc36eb53afc25b7d0ef4daddd9d398637f19a4d086d5a2b",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/candidate_output/candidates.fasta",
+    "destination": "data/candidates/design/candidates.fasta",
+    "action": "move",
+    "bytes": 1452,
+    "sha256": "6c92e44450fbad9baa9171eca83c1be0c68568a4d5ae979c74398a0f9a50eead",
+    "reason": "已筛选的10条候选，仅作小样本流程验证及候选来源"
+  },
+  {
+    "source": "design/src/candidate_output/candidates_detailed.csv",
+    "destination": "references/design/candidate_metadata/candidates_detailed.csv",
+    "action": "move",
+    "bytes": 10354,
+    "sha256": "9e32f0fa334d2de0c2486dc280237e432f265d5e62264c886ee4fb7aa1cc28f4",
+    "reason": "候选ID、模型来源和旧评分的来源记录，旧分数不作正式评价"
+  },
+  {
+    "source": "design/src/candidate_output/master_report.txt",
+    "destination": "",
+    "action": "delete",
+    "bytes": 6345,
+    "sha256": "68f43be991a18c9c4ff7e6322e4a935297ecb55fec31cf1867aec8aa0898eacb",
+    "reason": "旧候选可视化或重复叙述报告；候选FASTA与详细来源CSV已保留"
+  },
+  {
+    "source": "design/src/create_simple_msa.py",
+    "destination": "",
+    "action": "delete",
+    "bytes": 2343,
+    "sha256": "1be27d1e1c2ce0c68940d79efbdf17961b9d7886f77a6d0a14c07eb6aa57318f",
+    "reason": "额外训练、诊断、展示或错误截断MSA工具；本任务不训练新模型，问题已记入审计说明"
+  },
+  {
+    "source": "design/src/cross_species_analysis.py",
+    "destination": "references/design/src/cross_species_analysis.py",
+    "action": "move",
+    "bytes": 23922,
+    "sha256": "faaaf4f8f4e1dc59b5751d286d274c4d10b8e511e3729b50155edb930b3b7f4e",
+    "reason": "候选生成、评分或筛选方法参考；保留依赖布局，非本项目正式实现"
+  },
+  {
+    "source": "design/src/data_loader.py",
+    "destination": "references/design/src/data_loader.py",
+    "action": "move",
+    "bytes": 9320,
+    "sha256": "9326cb61228c69f0df13d7a37a9696807d0da36e621c3eac0396791cb48f87a2",
+    "reason": "候选生成、评分或筛选方法参考；保留依赖布局，非本项目正式实现"
+  },
+  {
+    "source": "design/src/deep_diagnose.py",
+    "destination": "",
+    "action": "delete",
+    "bytes": 5474,
+    "sha256": "05335d5f2f4851c60280c2cddea94b7fc36fc6a4af47aab7ace1a581db74ab90",
+    "reason": "额外训练、诊断、展示或错误截断MSA工具；本任务不训练新模型，问题已记入审计说明"
+  },
+  {
+    "source": "design/src/deeploc2/__pycache__/predict.cpython-312.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 538,
+    "sha256": "b4088739b7b5a4faa4d19c0fce8aacf63a7ab6964a8c3afb431e83019f86126f",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/deeploc2/__pycache__/predict.cpython-38.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 978,
+    "sha256": "f194abdf73a8d2e7e0d3d300cfccf78aaa49a5aa87cab0331a2c09eacb28eccb",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/deeploc2/_init__.py",
+    "destination": "references/design/src/deeploc2/_init__.py",
+    "action": "move",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "保留生成与旧评分源码的本地依赖闭包；包含mock，不能当真实指标"
+  },
+  {
+    "source": "design/src/deeploc2/predict.py",
+    "destination": "references/design/src/deeploc2/predict.py",
+    "action": "move",
+    "bytes": 1139,
+    "sha256": "4d72050a57f74f695a32cf70dfc1e499e60c7ba954531302283fb13ad069dad5",
+    "reason": "保留生成与旧评分源码的本地依赖闭包；包含mock，不能当真实指标"
+  },
+  {
+    "source": "design/src/fig1_overview.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 971123,
+    "sha256": "9dbbcdc85553e3ff2be7848916198e04a97fe94d8632428e7b3daee523214f4e",
+    "reason": "旧实验图表或截断比对的衍生分析；后续须以本项目数据重算"
+  },
+  {
+    "source": "design/src/fig2_sequence_features.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 739411,
+    "sha256": "2290c14a9a832b4faaec8b920f99539e8685f41cbb9536384880d287c52b5bdf",
+    "reason": "旧实验图表或截断比对的衍生分析；后续须以本项目数据重算"
+  },
+  {
+    "source": "design/src/fig3_sequence_logo.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 279596,
+    "sha256": "dc2b87cf3986800291050c60b68afe7029450cddb899a710418a5ebfe3024907",
+    "reason": "旧实验图表或截断比对的衍生分析；后续须以本项目数据重算"
+  },
+  {
+    "source": "design/src/fig4_quality_filter.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1100006,
+    "sha256": "04a04d7a7fbdf25ff865a0a88abafc263355210c8e087c02c6cc9efac725e311",
+    "reason": "旧实验图表或截断比对的衍生分析；后续须以本项目数据重算"
+  },
+  {
+    "source": "design/src/fig5_single_seq.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 547280,
+    "sha256": "f24fe83060cc30c6d8443858c7e185a1680060dc61ddaa295bf2edf68ccd9faf",
+    "reason": "旧实验图表或截断比对的衍生分析；后续须以本项目数据重算"
+  },
+  {
+    "source": "design/src/generate_and_evaluate.py",
+    "destination": "references/design/src/generate_and_evaluate.py",
+    "action": "move",
+    "bytes": 15041,
+    "sha256": "6f5f1daaa35b51146ba2b637ef942dc4e3c7c132bf58a8a73501e86de58472bc",
+    "reason": "候选生成、评分或筛选方法参考；保留依赖布局，非本项目正式实现"
+  },
+  {
+    "source": "design/src/models/__init__.py",
+    "destination": "references/design/src/models/__init__.py",
+    "action": "move",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "保留生成与旧评分源码的本地依赖闭包；包含mock，不能当真实指标"
+  },
+  {
+    "source": "design/src/models/__pycache__/__init__.cpython-312.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 130,
+    "sha256": "70e00a3eb000edff08a7dfa087c91c1c96459ddb8d3074db05211c3b6180c9ad",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/models/__pycache__/__init__.cpython-38.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 124,
+    "sha256": "7a01c6a4d345733f037d87c1c33c8116ae767b080fcaa04d342153c838e8f4c6",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/models/__pycache__/diffusion_gvp.cpython-312.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 13058,
+    "sha256": "d27c1540d7051bed743e7686bca7dea963384e110b253a8a66a91dd0c3dd847b",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/models/__pycache__/diffusion_gvp.cpython-38.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 9004,
+    "sha256": "4b5dbea69fd6e58867023e75d3d004ca6f3eacd6af6319617a9bba523fe77289",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/models/__pycache__/esm2_gvp.cpython-38.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 8562,
+    "sha256": "fce563bc70474fa30072d540fde83717fcee123443a52ff07a9d088633df5b14",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/models/__pycache__/transformer_gvp.cpython-312.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 11424,
+    "sha256": "6d3c2b69ac6de065bd72de211e032eb693f01374d78688ed00e8b2f10af4ab1a",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/models/__pycache__/transformer_gvp.cpython-38.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 7899,
+    "sha256": "bc20f9a7aed2252e31f4d45dc2f69149f3e23e41cff181c0d7137334a9567406",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/models/__pycache__/vae_gvp.cpython-312.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 13705,
+    "sha256": "641811ee062268f236fa054fa9b27ce3d8144b4474e42bb575ea3517257a69ab",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/models/__pycache__/vae_gvp.cpython-38.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 9712,
+    "sha256": "f2e668f825cc6a1d3b078d39762e2a1712337e047b3814f1c430424567911104",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/models/diffusion_gvp.py",
+    "destination": "references/design/src/models/diffusion_gvp.py",
+    "action": "move",
+    "bytes": 13606,
+    "sha256": "824c26e8654201056cc8a16df97d5dbbd82073e34aecdad277b21bc118b93641",
+    "reason": "保留生成与旧评分源码的本地依赖闭包；包含mock，不能当真实指标"
+  },
+  {
+    "source": "design/src/models/esm2_gvp.py",
+    "destination": "references/design/src/models/esm2_gvp.py",
+    "action": "move",
+    "bytes": 12209,
+    "sha256": "59e0af46bc9b1632ccedf31f7bca34910469b55837ef73580e15a597ff6765d4",
+    "reason": "保留生成与旧评分源码的本地依赖闭包；包含mock，不能当真实指标"
+  },
+  {
+    "source": "design/src/models/transformer_gvp.py",
+    "destination": "references/design/src/models/transformer_gvp.py",
+    "action": "move",
+    "bytes": 11011,
+    "sha256": "1dd2a23371d1931b4e85d80e22d44c7e8081f54bf1ef02f0a3c75e24caba4a8d",
+    "reason": "保留生成与旧评分源码的本地依赖闭包；包含mock，不能当真实指标"
+  },
+  {
+    "source": "design/src/models/vae_gvp.py",
+    "destination": "references/design/src/models/vae_gvp.py",
+    "action": "move",
+    "bytes": 13987,
+    "sha256": "b9c0ab76f5bf3625071128ff26c824d8e3974d125236666699ce04750a1c5b21",
+    "reason": "保留生成与旧评分源码的本地依赖闭包；包含mock，不能当真实指标"
+  },
+  {
+    "source": "design/src/protein_visualization.py",
+    "destination": "",
+    "action": "delete",
+    "bytes": 31563,
+    "sha256": "c833b6830fe9579d9ef6279e3a96fc6e5d8588e1da523e81070a522291daa4ca",
+    "reason": "额外训练、诊断、展示或错误截断MSA工具；本任务不训练新模型，问题已记入审计说明"
+  },
+  {
+    "source": "design/src/score/__init__.py",
+    "destination": "references/design/src/score/__init__.py",
+    "action": "move",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "保留生成与旧评分源码的本地依赖闭包；包含mock，不能当真实指标"
+  },
+  {
+    "source": "design/src/score/__pycache__/__init__.cpython-312.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 129,
+    "sha256": "21459954dc4f7d36d8ec76247bfc6bbcebf56adce83b8844d9c5207a7cf91d8a",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/score/__pycache__/__init__.cpython-38.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 123,
+    "sha256": "5b40c8ba4cb2223ab4fa49cfc8a696f1e3df7b4505e6b6fba2db5ae64a1e29b6",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/score/__pycache__/score_assembly.cpython-312.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 2626,
+    "sha256": "db1e64c9466224b8d946423870ea0ce52e79778672a27e0d0a0b8ad4f5a4024a",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/score/__pycache__/score_assembly.cpython-38.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 12848,
+    "sha256": "43e18aae1ee2d7052f78b8312bac0974b19fab328f7f66052a4c9835b2ecbdf2",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/score/__pycache__/score_conserv.cpython-312.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 815,
+    "sha256": "0a9ff8d817f7caf84c808026db3d44ccf06014bafe4c7af98dbdc41fab3216d5",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/score/__pycache__/score_conserv.cpython-38.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 3082,
+    "sha256": "3503ebae77d4be956f15f27cc210cb759e9b8104e63008dd7e78bad592b8e4df",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/score/__pycache__/score_fold.cpython-312.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 2065,
+    "sha256": "33edc62e2436aba7ca4b82845dfba918e4dd799dd28e1ea8e11ef787a14c04c5",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/score/__pycache__/score_fold.cpython-38.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 3487,
+    "sha256": "f992b9c14bd0ab68ffcccd8ce6d92b2cdb0507de5621500076bd19f8dd1d1b3a",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/score/__pycache__/score_mock.cpython-312.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 2149,
+    "sha256": "88ea1c5e92fc96669503a316de820f3c9acc51935a90da1cc3e83d9d6f315582",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/score/__pycache__/score_mock.cpython-38.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1564,
+    "sha256": "039eb87c151dd5b1e931bcbc861f84de763ea13123ad27da002be8dab5dc019c",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/score/__pycache__/score_net.cpython-312.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 2009,
+    "sha256": "437d2aae142765185914612eedfc9caf1e3fd3be38ddf1ccd187139c1241e7bf",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/score/__pycache__/score_net.cpython-38.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 2666,
+    "sha256": "8c842d33eaac39912cd1849b104635c8fb9c2112aa6b913b4c61abaf5331114f",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/score/__pycache__/score_novel.cpython-312.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1384,
+    "sha256": "4bfea1c94c3a9149ba48683df26261c1efdce79775bb86703cab7ead2fea7b25",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/score/__pycache__/score_novel.cpython-38.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 3063,
+    "sha256": "9c20e5bee1f76e811014258986c9c20d147654ff337607a333628190a7859311",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/score/__pycache__/score_toxic.cpython-312.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 767,
+    "sha256": "967a284de9deaf83aa4f09f29d789a98ee0b235ce0291a59c2ac44bc73d66bc7",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/score/__pycache__/score_toxic.cpython-38.pyc",
+    "destination": "",
+    "action": "delete",
+    "bytes": 2338,
+    "sha256": "a7ca3c666a99d4511cc84ac875505470d4936d244114acfd36b20898f0e643e0",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "design/src/score/score_assembly.py",
+    "destination": "references/design/src/score/score_assembly.py",
+    "action": "move",
+    "bytes": 16978,
+    "sha256": "1bb89620cc7ebf73970e16067e984ba8efa1424471c5f11315fb177d458db344",
+    "reason": "保留生成与旧评分源码的本地依赖闭包；包含mock，不能当真实指标"
+  },
+  {
+    "source": "design/src/score/score_conserv.py",
+    "destination": "references/design/src/score/score_conserv.py",
+    "action": "move",
+    "bytes": 4456,
+    "sha256": "1d76f4e1df2d0785dc7c3a8d482ff0f2289298f0a2429bf3c939d0ecbf53f82e",
+    "reason": "保留生成与旧评分源码的本地依赖闭包；包含mock，不能当真实指标"
+  },
+  {
+    "source": "design/src/score/score_fold.py",
+    "destination": "references/design/src/score/score_fold.py",
+    "action": "move",
+    "bytes": 3821,
+    "sha256": "d5311c73aca6fc5a33789f5c5a9b2abb817a1001c14a2ea5e55f282bb0e22946",
+    "reason": "保留生成与旧评分源码的本地依赖闭包；包含mock，不能当真实指标"
+  },
+  {
+    "source": "design/src/score/score_mock.py",
+    "destination": "references/design/src/score/score_mock.py",
+    "action": "move",
+    "bytes": 1623,
+    "sha256": "0db55d3f311d17917b57341ccb8faff103e83ded58eabbccd1c3bfe5e34452da",
+    "reason": "保留生成与旧评分源码的本地依赖闭包；包含mock，不能当真实指标"
+  },
+  {
+    "source": "design/src/score/score_net.py",
+    "destination": "references/design/src/score/score_net.py",
+    "action": "move",
+    "bytes": 3917,
+    "sha256": "bdc7b96335061ed25176e36bb71152f27b852aedccc4e210371362baa6f2d9b9",
+    "reason": "保留生成与旧评分源码的本地依赖闭包；包含mock，不能当真实指标"
+  },
+  {
+    "source": "design/src/score/score_novel.py",
+    "destination": "references/design/src/score/score_novel.py",
+    "action": "move",
+    "bytes": 3941,
+    "sha256": "f71a89a3ef50d463704fe0f811eadd572248a84a2c43f6d16b8c74eb1b16a690",
+    "reason": "保留生成与旧评分源码的本地依赖闭包；包含mock，不能当真实指标"
+  },
+  {
+    "source": "design/src/score/score_toxic.py",
+    "destination": "references/design/src/score/score_toxic.py",
+    "action": "move",
+    "bytes": 2534,
+    "sha256": "7ac937622f132c6cb20a17993af89528a9cb2defdff053d0e773479b5b93eb13",
+    "reason": "保留生成与旧评分源码的本地依赖闭包；包含mock，不能当真实指标"
+  },
+  {
+    "source": "design/src/train.py",
+    "destination": "",
+    "action": "delete",
+    "bytes": 9920,
+    "sha256": "10d1b1d20f2fda72ec46dc883303f414119ebb1ce815d3e7f8d68ab629a40d73",
+    "reason": "额外训练、诊断、展示或错误截断MSA工具；本任务不训练新模型，问题已记入审计说明"
+  },
+  {
+    "source": "design/毕业论文.pdf",
+    "destination": "references/design/毕业论文.pdf",
+    "action": "move",
+    "bytes": 1951241,
+    "sha256": "d04c0e7839a200a69a3d5d2f8572beb51b056b284cfdec6529eab41b2266f69d",
+    "reason": "教师提供的生成与评价方法参考论文"
+  },
+  {
+    "source": "T05/.DS_Store",
+    "destination": "",
+    "action": "delete",
+    "bytes": 6148,
+    "sha256": "fc00e23ace8f94afb36c6787b1adcb959c358af1ca654ee30d370717e584d105",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "T05/data/.DS_Store",
+    "destination": "",
+    "action": "delete",
+    "bytes": 6148,
+    "sha256": "8a9a74fbf8d206c82764ca731ff4726cced8f271a68fb85882316a8998a80da1",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "T05/data/generated_gvp.fasta",
+    "destination": "data/candidates/t05/generated_gvp.fasta",
+    "action": "move",
+    "bytes": 30076,
+    "sha256": "4be37ab575f7285035669955ed713dbcefb8fe2a1c2790de7ecd48e89cee9776",
+    "reason": "200条未验证家族归属的生成候选原始数据"
+  },
+  {
+    "source": "T05/data/real_gvp.fasta",
+    "destination": "data/raw/t05/real_gvp.fasta",
+    "action": "move",
+    "bytes": 950158,
+    "sha256": "2a9badfe7c3bbb80089b5948aa104cca1b6bd0800fe9946283e25bc69bf7edf9",
+    "reason": "4379条混合Gvp真实序列，保留已有训练基准及参考来源"
+  },
+  {
+    "source": "T05/data/原始数据/.DS_Store",
+    "destination": "",
+    "action": "delete",
+    "bytes": 6148,
+    "sha256": "1e396a38846f0043d48fdbc1b8553b4f52a9b818f2a0b4916a7d973dee468433",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "T05/data/原始数据/jtl/GvpL_not_partial.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 102718,
+    "sha256": "d84136e0f644eb95d56438c9aed5138059b6f43dd9a063c207814187cbb9dbdc",
+    "reason": "非GvpA原始家族数据；已有混合真实序列基准real_gvp.fasta保留，上游全家族采集不再重建"
+  },
+  {
+    "source": "T05/data/原始数据/jtl/GvpL_RefSeq.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 103483,
+    "sha256": "5901a1197cba349719cc5565c0093a79fb96ea4cde254a86d1a9f7952ff9a47a",
+    "reason": "非GvpA原始家族数据；已有混合真实序列基准real_gvp.fasta保留，上游全家族采集不再重建"
+  },
+  {
+    "source": "T05/data/原始数据/jtl/GvpN_not_partial.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 475530,
+    "sha256": "c673023d847e8cf94e05f99b051c39b479f686d00a26c8efccab284b0d863714",
+    "reason": "非GvpA原始家族数据；已有混合真实序列基准real_gvp.fasta保留，上游全家族采集不再重建"
+  },
+  {
+    "source": "T05/data/原始数据/jtl/GvpN_RefSeq.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 558395,
+    "sha256": "7b67090d42173b30a4b24e9cb6da8e8c769355c79eebc691d6474677d8b0c437",
+    "reason": "非GvpA原始家族数据；已有混合真实序列基准real_gvp.fasta保留，上游全家族采集不再重建"
+  },
+  {
+    "source": "T05/data/原始数据/jxzw/GvpJ_raw.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 180546,
+    "sha256": "950cb0bd67371d1f4e2147871ae18186e08214f2b308352073c65f9a47af3e36",
+    "reason": "非GvpA原始家族数据；已有混合真实序列基准real_gvp.fasta保留，上游全家族采集不再重建"
+  },
+  {
+    "source": "T05/data/原始数据/jxzw/GvpK_raw.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1018286,
+    "sha256": "2c29b6c51dc0fae0b1529fe7061c9b0b8473321ebe39e225d8fe8c1c139dd65e",
+    "reason": "非GvpA原始家族数据；已有混合真实序列基准real_gvp.fasta保留，上游全家族采集不再重建"
+  },
+  {
+    "source": "T05/data/原始数据/jxzw/GvpZ_raw.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "非GvpA原始家族数据；已有混合真实序列基准real_gvp.fasta保留，上游全家族采集不再重建"
+  },
+  {
+    "source": "T05/data/原始数据/ljl/GvpA_NotPartial.fasta",
+    "destination": "data/raw/t05/gvpa/GvpA_NotPartial.fasta",
+    "action": "move",
+    "bytes": 254328,
+    "sha256": "534b05d2d9a4cd3698960ace4633ee5e70c124908d32ee1df02fc741e594b1f6",
+    "reason": "GvpA原始采集序列和补救来源；保留原始头信息与重复记录"
+  },
+  {
+    "source": "T05/data/原始数据/ljl/GvpA_RefSeq.fasta",
+    "destination": "data/raw/t05/gvpa/GvpA_RefSeq.fasta",
+    "action": "move",
+    "bytes": 99011,
+    "sha256": "8f03d5b7bff9a23af7a27244dc1c51fcb583995d60b207517a3e5419788df6b8",
+    "reason": "GvpA原始采集序列和补救来源；保留原始头信息与重复记录"
+  },
+  {
+    "source": "T05/data/原始数据/ljl/GvpV_NotPartial.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 19180,
+    "sha256": "3b6c423c9454c36d2cacd6030604498f26a5a2e4c5b0da6198583a1883e97e52",
+    "reason": "非GvpA原始家族数据；已有混合真实序列基准real_gvp.fasta保留，上游全家族采集不再重建"
+  },
+  {
+    "source": "T05/data/原始数据/ljl/GvpV_RefSeq.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 8187,
+    "sha256": "96176addee164a944e1a5af6a56f9b06b0b4d7da7e954626caffa0f6af521afc",
+    "reason": "非GvpA原始家族数据；已有混合真实序列基准real_gvp.fasta保留，上游全家族采集不再重建"
+  },
+  {
+    "source": "T05/data/原始数据/ljl/rescued_GvpA_candidates.fasta",
+    "destination": "data/raw/t05/gvpa/rescued_GvpA_candidates.fasta",
+    "action": "move",
+    "bytes": 292,
+    "sha256": "86bb5af8e161668ca3282972ae40ce1c340583912aaf36339a36f8008e3a069b",
+    "reason": "GvpA原始采集序列和补救来源；保留原始头信息与重复记录"
+  },
+  {
+    "source": "T05/data/原始数据/ljl/rescued_GvpV_candidates.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 468,
+    "sha256": "5779cdf359458307e2ef36c8d0efd9f936f4b8c6b8db8dfb1a2983d823350615",
+    "reason": "非GvpA原始家族数据；已有混合真实序列基准real_gvp.fasta保留，上游全家族采集不再重建"
+  },
+  {
+    "source": "T05/data/原始数据/lxy/GvpC_raw.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 53057,
+    "sha256": "b6d82e69e2ff720bdcd660deb772d1a807c71d4159ceb12a60aed224a0d99b93",
+    "reason": "非GvpA原始家族数据；已有混合真实序列基准real_gvp.fasta保留，上游全家族采集不再重建"
+  },
+  {
+    "source": "T05/data/原始数据/lxy/GvpF_raw.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 16685,
+    "sha256": "5f6ca2bca3ea6bd4bb4a44947b98cead8911636dd7fdae9dc312b2852c74dd68",
+    "reason": "非GvpA原始家族数据；已有混合真实序列基准real_gvp.fasta保留，上游全家族采集不再重建"
+  },
+  {
+    "source": "T05/data/原始数据/sy/GvpG_GvpG_not_partial.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 15767,
+    "sha256": "e9ff0cb083714d766bba5af0c8deed488a6dd452f6a224fbd081436f218b29f7",
+    "reason": "非GvpA原始家族数据；已有混合真实序列基准real_gvp.fasta保留，上游全家族采集不再重建"
+  },
+  {
+    "source": "T05/data/原始数据/sy/GvpG_GvpG_refseq.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 15767,
+    "sha256": "e9ff0cb083714d766bba5af0c8deed488a6dd452f6a224fbd081436f218b29f7",
+    "reason": "非GvpA原始家族数据；已有混合真实序列基准real_gvp.fasta保留，上游全家族采集不再重建"
+  },
+  {
+    "source": "T05/data/原始数据/sy/GvpI_GvpI_not_partial.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 828,
+    "sha256": "4a42de06fac659c6c05c7ebf8a03dbcecb0f66c955ff61627dd1736de781b124",
+    "reason": "非GvpA原始家族数据；已有混合真实序列基准real_gvp.fasta保留，上游全家族采集不再重建"
+  },
+  {
+    "source": "T05/data/原始数据/sy/GvpI_GvpI_refseq.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 828,
+    "sha256": "4a42de06fac659c6c05c7ebf8a03dbcecb0f66c955ff61627dd1736de781b124",
+    "reason": "非GvpA原始家族数据；已有混合真实序列基准real_gvp.fasta保留，上游全家族采集不再重建"
+  },
+  {
+    "source": "T05/data/原始数据/sy/GvpW_GvpW_gvp.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 2750,
+    "sha256": "fd62548103460e55a5ddb884eaf0c77541bb06aedda0d7a08f9669b5ff6ac477",
+    "reason": "非GvpA原始家族数据；已有混合真实序列基准real_gvp.fasta保留，上游全家族采集不再重建"
+  },
+  {
+    "source": "T05/doc/ana_aprot.md",
+    "destination": "",
+    "action": "delete",
+    "bytes": 6494,
+    "sha256": "eb13b8fd034ecb24a6359d202440a5df1db98211976b6b6aeca95f4d3aa543c5",
+    "reason": "A-Prot结构预测复现或示例分析说明，超出必需评价范围"
+  },
+  {
+    "source": "T05/doc/ana_transformer_lm.md",
+    "destination": "references/t05/doc/ana_transformer_lm.md",
+    "action": "move",
+    "bytes": 3885,
+    "sha256": "92d53bce529c6f725a129112d315c7123a6a6c484d6fb5ca58fae264b64a182d",
+    "reason": "数据处理、生成或序列EDA方法说明"
+  },
+  {
+    "source": "T05/doc/aprot_run.md",
+    "destination": "",
+    "action": "delete",
+    "bytes": 2738,
+    "sha256": "557d05f4155571de57396969e63e77c4f658ec696d3893c9ac9f3e247b1c845c",
+    "reason": "A-Prot结构预测复现或示例分析说明，超出必需评价范围"
+  },
+  {
+    "source": "T05/doc/dataset.md",
+    "destination": "references/t05/doc/dataset.md",
+    "action": "move",
+    "bytes": 5648,
+    "sha256": "c91b24f527a23dde2b62e0a623fe45757812a487d6e8e7bd42937d993c669e82",
+    "reason": "数据处理、生成或序列EDA方法说明"
+  },
+  {
+    "source": "T05/doc/model_training.md",
+    "destination": "references/t05/doc/model_training.md",
+    "action": "move",
+    "bytes": 3717,
+    "sha256": "b10257de882f99fe14dc475f7cfcc70012682d0a4ae9994461536a5eaa52a6ab",
+    "reason": "数据处理、生成或序列EDA方法说明"
+  },
+  {
+    "source": "T05/output/.DS_Store",
+    "destination": "",
+    "action": "delete",
+    "bytes": 6148,
+    "sha256": "670434df5445f899eb41031e03b6ef7c38561413df0275232075dc28c9503a89",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "T05/output/aprot_ana_output/generated_a3m_new.npz",
+    "destination": "",
+    "action": "delete",
+    "bytes": 315092023,
+    "sha256": "48fbb9c27365a25763b0a0861ecaae0dfbe33a5cda37fc6a099a13d04589c972",
+    "reason": "结构预测示例及旧输出，不参与本任务四个必需指标；包含与候选无关的T0998案例"
+  },
+  {
+    "source": "T05/output/aprot_ana_output/log/log.txt",
+    "destination": "",
+    "action": "delete",
+    "bytes": 2344,
+    "sha256": "b2d031d616b8f9cf811b98fb3a71ee5620fb9d6107d225585cffdb6db6f53a1e",
+    "reason": "结构预测示例及旧输出，不参与本任务四个必需指标；包含与候选无关的T0998案例"
+  },
+  {
+    "source": "T05/output/aprot_ana_output/pic/predicted_contact_matrix.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 108610,
+    "sha256": "ffcc595da35735a0da8662c19f769ebfb22996bc004b983fed3c020fa0ba28a5",
+    "reason": "结构预测示例及旧输出，不参与本任务四个必需指标；包含与候选无关的T0998案例"
+  },
+  {
+    "source": "T05/output/aprot_ana_output/pic/residue_confidence_barplot.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 207862,
+    "sha256": "ada1e22bedaeebbfb154599b01551445dbe2233807bfed6382878f87acdc4ae6",
+    "reason": "结构预测示例及旧输出，不参与本任务四个必需指标；包含与候选无关的T0998案例"
+  },
+  {
+    "source": "T05/output/aprot_ana_output/real_a3m.npz",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1637674,
+    "sha256": "32e486d0909bc38ef77e14f6429070e40037f600117f8364d2674a29bf0f026e",
+    "reason": "结构预测示例及旧输出，不参与本任务四个必需指标；包含与候选无关的T0998案例"
+  },
+  {
+    "source": "T05/output/aprot_ana_output/real_a3m.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 96757,
+    "sha256": "123607da0c521d3c7e3160065363a48ed88ef750f7eefd7bf727da2929d181e6",
+    "reason": "结构预测示例及旧输出，不参与本任务四个必需指标；包含与候选无关的T0998案例"
+  },
+  {
+    "source": "T05/output/aprot_ana_output/T0998.npz",
+    "destination": "",
+    "action": "delete",
+    "bytes": 10215141,
+    "sha256": "7482195546906c2f4c5efdadd9cfe15be183e32eff00c35e7e27e77505b87e66",
+    "reason": "结构预测示例及旧输出，不参与本任务四个必需指标；包含与候选无关的T0998案例"
+  },
+  {
+    "source": "T05/output/aprot_ana_output/T0998.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 3421,
+    "sha256": "bfa54c6160adaf9098ff660b3ae213e1b763bef42f864370580d3319865683ef",
+    "reason": "结构预测示例及旧输出，不参与本任务四个必需指标；包含与候选无关的T0998案例"
+  },
+  {
+    "source": "T05/output/aprot_ana_output/test.npz",
+    "destination": "",
+    "action": "delete",
+    "bytes": 10330095,
+    "sha256": "f2d803d2bc56b15536350431c49c8d9b71c190dd2869e28d7302b3d66e79a953",
+    "reason": "结构预测示例及旧输出，不参与本任务四个必需指标；包含与候选无关的T0998案例"
+  },
+  {
+    "source": "T05/output/aprot_ana_output/test.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 237752,
+    "sha256": "bf01981581e92e5fbd544ce42000663843b882c3fa938c4fb2b6acb3935823a4",
+    "reason": "结构预测示例及旧输出，不参与本任务四个必需指标；包含与候选无关的T0998案例"
+  },
+  {
+    "source": "T05/output/original_analysis/分析数据/amino_acid_frequency.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 147772,
+    "sha256": "ae4c576c6b6d2f4b608dfa287c198c74c73f5aaeaebbdd87797cb3d692628c3b",
+    "reason": "混合家族的旧统计输出、日志或合并中间数据；保留原始GvpA、已有真实基准及可借鉴脚本"
+  },
+  {
+    "source": "T05/output/original_analysis/分析数据/amino_acid_frequency.txt",
+    "destination": "",
+    "action": "delete",
+    "bytes": 381,
+    "sha256": "ddc85c725703b8f27a35fa87e2cf2ba74cd3f39376df36ef4f2a5e27d26a6225",
+    "reason": "混合家族的旧统计输出、日志或合并中间数据；保留原始GvpA、已有真实基准及可借鉴脚本"
+  },
+  {
+    "source": "T05/output/original_analysis/分析数据/length_boxplot.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 55143,
+    "sha256": "d9ae42a8a944043d54436064700a10256ae64511a5f40d1ce480582cc5e6399e",
+    "reason": "混合家族的旧统计输出、日志或合并中间数据；保留原始GvpA、已有真实基准及可借鉴脚本"
+  },
+  {
+    "source": "T05/output/original_analysis/分析数据/length_distribution.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 63483,
+    "sha256": "a144c779dc30529645ce96c804f1e46b9c8e302ea0ee22e2b88dee67d00ac87c",
+    "reason": "混合家族的旧统计输出、日志或合并中间数据；保留原始GvpA、已有真实基准及可借鉴脚本"
+  },
+  {
+    "source": "T05/output/original_analysis/分析数据/length_distribution.txt",
+    "destination": "",
+    "action": "delete",
+    "bytes": 20269,
+    "sha256": "5198319ba551f72931477926fff9b21ee313e427c04552005542b4e3b5e6750a",
+    "reason": "混合家族的旧统计输出、日志或合并中间数据；保留原始GvpA、已有真实基准及可借鉴脚本"
+  },
+  {
+    "source": "T05/output/original_analysis/分析数据/length_stats.txt",
+    "destination": "",
+    "action": "delete",
+    "bytes": 184,
+    "sha256": "dd274761de0259107910b464651b18a192268713b727f340b4d6c3b5345893d9",
+    "reason": "混合家族的旧统计输出、日志或合并中间数据；保留原始GvpA、已有真实基准及可借鉴脚本"
+  },
+  {
+    "source": "T05/output/original_analysis/处理数据/deduplicated.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 950158,
+    "sha256": "2a9badfe7c3bbb80089b5948aa104cca1b6bd0800fe9946283e25bc69bf7edf9",
+    "reason": "字节级重复，已保留相同内容于 data/raw/t05/real_gvp.fasta"
+  },
+  {
+    "source": "T05/output/original_analysis/汇总数据/merged.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 2949672,
+    "sha256": "427e903437369321f440f408d64031bf4726e54569f85344335d3ea9fd17aed4",
+    "reason": "混合家族的旧统计输出、日志或合并中间数据；保留原始GvpA、已有真实基准及可借鉴脚本"
+  },
+  {
+    "source": "T05/output/transformerlm_ana_output/figures/amino/amino_acid_cdf.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 165544,
+    "sha256": "7e54386a6e5ab176f2cfa9ed6355afcf3fc60dcf77bf6ebc4b89277d5ebf3932",
+    "reason": "混合家族的旧统计输出、日志或合并中间数据；保留原始GvpA、已有真实基准及可借鉴脚本"
+  },
+  {
+    "source": "T05/output/transformerlm_ana_output/figures/amino/amino_acid_frequency.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 107895,
+    "sha256": "75621d146dd975a0f86b8b8a560613460e31b9efc43957375ea08065ec69f8c0",
+    "reason": "混合家族的旧统计输出、日志或合并中间数据；保留原始GvpA、已有真实基准及可借鉴脚本"
+  },
+  {
+    "source": "T05/output/transformerlm_ana_output/figures/amino/amino_acid_frequency_difference.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 110640,
+    "sha256": "2ee0d99e328c2ab8aca7fa9cf7c0188d6ddea80a807b2f82983dd951e1776189",
+    "reason": "混合家族的旧统计输出、日志或合并中间数据；保留原始GvpA、已有真实基准及可借鉴脚本"
+  },
+  {
+    "source": "T05/output/transformerlm_ana_output/figures/divergence/divergence_barplot.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 89067,
+    "sha256": "44d23274bf6ce16e2a4666eddf8ee68eced7a87c0c868b9c5429ce25269cfd30",
+    "reason": "混合家族的旧统计输出、日志或合并中间数据；保留原始GvpA、已有真实基准及可借鉴脚本"
+  },
+  {
+    "source": "T05/output/transformerlm_ana_output/figures/divergence/kl_contribution_per_aa.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 95625,
+    "sha256": "5c395b04c5acc85ed2d61e7c47b933283dd70406bb25d39047f8278702c6ad65",
+    "reason": "混合家族的旧统计输出、日志或合并中间数据；保留原始GvpA、已有真实基准及可借鉴脚本"
+  },
+  {
+    "source": "T05/output/transformerlm_ana_output/figures/length/length_boxplot.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 108059,
+    "sha256": "58c1770327a213aab9c4bcb963ce6e2df4e59dae9ae5cb3379e950466aec8fab",
+    "reason": "混合家族的旧统计输出、日志或合并中间数据；保留原始GvpA、已有真实基准及可借鉴脚本"
+  },
+  {
+    "source": "T05/output/transformerlm_ana_output/figures/length/length_cdf.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 126043,
+    "sha256": "6e78f99022c7cf7e99a4338ebf9168b2031e35c309311104a6469a399e08da8b",
+    "reason": "混合家族的旧统计输出、日志或合并中间数据；保留原始GvpA、已有真实基准及可借鉴脚本"
+  },
+  {
+    "source": "T05/output/transformerlm_ana_output/figures/length/length_distribution.png",
+    "destination": "",
+    "action": "delete",
+    "bytes": 109388,
+    "sha256": "71f63d0ac35a0efa0f6c2a0e793c174f9c42188706018a1a5f702c9033c8ba8b",
+    "reason": "混合家族的旧统计输出、日志或合并中间数据；保留原始GvpA、已有真实基准及可借鉴脚本"
+  },
+  {
+    "source": "T05/output/transformerlm_ana_output/log/analysis_2026-01-16_19-54-58.log",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1713,
+    "sha256": "f536f631153a585fd2ef7dc242f69f566c91fce6ba5921f7d4af30423a0fcbfd",
+    "reason": "混合家族的旧统计输出、日志或合并中间数据；保留原始GvpA、已有真实基准及可借鉴脚本"
+  },
+  {
+    "source": "T05/README.md",
+    "destination": "references/t05/README_original.md",
+    "action": "move",
+    "bytes": 7838,
+    "sha256": "db78c6cd0a0b932c460f92f48d8964d6fdc5c3ef7b47d1f7a190d7d18c505cc9",
+    "reason": "保留原工程说明用于追溯，旧路径可能已失效"
+  },
+  {
+    "source": "T05/ref/A_Comprehensive_Review_of_Transformer-based_language_models_for_Protein_Sequence_Analysis_and_Design.pdf",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1810928,
+    "sha256": "5505f4df441bbf125b63e7a66b30c90bb5c89921d257d70633ce93492051867b",
+    "reason": "上游生成模型或结构预测的背景文献附件，非本次四目标实现所需；原报告参考文献目录已保留"
+  },
+  {
+    "source": "T05/ref/A‑Prot.pdf",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1455484,
+    "sha256": "4339f3f2ede6711b050772179fe9d9bbc692e3638159ca47eae5b282c864ae90",
+    "reason": "上游生成模型或结构预测的背景文献附件，非本次四目标实现所需；原报告参考文献目录已保留"
+  },
+  {
+    "source": "T05/ref/Deep‑ProBind.pdf",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1778765,
+    "sha256": "10880dda21fcf95af3e928ac830bb53cc661b1e9c894c5b46533998e54a442f0",
+    "reason": "上游生成模型或结构预测的背景文献附件，非本次四目标实现所需；原报告参考文献目录已保留"
+  },
+  {
+    "source": "T05/ref/Improving functional protein generation via foundation model-derived latent space likelihood optimization.pdf",
+    "destination": "",
+    "action": "delete",
+    "bytes": 770480,
+    "sha256": "405cc1e10b46a46d2707904e6a6854a5e7f3c0f9e224f333f2230bedd58fccc0",
+    "reason": "上游生成模型或结构预测的背景文献附件，非本次四目标实现所需；原报告参考文献目录已保留"
+  },
+  {
+    "source": "T05/ref/LM‑GVP.pdf",
+    "destination": "",
+    "action": "delete",
+    "bytes": 3208439,
+    "sha256": "a3c2f963a9345d4943c9f02413f2aac23e03ab833c693d3bee55303c9cb5fadb",
+    "reason": "上游生成模型或结构预测的背景文献附件，非本次四目标实现所需；原报告参考文献目录已保留"
+  },
+  {
+    "source": "T05/ref/ProT-VAE.pdf",
+    "destination": "",
+    "action": "delete",
+    "bytes": 25222458,
+    "sha256": "0480fb9c457bd34c3a55e3f5c9a48003618b8a00d2a7a316707cbb53254727d6",
+    "reason": "上游生成模型或结构预测的背景文献附件，非本次四目标实现所需；原报告参考文献目录已保留"
+  },
+  {
+    "source": "T05/ref/Protein Large Language Models A Comprehensive Survey.pdf",
+    "destination": "",
+    "action": "delete",
+    "bytes": 21363004,
+    "sha256": "e5e51272ba1ecf08a370b1cce82d1d67c9b83af8cc3350fedc512e1619a4401e",
+    "reason": "上游生成模型或结构预测的背景文献附件，非本次四目标实现所需；原报告参考文献目录已保留"
+  },
+  {
+    "source": "T05/ref/Transformer-based protein generation with regularized latent space optimization.pdf",
+    "destination": "",
+    "action": "delete",
+    "bytes": 4413112,
+    "sha256": "6eba19320997a4e1c110b32186aa8f67449013b2db1f07b297ff974b2ddaeb48",
+    "reason": "上游生成模型或结构预测的背景文献附件，非本次四目标实现所需；原报告参考文献目录已保留"
+  },
+  {
+    "source": "T05/ref/Transformers in Protein A Survey.pdf",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1043344,
+    "sha256": "ba5f45b8aabdf07a874faf4b0e77cae2d99d1602c3d38ec702b55db8825bc972",
+    "reason": "上游生成模型或结构预测的背景文献附件，非本次四目标实现所需；原报告参考文献目录已保留"
+  },
+  {
+    "source": "T05/src/.DS_Store",
+    "destination": "",
+    "action": "delete",
+    "bytes": 8196,
+    "sha256": "44b6c9e5878e9e6f3568c240ad3e6f2106e20f3dd81e690b082f110abe363294",
+    "reason": "操作系统、解释器或编辑器缓存配置"
+  },
+  {
+    "source": "T05/src/analysis_aprot/analysis.py",
+    "destination": "",
+    "action": "delete",
+    "bytes": 11372,
+    "sha256": "0a560d373f5496a1838d97e86dab5bfeebecc791484b0ff9ad61036f90b34af9",
+    "reason": "结构预测示例及旧输出，不参与本任务四个必需指标；包含与候选无关的T0998案例"
+  },
+  {
+    "source": "T05/src/analysis_aprot/run_aprot_all.bash",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1532,
+    "sha256": "a0a9d18d4b3981f6c78e0013f221ae33ffc884cf66689d0d27a6ada05d51917c",
+    "reason": "结构预测示例及旧输出，不参与本任务四个必需指标；包含与候选无关的T0998案例"
+  },
+  {
+    "source": "T05/src/analysis_aprot/utils.py",
+    "destination": "",
+    "action": "delete",
+    "bytes": 201,
+    "sha256": "e3b02422121132bf656078ab4d22750bbce5d9381fec4b4fd6c11f13cb487a83",
+    "reason": "结构预测示例及旧输出，不参与本任务四个必需指标；包含与候选无关的T0998案例"
+  },
+  {
+    "source": "T05/src/analysis_transformer_lm/analysis_aa_freq.py",
+    "destination": "references/t05/src/analysis_transformer_lm/analysis_aa_freq.py",
+    "action": "move",
+    "bytes": 3368,
+    "sha256": "cc5c02d126773398d681ba3c8095b78b6fae166bb190ac824a9358cc74c99507",
+    "reason": "上游数据生成或序列预处理、EDA源码；保留原文供后续修复参考"
+  },
+  {
+    "source": "T05/src/analysis_transformer_lm/analysis_divergence.py",
+    "destination": "references/t05/src/analysis_transformer_lm/analysis_divergence.py",
+    "action": "move",
+    "bytes": 2347,
+    "sha256": "d8d37e2d28af5da81c6f1ecf49a8334c1ab54658d51f6d41acf6bde1d6210946",
+    "reason": "上游数据生成或序列预处理、EDA源码；保留原文供后续修复参考"
+  },
+  {
+    "source": "T05/src/analysis_transformer_lm/analysis_length.py",
+    "destination": "references/t05/src/analysis_transformer_lm/analysis_length.py",
+    "action": "move",
+    "bytes": 2543,
+    "sha256": "e9aaaf8c489e10282ee07f3b6d3d193f62b52711768ba66bb4fce4ace92b9d71",
+    "reason": "上游数据生成或序列预处理、EDA源码；保留原文供后续修复参考"
+  },
+  {
+    "source": "T05/src/analysis_transformer_lm/test.sh",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1025,
+    "sha256": "356b70f4cab814e55d10242b7611b637c1a2cb84e02b73749ad1840ae5b48d23",
+    "reason": "写死旧路径的演示运行脚本，分析Python源码已保留"
+  },
+  {
+    "source": "T05/src/aprot/.DS_Store",
+    "destination": "",
+    "action": "delete",
+    "bytes": 8196,
+    "sha256": "61c4b9ab491e4dbd355c7a2673fc0a4208c427d19e79d01488718d1bc8a4135b",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/config",
+    "destination": "",
+    "action": "delete",
+    "bytes": 298,
+    "sha256": "7d1a4e79c046803df064ef3a8cb39546c3999e3962dfd0b29b00c233db8610c4",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/description",
+    "destination": "",
+    "action": "delete",
+    "bytes": 73,
+    "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/HEAD",
+    "destination": "",
+    "action": "delete",
+    "bytes": 21,
+    "sha256": "28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/hooks/applypatch-msg.sample",
+    "destination": "",
+    "action": "delete",
+    "bytes": 478,
+    "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/hooks/commit-msg.sample",
+    "destination": "",
+    "action": "delete",
+    "bytes": 896,
+    "sha256": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/hooks/fsmonitor-watchman.sample",
+    "destination": "",
+    "action": "delete",
+    "bytes": 4655,
+    "sha256": "f3c0228d8e827f1c5260ac59fdd92c3d425c46e54711ef713c5a54ae0a4db2b4",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/hooks/post-update.sample",
+    "destination": "",
+    "action": "delete",
+    "bytes": 189,
+    "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/hooks/pre-applypatch.sample",
+    "destination": "",
+    "action": "delete",
+    "bytes": 424,
+    "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/hooks/pre-commit.sample",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1643,
+    "sha256": "f9af7d95eb1231ecf2eba9770fedfa8d4797a12b02d7240e98d568201251244a",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/hooks/pre-merge-commit.sample",
+    "destination": "",
+    "action": "delete",
+    "bytes": 416,
+    "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/hooks/pre-push.sample",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1374,
+    "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/hooks/pre-rebase.sample",
+    "destination": "",
+    "action": "delete",
+    "bytes": 4898,
+    "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/hooks/pre-receive.sample",
+    "destination": "",
+    "action": "delete",
+    "bytes": 544,
+    "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/hooks/prepare-commit-msg.sample",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1492,
+    "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/hooks/push-to-checkout.sample",
+    "destination": "",
+    "action": "delete",
+    "bytes": 2783,
+    "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/hooks/update.sample",
+    "destination": "",
+    "action": "delete",
+    "bytes": 3650,
+    "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/index",
+    "destination": "",
+    "action": "delete",
+    "bytes": 24904,
+    "sha256": "4c5322a52486600d69db212a632ffd72d017769ef0a6defbaaab8af93aa26a2c",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/info/exclude",
+    "destination": "",
+    "action": "delete",
+    "bytes": 240,
+    "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/logs/HEAD",
+    "destination": "",
+    "action": "delete",
+    "bytes": 212,
+    "sha256": "9dcae92250e454e7fd2f3276dc16e700968442e04078ed69a0135a11527e0eca",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/logs/refs/heads/main",
+    "destination": "",
+    "action": "delete",
+    "bytes": 212,
+    "sha256": "9dcae92250e454e7fd2f3276dc16e700968442e04078ed69a0135a11527e0eca",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/logs/refs/remotes/origin/HEAD",
+    "destination": "",
+    "action": "delete",
+    "bytes": 212,
+    "sha256": "9dcae92250e454e7fd2f3276dc16e700968442e04078ed69a0135a11527e0eca",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/objects/pack/pack-2d08cf1759846453092d4b4b5d63ae8d40a5b07e.idx",
+    "destination": "",
+    "action": "delete",
+    "bytes": 11264,
+    "sha256": "44b972ddb76527e0457bdaca04d228835f21153d6c5e22a07a84d2f7519a6a45",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/objects/pack/pack-2d08cf1759846453092d4b4b5d63ae8d40a5b07e.pack",
+    "destination": "",
+    "action": "delete",
+    "bytes": 9125276,
+    "sha256": "69a269efa91749a03c2a0569e512fc3df13de3210981ccc42818f0b0f644629a",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/packed-refs",
+    "destination": "",
+    "action": "delete",
+    "bytes": 169,
+    "sha256": "203031a0523f1b2dc14b3cc8e17fb59efc216e43697439322fad758afee6a06e",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/refs/heads/main",
+    "destination": "",
+    "action": "delete",
+    "bytes": 41,
+    "sha256": "ec4992b9ce4a01c5a344449c856bcaf5245857ffa81fd612931fcd554c136207",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.git/refs/remotes/origin/HEAD",
+    "destination": "",
+    "action": "delete",
+    "bytes": 30,
+    "sha256": "2bb6a24aa0fc6c484100f5d51a29bbad841cd2c755f5d93faa204e5dbb4eb2b4",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/.run_aprot_inference.py.swp",
+    "destination": "",
+    "action": "delete",
+    "bytes": 12288,
+    "sha256": "4e8148536c5d71041cdd04be1450acdd93f62fd55270cf1be712e8d909f42173",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0949.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 307001,
+    "sha256": "a0ba491fa1777f7a1353aaf5508022ee4bf17e392abe2fe74494168f6857dd57",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0950.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 530582,
+    "sha256": "c188b4ff88472f1f826b622c1e8b2482f71937a0e8500eabb9fe985610ddcd38",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0953s2.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 401668,
+    "sha256": "bef1bb641101e62ce8c40827e774379b34dd01c45421287bbbabb87a5d41da03",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0957s1.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 279087,
+    "sha256": "8174f500f088593b5fed6f9e330cbc1e5a395deb6876cc8873b0fcaac977e0dc",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0957s2.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 171928,
+    "sha256": "bc6fdcd9fcc2e0108e06583ac433e5767a38a2860f4dcfd41e33ac918705db59",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0958.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 76109,
+    "sha256": "32c0ad3aed153aff56f2d3e2517d0e7f76c07565655cbf879864426781f3772e",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0960.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 579383,
+    "sha256": "248b7fa3fbd1a6a926a7d2b4b23884eff6b0ef63f9cd1dd07ad861f206814a97",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0963.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 566054,
+    "sha256": "c3de72b97d781392659eaf616e3d68f4227467f0645209e3126b56466035b424",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0968s1.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 233225,
+    "sha256": "651e28640e50b4234632290094d23f219117e0083f590ae2ce282acdaf2fd81b",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0968s2.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 219379,
+    "sha256": "c970bfa0a331907de32de7c0e7af11ac1e743f8432f3a0db3264c2fe4810f97f",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0969.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 710772,
+    "sha256": "0dee547a409ddd22ce8ac6e4f97d61d4f6c66e7e206c209c787cf3774301c0d1",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0970.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 195854,
+    "sha256": "e00dbadc9332ee26bf8eba05017b066ceb3193ce236c7e8ddfa83eeffd6344d5",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0975.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 523241,
+    "sha256": "a2d37ddd6f2710dd5638a3d64b2248fec32572d146ec19a1a473372b484bb8c2",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0978.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 627138,
+    "sha256": "0764dbce6114f069cb83cb77fcb7301e7bd6f83bfb531191a6048c9ced63f5ad",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0980s1.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 142517,
+    "sha256": "751728c4982bf061bac782f2a9dbcf28e3bad578b969a7d83c2db17b05c42334",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0981.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 912690,
+    "sha256": "1c600fab759405678008bd57785ed36b14b9205ebf0a0b961cc694b4470fd72f",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0986s1.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 192840,
+    "sha256": "b386230f178bb178c5da451ca51887860e3adb4702c1eff3bac6fffb31211fc9",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0986s2.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 183632,
+    "sha256": "fc31187f40dbe2f1885adc416420903d501c36ebf7c2964989584bb897332f99",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0987.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 372045,
+    "sha256": "fc53c238552ed2e1936c167c994c67c9cd366b62ab52cc5c71f3ffab74f5c94a",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0989.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 301577,
+    "sha256": "1662d3a95437c06133f7628f76faf62fd90251dd4adbe9e3f6ab461bef42a9d2",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0990.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 413139,
+    "sha256": "8d92bc4fd43ff945e83668e9967d1ff227515f43225b27a839a3e51bb2fcfa0a",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0991.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 68337,
+    "sha256": "b72f31a6946faf98ec0aeba6f0f2a3561c1d14d5344b80a16cbf58aa562a4c8b",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0992.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 232981,
+    "sha256": "9a8159de79841fb2b73861c5ec4547cdd9c6c32d8a3dac5c43efa4ddadf27bcb",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0997.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 374182,
+    "sha256": "3d3c95d0a5423a77c12e9b5dca06d87b6e88e71fceea98b78fec4da3c185f3cb",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0998.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 112961,
+    "sha256": "39314908bcb5e71ef04e88cccc76269633a7cadb86b7e8531c7dae254f856673",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1000.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 764537,
+    "sha256": "880927871d2e83008b4a849f324aa98991f19a28fd7b699ccef75e64b272a2ac",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1001.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 173893,
+    "sha256": "12dce2fabf526fee1568fff57825545bfbd1af571da7725aa5bb3e10c9ed1f42",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1005.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 551368,
+    "sha256": "b5fd78cac7097e01914ebcab3076de0c6be64dea2bda8aa65add6f44a36ebcb3",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1008.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 45473,
+    "sha256": "bceef3bcf2bebcb27c86139e1172139a0a3b70450b5018dfca0c5da88f562c4a",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1010.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 345494,
+    "sha256": "f65ce293d1f59d427ac2253d59216f7c4b531d16b8888e1d983f65ac0765eeed",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1015s1.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 183150,
+    "sha256": "548079ad4f4a24f35d3c0a22210317abdcfa1d1dbafbd33eecc7e8b6e1d9370a",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1017s2.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 208522,
+    "sha256": "260584ef329f1884724f7cef85de62bc7347e693255659b503d20aa03c9ba68e",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1019s1.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 142270,
+    "sha256": "7d6b87299e41738198743aa91a7adee98cef98c3713ac23327bfc3c6b59c8df4",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1021s3.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 459623,
+    "sha256": "1d775b40ad9c5622aa2c5aaa143b745b466269371edf83cc4b99b25c38b54b17",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1022s1.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 379181,
+    "sha256": "ea42e1698bcab2fa04faeb12410a34077448feac9e75a94d2bfd5c024874ec17",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0949.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 71091,
+    "sha256": "fdf4dd3885b43db26090f30ef32cd211610ea353d5c61fc24c76b4cd2bea9bdb",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0950.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 68255,
+    "sha256": "192d71796c2ef4477875a4de056973704d9d370e56a6873e63b514cff3e1d557",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0953s2.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 53303,
+    "sha256": "b7e1beff8f9dde09af1235bd0483f71b8f9eda45ef42ba07003f61a71482aa97",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0957s1.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 21766,
+    "sha256": "a3cff88dc0580cda37e04296ecec9510ae25c63672714090940479ed64e8930f",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0957s2.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 12410,
+    "sha256": "33d9e67c61deefc0257bdfde7e85285da5343dcd94eca0d99ec56e62f9b4684b",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0958.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 6575,
+    "sha256": "0d5b368d1acf19ac162bbe90809fa7d5ffde068c97dc3253b3f6f4a4755eec3c",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0960.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 122948,
+    "sha256": "4358de78d5b6ad07ea4c3c405451c480321944b5a16f3a09dc822165b7068b30",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0963.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 119797,
+    "sha256": "378bda3f402b3cdeb67e2db32940be11b58faca7706879ea531375f6fe512bb2",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0968s1.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 56309,
+    "sha256": "85c92844bf1b1025fc623b58833c4e4f93b5cabcde6e1e920bde96e50314ead5",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0968s2.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 47192,
+    "sha256": "eec0b92a7303a2557769659dfa279a3c1b90c1707b8bea0a9b6c8aa9acf1bf4f",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0969.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 149297,
+    "sha256": "4acd81c96ed23a5d27898115fe9984642c13d06fa9973fec3783393a44941e03",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0970.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 36240,
+    "sha256": "91eec1bc70300b9089c587a530044823feb0677225767803c5c5c414186ab2b4",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0975.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 111948,
+    "sha256": "51de282c286ac1ed9e22a6ab66f65bf452d13f33bc23c908ba1617a905fcf611",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0978.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 131309,
+    "sha256": "1e25f3852b0c46c8f8f883c97bcd27c4ef9fd7e35643462a8a41ccf80ebededb",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0980s1.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 11243,
+    "sha256": "3aaac702fe4d0f4cd209b9027ae5d8e134094950cf421ed6ebe3658ac6e8c893",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0981.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 189123,
+    "sha256": "df45aa6a6bb9ee85aed279eee43646a95437d8d9d2ac964543f34a5d278e42a0",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0986s1.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 48464,
+    "sha256": "fe594a9aa2e6f38afa573654c7691f3bc4f40fc1321ca9585642e58a6b87dd4a",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0986s2.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 13700,
+    "sha256": "08883b7b1b36ec41a9b1ea026a36cc5d47c557deb6ab060aa362dd39e3cd2dba",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0987.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 34545,
+    "sha256": "99c52bf42426cc8ca576072d2ccbf519a15307ad71e49f7b0850a1fe7761823a",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0989.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 87423,
+    "sha256": "b485d35dc3ecf82a0f698ad27bd3558e6ff9e01553615b9804122d8d3977f3b8",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0990.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 29206,
+    "sha256": "a73ae8f3bb9af9952d97c6dcd31c875d09c497f5014f99e216741fab2d4ec51e",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0991.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1100,
+    "sha256": "acfb80da6aaa74cba930dbd4960e3884dc3fd9706208d1a8a2dd041c621c811a",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0992.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 56423,
+    "sha256": "01ba1654a0f6b35ec6b5854d03d27e22d47bb3ae50f2520a7e396c61e17dd0e3",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0997.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 82901,
+    "sha256": "83433babcda3050a20c20c051596c55606321d149e025e64920909d333d3f381",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0998.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1762,
+    "sha256": "ae4a09755db28ef60ccf30bea0bc9a1b007bfc079e7a84b5885a93978db94efb",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1000.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 158995,
+    "sha256": "655449b8cf2b6537daa8611bac3a213097dbd7081d733e2d5b999135ca8bd1d9",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1001.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 2309,
+    "sha256": "5d866e504f6beae836d1317133d61bb42cecb6ff443f57251707f44d5c231f7d",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1005.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 117093,
+    "sha256": "9a0a9144bfdd0c23f0bd20bff1fd66113ed49d6f323ce67270eb0dfd00852bfe",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1008.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 985,
+    "sha256": "1b4cf419b218323f9f8e206f1e014d561a6f153ec6f9765bf0961c3ee8bb722e",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1010.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 17022,
+    "sha256": "817d9e8539cae2e9ae80fb0eb55243c12732a14280378d5cba6987daa8f8b29e",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1015s1.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 31514,
+    "sha256": "77b6dca606cf225ed471583bd38e9a0e435f187fae214c8d27955be45154fd38",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1017s2.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 30936,
+    "sha256": "7287d927f835c8b0c8b6a29da1ed4aa2783f7a422e0cea095028ae84bca4899b",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1019s1.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 38828,
+    "sha256": "5bf330658ab5b688dc2039c5a66e51c709405175f0e0e40028759de577546032",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1021s3.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 99969,
+    "sha256": "45544a23574caf69061dc80c3e96c9f03dbf0bc393adc22ba2d7a95eb8798eb8",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1022s1.msa.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 83005,
+    "sha256": "767840d4ad3b63e73d53f3155e519c18ce39de5e6485be5e8fa14e3ca14958ab",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1026.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 109050,
+    "sha256": "3b0432ea6355d754caa4119e8f1c032817d38a6f178bb25b7917dceaf32b6b0c",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1027.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 247046,
+    "sha256": "9257f51c06a82126cd98ce79deb7d7be054d1a1ac0ba4999b1cf81dfce2166e2",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1029.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 189204,
+    "sha256": "1499b1d8b7e5875ff8e5a73a8834e6ce832c5d7c4cf85e056be9e0e4192d152e",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1030.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 355082,
+    "sha256": "951054335486c857a889e3136282465066d9339174bf4553d3b9911ec8ba7293",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1031.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 203954,
+    "sha256": "5015391ae4922f83f1bf99956abc0dd4ce1221472d20a8bafbc543c1f5dc1297",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1032.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 442298,
+    "sha256": "61f6bb8bc55150f24497b50e6f3aa55f2f691d5f0d5c695e044f784f920388c2",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1033.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 58743,
+    "sha256": "d8558a4edd7f877dd1a85e009ed440749842572ec350065b1b2f22510f950b27",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1035.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 214864,
+    "sha256": "1c43f7978c2633e2393500cefa871b266787626f678a4f7b877d1b6b25d1ec1d",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1037.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 624476,
+    "sha256": "6311f37bfff95fc6f70266e5efce691f5bd68f850d60b25df6628a85d0c02b2d",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1038.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 132727,
+    "sha256": "81ef981ca1f191847be9b6667a6059c300d0ae25aeebde2b4513cced50314de8",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1039.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 93736,
+    "sha256": "73655969285efccb724dd9a8e2aa33f7e6b90e5154df0af77d0378b33a4f2d0d",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1040.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 98901,
+    "sha256": "f1a338158c932d9546d7f9a1e449c553966a3044977790f8b65acc6fb00146a4",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1041.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 407370,
+    "sha256": "81e32fdb2bd730741b755aad3ebc7dd6e7fff628a3df59c9a03d45a42255562c",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1042.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 467800,
+    "sha256": "cfd8562508a857a43db56cdacbf0c6e4c1660b4906655672d9b6143af548f6ae",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1043.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 85570,
+    "sha256": "60726ba4a21719ce7e3250299626cf12f9321bb14f5a2dad31752d64d1a91d3f",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1046s1.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 60576,
+    "sha256": "5450f8bc58f2726596804d8b365079096a7e1a1ebd8e54af7e231da6406b8f5b",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1046s2.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 110482,
+    "sha256": "be2ea6ca82da98edf5c1267b5a14227d87a8da6dba478085bc2f64287e58a28f",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1049.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 188737,
+    "sha256": "739cae855bbd380fed12e42970d2ae75fb5c9ce32fbf1c918e3cc461e8a345f9",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1056.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 315091,
+    "sha256": "189e62ec2711630406801fde99f46b91df19c4a13c5ce53ecc51b4add35cce73",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1064.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 65506,
+    "sha256": "24b4a3ca4a4eda679081f912dc9d68bac740d9cc50cd03b0bc0b52ee2755bb58",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1082.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 62302,
+    "sha256": "28a8114208a8652fddacc01102c251fb5675e0ff3da8098a35c93bdbf39c840e",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1090.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 323749,
+    "sha256": "249dd35c586ff347e48bab58a41227c12120b7f6000ca951ffcf49ab2d441339",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1099.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 281801,
+    "sha256": "849c773c79d972956a243e1038bc29923c1dfb24af91f57cafaf9c2af123112e",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0949-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 161109,
+    "sha256": "7b33d3fd48630b616d1c054fa109d3efc372f09fdfcb896299b76159a1aaf40f",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0950-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 456840,
+    "sha256": "a3b03a476fb2c3ce36b86cd62e351ccaba13b8fe4999e8983b26fd54d9c18654",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0953s2-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 54675,
+    "sha256": "5e805ad24bcba6a7c1580d980a8d94d7d12178506172b2749663a4cd9b5655f7",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0953s2-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 140535,
+    "sha256": "6256de65329d050b432f770d786d79cdb9b297990bd2de84f607192440c151c2",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0953s2-D3.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 73224,
+    "sha256": "4e211c3525e305c6656cb74acd8c934c2072d898c695f6f3bf36515191022bfd",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0957s1-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 132597,
+    "sha256": "33a5ebc376ab54cc7f0c0cfdd2b8fe679d67a364acb7982e66650005d63836e1",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0957s2-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 197397,
+    "sha256": "0633ece7d3d95004e56f0a5e4f98e6c20e05b92255526598495a7424cda93e3f",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0958-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 103437,
+    "sha256": "4eacf7dde99942ae67d04f5db43a96ab9083d6a714bba4f056c9c5b580664da5",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0960-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 101331,
+    "sha256": "0b5edf37ed2270a32556391252bcb60ccda145a73d5e86cac9e4a4618fb5809d",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0963-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 100197,
+    "sha256": "8e1b4bd4030a71d6688d0df8c66fa788c6330a8398a4634bc226e2035d06a2ec",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0968s1-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 147420,
+    "sha256": "223af232e3577b2c729a48905e9f23583f756e2356bfeede4f1b379b5e52dd91",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0968s2-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 151308,
+    "sha256": "94d1dca22a1bb3d46352c6208881586aaa1e245a942f00109c3dbf9b918a2a08",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0969-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 466641,
+    "sha256": "430c5ee10c3021a734cb70af90f3b8546fc6b3714f7d94f98951fb0a9989bc7d",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0970-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 109917,
+    "sha256": "7dde39db4aed78de438701da4b6f65fcaa4357602cea2d5f4101f9872ede2154",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0975-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 367983,
+    "sha256": "47d42f04001e09dbecf80e9887778764c364a32285c2f296df5db675d9ff7be1",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0978-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 539865,
+    "sha256": "9dddd6fb5ddef42afa6d550b42f2243504a2c3f5b9e354bc18c321b32683db71",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0980s1-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 142722,
+    "sha256": "c5206001878d3d9e401dd6aeba387bb632919af165c01c5ac67fb4f4d2899ab2",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0981-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 103599,
+    "sha256": "35aafcdeffb908311009727fbe2aef00284bef5b6102d4fd8fae148520ce42e9",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0981-D3.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 256284,
+    "sha256": "39b6b8df654575a9fe1314edcc6c536aa7ce5a3a04a52649036d32cd322adcd1",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0986s1-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 117612,
+    "sha256": "465efbd6ee11ed816dfebf81b7d5ed099ecae05d034f1550646faa2291adfde2",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0986s2-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 198774,
+    "sha256": "7001eb6224ec7cf78606b88739a14a8148e73106dc6f897522b6dde279b83c4a",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0987-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 234981,
+    "sha256": "bdcd951564cf4e3d97c18cd00a88eac4230c8369e485a4f6654c4cb46f230000",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0987-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 248832,
+    "sha256": "f9eaca659dada417debf9223e7f6f75616f5564a7289fcc1359c6448fac254f4",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0989-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 158760,
+    "sha256": "647abeed521ae274002e70c391ea493f988c79e780f17eb10a0b6e6f71260f05",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0989-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 133083,
+    "sha256": "bc2bf2af4d75630a92e300dd4d54636dea3616654d2705afb6f2c418e59bc2b9",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0990-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 98739,
+    "sha256": "035eb826440faeeb66d4188c3507a189d6e06cc7ef3b4e08540988a5c5634a1f",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0990-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 297594,
+    "sha256": "a0cc16457da324a9cb8c7f2eb261db3ce7b72612c1fac66d5d50eeab26396e37",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0990-D3.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 290709,
+    "sha256": "654d90a08640fb2a8f9558fe7061c4b9fcf9d063910cedff320e67e3d9a6e470",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0991-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 135513,
+    "sha256": "1252590cb069cdedf2e918468d5f5f37f5074308e620fc9101252f3ea63fbb93",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0992-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 132840,
+    "sha256": "88164c93e7c8b4d893bc0bcafc10a6f7cb955557f520cdf218d3a87ca36735c0",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0997-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 230040,
+    "sha256": "c7467f68b620ff21790b1a43587018eb9ac19ee5a6e4e6862f19f2ff73b83df5",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0998-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 210519,
+    "sha256": "659adb18aa5b5e039750e61b3a6afac352d5dd030f85066bd532da981ecc6b0e",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1000-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 455463,
+    "sha256": "1a179c7b5d4df12ffa1687c6e6ca7e60ace75dcd6681f08dee86638829dd1fcf",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1001-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 175122,
+    "sha256": "2e111a95ee16f17bc18cd3fc0fcbf3f6a5c9177cd96d71df4b127c9376f94cf2",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1005-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 418527,
+    "sha256": "985817b6c3ab6ed73da5ca800705f9bfb31c51f2457cfeae6350fc78cbb2075a",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1008-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 104571,
+    "sha256": "2aac60d3bbac882962f42275e8c03d0f653636fb2c021f0f8a3d54eb729c5abd",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1010-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 256203,
+    "sha256": "f37d49366c8de229ef248b2de7d8bad3660a371c11725a5125e60b0758779672",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1015s1-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 111213,
+    "sha256": "2eb6040965ec30e0de02230020d6919a1929f3a2dfd61af13c7fc2730ecbd886",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1017s2-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 163701,
+    "sha256": "6f366cfa0fd85f30a3b401380585845f55ddcef82a53ec9d5a2eade90eb088c4",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1019s1-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 65448,
+    "sha256": "9692ec718c06436afbfc92c1af2e386b0770c8de8775e20db860866cd7f7fb1e",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1021s3-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 208494,
+    "sha256": "305ee26956b6a09b024a7f217821e4f9e5ffc04675941df31efa533c9404dfaf",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1021s3-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 118827,
+    "sha256": "f9f94f705df278fce40cbd6f2ffbcc4e4961b26c2c75ec6ed85b180ac29c4a70",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1022s1-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 197559,
+    "sha256": "ad4e92e21e5873eea8ace6faef3ae1afc43948561084b49870d156c1f7a46d64",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/aa.txt",
+    "destination": "",
+    "action": "delete",
+    "bytes": 4,
+    "sha256": "17e682f060b5f8e47ea04c5c4855908b0a5ad612022260fe50e11ecb0cc0ab76",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0949-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 161109,
+    "sha256": "1d94ebcd88d11e409f10e79359b15fae1e3ffe386bb030019593e525bc729b6e",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0950-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 456840,
+    "sha256": "d8aeacb179f720f4deb7cbc9b0ff2643aa7cf7fe0c14d6acb5f6121485a3c4e3",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0953s2-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 54675,
+    "sha256": "70373085f3587118a100ab2fd7680dc99a783e9e9a9437566c15f3acb37cc78f",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0953s2-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 140535,
+    "sha256": "eeedd09a5bcdb844e72bdfa0d559f1aa9670d6a409e44dc51ac44ba67ed33bc5",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0953s2-D3.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 73224,
+    "sha256": "a18f40fed2ea1c3ca66238d99e17bce75de45eee69bbb16e6ec3bccc675bd33c",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0957s1-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 132597,
+    "sha256": "b31aa4eee45f2f3a9426f129666b6681be413402535e1ba7feab9082f0dfb857",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0957s2-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 197397,
+    "sha256": "aced46fa4d00cbde1d1988ae844d2f563172d67db562321c0a2d6b0cfcde55c5",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0958-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 103437,
+    "sha256": "3b6a497f3e8e51f81205298fa2727c0646c67030b5f6969d21033e07dc406267",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0960-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 101331,
+    "sha256": "96f9bbf62d53ad8199163610def31009541fb41f96d2ca5c333cff697662692c",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0963-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 100197,
+    "sha256": "0a492eb2f587685e38e22085cadf13736d289a40406474030b87398f4517b236",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0968s1-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 147420,
+    "sha256": "310129f70cb3088734b689b8a83c991550f83749be45d0c559ed82eb32d0644f",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0968s2-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 151308,
+    "sha256": "c553e2e558db46cb249634df02985eed1d8861297dfbf1ff60b31c12576606ba",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0969-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 466641,
+    "sha256": "a5f1da8dd3d79c0b9b43910adb5891e1b2dceaacb6d40613679ed0d424f8f94e",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0970-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 109917,
+    "sha256": "62b0ab81f07613258e5875cfcf787e3fa0880fc10b429ed82d3067bbf0ecd175",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0975-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 367983,
+    "sha256": "a14b112d5452241d24e1d9a1fad5bfe6f3f3c4862474428c50bd3d04b7357ea3",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0978-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 539865,
+    "sha256": "c2915ea3f30ebd7cebd5616777b5d30e273f29e41d734ae06e59fe48d7e5efd8",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0980s1-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 142722,
+    "sha256": "348a65c9d89ee1204bd929c57f130eee0058b9964a560e032181865cb9e00c40",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0981-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 103599,
+    "sha256": "734a71b7c201a0ea51cf1e2ca0350a7aee037921e930b504b46aedde2126ef84",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0981-D3.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 256284,
+    "sha256": "a47a2c5c5a8f43013f1621b83270dd4ff8ce8fef8b80d0982e9c1b86f781058b",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0986s1-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 117612,
+    "sha256": "db69e29dc6babd1c5a65ba4f4221de350d49c9550c2b217599cf6af70189d7cf",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0986s2-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 198774,
+    "sha256": "aab23150a1c3cdc4b7265694197386ef7d129902f8ac649a6eca09d453c04153",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0987-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 234981,
+    "sha256": "e5f82102d57db179a3f3afce6ffad79d61231566d8822896ed38983e186a2a72",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0987-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 248832,
+    "sha256": "863d0e9b12ecffe0cf6778ef8c4b2a25f7e200f6ce0d6d552f88870b90d8e0df",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0989-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 158760,
+    "sha256": "52dca699c5de3e1cc9f4e959a38dc08b47b1d4b85e07ea220b37cbc8ec8f66f7",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0989-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 133083,
+    "sha256": "479b047f825becca606b7c0daa5eaaf53108eff8b68c9e9e1c4bdf78a7c73e70",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0990-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 98739,
+    "sha256": "4ee3de8ee0a0018218eecea946e84aacbb29ab57a78b758c5c629cdb1d2ef1a4",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0990-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 297594,
+    "sha256": "a2f3c640663b5d4a57f9d940cbe33a87fdf5e68710e0a3962eb5cc1dd0f2bc7b",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0990-D3.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 290709,
+    "sha256": "e70cbe1969e4e9ab895d176ec34c3f87c1d210b015b72ce99ce42489a3655e49",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0991-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 135513,
+    "sha256": "f630767f973e0d52a646c712f4c2c9789b74866b294ebac22c97c988d56580e0",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0992-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 132840,
+    "sha256": "6a98cfab416d9a192163c5f9ea3775f300864cd7f31ffa815047dcfe08fc9304",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0997-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 230040,
+    "sha256": "48e0d8c260adaaff045f2f2c9da52ab757d94ed68a366b95c118dbd58bf61744",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0998-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 210519,
+    "sha256": "0403daad7d810b790d29b9d6850840bbfb8e40ccfb98727750fac460cdeea359",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1000-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 455463,
+    "sha256": "0e34722dbba956e2ca740434b8e497a258f1d47481a889414b9e7d9dd87119dc",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1001-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 175122,
+    "sha256": "4b868492674ba6a5f47a9cf82656eb8224a0146c9c8088db421c90befebd2f7d",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1005-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 418527,
+    "sha256": "a92e85be81787c72d9c0ca1b416251478c8dc79590127dfd8f36d7f311280590",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1008-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 104571,
+    "sha256": "c763b3e15493511e0b660c2f71897b4e97a5d345675abc9104579a2790ad4c54",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1010-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 256203,
+    "sha256": "28dfe2f4fda8ead65d7825646fb8aef47bf61b4b787902c0927c38f9328da7b2",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1015s1-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 111213,
+    "sha256": "60443f06a75c38b85df4f521b1541c3cae2e960758015c2719dd9f080a81e3cf",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1017s2-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 163701,
+    "sha256": "efc50d25027ba1026850207414d9a5417882832a21605dee2d8f259d086515ae",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1019s1-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 65448,
+    "sha256": "24b4e541c0523207b41f41a9dfc30ad033aaa45836976f6909732aa5d2a96ad0",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1021s3-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 208494,
+    "sha256": "8b01e3575226f36476c1829ee915b7157ee990d9fd1af271bb5b50df4c71c0eb",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1021s3-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 118827,
+    "sha256": "7ecdd982382b183c780b053723a98997ec4ac88d5f3dfdddb1d4d5c768d97beb",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1022s1-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 197559,
+    "sha256": "a9cace8bf74d5b8fd7260cc61e80c3fb3e49bf6537fd5fb8b2fea96713d6c01c",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1026-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 185490,
+    "sha256": "a5e46b10441e10b9c7c53e14e3c39f8d9e83487ddd9deab6b29da2b87257ddde",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1027-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 125955,
+    "sha256": "ec172322eaa489cd2a869ad85346752944fb1304e102f51cc367b6335dcf0b19",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1029-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 162162,
+    "sha256": "9f5363a11e1f74a5f2093ab918bb3a7ee4115d6ea5b75134e85ae128ff84c436",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1030-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 199503,
+    "sha256": "7a09d963cd5a523660f218dc49226cca5e8d19a665e37dbd9abbe2788c99e438",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1030-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 156249,
+    "sha256": "71e4c493bb85b2cc976bbe013eb0b9faa862324b90685067b7a1faa93e87e4a5",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1031-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 126279,
+    "sha256": "4900ba4888d7b4c11639a04527d8b3f14dcbc1c9a6e5fe318a884fe7f2dc5117",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1032-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 213516,
+    "sha256": "6ebdf962de56aa432ce4056edc74e14ac90010a61a43f669ec6b88d4c98ca7b4",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1033-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 131139,
+    "sha256": "c25658e07f25ffdc23a4a4280017064796de3acd184af2ff8c02c03e50804063",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1035-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 132273,
+    "sha256": "fc9e87cfc664b4919827ec39bdf73c34d68e58cf7fb66d1c02cbd8d2457465ad",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1037-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 506169,
+    "sha256": "b8785b7c51d169fbd718da828e97c0877ebce9313d3661c236140d4ab1c4f894",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1038-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 143937,
+    "sha256": "9843b47ed7abcfba6f7b452cc49b4c759ff1e3a70a1f3521421583a8d67dfc60",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1038-D2.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 93555,
+    "sha256": "9e002bf211866cdda5c9476010cd34789410776525397bec43e149e0831ea001",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1039-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 210681,
+    "sha256": "3c479935a34e87c1e46de9fedea186050a84a52fb2632dea60462a6a6c25385b",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1040-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 168156,
+    "sha256": "0c530dadd06aa4b56f64630ba1d2e6d6ef00fe635e90107bae1ce0e644bffe1a",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1041-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 306018,
+    "sha256": "86b328339ccf7fbdbe825450e333639cd77579725ea784f67fb3f234e52679d7",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1042-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 348786,
+    "sha256": "942f25c5a3fca11181aa66ce4ddfdd4e9ab731e112d500e21b92e74353657fd6",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1043-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 193833,
+    "sha256": "0c82ca56f3e0ffe2ee82d80e87ae8a7a66bd3cc3a8992c51f8575e0465d08b5b",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1046s1-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 93717,
+    "sha256": "243cef5920302d69f2b443ef71c9d0f9a7eeea2317d842669fef214f67857c61",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1046s2-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 182817,
+    "sha256": "bee827a08bdfb7a01bc7556b5a0dc9a9ad8b96c0d00abb22326b641f0578fb0c",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1049-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 165240,
+    "sha256": "386c61fac865c2542be13e2348d69ab1c4f7fa18fa3b8e0a66068ea1bc4fd030",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1056-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 212058,
+    "sha256": "aa042af1cb79294496683bbabb7c644f548a9ae90646c3499d272fa3c886eb6d",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1064-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 119232,
+    "sha256": "0615cc2d0ea0fbe7a8fcdb4c8c17bc8959053919e6373c1e032c084ff555e7ca",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1082-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 94770,
+    "sha256": "f991c96990ad4c7b9745601ee25161ac369bac394c0f336296a920028d4f33f7",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1090-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 242109,
+    "sha256": "3543b2027d4c766bf1721fdf3d68dd5e423fc4935d698d74e63db210dfcc36a6",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1099-D1.pdb",
+    "destination": "",
+    "action": "delete",
+    "bytes": 236115,
+    "sha256": "ed04fed37dee2769619c45e753b7e26ca02946a34953f63a64101d0e104a67a4",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/aprot_input_data/generated_gvp.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 30076,
+    "sha256": "4be37ab575f7285035669955ed713dbcefb8fe2a1c2790de7ecd48e89cee9776",
+    "reason": "字节级重复，已保留相同内容于 data/candidates/t05/generated_gvp.fasta"
+  },
+  {
+    "source": "T05/src/aprot/aprot_input_data/generated_gvp.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 193654,
+    "sha256": "099f81fed80a48a16c2e2d4d33de202ebe3f98525cdad2dadc0afa7ee7100b8f",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/aprot_input_data/generated_gvp_aln.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 189290,
+    "sha256": "bab9f5865108a24bca24a625a59b07573297d20db01ddcb857ab28545c6a49a6",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/aprot_input_data/real.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 242,
+    "sha256": "5971d9776141bb579e57207b441f84efcd6ee67b02b5952975ac5d8f54ce4181",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/aprot_input_data/real_a3m.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 8692985,
+    "sha256": "83c0d5d56c57a1699e5499be837674087fb030f7353345d72b21a3a3553cd774",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/aprot_input_data/real_aligned.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/aprot_input_data/real_gvp.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 950158,
+    "sha256": "2a9badfe7c3bbb80089b5948aa104cca1b6bd0800fe9946283e25bc69bf7edf9",
+    "reason": "字节级重复，已保留相同内容于 data/raw/t05/real_gvp.fasta"
+  },
+  {
+    "source": "T05/src/aprot/aprot_input_data/real_gvp.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 4436378,
+    "sha256": "f62902c6af9147238039441b49f39a5ffde156c158269810f8cd0ff9cf316526",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/aprot_input_data/real_gvp_aligned.fasta",
+    "destination": "",
+    "action": "delete",
+    "bytes": 8833113,
+    "sha256": "739ba1d07ada57607b46f716ad994fd6d0f6e851db6bb96802b2e376f21e6c1b",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/gen.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 19541,
+    "sha256": "c95541156f9d20c7e3ff9cc80920a44cb522251cf32cbc2d177bda54c9760ef5",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/gen_a3m_aln.npz",
+    "destination": "",
+    "action": "delete",
+    "bytes": 312790820,
+    "sha256": "d56ed48cfd1553489bcc9332b12cf66619161a3d9f003bdd01b8e6eff495eefb",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/generated.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 18256,
+    "sha256": "8184fb225fc64e4b23e240d50bed1a73096841632b79808c5050e993cfb327bf",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/generated_gvp_aln.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 189290,
+    "sha256": "bab9f5865108a24bca24a625a59b07573297d20db01ddcb857ab28545c6a49a6",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/LICENSE",
+    "destination": "",
+    "action": "delete",
+    "bytes": 20849,
+    "sha256": "1349a4b6148492b44f629e64eed676612e234fe9a839e4f3b277c1482c8849f1",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/README.md",
+    "destination": "",
+    "action": "delete",
+    "bytes": 2029,
+    "sha256": "56ed1ea12c627c9c67c0039f32fc6ac59393ba7599f77ce98bb37c0dd1dc9f23",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/README1.md",
+    "destination": "",
+    "action": "delete",
+    "bytes": 2738,
+    "sha256": "557d05f4155571de57396969e63e77c4f658ec696d3893c9ac9f3e247b1c845c",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/requirements.txt",
+    "destination": "",
+    "action": "delete",
+    "bytes": 3832,
+    "sha256": "c83a3ad456e1a9c0aa806a88623df9555498fe14f9e16be6bda4e0bf11f5e5e5",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/run_a_prot.py",
+    "destination": "",
+    "action": "delete",
+    "bytes": 11418,
+    "sha256": "36e5c5267970b13007a7cde1fd3749a330159510081746c6ad4150f89c56bad4",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/run_aprot_inference.py",
+    "destination": "",
+    "action": "delete",
+    "bytes": 2374,
+    "sha256": "25a29c3e625897305f968b8766cc962bfb037bba3c68631662d0fbf084255ce8",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/run_structure_modeling.py",
+    "destination": "",
+    "action": "delete",
+    "bytes": 6195,
+    "sha256": "3df8ac22d87e4aed02aee6a5800d64fd528e28154c4859d6303c33f65f5b01be",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/T0998.a3m",
+    "destination": "",
+    "action": "delete",
+    "bytes": 45073,
+    "sha256": "7de29671b0b3584442bf9d605e76e416e3daac70b526e179b8ab4bf99877b6b0",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/T0998.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 112961,
+    "sha256": "39314908bcb5e71ef04e88cccc76269633a7cadb86b7e8531c7dae254f856673",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/trrosetta_utils/arguments.py",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1413,
+    "sha256": "1f6c55d979165f6370ef241f9f27ac6db5bf79dab34f2d455f862f396b588a6c",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/trrosetta_utils/data/params.json",
+    "destination": "",
+    "action": "delete",
+    "bytes": 306,
+    "sha256": "b47b3ae5882d3fe06b2743c03be85fee0090960c4abdbd994dc52d50648bedf4",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/trrosetta_utils/data/scorefxn.wts",
+    "destination": "",
+    "action": "delete",
+    "bytes": 120,
+    "sha256": "9c79bbd5dde6c09afd76c99361e58b229e33f8d597ae48aa26cb085f7863ab95",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/trrosetta_utils/data/scorefxn1.wts",
+    "destination": "",
+    "action": "delete",
+    "bytes": 120,
+    "sha256": "e50de0af89ead2118386f18c4b75af2139f62232423311c666ed9213c6289277",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/trrosetta_utils/data/scorefxn_cart.wts",
+    "destination": "",
+    "action": "delete",
+    "bytes": 174,
+    "sha256": "8009ebd6e52fb80036b841b2f924912993cbd10a22db4164fb7b224094a07085",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/trrosetta_utils/data/scorefxn_vdw.wts",
+    "destination": "",
+    "action": "delete",
+    "bytes": 24,
+    "sha256": "14c3951d0e59f58d20f11adcd3df4112fbbf9aa862ea99f0a64a9514eec07319",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/trrosetta_utils/npz_2_dist.py",
+    "destination": "",
+    "action": "delete",
+    "bytes": 4897,
+    "sha256": "48096aa1dd7b3bcb0424cfa7ee3a935ddc59587d91ef474abde3ed91b3c1f446",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/trrosetta_utils/pdb2npz.py",
+    "destination": "",
+    "action": "delete",
+    "bytes": 7428,
+    "sha256": "1a083b474ac42a09f92cf52d38fb4e89f829fdc2320d176d932a20fbded3c46f",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/trrosetta_utils/top_prob.py",
+    "destination": "",
+    "action": "delete",
+    "bytes": 1826,
+    "sha256": "d138fae72231b73e7cc93c8140094893c5bd967fd246e57cb4af1df758fb7b92",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/trrosetta_utils/utils_ros.py",
+    "destination": "",
+    "action": "delete",
+    "bytes": 8808,
+    "sha256": "e85fe8b337c7c1cea41d4d1882cd7c4ca66c5f30c9cfe0c5eedd3f2ff4fe3ac4",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/utils/fasta_to_aprot_json.py",
+    "destination": "",
+    "action": "delete",
+    "bytes": 4234,
+    "sha256": "47a8ed71f951d4648e33f6919e691fbc11efe050b4a4a9651761086340bd3dbf",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/utils/rename_pipe_to_underscore.sh",
+    "destination": "",
+    "action": "delete",
+    "bytes": 623,
+    "sha256": "d0513251f7f602a296dd26b275a3c9e963560058d9888cf0c3e9361de798b900",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/aprot/wget-log",
+    "destination": "",
+    "action": "delete",
+    "bytes": 5996,
+    "sha256": "45814696c24b6deafd3cc2dbcf14574ac09a309786c54111c131f153cb82965d",
+    "reason": "非必需的A-Prot结构预测工程、CASP示例、第三方仓库或衍生文件；原始核心序列已另保留"
+  },
+  {
+    "source": "T05/src/model_training/generate.py",
+    "destination": "references/t05/src/model_training/generate.py",
+    "action": "move",
+    "bytes": 2483,
+    "sha256": "5e5f83eac40ad6a3c615026c961d74d352589660f3da29562abddc1777fdd3c8",
+    "reason": "上游数据生成或序列预处理、EDA源码；保留原文供后续修复参考"
+  },
+  {
+    "source": "T05/src/model_training/gvp_ckpt/model.pt",
+    "destination": "references/t05/src/model_training/gvp_ckpt/model.pt",
+    "action": "move",
+    "bytes": 13749898,
+    "sha256": "b3cc6c89da97591ac3a4033f8086e5579e9561d1d5582d273b3a76d84ea5c33f",
+    "reason": "已有生成模型权重；避免丢失扩充候选的上游资产"
+  },
+  {
+    "source": "T05/src/model_training/model.py",
+    "destination": "references/t05/src/model_training/model.py",
+    "action": "move",
+    "bytes": 1097,
+    "sha256": "2d0ec1e9ef04a11ee8127abd7e4ff14c117baaf317c4fd889aaebb2b2729b436",
+    "reason": "上游数据生成或序列预处理、EDA源码；保留原文供后续修复参考"
+  },
+  {
+    "source": "T05/src/model_training/train.py",
+    "destination": "references/t05/src/model_training/train.py",
+    "action": "move",
+    "bytes": 1155,
+    "sha256": "c703871a2fe7bb901b06c4b90d4e5d96f7d576430b1ced28fbd90f77ffeb0b3e",
+    "reason": "上游数据生成或序列预处理、EDA源码；保留原文供后续修复参考"
+  },
+  {
+    "source": "T05/src/raw_data_processing/analyze_fasta.py",
+    "destination": "references/t05/src/raw_data_processing/analyze_fasta.py",
+    "action": "move",
+    "bytes": 6357,
+    "sha256": "ef263db1265a853dbf80611a54974b83b5dbbfb4082823d0b47caeb6388f2ec7",
+    "reason": "上游数据生成或序列预处理、EDA源码；保留原文供后续修复参考"
+  },
+  {
+    "source": "T05/src/raw_data_processing/deduplicate_fasta.py",
+    "destination": "references/t05/src/raw_data_processing/deduplicate_fasta.py",
+    "action": "move",
+    "bytes": 4589,
+    "sha256": "c5d7f2edb4cba2634c9f0fc50352e68058bd33b08f096c0b5b057095a618ec5a",
+    "reason": "上游数据生成或序列预处理、EDA源码；保留原文供后续修复参考"
+  },
+  {
+    "source": "T05/src/raw_data_processing/merge_fasta.py",
+    "destination": "references/t05/src/raw_data_processing/merge_fasta.py",
+    "action": "move",
+    "bytes": 1132,
+    "sha256": "40c7f829026a7673ee2625230d296068e04ac631c730100a0f1d1078892be8b2",
+    "reason": "上游数据生成或序列预处理、EDA源码；保留原文供后续修复参考"
+  },
+  {
+    "source": "T05/T05-report.docx",
+    "destination": "references/t05/T05-report.docx",
+    "action": "move",
+    "bytes": 473144,
+    "sha256": "a8c4a3492c2367f18438d6b964ac495d42fca9caf26e85aa05335e2cffb96a91",
+    "reason": "教师来源报告，用于理解数据生成过程；非本项目实验结果"
+  },
+  {
+    "source": "T05/T05-report.pptx",
+    "destination": "references/t05/T05-report.pptx",
+    "action": "move",
+    "bytes": 4640704,
+    "sha256": "82bba65a150ad7daf5be0958c7d8e96a19ca5f3fb69fd3d568bd8ebeb4cb8205",
+    "reason": "教师来源报告，用于理解数据生成过程；非本项目实验结果"
+  },
+  {
+    "source": "机器学习要求.md",
+    "destination": "机器学习要求.md",
+    "action": "keep",
+    "bytes": 7128,
+    "sha256": "31eae9cf7d5c9ca0e70f033c4b71ab8fa129a4aebdade70fb81d8ec5d9d1bd6d",
+    "reason": "教师原始任务要求，保持原位和原文"
+  }
+]

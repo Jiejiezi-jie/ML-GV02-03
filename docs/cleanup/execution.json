@@ -1,0 +1,2834 @@
+[
+    {
+        "action":  "move",
+        "source":  "design/data/GvpA.fasta",
+        "destination":  "data/raw/design/GvpA.fasta",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/aggrescan3d.py",
+        "destination":  "references/design/src/aggrescan3d.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/candidate_explainer.py",
+        "destination":  "references/design/src/candidate_explainer.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/candidate_output/candidates.fasta",
+        "destination":  "data/candidates/design/candidates.fasta",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/candidate_output/candidates_detailed.csv",
+        "destination":  "references/design/candidate_metadata/candidates_detailed.csv",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/cross_species_analysis.py",
+        "destination":  "references/design/src/cross_species_analysis.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/data_loader.py",
+        "destination":  "references/design/src/data_loader.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/deeploc2/_init__.py",
+        "destination":  "references/design/src/deeploc2/_init__.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/deeploc2/predict.py",
+        "destination":  "references/design/src/deeploc2/predict.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/generate_and_evaluate.py",
+        "destination":  "references/design/src/generate_and_evaluate.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/models/__init__.py",
+        "destination":  "references/design/src/models/__init__.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/models/diffusion_gvp.py",
+        "destination":  "references/design/src/models/diffusion_gvp.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/models/esm2_gvp.py",
+        "destination":  "references/design/src/models/esm2_gvp.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/models/transformer_gvp.py",
+        "destination":  "references/design/src/models/transformer_gvp.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/models/vae_gvp.py",
+        "destination":  "references/design/src/models/vae_gvp.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/score/__init__.py",
+        "destination":  "references/design/src/score/__init__.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/score/score_assembly.py",
+        "destination":  "references/design/src/score/score_assembly.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/score/score_conserv.py",
+        "destination":  "references/design/src/score/score_conserv.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/score/score_fold.py",
+        "destination":  "references/design/src/score/score_fold.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/score/score_mock.py",
+        "destination":  "references/design/src/score/score_mock.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/score/score_net.py",
+        "destination":  "references/design/src/score/score_net.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/score/score_novel.py",
+        "destination":  "references/design/src/score/score_novel.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/src/score/score_toxic.py",
+        "destination":  "references/design/src/score/score_toxic.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "design/毕业论文.pdf",
+        "destination":  "references/design/毕业论文.pdf",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/data/generated_gvp.fasta",
+        "destination":  "data/candidates/t05/generated_gvp.fasta",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/data/real_gvp.fasta",
+        "destination":  "data/raw/t05/real_gvp.fasta",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/data/原始数据/ljl/GvpA_NotPartial.fasta",
+        "destination":  "data/raw/t05/gvpa/GvpA_NotPartial.fasta",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/data/原始数据/ljl/GvpA_RefSeq.fasta",
+        "destination":  "data/raw/t05/gvpa/GvpA_RefSeq.fasta",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/data/原始数据/ljl/rescued_GvpA_candidates.fasta",
+        "destination":  "data/raw/t05/gvpa/rescued_GvpA_candidates.fasta",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/doc/ana_transformer_lm.md",
+        "destination":  "references/t05/doc/ana_transformer_lm.md",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/doc/dataset.md",
+        "destination":  "references/t05/doc/dataset.md",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/doc/model_training.md",
+        "destination":  "references/t05/doc/model_training.md",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/README.md",
+        "destination":  "references/t05/README_original.md",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/src/analysis_transformer_lm/analysis_aa_freq.py",
+        "destination":  "references/t05/src/analysis_transformer_lm/analysis_aa_freq.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/src/analysis_transformer_lm/analysis_divergence.py",
+        "destination":  "references/t05/src/analysis_transformer_lm/analysis_divergence.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/src/analysis_transformer_lm/analysis_length.py",
+        "destination":  "references/t05/src/analysis_transformer_lm/analysis_length.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/src/model_training/generate.py",
+        "destination":  "references/t05/src/model_training/generate.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/src/model_training/gvp_ckpt/model.pt",
+        "destination":  "references/t05/src/model_training/gvp_ckpt/model.pt",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/src/model_training/model.py",
+        "destination":  "references/t05/src/model_training/model.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/src/model_training/train.py",
+        "destination":  "references/t05/src/model_training/train.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/src/raw_data_processing/analyze_fasta.py",
+        "destination":  "references/t05/src/raw_data_processing/analyze_fasta.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/src/raw_data_processing/deduplicate_fasta.py",
+        "destination":  "references/t05/src/raw_data_processing/deduplicate_fasta.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/src/raw_data_processing/merge_fasta.py",
+        "destination":  "references/t05/src/raw_data_processing/merge_fasta.py",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/T05-report.docx",
+        "destination":  "references/t05/T05-report.docx",
+        "verified":  true
+    },
+    {
+        "action":  "move",
+        "source":  "T05/T05-report.pptx",
+        "destination":  "references/t05/T05-report.pptx",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/.DS_Store",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/.vscode/settings.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpA_msa.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpC.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpC_msa.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpF.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpF_msa.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpG.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpG_msa.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpJ.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpJ_msa.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpK.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpK_msa.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpL.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpL_msa.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpM.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpM_msa.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpN.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpN_msa.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpS.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpS_msa.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpU.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpU_msa.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpV.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpV_msa.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpW.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpW_msa.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpY.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpY_msa.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpZ.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/GvpZ_msa.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/data/natural_gvp.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/.DS_Store",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/1.sh",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/analysis_output/conservation_landscape.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/analysis_output/cross_species_report.txt",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/analysis_output/functional_regions.csv",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_01_esm2_gen_22.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_01_transformer_gen_30.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_02_transformer_gen_33.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_02_transformer_gen_85.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_03_esm2_gen_59.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_03_transformer_gen_14.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_04_transformer_gen_21.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_04_transformer_gen_69.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_05_transformer_gen_28.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_05_transformer_gen_31.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_06_diffusion_gen_4.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_06_transformer_gen_48.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_07_transformer_gen_45.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_07_transformer_gen_77.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_08_esm2_gen_64.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_08_transformer_gen_69.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_09_transformer_gen_45.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_09_transformer_gen_85.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_10_diffusion_gen_21.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_10_esm2_gen_52.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/candidate_comparison.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/candidate_output/master_report.txt",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/create_simple_msa.py",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/deep_diagnose.py",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/deeploc2/__pycache__/predict.cpython-312.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/deeploc2/__pycache__/predict.cpython-38.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/fig1_overview.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/fig2_sequence_features.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/fig3_sequence_logo.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/fig4_quality_filter.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/fig5_single_seq.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/models/__pycache__/__init__.cpython-312.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/models/__pycache__/__init__.cpython-38.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/models/__pycache__/diffusion_gvp.cpython-312.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/models/__pycache__/diffusion_gvp.cpython-38.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/models/__pycache__/esm2_gvp.cpython-38.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/models/__pycache__/transformer_gvp.cpython-312.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/models/__pycache__/transformer_gvp.cpython-38.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/models/__pycache__/vae_gvp.cpython-312.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/models/__pycache__/vae_gvp.cpython-38.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/protein_visualization.py",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/score/__pycache__/__init__.cpython-312.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/score/__pycache__/__init__.cpython-38.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/score/__pycache__/score_assembly.cpython-312.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/score/__pycache__/score_assembly.cpython-38.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/score/__pycache__/score_conserv.cpython-312.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/score/__pycache__/score_conserv.cpython-38.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/score/__pycache__/score_fold.cpython-312.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/score/__pycache__/score_fold.cpython-38.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/score/__pycache__/score_mock.cpython-312.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/score/__pycache__/score_mock.cpython-38.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/score/__pycache__/score_net.cpython-312.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/score/__pycache__/score_net.cpython-38.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/score/__pycache__/score_novel.cpython-312.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/score/__pycache__/score_novel.cpython-38.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/score/__pycache__/score_toxic.cpython-312.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/score/__pycache__/score_toxic.cpython-38.pyc",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "design/src/train.py",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/.DS_Store",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/data/.DS_Store",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/data/原始数据/.DS_Store",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/data/原始数据/jtl/GvpL_not_partial.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/data/原始数据/jtl/GvpL_RefSeq.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/data/原始数据/jtl/GvpN_not_partial.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/data/原始数据/jtl/GvpN_RefSeq.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/data/原始数据/jxzw/GvpJ_raw.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/data/原始数据/jxzw/GvpK_raw.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/data/原始数据/jxzw/GvpZ_raw.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/data/原始数据/ljl/GvpV_NotPartial.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/data/原始数据/ljl/GvpV_RefSeq.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/data/原始数据/ljl/rescued_GvpV_candidates.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/data/原始数据/lxy/GvpC_raw.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/data/原始数据/lxy/GvpF_raw.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/data/原始数据/sy/GvpG_GvpG_not_partial.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/data/原始数据/sy/GvpG_GvpG_refseq.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/data/原始数据/sy/GvpI_GvpI_not_partial.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/data/原始数据/sy/GvpI_GvpI_refseq.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/data/原始数据/sy/GvpW_GvpW_gvp.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/doc/ana_aprot.md",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/doc/aprot_run.md",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/.DS_Store",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/aprot_ana_output/generated_a3m_new.npz",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/aprot_ana_output/log/log.txt",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/aprot_ana_output/pic/predicted_contact_matrix.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/aprot_ana_output/pic/residue_confidence_barplot.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/aprot_ana_output/real_a3m.npz",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/aprot_ana_output/real_a3m.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/aprot_ana_output/T0998.npz",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/aprot_ana_output/T0998.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/aprot_ana_output/test.npz",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/aprot_ana_output/test.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/original_analysis/分析数据/amino_acid_frequency.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/original_analysis/分析数据/amino_acid_frequency.txt",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/original_analysis/分析数据/length_boxplot.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/original_analysis/分析数据/length_distribution.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/original_analysis/分析数据/length_distribution.txt",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/original_analysis/分析数据/length_stats.txt",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/original_analysis/处理数据/deduplicated.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/original_analysis/汇总数据/merged.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/transformerlm_ana_output/figures/amino/amino_acid_cdf.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/transformerlm_ana_output/figures/amino/amino_acid_frequency.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/transformerlm_ana_output/figures/amino/amino_acid_frequency_difference.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/transformerlm_ana_output/figures/divergence/divergence_barplot.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/transformerlm_ana_output/figures/divergence/kl_contribution_per_aa.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/transformerlm_ana_output/figures/length/length_boxplot.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/transformerlm_ana_output/figures/length/length_cdf.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/transformerlm_ana_output/figures/length/length_distribution.png",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/output/transformerlm_ana_output/log/analysis_2026-01-16_19-54-58.log",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/ref/A_Comprehensive_Review_of_Transformer-based_language_models_for_Protein_Sequence_Analysis_and_Design.pdf",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/ref/A‑Prot.pdf",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/ref/Deep‑ProBind.pdf",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/ref/Improving functional protein generation via foundation model-derived latent space likelihood optimization.pdf",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/ref/LM‑GVP.pdf",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/ref/ProT-VAE.pdf",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/ref/Protein Large Language Models A Comprehensive Survey.pdf",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/ref/Transformer-based protein generation with regularized latent space optimization.pdf",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/ref/Transformers in Protein A Survey.pdf",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/.DS_Store",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/analysis_aprot/analysis.py",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/analysis_aprot/run_aprot_all.bash",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/analysis_aprot/utils.py",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/analysis_transformer_lm/test.sh",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.DS_Store",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/config",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/description",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/HEAD",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/hooks/applypatch-msg.sample",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/hooks/commit-msg.sample",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/hooks/fsmonitor-watchman.sample",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/hooks/post-update.sample",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/hooks/pre-applypatch.sample",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/hooks/pre-commit.sample",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/hooks/pre-merge-commit.sample",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/hooks/pre-push.sample",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/hooks/pre-rebase.sample",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/hooks/pre-receive.sample",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/hooks/prepare-commit-msg.sample",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/hooks/push-to-checkout.sample",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/hooks/update.sample",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/index",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/info/exclude",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/logs/HEAD",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/logs/refs/heads/main",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/logs/refs/remotes/origin/HEAD",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/objects/pack/pack-2d08cf1759846453092d4b4b5d63ae8d40a5b07e.idx",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/objects/pack/pack-2d08cf1759846453092d4b4b5d63ae8d40a5b07e.pack",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/packed-refs",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/refs/heads/main",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.git/refs/remotes/origin/HEAD",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/.run_aprot_inference.py.swp",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0949.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0950.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0953s2.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0957s1.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0957s2.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0958.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0960.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0963.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0968s1.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0968s2.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0969.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0970.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0975.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0978.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0980s1.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0981.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0986s1.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0986s2.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0987.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0989.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0990.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0991.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0992.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0997.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T0998.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1000.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1001.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1005.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1008.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1010.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1015s1.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1017s2.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1019s1.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1021s3.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_with_bfd/T1022s1.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0949.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0950.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0953s2.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0957s1.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0957s2.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0958.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0960.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0963.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0968s1.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0968s2.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0969.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0970.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0975.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0978.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0980s1.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0981.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0986s1.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0986s2.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0987.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0989.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0990.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0991.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0992.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0997.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T0998.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1000.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1001.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1005.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1008.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1010.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1015s1.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1017s2.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1019s1.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1021s3.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp13_without_bfd/T1022s1.msa.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1026.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1027.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1029.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1030.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1031.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1032.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1033.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1035.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1037.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1038.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1039.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1040.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1041.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1042.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1043.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1046s1.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1046s2.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1049.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1056.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1064.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1082.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1090.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_msa/casp14_with_bfd/T1099.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0949-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0950-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0953s2-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0953s2-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0953s2-D3.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0957s1-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0957s2-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0958-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0960-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0963-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0968s1-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0968s2-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0969-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0970-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0975-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0978-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0980s1-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0981-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0981-D3.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0986s1-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0986s2-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0987-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0987-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0989-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0989-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0990-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0990-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0990-D3.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0991-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0992-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0997-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T0998-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1000-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1001-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1005-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1008-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1010-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1015s1-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1017s2-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1019s1-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1021s3-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1021s3-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_with_bfd/T1022s1-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/aa.txt",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0949-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0950-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0953s2-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0953s2-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0953s2-D3.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0957s1-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0957s2-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0958-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0960-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0963-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0968s1-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0968s2-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0969-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0970-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0975-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0978-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0980s1-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0981-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0981-D3.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0986s1-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0986s2-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0987-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0987-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0989-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0989-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0990-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0990-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0990-D3.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0991-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0992-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0997-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T0998-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1000-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1001-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1005-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1008-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1010-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1015s1-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1017s2-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1019s1-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1021s3-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1021s3-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp13_without_bfd/T1022s1-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1026-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1027-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1029-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1030-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1030-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1031-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1032-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1033-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1035-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1037-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1038-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1038-D2.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1039-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1040-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1041-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1042-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1043-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1046s1-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1046s2-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1049-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1056-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1064-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1082-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1090-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/A_Prot_predicted_pdb/casp14_with_bfd/T1099-D1.pdb",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/aprot_input_data/generated_gvp.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/aprot_input_data/generated_gvp.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/aprot_input_data/generated_gvp_aln.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/aprot_input_data/real.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/aprot_input_data/real_a3m.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/aprot_input_data/real_aligned.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/aprot_input_data/real_gvp.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/aprot_input_data/real_gvp.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/aprot_input_data/real_gvp_aligned.fasta",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/gen.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/gen_a3m_aln.npz",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/generated.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/generated_gvp_aln.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/LICENSE",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/README.md",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/README1.md",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/requirements.txt",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/run_a_prot.py",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/run_aprot_inference.py",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/run_structure_modeling.py",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/T0998.a3m",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/T0998.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/trrosetta_utils/arguments.py",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/trrosetta_utils/data/params.json",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/trrosetta_utils/data/scorefxn.wts",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/trrosetta_utils/data/scorefxn1.wts",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/trrosetta_utils/data/scorefxn_cart.wts",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/trrosetta_utils/data/scorefxn_vdw.wts",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/trrosetta_utils/npz_2_dist.py",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/trrosetta_utils/pdb2npz.py",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/trrosetta_utils/top_prob.py",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/trrosetta_utils/utils_ros.py",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/utils/fasta_to_aprot_json.py",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/utils/rename_pipe_to_underscore.sh",
+        "destination":  "",
+        "verified":  true
+    },
+    {
+        "action":  "delete",
+        "source":  "T05/src/aprot/wget-log",
+        "destination":  "",
+        "verified":  true
+    }
+]

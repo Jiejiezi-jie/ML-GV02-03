@@ -1,0 +1,154 @@
+{
+  "note": "Header labels are annotations, not verified family assignments. Sequences are not aligned, filtered or modified.",
+  "files": [
+    {
+      "path": "data/candidates/design/candidates.fasta",
+      "bytes": 1452,
+      "sha256": "6c92e44450fbad9baa9171eca83c1be0c68568a4d5ae979c74398a0f9a50eead",
+      "records": 10,
+      "unique_sequences": 10,
+      "duplicate_sequence_records": 0,
+      "duplicate_id_records": 0,
+      "empty_sequences": 0,
+      "min_length": 83,
+      "max_length": 99,
+      "mean_length": 90.1,
+      "median_length": 90.0,
+      "nonstandard_characters": [],
+      "header_family_labels": {
+        "unlabelled": 10
+      },
+      "partial_or_fragment_headers": 0
+    },
+    {
+      "path": "data/candidates/t05/generated_gvp.fasta",
+      "bytes": 30076,
+      "sha256": "4be37ab575f7285035669955ed713dbcefb8fe2a1c2790de7ecd48e89cee9776",
+      "records": 200,
+      "unique_sequences": 200,
+      "duplicate_sequence_records": 0,
+      "duplicate_id_records": 0,
+      "empty_sequences": 0,
+      "min_length": 66,
+      "max_length": 512,
+      "mean_length": 138.93,
+      "median_length": 103.0,
+      "nonstandard_characters": [],
+      "header_family_labels": {
+        "unlabelled": 200
+      },
+      "partial_or_fragment_headers": 0
+    },
+    {
+      "path": "data/raw/design/GvpA.fasta",
+      "bytes": 137374,
+      "sha256": "c58b00e8198049e299d10fcf5b20ed76898052b48eb67943dbc9ea596d8352e3",
+      "records": 856,
+      "unique_sequences": 856,
+      "duplicate_sequence_records": 0,
+      "duplicate_id_records": 0,
+      "empty_sequences": 0,
+      "min_length": 60,
+      "max_length": 100,
+      "mean_length": 82.07943925233644,
+      "median_length": 85.0,
+      "nonstandard_characters": [],
+      "header_family_labels": {
+        "GvpA": 824,
+        "GvpJ": 30,
+        "unlabelled": 2
+      },
+      "partial_or_fragment_headers": 19
+    },
+    {
+      "path": "data/raw/t05/gvpa/GvpA_NotPartial.fasta",
+      "bytes": 254328,
+      "sha256": "534b05d2d9a4cd3698960ace4633ee5e70c124908d32ee1df02fc741e594b1f6",
+      "records": 2000,
+      "unique_sequences": 1196,
+      "duplicate_sequence_records": 804,
+      "duplicate_id_records": 0,
+      "empty_sequences": 0,
+      "min_length": 61,
+      "max_length": 160,
+      "mean_length": 96.912,
+      "median_length": 86.0,
+      "nonstandard_characters": [
+        "X"
+      ],
+      "header_family_labels": {
+        "GvpA": 2000
+      },
+      "partial_or_fragment_headers": 0
+    },
+    {
+      "path": "data/raw/t05/gvpa/GvpA_RefSeq.fasta",
+      "bytes": 99011,
+      "sha256": "8f03d5b7bff9a23af7a27244dc1c51fcb583995d60b207517a3e5419788df6b8",
+      "records": 862,
+      "unique_sequences": 862,
+      "duplicate_sequence_records": 0,
+      "duplicate_id_records": 0,
+      "empty_sequences": 0,
+      "min_length": 54,
+      "max_length": 177,
+      "mean_length": 82.87122969837587,
+      "median_length": 86.0,
+      "nonstandard_characters": [],
+      "header_family_labels": {
+        "GvpA": 862
+      },
+      "partial_or_fragment_headers": 0
+    },
+    {
+      "path": "data/raw/t05/gvpa/rescued_GvpA_candidates.fasta",
+      "bytes": 292,
+      "sha256": "86bb5af8e161668ca3282972ae40ce1c340583912aaf36339a36f8008e3a069b",
+      "records": 2,
+      "unique_sequences": 2,
+      "duplicate_sequence_records": 0,
+      "duplicate_id_records": 0,
+      "empty_sequences": 0,
+      "min_length": 73,
+      "max_length": 83,
+      "mean_length": 78,
+      "median_length": 78.0,
+      "nonstandard_characters": [],
+      "header_family_labels": {
+        "GvpA": 2
+      },
+      "partial_or_fragment_headers": 0
+    },
+    {
+      "path": "data/raw/t05/real_gvp.fasta",
+      "bytes": 950158,
+      "sha256": "2a9badfe7c3bbb80089b5948aa104cca1b6bd0800fe9946283e25bc69bf7edf9",
+      "records": 4379,
+      "unique_sequences": 4379,
+      "duplicate_sequence_records": 0,
+      "duplicate_id_records": 0,
+      "empty_sequences": 0,
+      "min_length": 54,
+      "max_length": 757,
+      "mean_length": 148.02306462662708,
+      "median_length": 106,
+      "nonstandard_characters": [
+        "X"
+      ],
+      "header_family_labels": {
+        "GvpA": 507,
+        "GvpC": 45,
+        "GvpF": 45,
+        "GvpG": 70,
+        "GvpI": 2,
+        "GvpJ": 645,
+        "GvpK": 172,
+        "GvpL": 221,
+        "GvpN": 626,
+        "GvpV": 57,
+        "unlabelled": 1989
+      },
+      "partial_or_fragment_headers": 10
+    }
+  ]
+}

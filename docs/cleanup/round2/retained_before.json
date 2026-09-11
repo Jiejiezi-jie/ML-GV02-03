@@ -1,0 +1,77 @@
+[
+  {
+    "path": "data/candidates/t05/generated_gvp.fasta",
+    "bytes": 30076,
+    "sha256": "4be37ab575f7285035669955ed713dbcefb8fe2a1c2790de7ecd48e89cee9776"
+  },
+  {
+    "path": "data/raw/design/GvpA.fasta",
+    "bytes": 137374,
+    "sha256": "c58b00e8198049e299d10fcf5b20ed76898052b48eb67943dbc9ea596d8352e3"
+  },
+  {
+    "path": "data/raw/t05/gvpa/GvpA_NotPartial.fasta",
+    "bytes": 254328,
+    "sha256": "534b05d2d9a4cd3698960ace4633ee5e70c124908d32ee1df02fc741e594b1f6"
+  },
+  {
+    "path": "data/raw/t05/gvpa/GvpA_RefSeq.fasta",
+    "bytes": 99011,
+    "sha256": "8f03d5b7bff9a23af7a27244dc1c51fcb583995d60b207517a3e5419788df6b8"
+  },
+  {
+    "path": "data/raw/t05/gvpa/rescued_GvpA_candidates.fasta",
+    "bytes": 292,
+    "sha256": "86bb5af8e161668ca3282972ae40ce1c340583912aaf36339a36f8008e3a069b"
+  },
+  {
+    "path": "data/raw/t05/real_gvp.fasta",
+    "bytes": 950158,
+    "sha256": "2a9badfe7c3bbb80089b5948aa104cca1b6bd0800fe9946283e25bc69bf7edf9"
+  },
+  {
+    "path": "data/README.md",
+    "bytes": 4599,
+    "sha256": "418e6036f97f3781611158a3f85e3cc70ba6a575c68f430cb32f47086f4ce5ff"
+  },
+  {
+    "path": "references/README.md",
+    "bytes": 2807,
+    "sha256": "331611db6bbb0940fc7ab3130ea51da395a0e585bc51f8e7c4bf6be9f3ebcb4a"
+  },
+  {
+    "path": "references/t05/doc/dataset.md",
+    "bytes": 5648,
+    "sha256": "c91b24f527a23dde2b62e0a623fe45757812a487d6e8e7bd42937d993c669e82"
+  },
+  {
+    "path": "references/t05/doc/model_training.md",
+    "bytes": 3717,
+    "sha256": "b10257de882f99fe14dc475f7cfcc70012682d0a4ae9994461536a5eaa52a6ab"
+  },
+  {
+    "path": "references/t05/src/model_training/generate.py",
+    "bytes": 2483,
+    "sha256": "5e5f83eac40ad6a3c615026c961d74d352589660f3da29562abddc1777fdd3c8"
+  },
+  {
+    "path": "references/t05/src/model_training/gvp_ckpt/model.pt",
+    "bytes": 13749898,
+    "sha256": "b3cc6c89da97591ac3a4033f8086e5579e9561d1d5582d273b3a76d84ea5c33f"
+  },
+  {
+    "path": "references/t05/src/model_training/model.py",
+    "bytes": 1097,
+    "sha256": "2d0ec1e9ef04a11ee8127abd7e4ff14c117baaf317c4fd889aaebb2b2729b436"
+  },
+  {
+    "path": "references/t05/src/model_training/train.py",
+    "bytes": 1155,
+    "sha256": "c703871a2fe7bb901b06c4b90d4e5d96f7d576430b1ced28fbd90f77ffeb0b3e"
+  },
+  {
+    "path": "references/t05/T05-report.docx",
+    "bytes": 473144,
+    "sha256": "a8c4a3492c2367f18438d6b964ac495d42fca9caf26e85aa05335e2cffb96a91"
+  }
+]

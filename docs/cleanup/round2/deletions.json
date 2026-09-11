@@ -1,0 +1,226 @@
+[
+  {
+    "path": "references/design/candidate_metadata/candidates_detailed.csv",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 10354,
+    "sha256": "9e32f0fa334d2de0c2486dc280237e432f265d5e62264c886ee4fb7aa1cc28f4",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/aggrescan3d.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 1000,
+    "sha256": "e8effbf4d4b5090877dae9d275ca00792e62b682710fdf53f8bd05f62986cf74",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/candidate_explainer.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 37400,
+    "sha256": "13e7e3e052dbd4193c1f26adf2f336fab91dd23ebbba9d19a504d6f6924ca80e",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/cross_species_analysis.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 23922,
+    "sha256": "faaaf4f8f4e1dc59b5751d286d274c4d10b8e511e3729b50155edb930b3b7f4e",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/data_loader.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 9320,
+    "sha256": "9326cb61228c69f0df13d7a37a9696807d0da36e621c3eac0396791cb48f87a2",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/deeploc2/_init__.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/deeploc2/predict.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 1139,
+    "sha256": "4d72050a57f74f695a32cf70dfc1e499e60c7ba954531302283fb13ad069dad5",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/generate_and_evaluate.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 15041,
+    "sha256": "6f5f1daaa35b51146ba2b637ef942dc4e3c7c132bf58a8a73501e86de58472bc",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/models/__init__.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/models/diffusion_gvp.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 13606,
+    "sha256": "824c26e8654201056cc8a16df97d5dbbd82073e34aecdad277b21bc118b93641",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/models/esm2_gvp.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 12209,
+    "sha256": "59e0af46bc9b1632ccedf31f7bca34910469b55837ef73580e15a597ff6765d4",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/models/transformer_gvp.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 11011,
+    "sha256": "1dd2a23371d1931b4e85d80e22d44c7e8081f54bf1ef02f0a3c75e24caba4a8d",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/models/vae_gvp.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 13987,
+    "sha256": "b9c0ab76f5bf3625071128ff26c824d8e3974d125236666699ce04750a1c5b21",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/score/__init__.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/score/score_assembly.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 16978,
+    "sha256": "1bb89620cc7ebf73970e16067e984ba8efa1424471c5f11315fb177d458db344",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/score/score_conserv.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 4456,
+    "sha256": "1d76f4e1df2d0785dc7c3a8d482ff0f2289298f0a2429bf3c939d0ecbf53f82e",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/score/score_fold.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 3821,
+    "sha256": "d5311c73aca6fc5a33789f5c5a9b2abb817a1001c14a2ea5e55f282bb0e22946",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/score/score_mock.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 1623,
+    "sha256": "0db55d3f311d17917b57341ccb8faff103e83ded58eabbccd1c3bfe5e34452da",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/score/score_net.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 3917,
+    "sha256": "bdc7b96335061ed25176e36bb71152f27b852aedccc4e210371362baa6f2d9b9",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/score/score_novel.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 3941,
+    "sha256": "f71a89a3ef50d463704fe0f811eadd572248a84a2c43f6d16b8c74eb1b16a690",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/src/score/score_toxic.py",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 2534,
+    "sha256": "7ac937622f132c6cb20a17993af89528a9cb2defdff053d0e773479b5b93eb13",
+    "action": "delete"
+  },
+  {
+    "path": "references/design/毕业论文.pdf",
+    "reason": "另一套生成与五维mock评分工程及论文；本项目只使用T05候选，相关独有天然序列已保留在data/raw/design",
+    "bytes": 1951241,
+    "sha256": "d04c0e7839a200a69a3d5d2f8572beb51b056b284cfdec6529eab41b2266f69d",
+    "action": "delete"
+  },
+  {
+    "path": "references/t05/src/raw_data_processing/analyze_fasta.py",
+    "reason": "混合家族上游处理代码；本项目已有输入审计，正式参考清洗将独立实现",
+    "bytes": 6357,
+    "sha256": "ef263db1265a853dbf80611a54974b83b5dbbfb4082823d0b47caeb6388f2ec7",
+    "action": "delete"
+  },
+  {
+    "path": "references/t05/src/raw_data_processing/deduplicate_fasta.py",
+    "reason": "混合家族上游处理代码；本项目已有输入审计，正式参考清洗将独立实现",
+    "bytes": 4589,
+    "sha256": "c5d7f2edb4cba2634c9f0fc50352e68058bd33b08f096c0b5b057095a618ec5a",
+    "action": "delete"
+  },
+  {
+    "path": "references/t05/src/raw_data_processing/merge_fasta.py",
+    "reason": "混合家族上游处理代码；本项目已有输入审计，正式参考清洗将独立实现",
+    "bytes": 1132,
+    "sha256": "40c7f829026a7673ee2625230d296068e04ac631c730100a0f1d1078892be8b2",
+    "action": "delete"
+  },
+  {
+    "path": "references/t05/src/analysis_transformer_lm/analysis_aa_freq.py",
+    "reason": "旧混合家族EDA，与本项目统一评价实现分开，已有基础审计替代",
+    "bytes": 3368,
+    "sha256": "cc5c02d126773398d681ba3c8095b78b6fae166bb190ac824a9358cc74c99507",
+    "action": "delete"
+  },
+  {
+    "path": "references/t05/src/analysis_transformer_lm/analysis_divergence.py",
+    "reason": "旧混合家族EDA，与本项目统一评价实现分开，已有基础审计替代",
+    "bytes": 2347,
+    "sha256": "d8d37e2d28af5da81c6f1ecf49a8334c1ab54658d51f6d41acf6bde1d6210946",
+    "action": "delete"
+  },
+  {
+    "path": "references/t05/src/analysis_transformer_lm/analysis_length.py",
+    "reason": "旧混合家族EDA，与本项目统一评价实现分开，已有基础审计替代",
+    "bytes": 2543,
+    "sha256": "e9aaaf8c489e10282ee07f3b6d3d193f62b52711768ba66bb4fce4ace92b9d71",
+    "action": "delete"
+  },
+  {
+    "path": "data/candidates/design/candidates.fasta",
+    "reason": "用户明确候选入口为T05，删除design已筛选的10条候选子集",
+    "bytes": 1452,
+    "sha256": "6c92e44450fbad9baa9171eca83c1be0c68568a4d5ae979c74398a0f9a50eead",
+    "action": "delete"
+  },
+  {
+    "path": "references/t05/T05-report.pptx",
+    "reason": "与保留的完整来源报告重复，不作为本项目答辩材料",
+    "bytes": 4640704,
+    "sha256": "82bba65a150ad7daf5be0958c7d8e96a19ca5f3fb69fd3d568bd8ebeb4cb8205",
+    "action": "delete"
+  },
+  {
+    "path": "references/t05/doc/ana_transformer_lm.md",
+    "reason": "旧混合家族EDA说明，相关数据特征已纳入本项目报告",
+    "bytes": 3885,
+    "sha256": "92d53bce529c6f725a129112d315c7123a6a6c484d6fb5ca58fae264b64a182d",
+    "action": "delete"
+  },
+  {
+    "path": "references/t05/README_original.md",
+    "reason": "旧完整工程说明含已删除模块及失效路径，改用当前来源说明",
+    "bytes": 7838,
+    "sha256": "db78c6cd0a0b932c460f92f48d8964d6fdc5c3ef7b47d1f7a190d7d18c505cc9",
+    "action": "delete"
+  }
+]

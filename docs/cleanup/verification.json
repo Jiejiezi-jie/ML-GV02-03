@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-11",
+  "original_files": 473,
+  "retained_original_files": 46,
+  "deleted_original_files": 427,
+  "moved_original_files": 45,
+  "retained_sha256_verified": true,
+  "deleted_paths_absent": true,
+  "original_directories_removed": true,
+  "execution_matches_manifest": true,
+  "retained_fasta_files": 7,
+  "unfiltered_nominal_gvpa_unique_sequences": 1252,
+  "documentation_links_valid": true
+}
