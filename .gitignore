@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+.DS_Store
+
+# Rebuildable local BLAST databases and transient logs.
+results/gv02_03/work/blastdb/
+results/gv02_03/work/*.log
+

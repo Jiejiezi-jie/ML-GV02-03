@@ -1,0 +1,19 @@
+{
+  "source_records": 3720,
+  "accepted_source_records_including_duplicates": 3671,
+  "clean_unique_sequences": 1224,
+  "reason_counts": {
+    "accepted_unique": 1224,
+    "exact_duplicate": 2447,
+    "excluded_family_label": 30,
+    "excluded_header_term": 19,
+    "missing_required_gvpa_label": 32,
+    "nonstandard_residue": 1
+  },
+  "unique_sequences_first_seen_by_source": {
+    "/home/user/wangyuhan/ML-GV02-03/data/raw/design/GvpA.fasta": 3,
+    "/home/user/wangyuhan/ML-GV02-03/data/raw/t05/gvpa/GvpA_NotPartial.fasta": 358,
+    "/home/user/wangyuhan/ML-GV02-03/data/raw/t05/gvpa/GvpA_RefSeq.fasta": 862,
+    "/home/user/wangyuhan/ML-GV02-03/data/raw/t05/gvpa/rescued_GvpA_candidates.fasta": 1
+  }
+}

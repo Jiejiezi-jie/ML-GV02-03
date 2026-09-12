@@ -1,55 +1,105 @@
 # GV02-03：GvpA 候选序列的多目标评价与筛选
 
-本项目属于教师指南 [project-pool(1).pdf](project-pool(1).pdf) 的 **Track 1：GV（气囊蛋白）／GV02-03**。我们接收已有候选，评价域约束满足度、关键位点保守性、新颖性和多样性，并比较筛选策略、开展消融及鲁棒性分析。多样性是四个目标之一；本项目不要求训练新生成模型。
+本仓库实现课程项目 Track 1 / GV02-03。系统接收已有蛋白质生成候选，使用约束满足度、统计保守性、新颖性和多样性四个目标进行可解释评价，对比等权加权、Pareto 和各维度轮转三种筛选策略，并完成消融、权重/阈值鲁棒性与随机基线实验。项目不训练新的生成模型。
 
-**候选入口：[T05 生成候选集](data/candidates/t05/generated_gvp.fasta)，共 200 条。** 这些序列来自混合 Gvp 数据训练的生成模型，尚未被核验为纯 GvpA。天然序列用于建立参考集，不能当作生成候选混入评价。
+## 关键结果
 
-## 当前阶段
+- 候选：T05 生成的 200 条序列；天然参考清洗后 1224 条，CD-HIT 90% 聚类为 418 条代表。
+- 资源：官方 PF00741.24 / Gas_vesicle profile；23 个仅由天然参考 MSA 定义的统计保守位点。
+- 域证据：37/200 条有可报告 PF00741 命中，27/200 条通过 GA 25 bits + 模型覆盖 0.95 门槛。
+- 目标冲突：约束–新颖性 Pearson -0.7961，保守性–新颖性 -0.9127；约束–保守性 0.7498。
+- Top-20 等权加权：约束 0.6626、保守性 0.8739、域通过率 100%，但集合多样性 0.6121。
+- Top-20 Pareto/轮转：集合多样性 0.8753/0.8857，新颖性 0.5971/0.5893，但域通过率降到 60%/50%。
+- 200 次±20%权重扰动：Top-20 Jaccard 均值 0.9064、最小 0.6667；完整排名 Spearman 均值 0.9959。
+- 自动化测试：16 项全部通过。
 
-本轮完成 M1 问题分析：理解背景、分析数据特点、抽象和定义任务，形成 [功能需求分析与任务建模报告](reports/M1_功能需求分析与任务建模报告.md)（[PDF](reports/M1_功能需求分析与任务建模报告.pdf)）。输入统计是实际审计结果；域扫描、序列比对、正式四目标评分和筛选实验属于后续工作。
+这些都是计算代理结果，不是候选功能准确率或湿实验成功率。PF00741 也并非 GvpA 专一；候选进入下游前仍需结构与实验验证。
 
-[机器学习要求.md](机器学习要求.md) 保留原始任务记录。任务范围以课程指南的 GV02-03 为准，T05 原报告用于追溯输入来源。
+## 数据
 
-## 项目目录
+唯一待筛选输入为 [generated_gvp.fasta](data/candidates/t05/generated_gvp.fasta)，共 200 条。天然参考来自：
+
+- `data/raw/t05/gvpa/GvpA_RefSeq.fasta`
+- `data/raw/t05/gvpa/GvpA_NotPartial.fasta`
+- `data/raw/t05/gvpa/rescued_GvpA_candidates.fasta`
+- `data/raw/design/GvpA.fasta`
+
+参考清洗要求显式 GvpA 标签，排除 GvpJ、partial/fragment/predicted、非标准氨基酸和 50–180 aa 以外记录。混合多家族的 `data/raw/t05/real_gvp.fasta` 不作为纯 GvpA 参考。详情见 [数据说明](data/README.md)和[参考映射](data/processed/gv02_03/reference_mapping.tsv)。
+
+## 环境与完整复现
+
+推荐使用仓库提供的 Conda 配置：
+
+```bash
+cd /home/user/wangyuhan/ML-GV02-03
+conda env create -f environment.yml
+conda activate ml-gv02-03
+python -B experiments/run_full_experiment.py --config configs/gv02_03.yaml
+python -m pytest -q
+```
+
+本次实际环境位于 `/home/user/wangyuhan/envs/ml-gv02-03`；未激活环境时可运行：
+
+```bash
+PATH=/home/user/wangyuhan/envs/ml-gv02-03/bin:$PATH \
+  /home/user/wangyuhan/envs/ml-gv02-03/bin/python -B \
+  experiments/run_full_experiment.py --config configs/gv02_03.yaml
+PYTHONPATH=src /home/user/wangyuhan/envs/ml-gv02-03/bin/python -m pytest -q
+```
+
+首次运行从 EMBL-EBI InterPro 官方接口下载 PF00741 HMM，下载失败或内容校验失败会停止，不会换成伪造分数。参数和随机种子 42 固定在 [配置文件](configs/gv02_03.yaml)，输入/输出哈希、工具与 profile 版本见 [实验清单](results/gv02_03/manifest.json)。流水线不会修改原始 FASTA。
+
+## 四个指标
+
+| 指标 | 实现 |
+| --- | --- |
+| 约束满足度 | PF00741 domain bit score 相对参考命中的经验百分位 × 模型覆盖因子；另报 GA+覆盖门槛通过状态 |
+| 保守性 | 参考 MSA 中 gap≤0.10、共识≥0.90 的 23 个列上，候选与共识一致的比例；缺口计 0 |
+| 新颖性 | `1 - max_reference(pident × alignment_length / max(lengths))` |
+| 独特性/集合多样性 | 候选到其他候选的平均距离 / 筛选子集平均两两距离 |
+
+完整逐条证据在 [candidate_scores.tsv](results/gv02_03/tables/candidate_scores.tsv)。
+
+## 目录
 
 ```text
-machine/
-├── project-pool(1).pdf              # 教师课程指南
-├── 机器学习要求.md                  # 原始任务记录
+ML-GV02-03/
+├── configs/gv02_03.yaml             # 冻结参数
 ├── data/
-│   ├── README.md                   # 六份 FASTA 的用途和风险
-│   ├── candidates/t05/             # 200 条生成候选
-│   ├── raw/t05/gvpa/               # 三份名义 GvpA 天然来源
-│   ├── raw/t05/real_gvp.fasta       # 混合 Gvp 来源和训练背景
-│   └── raw/design/GvpA.fasta        # 有独有序列的天然参考来源
-├── references/t05/                # 原始报告、方法说明及生成资源
-├── preprocessing/                 # 输入审计脚本
-├── results/input_audit/            # 当前统计摘要和逐候选审计表
-├── reports/                        # M1 报告
-└── docs/
-    ├── 整理说明.md                  # 目录整理说明
-    └── cleanup/                    # 两轮清理与校验记录
+│   ├── candidates/                   # 原始候选
+│   ├── raw/                          # 原始天然来源（不覆盖）
+│   └── processed/gv02_03/            # 清洗参考、MSA、位点和距离矩阵
+├── models/pfam/                      # PF00741.24 profile 与来源元数据
+├── src/gv_eval/                      # I/O、工具封装、指标、策略、分析、流水线
+├── experiments/run_full_experiment.py
+├── results/gv02_03/
+│   ├── raw/                          # HMMER/BLAST 原始结果
+│   ├── tables/                       # 评分、相关、策略、消融、鲁棒性、随机基线
+│   ├── selections/                   # 三策略 K=10/20/50 的 TSV 与 FASTA
+│   ├── figures/                      # 论文图件
+│   ├── summary.json
+│   └── manifest.json
+├── reports/                          # M1–M5、最终 PDF 与答辩 PPT
+├── tests/                            # 自动化测试
+└── docs/project_management/          # 真实过程材料填写说明与模板
 ```
 
-第二轮删除 32 个无关或重复文件，共 6,811,715 字节。design 工程、design 的 10 条旧候选和评分、T05 重复演示材料及旧处理/分析脚本已删除。design 天然 FASTA 因有 30 条其余三份天然来源未覆盖的完整序列而保留。详见 [整理说明](docs/整理说明.md)。
+`results/gv02_03/work/blastdb/` 和工具日志属于可重建中间文件，不纳入版本控制；正式评分、原始比对表、图件和名单均保留。
 
-## 数据风险
+## 报告与答辩材料
 
-- 当前有 **6 个 FASTA 文件**。四份名义 GvpA 来源的不同完整序列并集为 1252 条，尚未完成家族和质量过滤。
-- T05 候选长 66–512 aa，中位数 103 aa，全部使用标准氨基酸且无完整序列重复。两条长度恰为生成上限 512 aa，需要核查是否截断。
-- 天然来源存在重复、未知残基 `X`、不完整注释和 GvpJ 等其他家族条目。不能仅按长度判断 GvpA 身份；没有精确重复也不能证明高新颖性。
-- 原任务记录中的 **PF01132 是 EFP（EF-P 的 OB 域），不能作为 GvpA 域标识**。相关的 PF00741／Gas_vesicle 家族也包含 GvpJ，因此命中不足以单独确定 GvpA 亚家族；后续需结合参考注释、比对与覆盖度核查，并固定数据库版本。[NCBI PF01132](https://www.ncbi.nlm.nih.gov/Structure/cdd/pfam01132)、[NCBI PF00741](https://www.ncbi.nlm.nih.gov/Structure/cdd/pfam00741)
+- [M1 功能需求分析与任务建模](reports/M1_功能需求分析与任务建模报告.md)
+- [M2 探索性数据分析](reports/M2_探索性数据分析.md)
+- [M3 评价体系与初步筛选](reports/M3_评价体系与初步筛选.md)
+- [M4 完整实验与鲁棒性分析](reports/M4_完整实验与鲁棒性分析.md)
+- [M5 最终报告](reports/M5_最终报告.md)及 PDF
+- `reports/GV02-03_答辩PPT.pptx`
 
-## 复核输入
+过程评分还要求真实会议、分工、Git 贡献和照片。仓库只提供模板，不会代替成员编造这些证据；项目组应从现在起按 [过程材料说明](docs/project_management/README.md)持续补充。
 
-在项目根目录运行（Python 3.8 及以上，无第三方依赖）：
+## 主要限制
 
-```powershell
-python -B -X utf8 preprocessing/analyze_inputs.py
-```
-
-命令读取原始 FASTA，更新 [summary.json](results/input_audit/summary.json) 和 [candidate_records.tsv](results/input_audit/candidate_records.tsv)，不修改原始序列，不执行域扫描、比对或家族判定。具体来源见 [数据说明](data/README.md)，原生成资源的缺失依赖见 [参考材料说明](references/README.md)。
-
-`docs/cleanup/` 第一轮 `fasta_inventory.json` 等文件是历史快照，包含当时的七份 FASTA；**当前统计以 `results/input_audit/summary.json` 为准**。后续清洗参考集、评分表、筛选名单和实验结果应另行输出，保持原始输入不变。
-
-报告正文可直接编辑 Markdown。重新生成 PDF 和长度分布图需要 Python 的 `reportlab`、Poppler 的 `pdftoppm`，以及 Windows 宋体和黑体字体：运行 `python -B reports/build_report.py --pdftoppm "pdftoppm.exe的实际路径"`。输入审计无需这些额外依赖。
+- 大多数 T05 候选没有 PF00741 命中，说明输入是混合 Gvp 生成池，而非已确认的纯 GvpA 池。
+- 统计保守位点不是实验验证关键位点；PF00741 命中也不能区分全部 GvpA/GvpJ 情形。
+- BLAST 局部比对经过覆盖校正，但不是严格全局结构相似性。
+- 无功能真值，不能通过调参声称找到“最优蛋白”；推荐将等权质量组与 Pareto/轮转探索组交给独立结构和实验验证。

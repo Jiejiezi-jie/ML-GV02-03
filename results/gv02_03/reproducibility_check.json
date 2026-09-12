@@ -1,0 +1,24 @@
+{
+  "check_date": "2026-09-12",
+  "procedure": "Run the full pipeline twice with the same environment, inputs and configs/gv02_03.yaml, then compare SHA-256.",
+  "alignment_threads": 1,
+  "all_equal": true,
+  "run_1": {
+    "results/gv02_03/summary.json": "0a912cc70b5c74839a1871810c60cae8e39b972a53d6dba02e39866aa2cd06fc",
+    "results/gv02_03/tables/candidate_scores.tsv": "0badaf96848ecfa953193aad39b9510a2543f723484799753ef095149d9bb347",
+    "results/gv02_03/tables/strategy_summary.tsv": "635e1851c4146383351dcac54cf6258c6d338e3b4ce1d3194c7ef61ae5bba3cc",
+    "results/gv02_03/tables/weight_robustness.tsv": "b9166eb8ea821106d074b6f9570c08afcd72bcd62f998c785cade338249d194c",
+    "data/processed/gv02_03/reference_cdhit90_alignment.fasta": "2d908adca7a53964fb5f59c6b3fd74bcddd24762cbfb5bb1fea9a05ad2491d2b",
+    "data/processed/gv02_03/reference_candidate_alignment.fasta": "1ef45a8b7839808d9f5ae6ae17da188de4a7561e96bf2c96c6f9b9a50770aede",
+    "data/processed/gv02_03/candidate_distance.npy": "9cf28f820e69e3bb3ca9bb79e4d728f478548ab50d5711c07c91e394c2f6ceba"
+  },
+  "run_2": {
+    "results/gv02_03/summary.json": "0a912cc70b5c74839a1871810c60cae8e39b972a53d6dba02e39866aa2cd06fc",
+    "results/gv02_03/tables/candidate_scores.tsv": "0badaf96848ecfa953193aad39b9510a2543f723484799753ef095149d9bb347",
+    "results/gv02_03/tables/strategy_summary.tsv": "635e1851c4146383351dcac54cf6258c6d338e3b4ce1d3194c7ef61ae5bba3cc",
+    "results/gv02_03/tables/weight_robustness.tsv": "b9166eb8ea821106d074b6f9570c08afcd72bcd62f998c785cade338249d194c",
+    "data/processed/gv02_03/reference_cdhit90_alignment.fasta": "2d908adca7a53964fb5f59c6b3fd74bcddd24762cbfb5bb1fea9a05ad2491d2b",
+    "data/processed/gv02_03/reference_candidate_alignment.fasta": "1ef45a8b7839808d9f5ae6ae17da188de4a7561e96bf2c96c6f9b9a50770aede",
+    "data/processed/gv02_03/candidate_distance.npy": "9cf28f820e69e3bb3ca9bb79e4d728f478548ab50d5711c07c91e394c2f6ceba"
+  }
+}

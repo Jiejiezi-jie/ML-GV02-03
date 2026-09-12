@@ -1,0 +1,23 @@
+name: ml-gv02-03
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - numpy=2.4
+  - pandas=3.0
+  - scipy=1.17
+  - scikit-learn=1.9
+  - matplotlib=3.11
+  - seaborn=0.13
+  - biopython=1.88
+  - hmmer=3.4
+  - mafft=7.526
+  - blast=2.17
+  - cd-hit=4.8.1
+  - pyyaml=6.0
+  - pytest=9.1
+  - reportlab=5.0
+  - python-docx=1.2
+  - python-pptx=1.0
+

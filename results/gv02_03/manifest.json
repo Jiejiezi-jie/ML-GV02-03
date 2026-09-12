@@ -1,0 +1,144 @@
+{
+  "pipeline_version": "1.0.0",
+  "seed": 42,
+  "python": "3.11.16",
+  "platform": "Linux-6.8.0-88-generic-x86_64-with-glibc2.39",
+  "tools": {
+    "hmmsearch": {
+      "path": "/home/user/wangyuhan/envs/ml-gv02-03/bin/hmmsearch",
+      "version": "# hmmsearch :: search profile(s) against a sequence database"
+    },
+    "mafft": {
+      "path": "/home/user/wangyuhan/envs/ml-gv02-03/bin/mafft",
+      "version": "v7.526 (2024/Apr/26)"
+    },
+    "blastp": {
+      "path": "/home/user/wangyuhan/envs/ml-gv02-03/bin/blastp",
+      "version": "blastp: 2.17.0+"
+    },
+    "makeblastdb": {
+      "path": "/home/user/wangyuhan/envs/ml-gv02-03/bin/makeblastdb",
+      "version": "makeblastdb: 2.17.0+"
+    },
+    "cd-hit": {
+      "path": "/home/user/wangyuhan/envs/ml-gv02-03/bin/cd-hit",
+      "version": "====== CD-HIT version 4.8.1 (built on Apr 24 2025) ======"
+    }
+  },
+  "pfam": {
+    "name": "Gas_vesicle",
+    "accession": "PF00741.24",
+    "length": 39,
+    "ga_sequence": 25.0,
+    "ga_domain": 25.0,
+    "url": "https://www.ebi.ac.uk/interpro/wwwapi/entry/pfam/PF00741/?annotation=hmm",
+    "sha256": "e44f933c618426c2d0465657a64f1890f50feaeaea626ecb0b8dedb734f38c2f"
+  },
+  "inputs": {
+    "configs/gv02_03.yaml": "9d884a93b82b667eaee783ae78f671adbe77e90cf8780eb013d8af9260415a41",
+    "data/candidates/t05/generated_gvp.fasta": "d9bc75580ee870adbe80f069393d80a6d39fd9981cc64baeb8a9ea9d4f2ebeb6",
+    "data/raw/t05/gvpa/GvpA_RefSeq.fasta": "53483961cd05c61e6c63a5b369fdd07fed7425ff70d71edf5c2cb33430b71cc1",
+    "data/raw/t05/gvpa/GvpA_NotPartial.fasta": "835048e31800ff5c298e755fc9a640f79e3950e0096cc4f284019fed240ab6e2",
+    "data/raw/t05/gvpa/rescued_GvpA_candidates.fasta": "1cc12eb54b7852c03f2e014216006cd2cf56f438335054445a76b518846e412f",
+    "data/raw/design/GvpA.fasta": "c58b00e8198049e299d10fcf5b20ed76898052b48eb67943dbc9ea596d8352e3"
+  },
+  "outputs": {
+    "data/processed/gv02_03/reference_clean.fasta": "141986b4ae6a47155f14f8cfb31c6259932115e828108e4641e8e65810a12178",
+    "data/processed/gv02_03/reference_cdhit90.fasta": "655c57e03de78d56788a8d252525ae91ad72da932992a5b034932bc61f21f630",
+    "data/processed/gv02_03/conserved_sites.tsv": "900de96d2bc88ff1fd840c09ba372b189c488ddff9446c62109534acd0a4b5ac",
+    "data/processed/gv02_03/candidate_distance.npy": "9cf28f820e69e3bb3ca9bb79e4d728f478548ab50d5711c07c91e394c2f6ceba",
+    "results/gv02_03/tables/candidate_scores.tsv": "0badaf96848ecfa953193aad39b9510a2543f723484799753ef095149d9bb347",
+    "results/gv02_03/tables/strategy_summary.tsv": "635e1851c4146383351dcac54cf6258c6d338e3b4ce1d3194c7ef61ae5bba3cc",
+    "results/gv02_03/tables/ablation_summary.tsv": "301f872b275d5b0421aee20d2002d6e7752411fdcf2fe47772a97aa144d3e109",
+    "results/gv02_03/tables/weight_robustness.tsv": "b9166eb8ea821106d074b6f9570c08afcd72bcd62f998c785cade338249d194c",
+    "results/gv02_03/summary.json": "0a912cc70b5c74839a1871810c60cae8e39b972a53d6dba02e39866aa2cd06fc"
+  },
+  "config": {
+    "seed": 42,
+    "threads": 8,
+    "inputs": {
+      "candidates": "data/candidates/t05/generated_gvp.fasta",
+      "nominal_gvpa_sources": [
+        "data/raw/t05/gvpa/GvpA_RefSeq.fasta",
+        "data/raw/t05/gvpa/GvpA_NotPartial.fasta",
+        "data/raw/t05/gvpa/rescued_GvpA_candidates.fasta",
+        "data/raw/design/GvpA.fasta"
+      ]
+    },
+    "reference": {
+      "required_label": "gvpa",
+      "excluded_labels": [
+        "gvpj"
+      ],
+      "excluded_header_terms": [
+        "partial",
+        "fragment",
+        "predicted"
+      ],
+      "min_length": 50,
+      "max_length": 180,
+      "cluster_identity": 0.9,
+      "cluster_word_length": 5
+    },
+    "pfam": {
+      "accession": "PF00741",
+      "name": "Gas_vesicle",
+      "url": "https://www.ebi.ac.uk/interpro/wwwapi/entry/pfam/PF00741/?annotation=hmm",
+      "model_path": "models/pfam/PF00741.hmm",
+      "permissive_sequence_evalue": 1000.0,
+      "permissive_domain_evalue": 1000.0,
+      "minimum_coverage_floor": 0.5,
+      "minimum_coverage_ceiling": 0.95
+    },
+    "conservation": {
+      "alignment_threads": 1,
+      "maximum_reference_gap_fraction": 0.1,
+      "minimum_consensus_fraction": 0.9
+    },
+    "blast": {
+      "evalue": 1000.0,
+      "maximum_reference_targets": 2000,
+      "maximum_candidate_targets": 200
+    },
+    "selection": {
+      "primary_k": 20,
+      "budgets": [
+        10,
+        20,
+        50
+      ],
+      "metrics": [
+        "constraint_score",
+        "conservation_score",
+        "novelty_score",
+        "uniqueness_score"
+      ],
+      "equal_weights": {
+        "constraint_score": 0.25,
+        "conservation_score": 0.25,
+        "novelty_score": 0.25,
+        "uniqueness_score": 0.25
+      }
+    },
+    "robustness": {
+      "weight_samples": 200,
+      "relative_weight_sigma": 0.2,
+      "random_baseline_samples": 1000,
+      "domain_cutoff_multipliers": [
+        0.8,
+        1.0,
+        1.2
+      ],
+      "coverage_offsets": [
+        -0.1,
+        0.0,
+        0.1
+      ]
+    },
+    "outputs": {
+      "processed_dir": "data/processed/gv02_03",
+      "model_dir": "models/pfam",
+      "result_dir": "results/gv02_03"
+    }
+  }
+}
