@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 import platform
 import sys
+from collections import Counter
 from pathlib import Path
 
 import numpy as np
@@ -45,6 +46,7 @@ from .metrics import (
     find_conserved_sites,
 )
 from .reference import build_clean_reference
+from .quality import assess_candidates, passing_candidates
 from .selection import pareto_ranking, weighted_ranking
 
 
@@ -72,7 +74,6 @@ def run_pipeline(root: str | Path, config_path: str | Path) -> dict:
     config = yaml.safe_load(config_path.read_text(encoding="utf-8"))
     os.environ.setdefault("PYTHONHASHSEED", str(config["seed"]))
 
-    tools = require_tools(["hmmsearch", "mafft", "blastp", "makeblastdb", "cd-hit"])
     processed = _path(root, config["outputs"]["processed_dir"])
     result = _path(root, config["outputs"]["result_dir"])
     raw = result / "raw"
@@ -83,13 +84,29 @@ def run_pipeline(root: str | Path, config_path: str | Path) -> dict:
     for directory in (processed, raw, tables, figures, selections_dir, work):
         directory.mkdir(parents=True, exist_ok=True)
 
-    candidate_path = _path(root, config["inputs"]["candidates"])
-    candidates_list = list(read_fasta(candidate_path))
+    candidate_input_path = _path(root, config["inputs"]["candidates"])
+    candidates_list = list(read_fasta(candidate_input_path))
     candidate_ids = [row.identifier for row in candidates_list]
     if len(candidate_ids) != len(set(candidate_ids)):
         raise ValueError("Candidate FASTA contains duplicate identifiers")
-    if not candidates_list or any(not row.sequence or set(row.sequence) - STANDARD_AA for row in candidates_list):
+    if not candidates_list:
+        raise ValueError("Candidate FASTA is empty")
+    qc = {}
+    qc_rows = []
+    candidate_path = candidate_input_path
+    if "quality" in config:
+        qc = assess_candidates(candidates_list, **config["quality"])
+        qc_rows = [{"sequence_id": record.identifier, **qc[record.identifier]} for record in candidates_list]
+        write_tsv(processed / "candidate_qc.tsv", qc_rows, list(qc_rows[0]))
+        candidates_list = passing_candidates(candidates_list, qc)
+        candidate_ids = [row.identifier for row in candidates_list]
+        candidate_path = processed / "eligible_candidates.fasta"
+        write_fasta(candidates_list, candidate_path)
+        if len(candidates_list) < max(2, *config["selection"]["budgets"], config["selection"]["primary_k"]):
+            raise ValueError("Insufficient QC-passing candidates for configured analysis budgets; see candidate_qc.tsv")
+    elif any(not row.sequence or set(row.sequence) - STANDARD_AA for row in candidates_list):
         raise ValueError("Candidate FASTA contains empty or non-standard protein sequences")
+    tools = require_tools(["hmmsearch", "mafft", "blastp", "makeblastdb", "cd-hit"])
     candidates = {row.identifier: row for row in candidates_list}
 
     reference_paths = [_path(root, value) for value in config["inputs"]["nominal_gvpa_sources"]]
@@ -219,6 +236,7 @@ def run_pipeline(root: str | Path, config_path: str | Path) -> dict:
             {
                 "sequence_id": identifier,
                 "length": len(record.sequence),
+                **qc.get(identifier, {}),
                 **domain[identifier],
                 **conservation[identifier],
                 **novelty[identifier],
@@ -310,9 +328,16 @@ def run_pipeline(root: str | Path, config_path: str | Path) -> dict:
         "threshold_robustness": threshold_rows,
         "random_baseline_comparison": random_comparisons,
     }
+    if qc_rows:
+        summary["quality_control"] = {
+            "input_count": len(qc_rows),
+            "pass_count": len(candidates_list),
+            "failure_count": len(qc_rows) - len(candidates_list),
+            "reason_counts": dict(Counter(reason for row in qc_rows for reason in row["qc_reasons"].split(";") if reason)),
+        }
     write_json(result / "summary.json", summary)
 
-    input_files = [config_path, candidate_path, *reference_paths]
+    input_files = [config_path, candidate_input_path, *reference_paths]
     output_files = [
         processed / "reference_clean.fasta", processed / "reference_cdhit90.fasta",
         processed / "conserved_sites.tsv", processed / "candidate_distance.npy",
@@ -320,6 +345,8 @@ def run_pipeline(root: str | Path, config_path: str | Path) -> dict:
         tables / "ablation_summary.tsv", tables / "weight_robustness.tsv",
         result / "summary.json",
     ]
+    if qc_rows:
+        output_files.extend([processed / "candidate_qc.tsv", candidate_path])
     manifest = {
         "pipeline_version": "1.0.0",
         "seed": config["seed"],

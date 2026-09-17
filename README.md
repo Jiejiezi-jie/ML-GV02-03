@@ -49,7 +49,26 @@ PYTHONPATH=src /home/user/wangyuhan/envs/ml-gv02-03/bin/python -m pytest -q
 
 首次运行从 EMBL-EBI InterPro 官方接口下载 PF00741 HMM，下载失败或内容校验失败会停止，不会换成伪造分数。参数和随机种子 42 固定在 [配置文件](configs/gv02_03.yaml)，输入/输出哈希、工具与 profile 版本见 [实验清单](results/gv02_03/manifest.json)。流水线不会修改原始 FASTA。
 
-## 四个指标
+## 可选候选 QC（新增）
+
+运行 `python -B experiments/run_full_experiment.py --config configs/gv02_03_qc.yaml`
+可在评分前启用基础候选质控，输出到 `data/processed/gv02_03_qc/` 和
+`results/gv02_03_qc/`。原配置及上面的历史实验结果保持为旧版基线。
+
+QC 硬失败包括空序列、非法氨基酸、长度不在 50–180 aa、完全重复候选
+（重复组全部排除），以及低复杂度代理规则：不同残基少于 8 种或某一残基
+比例超过 0.35。这些是可配置的初始筛查阈值，尚未经过生物学校准。
+`generation_length_cap` 若设置，达到或超过该长度会产生警告而不单独排除；
+旧候选缺少生成上限记录，默认 `null` 表示未检查，不能据此认定没有截断。
+
+`candidate_qc.tsv` 保留所有候选的状态和原因，`eligible_candidates.fasta`
+保存通过者，评分和 Top-K 表携带 QC 字段。通过数量不足现有分析预算时
+明确报错并保留 QC 表，需调整预算后重新运行。原始 FASTA 不被修改。
+本次仅完成改进计划“工作二”的基础序列 QC；训练/参考完全匹配、组成偏离、
+疏水片段、额外结构域和生成 EOS 元数据检查仍待实现。QC 通过不代表 GvpA
+家族鉴定通过。完整 QC 实验仍需 HMMER、MAFFT、BLAST 和 CD-HIT 环境运行。
+
+## 四个指标（旧版基线）
 
 | 指标 | 实现 |
 | --- | --- |
