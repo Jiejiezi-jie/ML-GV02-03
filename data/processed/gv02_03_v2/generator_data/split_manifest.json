@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "seed": 42,
+  "dataset_status": "provisional_nominal_gvpa",
+  "family_verification_status": "pending_competitive_gvpa_gvpj_verification",
+  "warning": "The source annotation, length and character filters are complete, but competitive GvpA/GvpJ verification is still pending. These files are not the final high-confidence GvpA training set.",
+  "split_algorithm": "seeded_largest_cluster_first",
+  "cluster_identity": 0.9,
+  "ratios": {
+    "train": 0.8,
+    "validation": 0.1,
+    "test": 0.1
+  },
+  "total_sequences": 1224,
+  "total_clusters": 418,
+  "splits": {
+    "train": {
+      "sequences": 978,
+      "clusters": 336,
+      "fraction": 0.7990196078431373,
+      "minimum_length": 54,
+      "maximum_length": 177
+    },
+    "validation": {
+      "sequences": 123,
+      "clusters": 41,
+      "fraction": 0.10049019607843138,
+      "minimum_length": 68,
+      "maximum_length": 159
+    },
+    "test": {
+      "sequences": 123,
+      "clusters": 41,
+      "fraction": 0.10049019607843138,
+      "minimum_length": 69,
+      "maximum_length": 157
+    }
+  },
+  "input_sha256": {
+    "configs/generation.yaml": "cd3dcd992de0459cbfb716da9372100110dff0cc639661d686700bf1def928b3",
+    "data/processed/gv02_03/reference_clean.fasta": "141986b4ae6a47155f14f8cfb31c6259932115e828108e4641e8e65810a12178",
+    "data/processed/gv02_03/reference_mapping.tsv": "ccce221c7c0a8327fdde74a36844800ad9136d1026a307a6123ea2cee8506757",
+    "data/processed/gv02_03/reference_cdhit90.fasta.clstr": "4d5b54ddd1f80b0f71afeea4bc679c59b46198a428c84ea0103443160a7eb601"
+  },
+  "output_sha256": {
+    "data/processed/gv02_03_v2/generator_data/sequence_manifest.tsv": "83c17768764f4ba33542435d4c4deb59c94da13a166ee81512da74439cb2e250",
+    "data/processed/gv02_03_v2/generator_data/test.fasta": "ff5dc84d874b6e12f874bd6c296d668df49aaba587e3416a14bc811b270e8c3a",
+    "data/processed/gv02_03_v2/generator_data/train.fasta": "b1b0745039e3c286f3c0c3388c7d30a43bd9eaca82cf655831619ec32bcc5682",
+    "data/processed/gv02_03_v2/generator_data/validation.fasta": "1e840904089adb0d89082a18a903aa9e0a9f771a4c06abecc971d2c4ef1f9331",
+    "models/generator/sequence_vae/vocabulary.json": "4664cb809825b7023ad6a8a90b9492f757446b7b97890595c397504646aa55d4"
+  }
+}

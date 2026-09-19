@@ -1,0 +1,47 @@
+version: 1
+seed: 42
+
+# 老师反馈后的 V2 首选基线。GAN 仅作为后续可选对照。
+model:
+  type: sequence_vae
+  architecture: gru
+  embedding_dim: 32
+  hidden_dim: 128
+  latent_dim: 32
+  maximum_sequence_length: 180
+  training:
+    batch_size: 64
+    epochs: 100
+    learning_rate: 0.001
+    kl_beta: 0.1
+    kl_warmup_epochs: 20
+    early_stopping_patience: 15
+
+data:
+  # 该集合通过来源注释、长度、字符和精确去重规则，但尚未完成
+  # GvpA/GvpJ 竞争性核验，因此不能称为最终 high_confidence_gvpa。
+  verification_status: pending_competitive_gvpa_gvpj_verification
+  reference_fasta: data/processed/gv02_03/reference_clean.fasta
+  reference_mapping: data/processed/gv02_03/reference_mapping.tsv
+  cluster_file: data/processed/gv02_03/reference_cdhit90.fasta.clstr
+  cluster_identity: 0.90
+  split:
+    algorithm: seeded_largest_cluster_first
+    train: 0.80
+    validation: 0.10
+    test: 0.10
+
+vocabulary:
+  special_tokens: ["<PAD>", "<BOS>", "<EOS>", "<UNK>"]
+  amino_acids: "ACDEFGHIKLMNPQRSTVWY"
+
+generation:
+  candidate_count: 1000
+  sampling_temperature: 1.0
+  top_k: 0
+  top_p: 1.0
+  final_selection_budgets: [10, 20, 50]
+
+outputs:
+  data_dir: data/processed/gv02_03_v2/generator_data
+  vocabulary: models/generator/sequence_vae/vocabulary.json
