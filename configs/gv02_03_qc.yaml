@@ -3,6 +3,9 @@ threads: 8
 
 inputs:
   candidates: data/candidates/t05/generated_gvp.fasta
+  # Provisional V2 training split, not the unknown training set of the legacy T05 model.
+  qc_training_fasta: data/processed/gv02_03_v2/generator_data/train.fasta
+  qc_reference_fasta: data/processed/gv02_03/reference_clean.fasta
   nominal_gvpa_sources:
     - data/raw/t05/gvpa/GvpA_RefSeq.fasta
     - data/raw/t05/gvpa/GvpA_NotPartial.fasta
@@ -15,6 +18,8 @@ quality:
   minimum_unique_residues: 8
   maximum_single_residue_fraction: 0.35
   generation_length_cap: null
+  exact_training_match_action: warn
+  exact_reference_match_action: warn
 
 reference:
   required_label: gvpa

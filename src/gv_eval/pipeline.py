@@ -46,7 +46,7 @@ from .metrics import (
     find_conserved_sites,
 )
 from .reference import build_clean_reference
-from .quality import assess_candidates, passing_candidates
+from .quality import assess_candidate_files, passing_candidates
 from .selection import pareto_ranking, weighted_ranking
 
 
@@ -93,9 +93,16 @@ def run_pipeline(root: str | Path, config_path: str | Path) -> dict:
         raise ValueError("Candidate FASTA is empty")
     qc = {}
     qc_rows = []
+    qc_input_paths = {}
     candidate_path = candidate_input_path
     if "quality" in config:
-        qc = assess_candidates(candidates_list, **config["quality"])
+        for source in ("training", "reference"):
+            source_path = config["inputs"].get(f"qc_{source}_fasta")
+            if source_path is not None:
+                if not isinstance(source_path, str) or not source_path.strip():
+                    raise ValueError(f"qc_{source}_fasta must be a nonempty path or null")
+                qc_input_paths[f"{source}_fasta"] = _path(root, source_path)
+        qc = assess_candidate_files(candidates_list, **qc_input_paths, **config["quality"])
         qc_rows = [{"sequence_id": record.identifier, **qc[record.identifier]} for record in candidates_list]
         write_tsv(processed / "candidate_qc.tsv", qc_rows, list(qc_rows[0]))
         candidates_list = passing_candidates(candidates_list, qc)
@@ -333,11 +340,19 @@ def run_pipeline(root: str | Path, config_path: str | Path) -> dict:
             "input_count": len(qc_rows),
             "pass_count": len(candidates_list),
             "failure_count": len(qc_rows) - len(candidates_list),
+            "exact_match_counts": {
+                source: sum(row[f"exact_{source}_match"] for row in qc_rows)
+                for source in ("training", "reference")
+            },
+            "match_checked": {
+                source: qc_rows[0][f"{source}_match_checked"]
+                for source in ("training", "reference")
+            },
             "reason_counts": dict(Counter(reason for row in qc_rows for reason in row["qc_reasons"].split(";") if reason)),
         }
     write_json(result / "summary.json", summary)
 
-    input_files = [config_path, candidate_input_path, *reference_paths]
+    input_files = [config_path, candidate_input_path, *reference_paths, *qc_input_paths.values()]
     output_files = [
         processed / "reference_clean.fasta", processed / "reference_cdhit90.fasta",
         processed / "conserved_sites.tsv", processed / "candidate_distance.npy",

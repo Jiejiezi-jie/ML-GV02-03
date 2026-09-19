@@ -73,9 +73,31 @@ QC 硬失败包括空序列、非法氨基酸、长度不在 50–180 aa、完�
 `candidate_qc.tsv` 保留所有候选的状态和原因，`eligible_candidates.fasta`
 保存通过者，评分和 Top-K 表携带 QC 字段。通过数量不足现有分析预算时
 明确报错并保留 QC 表，需调整预算后重新运行。原始 FASTA 不被修改。
-本次仅完成改进计划“工作二”的基础序列 QC；训练/参考完全匹配、组成偏离、
+本次完成改进计划“工作二”的基础序列 QC 和训练/参考完全匹配检查；组成偏离、
 疏水片段、额外结构域和生成 EOS 元数据检查仍待实现。QC 通过不代表 GvpA
 家族鉴定通过。完整 QC 实验仍需 HMMER、MAFFT、BLAST 和 CD-HIT 环境运行。
+
+### 训练集与天然参考完全匹配检查
+
+`inputs.qc_training_fasta` 和 `inputs.qc_reference_fasta` 分别指定比对 FASTA。
+QC 配置默认使用 V2 暂定训练集 `data/processed/gv02_03_v2/generator_data/train.fasta`
+以及天然参考 `data/processed/gv02_03/reference_clean.fasta`。
+旧 T05 生成模型的真实训练集未知，所以默认的训练匹配只表示“与指定 V2 训练集重复”，
+不能解释为旧模型记忆了训练数据。为新生成批次运行时，应指定实际使用的训练 FASTA。
+
+比较完整氨基酸序列（忽略大小写，不做近似匹配）。输出字段：
+
+- `exact_training_match` / `exact_reference_match`：是否找到完全相同的序列；
+- `training_match_ids` / `reference_match_ids`：所有匹配 ID 的有序 JSON 数组；
+- `training_match_checked` / `reference_match_checked`：是否实际执行了该项检查。
+
+在 `quality` 下独立设置 `exact_training_match_action` 和
+`exact_reference_match_action`，取值为 `warn`（默认，仅告警）或 `exclude`
+（将匹配者设为 `qc_pass=false`，不进入评分）。警告同样写入 `qc_reasons`。
+比对路径缺省或为 `null` 时标记未检查；此时不能启用 `exclude`。
+指定文件不存在、为空、含非法序列或重复 ID 时明确报错，不静默跳过。
+同一合法序列对应多个不同 ID 时全部保留。完整运行的摘要包含两类匹配数量，
+manifest 记录所用比对 FASTA 的 SHA-256；QC 字段随评分与筛选名单传递。
 
 ## 四个指标（旧版基线）
 
