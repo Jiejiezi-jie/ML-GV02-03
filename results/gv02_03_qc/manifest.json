@@ -1,0 +1,161 @@
+{
+  "pipeline_version": "1.0.0",
+  "seed": 42,
+  "python": "3.11.16",
+  "platform": "Linux-6.8.0-88-generic-x86_64-with-glibc2.39",
+  "tools": {
+    "hmmsearch": {
+      "path": "/home/user/wangyuhan/envs/ml-gv02-03/bin/hmmsearch",
+      "version": "# hmmsearch :: search profile(s) against a sequence database"
+    },
+    "mafft": {
+      "path": "/home/user/wangyuhan/envs/ml-gv02-03/bin/mafft",
+      "version": "v7.526 (2024/Apr/26)"
+    },
+    "blastp": {
+      "path": "/home/user/wangyuhan/envs/ml-gv02-03/bin/blastp",
+      "version": "blastp: 2.17.0+"
+    },
+    "makeblastdb": {
+      "path": "/home/user/wangyuhan/envs/ml-gv02-03/bin/makeblastdb",
+      "version": "makeblastdb: 2.17.0+"
+    },
+    "cd-hit": {
+      "path": "/home/user/wangyuhan/envs/ml-gv02-03/bin/cd-hit",
+      "version": "====== CD-HIT version 4.8.1 (built on Apr 24 2025) ======"
+    }
+  },
+  "pfam": {
+    "name": "Gas_vesicle",
+    "accession": "PF00741.24",
+    "length": 39,
+    "ga_sequence": 25.0,
+    "ga_domain": 25.0,
+    "url": "https://www.ebi.ac.uk/interpro/wwwapi/entry/pfam/PF00741/?annotation=hmm",
+    "sha256": "e44f933c618426c2d0465657a64f1890f50feaeaea626ecb0b8dedb734f38c2f"
+  },
+  "inputs": {
+    "configs/gv02_03_qc.yaml": "89e88e6711251b064f2a6541e06ff87dddb04e83de67c05da96cbc53a0e6b78a",
+    "data/candidates/t05/generated_gvp.fasta": "d9bc75580ee870adbe80f069393d80a6d39fd9981cc64baeb8a9ea9d4f2ebeb6",
+    "data/raw/t05/gvpa/GvpA_RefSeq.fasta": "53483961cd05c61e6c63a5b369fdd07fed7425ff70d71edf5c2cb33430b71cc1",
+    "data/raw/t05/gvpa/GvpA_NotPartial.fasta": "835048e31800ff5c298e755fc9a640f79e3950e0096cc4f284019fed240ab6e2",
+    "data/raw/t05/gvpa/rescued_GvpA_candidates.fasta": "1cc12eb54b7852c03f2e014216006cd2cf56f438335054445a76b518846e412f",
+    "data/raw/design/GvpA.fasta": "c58b00e8198049e299d10fcf5b20ed76898052b48eb67943dbc9ea596d8352e3",
+    "data/processed/gv02_03_v2/generator_data/train.fasta": "b1b0745039e3c286f3c0c3388c7d30a43bd9eaca82cf655831619ec32bcc5682",
+    "data/processed/gv02_03/reference_clean.fasta": "141986b4ae6a47155f14f8cfb31c6259932115e828108e4641e8e65810a12178"
+  },
+  "outputs": {
+    "data/processed/gv02_03_qc/reference_clean.fasta": "141986b4ae6a47155f14f8cfb31c6259932115e828108e4641e8e65810a12178",
+    "data/processed/gv02_03_qc/reference_cdhit90.fasta": "655c57e03de78d56788a8d252525ae91ad72da932992a5b034932bc61f21f630",
+    "data/processed/gv02_03_qc/conserved_sites.tsv": "4f47c171b3a31275bdbf03691e0a6230ebb090e485f58246a94d6856dec80d6b",
+    "data/processed/gv02_03_qc/candidate_distance.npy": "4b0454c856eb490d129155282dd493cc2029a378366b301379155cc13c63dbd5",
+    "results/gv02_03_qc/tables/candidate_scores.tsv": "da1ca15675d8f132a77db2db8239658d5f76fc187a0c58c58cc654fdd32b7082",
+    "results/gv02_03_qc/tables/strategy_summary.tsv": "0dceb54be83e16a1010b7fc43630d040e5aee7b398e965304996f0df9d7b6a92",
+    "results/gv02_03_qc/tables/ablation_summary.tsv": "72b1a583d11db7726f8bd100a63d940947946da3727ed37efcd0605f09c536ad",
+    "results/gv02_03_qc/tables/weight_robustness.tsv": "82d86eb1e229208d08b93182bcda13adc1c28a9751d8290e0c9f6e77321a6863",
+    "results/gv02_03_qc/summary.json": "ca912aff4a048d033c870c3fec0b9744660262b4fd32b5a29b3b1a44106ef9d1",
+    "data/processed/gv02_03_qc/candidate_qc.tsv": "f04c1086670b2a9c36366a34feadd0b0e7681e506892b64ae54b5b84ca075d26",
+    "data/processed/gv02_03_qc/eligible_candidates.fasta": "a8456b30fe0c68689a4fa9b6a6c188ba6177a88d7c7e61a4964f801b9a4ada46"
+  },
+  "config": {
+    "seed": 42,
+    "threads": 8,
+    "inputs": {
+      "candidates": "data/candidates/t05/generated_gvp.fasta",
+      "qc_training_fasta": "data/processed/gv02_03_v2/generator_data/train.fasta",
+      "qc_reference_fasta": "data/processed/gv02_03/reference_clean.fasta",
+      "nominal_gvpa_sources": [
+        "data/raw/t05/gvpa/GvpA_RefSeq.fasta",
+        "data/raw/t05/gvpa/GvpA_NotPartial.fasta",
+        "data/raw/t05/gvpa/rescued_GvpA_candidates.fasta",
+        "data/raw/design/GvpA.fasta"
+      ]
+    },
+    "quality": {
+      "minimum_length": 50,
+      "maximum_length": 180,
+      "minimum_unique_residues": 8,
+      "maximum_single_residue_fraction": 0.35,
+      "generation_length_cap": null,
+      "exact_training_match_action": "warn",
+      "exact_reference_match_action": "warn",
+      "composition_outlier_quantile": 0.99,
+      "composition_outlier_action": "warn"
+    },
+    "reference": {
+      "required_label": "gvpa",
+      "excluded_labels": [
+        "gvpj"
+      ],
+      "excluded_header_terms": [
+        "partial",
+        "fragment",
+        "predicted"
+      ],
+      "min_length": 50,
+      "max_length": 180,
+      "cluster_identity": 0.9,
+      "cluster_word_length": 5
+    },
+    "pfam": {
+      "accession": "PF00741",
+      "name": "Gas_vesicle",
+      "url": "https://www.ebi.ac.uk/interpro/wwwapi/entry/pfam/PF00741/?annotation=hmm",
+      "model_path": "models/pfam/PF00741.hmm",
+      "permissive_sequence_evalue": 1000.0,
+      "permissive_domain_evalue": 1000.0,
+      "minimum_coverage_floor": 0.5,
+      "minimum_coverage_ceiling": 0.95
+    },
+    "conservation": {
+      "alignment_threads": 1,
+      "maximum_reference_gap_fraction": 0.1,
+      "minimum_consensus_fraction": 0.9
+    },
+    "blast": {
+      "evalue": 1000.0,
+      "maximum_reference_targets": 2000,
+      "maximum_candidate_targets": 200
+    },
+    "selection": {
+      "primary_k": 20,
+      "budgets": [
+        10,
+        20,
+        50
+      ],
+      "metrics": [
+        "constraint_score",
+        "conservation_score",
+        "novelty_score",
+        "uniqueness_score"
+      ],
+      "equal_weights": {
+        "constraint_score": 0.25,
+        "conservation_score": 0.25,
+        "novelty_score": 0.25,
+        "uniqueness_score": 0.25
+      }
+    },
+    "robustness": {
+      "weight_samples": 200,
+      "relative_weight_sigma": 0.2,
+      "random_baseline_samples": 1000,
+      "domain_cutoff_multipliers": [
+        0.8,
+        1.0,
+        1.2
+      ],
+      "coverage_offsets": [
+        -0.1,
+        0.0,
+        0.1
+      ]
+    },
+    "outputs": {
+      "processed_dir": "data/processed/gv02_03_qc",
+      "model_dir": "models/pfam",
+      "result_dir": "results/gv02_03_qc"
+    }
+  }
+}

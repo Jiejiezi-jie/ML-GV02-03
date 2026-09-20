@@ -104,11 +104,12 @@ def write_tsv(path: str | Path, rows: Iterable[dict], fieldnames: Sequence[str])
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=fieldnames, delimiter="\t")
+        writer = csv.DictWriter(
+            stream, fieldnames=fieldnames, delimiter="\t", lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(rows)
 
 
 def header_has_label(header: str, label: str) -> bool:
     return bool(re.search(rf"(?i)(?:^|[^a-z0-9]){re.escape(label)}(?:[^a-z0-9]|$)", header))
-

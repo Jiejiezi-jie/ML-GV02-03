@@ -1,0 +1,16 @@
+{
+  "runs": 2,
+  "seed": 42,
+  "non_work_artifacts_compared": 59,
+  "byte_identical_artifacts": 55,
+  "derived_outputs_identical": true,
+  "manifest_sha256_run_1": "fe8f06c8702590fe80c69500fca92aefbe45d4209c706ac44a28d264dd1667c3",
+  "manifest_sha256_run_2": "fe8f06c8702590fe80c69500fca92aefbe45d4209c706ac44a28d264dd1667c3",
+  "non_identical_raw_artifacts": [
+    "results/gv02_03_qc/raw/candidate_pfam.domtbl",
+    "results/gv02_03_qc/raw/candidate_pfam.txt",
+    "results/gv02_03_qc/raw/reference_pfam.domtbl",
+    "results/gv02_03_qc/raw/reference_pfam.txt"
+  ],
+  "difference_reason": "HMMER embeds run date, elapsed time and throughput metadata; parsed domain evidence and all downstream artifacts are identical."
+}

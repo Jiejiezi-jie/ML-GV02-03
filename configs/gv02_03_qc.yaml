@@ -20,6 +20,9 @@ quality:
   generation_length_cap: null
   exact_training_match_action: warn
   exact_reference_match_action: warn
+  # Calibrated against the provisional nominal-GvpA reference distribution.
+  composition_outlier_quantile: 0.99
+  composition_outlier_action: warn
 
 reference:
   required_label: gvpa

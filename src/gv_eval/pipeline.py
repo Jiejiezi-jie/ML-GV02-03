@@ -348,6 +348,10 @@ def run_pipeline(root: str | Path, config_path: str | Path) -> dict:
                 source: qc_rows[0][f"{source}_match_checked"]
                 for source in ("training", "reference")
             },
+            "composition_outlier_count": sum(
+                row["composition_outlier_warning"] for row in qc_rows
+            ),
+            "composition_outlier_checked": qc_rows[0]["composition_outlier_checked"],
             "reason_counts": dict(Counter(reason for row in qc_rows for reason in row["qc_reasons"].split(";") if reason)),
         }
     write_json(result / "summary.json", summary)

@@ -4,7 +4,6 @@ __pycache__/
 .coverage
 .DS_Store
 
-# Rebuildable local BLAST databases and transient logs.
-results/gv02_03/work/blastdb/
-results/gv02_03/work/*.log
-
+# Rebuildable local BLAST databases and transient logs for every experiment variant.
+results/*/work/blastdb/
+results/*/work/*.log
