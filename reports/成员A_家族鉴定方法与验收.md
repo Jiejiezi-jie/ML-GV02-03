@@ -6,9 +6,23 @@
 在项目根目录、具备 Python、PyYAML、HMMER、MAFFT、CD-HIT、BLAST+ 的环境执行：
 
 ```bash
-python -B experiments/run_family_classification.py
-python -B experiments/verify_family_deliverables.py
+python -B experiments/run_family_classification.py                      # 1 分类与参考产物
+python -B experiments/verify_family_deliverables.py                     # 2 生成验收表与待核查对照表
+python -B experiments/adjudicate_family_conflicts.py                    # 3 按 NCBI 快照裁决冲突
+python -B experiments/verify_family_deliverables.py                     # 4 用裁决结果重算验收
+python -B experiments/prepare_member_b_handoff.py                       # 5 冻结保守发布包
+python -B experiments/prepare_member_b_split.py --allow-provisional     # 6 生成开发划分
 ```
+
+**步骤顺序不可调换。** 第 2 步会重写 `results/gv02_03_v2/family/acceptance.json` 和
+`unresolved_negative_controls.tsv`；第 3 步读后者，第 5 步把前者按 SHA-256 钉进
+`release_manifest.json`，第 6 步再把 `release_manifest.json` 钉进 `split_manifest.json`。
+若把第 5、6 步提前到第 2、4 步之前，清单哈希立即过期，`tests/test_member_b_handoff.py`
+会失败且 `--allow-provisional` 会拒绝运行。第 4 步必须重跑，否则 `acceptance.json`
+不含裁决结论，`reviewed_conflict_count` 和 `scientific_acceptance` 会退回 `requires_review`。
+
+所有 JSON 由 `write_json` 以 LF 写出（与 `write_fasta`、`write_tsv` 一致），
+因此同一输入的哈希在 Windows 与 WSL 下逐字节相同，不会因检出平台漂移。
 
 复现检查：在一次完整运行结束后执行
 `python -B experiments/check_family_reproducibility.py snapshot`，再完整运行，最后执行
