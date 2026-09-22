@@ -7,18 +7,24 @@
 - 已冻结首选模型为序列 VAE、随机种子 42、计划生成 1000 条候选以及 Top-10/20/50 预算；
 - 已将 1224 条暂定 GvpA 参考按 418 个 CD-HIT 90% 同源簇划分为训练 978 条、验证 123 条、测试 123 条，同源簇之间无跨集合泄漏；
 - 已保存固定词表、逐序列来源与哈希及划分清单，运行方式为 `python -B experiments/prepare_generator_data.py`；
+- 已实现与冻结配置一致的 GRU 序列 VAE，包括 PAD-aware 编码、KL warm-up、验证/早停、
+  checkpoint 恢复、逐样本 EOS 生成及完整生成元数据；
 - 尚未完成 GvpA/GvpJ 竞争性核验，因此该划分明确标记为暂定数据，不能作为最终高可信训练集，也尚未开始正式 VAE 训练。
 
-阶段说明见 [M0–M1 生成数据准备](reports/M0_M1_生成数据准备.md)。
+阶段说明见 [M0–M1 生成数据准备](reports/M0_M1_生成数据准备.md)和
+[成员 B 的 VAE 开发版说明](reports/V2_B_VAE开发版.md)。
 
 ## 成员 B 的 VAE 参考代码
 
-`gv/` 仅保留成员 B 需要的 VAE 模型、数据加载、VAE 专用训练入口、依赖列表和交接说明。
-模型位于 [`gv/design/src/models/vae_gvp.py`](gv/design/src/models/vae_gvp.py)，
-训练入口为 [`gv/design/src/train.py`](gv/design/src/train.py)，生成方法为 `GVAE.generate()`。
-没有附带训练权重，也尚未接入本项目 V2 的数据划分和生成流程。
-成员 B 请先阅读 [VAE 交接说明](gv/README.md)，其中列出了与现有 GRU 方案的差异
-以及训练前需要修正的问题。
+组员提供的原始最小参考包保留在 `gv/`，仅作为来源记录。项目接入后的实现位于
+[`src/gv_eval/vae.py`](src/gv_eval/vae.py)和
+[`src/gv_eval/generation.py`](src/gv_eval/generation.py)，训练与生成入口分别为
+[`experiments/train_generator.py`](experiments/train_generator.py)和
+[`experiments/generate_candidates.py`](experiments/generate_candidates.py)。
+
+当前数据仍待 GvpA/GvpJ 核验，训练脚本默认拒绝使用；仅开发验证可显式加入
+`--allow-provisional-data`。模型权重和临时候选不提交 Git，正式 checkpoint 必须等成员 A
+提供高可信参考并重新划分数据后训练。
 
 ## 关键结果
 

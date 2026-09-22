@@ -8,6 +8,9 @@ model:
   embedding_dim: 32
   hidden_dim: 128
   latent_dim: 32
+  encoder_layers: 1
+  decoder_layers: 1
+  dropout: 0.0
   maximum_sequence_length: 180
   training:
     batch_size: 64
@@ -16,6 +19,9 @@ model:
     kl_beta: 0.1
     kl_warmup_epochs: 20
     early_stopping_patience: 15
+    gradient_clip_norm: 1.0
+    num_workers: 0
+    posterior_collapse_kl_threshold: 0.01
 
 data:
   # 该集合通过来源注释、长度、字符和精确去重规则，但尚未完成
@@ -37,6 +43,8 @@ vocabulary:
 
 generation:
   candidate_count: 1000
+  batch_size: 64
+  minimum_sequence_length: 50
   sampling_temperature: 1.0
   top_k: 0
   top_p: 1.0
@@ -45,3 +53,5 @@ generation:
 outputs:
   data_dir: data/processed/gv02_03_v2/generator_data
   vocabulary: models/generator/sequence_vae/vocabulary.json
+  model_dir: models/generator/sequence_vae
+  candidate_output_dir: data/processed/gv02_03_v2/generated_candidates
