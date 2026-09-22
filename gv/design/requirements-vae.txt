@@ -1,0 +1,4 @@
+# Direct dependencies of the VAE reference package; versions are not runtime-validated.
+torch
+numpy
+biopython

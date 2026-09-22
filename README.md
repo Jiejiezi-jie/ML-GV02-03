@@ -11,6 +11,15 @@
 
 阶段说明见 [M0–M1 生成数据准备](reports/M0_M1_生成数据准备.md)。
 
+## 成员 B 的 VAE 参考代码
+
+`gv/` 仅保留成员 B 需要的 VAE 模型、数据加载、VAE 专用训练入口、依赖列表和交接说明。
+模型位于 [`gv/design/src/models/vae_gvp.py`](gv/design/src/models/vae_gvp.py)，
+训练入口为 [`gv/design/src/train.py`](gv/design/src/train.py)，生成方法为 `GVAE.generate()`。
+没有附带训练权重，也尚未接入本项目 V2 的数据划分和生成流程。
+成员 B 请先阅读 [VAE 交接说明](gv/README.md)，其中列出了与现有 GRU 方案的差异
+以及训练前需要修正的问题。
+
 ## 关键结果
 
 - 候选：T05 生成的 200 条序列；天然参考清洗后 1224 条，CD-HIT 90% 聚类为 418 条代表。
