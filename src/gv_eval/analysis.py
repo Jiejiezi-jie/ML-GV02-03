@@ -14,11 +14,95 @@ import seaborn as sns
 from scipy.stats import spearmanr
 
 from .metrics import subset_diversity
-from .selection import jaccard, pareto_ranking, round_robin_top_k, weighted_ranking
+from .selection import (
+    eligibility_mask,
+    jaccard,
+    pareto_ranking,
+    round_robin_top_k,
+    validate_selection_budget,
+    weighted_ranking,
+)
 
 
 def correlation_tables(frame: pd.DataFrame, metrics: list[str]) -> tuple[pd.DataFrame, pd.DataFrame]:
     return frame[metrics].corr(method="pearson"), frame[metrics].corr(method="spearman")
+
+
+def eligibility_summary(
+    frame: pd.DataFrame,
+    *,
+    required_family_status: str = "supported_gvpa",
+) -> dict[str, int | str]:
+    """Build a mutually exclusive audit funnel for the formal GvpA pool."""
+
+    eligible = eligibility_mask(frame, required_family_status=required_family_status)
+    qc_pass = frame["qc_pass"]
+    family_pass = qc_pass & frame["family_status"].eq(required_family_status)
+    domain_pass = family_pass & frame["domain_pass"]
+    return {
+        "required_family_status": required_family_status,
+        "input_candidate_count": len(frame),
+        "qc_passing_count": int(qc_pass.sum()),
+        "supported_gvpa_count": int(family_pass.sum()),
+        "domain_passing_count": int(domain_pass.sum()),
+        "eligible_candidate_count": int(eligible.sum()),
+        "excluded_qc_count": int((~qc_pass).sum()),
+        "excluded_family_count": int(
+            (qc_pass & ~frame["family_status"].eq(required_family_status)).sum()
+        ),
+        "excluded_domain_count": int((family_pass & ~frame["domain_pass"]).sum()),
+    }
+
+
+def prepare_eligible_analysis_pool(
+    frame: pd.DataFrame,
+    distance: np.ndarray,
+    *,
+    distance_ids: Iterable[str],
+    required_family_status: str = "supported_gvpa",
+) -> tuple[pd.DataFrame, np.ndarray, dict[str, int | str]]:
+    """Align by sequence ID, then filter candidates and their distance matrix."""
+
+    distance = np.asarray(distance, dtype=float)
+    distance_ids = list(distance_ids)
+    expected_shape = (len(distance_ids), len(distance_ids))
+    if distance.shape != expected_shape:
+        raise ValueError(
+            f"Candidate distance matrix shape {distance.shape} does not match {expected_shape}"
+        )
+    if not np.isfinite(distance).all():
+        raise ValueError("Candidate distance matrix contains non-finite values")
+    if ((distance < 0.0) | (distance > 1.0)).any():
+        raise ValueError("Candidate distances must be in [0, 1]")
+    if not np.allclose(distance, distance.T, rtol=0.0, atol=1e-12):
+        raise ValueError("Candidate distance matrix must be symmetric")
+    if not np.allclose(np.diag(distance), 0.0, rtol=0.0, atol=1e-12):
+        raise ValueError("Candidate distance matrix diagonal must be zero")
+    if not all(isinstance(value, str) and value.strip() for value in distance_ids):
+        raise ValueError("Distance matrix IDs must be nonempty strings")
+    if len(set(distance_ids)) != len(distance_ids):
+        raise ValueError("Distance matrix IDs contain duplicates")
+
+    frame_ids = frame["sequence_id"].tolist()
+    frame_id_set = set(frame_ids)
+    distance_id_set = set(distance_ids)
+    if frame_id_set != distance_id_set:
+        missing = sorted(frame_id_set - distance_id_set)
+        unexpected = sorted(distance_id_set - frame_id_set)
+        raise ValueError(
+            "Distance matrix IDs do not match candidate IDs: "
+            f"missing={missing}, unexpected={unexpected}"
+        )
+
+    distance_position = {identifier: index for index, identifier in enumerate(distance_ids)}
+    frame_order = [distance_position[identifier] for identifier in frame_ids]
+    aligned_distance = distance[np.ix_(frame_order, frame_order)]
+    mask = eligibility_mask(frame, required_family_status=required_family_status)
+    positions = np.flatnonzero(mask.to_numpy())
+    eligible_frame = frame.iloc[positions].copy().reset_index(drop=True)
+    eligible_distance = aligned_distance[np.ix_(positions, positions)].copy()
+    summary = eligibility_summary(frame, required_family_status=required_family_status)
+    return eligible_frame, eligible_distance, summary
 
 
 def selected_quality(
@@ -51,8 +135,7 @@ def build_strategy_results(
     summaries: list[dict] = []
     overlap: list[dict] = []
     for budget in budgets:
-        if budget > len(frame):
-            continue
+        validate_selection_budget(len(frame), budget)
         variants = {
             "weighted_sum": weighted.head(budget).copy(),
             "pareto": pareto.head(budget).copy(),
@@ -83,6 +166,39 @@ def build_strategy_results(
                     }
                 )
     return selections, summaries, overlap
+
+
+def build_eligible_strategy_results(
+    frame: pd.DataFrame,
+    metrics: list[str],
+    equal_weights: dict[str, float],
+    budgets: Iterable[int],
+    distance: np.ndarray,
+    *,
+    distance_ids: Iterable[str],
+    required_family_status: str = "supported_gvpa",
+) -> tuple[
+    dict[tuple[str, int], pd.DataFrame],
+    list[dict],
+    list[dict],
+    dict[str, int | str],
+]:
+    """Apply strict V2 gates, then run all strategies on the aligned eligible pool."""
+
+    eligible, eligible_distance, summary = prepare_eligible_analysis_pool(
+        frame,
+        distance,
+        distance_ids=distance_ids,
+        required_family_status=required_family_status,
+    )
+    selections, summaries, overlap = build_strategy_results(
+        eligible,
+        metrics,
+        equal_weights,
+        budgets,
+        eligible_distance,
+    )
+    return selections, summaries, overlap, summary
 
 
 def ablation_results(
