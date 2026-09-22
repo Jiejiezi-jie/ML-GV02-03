@@ -254,3 +254,72 @@ def test_tiny_training_resume_and_generation_are_auditable(tmp_path):
     manifest = json.loads(generated.manifest_path.read_text(encoding="utf-8"))
     assert manifest["status"] == "development_provisional"
     assert manifest["candidate_count"] == 3
+    assert 0 < manifest["generation_diagnostics"]["unique_sequence_rate"] <= 1
+    assert manifest["generation_diagnostics"]["nonstandard_sequence_count"] == 0
+    training_manifest = json.loads(resumed.manifest_path.read_text(encoding="utf-8"))
+    assert training_manifest["test_metrics"]["perplexity"] > 0
+    assert 0 <= training_manifest["test_metrics"]["token_accuracy"] <= 1
+    assert 0 <= training_manifest["test_metrics"]["eos_accuracy"] <= 1
+
+    repeated = generate_candidates(
+        tmp_path,
+        config_path,
+        resumed.best_checkpoint,
+        device_name="cpu",
+        allow_provisional_data=True,
+        candidate_count=3,
+        output_dir=tmp_path / "generated_repeated",
+    )
+    assert repeated.candidates_fasta.read_bytes() == generated.candidates_fasta.read_bytes()
+    assert repeated.metadata_path.read_bytes() == generated.metadata_path.read_bytes()
+
+
+def test_resumed_training_matches_uninterrupted_training(tmp_path):
+    config_path = _write_tiny_training_project(tmp_path)
+    uninterrupted = train_sequence_vae(
+        tmp_path,
+        config_path,
+        device_name="cpu",
+        allow_provisional_data=True,
+        maximum_epochs=2,
+        output_dir=tmp_path / "uninterrupted",
+    )
+    first_stage = train_sequence_vae(
+        tmp_path,
+        config_path,
+        device_name="cpu",
+        allow_provisional_data=True,
+        maximum_epochs=1,
+        output_dir=tmp_path / "resumed",
+    )
+    resumed = train_sequence_vae(
+        tmp_path,
+        config_path,
+        device_name="cpu",
+        allow_provisional_data=True,
+        resume_checkpoint=first_stage.last_checkpoint,
+        maximum_epochs=2,
+        output_dir=tmp_path / "resumed",
+    )
+
+    full_state = torch.load(
+        uninterrupted.last_checkpoint, map_location="cpu", weights_only=False
+    )["model_state_dict"]
+    resumed_state = torch.load(
+        resumed.last_checkpoint, map_location="cpu", weights_only=False
+    )["model_state_dict"]
+    assert full_state.keys() == resumed_state.keys()
+    assert all(
+        torch.equal(full_state[name], resumed_state[name]) for name in full_state
+    )
+
+    def deterministic_history(path: Path) -> list[dict[str, str]]:
+        with path.open(encoding="utf-8", newline="") as stream:
+            rows = list(csv.DictReader(stream, delimiter="\t"))
+        for row in rows:
+            row.pop("epoch_seconds")
+        return rows
+
+    assert deterministic_history(uninterrupted.history_path) == deterministic_history(
+        resumed.history_path
+    )

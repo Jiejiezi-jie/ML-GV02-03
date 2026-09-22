@@ -12,10 +12,12 @@
 - 使用 padding-aware 双向 GRU 编码器、重参数化潜变量和 GRU 自回归解码器；
 - 重构损失只忽略 PAD，EOS 作为正常预测目标；
 - 使用 KL warm-up、梯度裁剪、验证集早停和 posterior-collapse 警告；
+- 记录重构交叉熵、困惑度、非PAD token准确率和EOS准确率；
 - checkpoint 保存模型、优化器、随机状态、配置和输入哈希，支持严格恢复；
 - 每条生成序列独立处理 EOS，不因同批其他序列结束而提前截断；
 - 生成时禁止 PAD、BOS 和 UNK，并记录 checkpoint 哈希、种子、采样参数、潜变量编号、
   EOS、长度上限、长度和序列哈希；
+- 生成Manifest汇总唯一率、重复序列、长度、非法字符及与训练/参考集完全匹配数量；
 - 暂定数据默认禁止训练和生成，开发运行必须显式使用 `--allow-provisional-data`。
 
 ## 开发命令
@@ -44,7 +46,9 @@ python -B experiments/generate_candidates.py \
 
 ## 验证结果
 
-- 自动化测试：64项全部通过，其中VAE新增测试6项；
+- 自动化测试：65项全部通过，其中VAE测试7项；
+- 连续训练2个epoch与训练1个epoch后恢复至第2个epoch的模型参数逐项完全一致；
+- 相同checkpoint与种子重复生成的FASTA和元数据逐字节一致；
 - 暂定真实数据：训练978条、验证123条、测试123条；
 - CPU冒烟训练：1个epoch成功完成，约9秒；
 - checkpoint、训练历史、曲线和Manifest均成功生成；

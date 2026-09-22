@@ -8,7 +8,8 @@
 - 已将 1224 条暂定 GvpA 参考按 418 个 CD-HIT 90% 同源簇划分为训练 978 条、验证 123 条、测试 123 条，同源簇之间无跨集合泄漏；
 - 已保存固定词表、逐序列来源与哈希及划分清单，运行方式为 `python -B experiments/prepare_generator_data.py`；
 - 已实现与冻结配置一致的 GRU 序列 VAE，包括 PAD-aware 编码、KL warm-up、验证/早停、
-  checkpoint 恢复、逐样本 EOS 生成及完整生成元数据；
+  checkpoint 严格恢复、逐样本 EOS 生成及完整生成元数据；训练记录包含困惑度、token/EOS
+  准确率，生成Manifest包含唯一率、重复、长度和训练/参考完全匹配诊断；
 - 尚未完成 GvpA/GvpJ 竞争性核验，因此该划分明确标记为暂定数据，不能作为最终高可信训练集，也尚未开始正式 VAE 训练。
 
 阶段说明见 [M0–M1 生成数据准备](reports/M0_M1_生成数据准备.md)和

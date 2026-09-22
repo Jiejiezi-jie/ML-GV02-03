@@ -2,10 +2,12 @@ from __future__ import annotations
 
 import csv
 import importlib.metadata
+import math
 import os
 import platform
 import random
 import time
+from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -17,7 +19,15 @@ from torch import nn
 from torch.optim import Adam
 from torch.utils.data import DataLoader
 
-from .io import FastaRecord, sequence_sha256, sha256_file, write_fasta, write_json, write_tsv
+from .io import (
+    FastaRecord,
+    read_fasta,
+    sequence_sha256,
+    sha256_file,
+    write_fasta,
+    write_json,
+    write_tsv,
+)
 from .vae import (
     ProteinBatchCollator,
     ProteinSequenceDataset,
@@ -139,6 +149,9 @@ def _run_epoch(
     totals = {"total": 0.0, "reconstruction": 0.0, "kl": 0.0}
     examples = 0
     tokens = 0
+    correct_tokens = 0
+    eos_tokens = 0
+    correct_eos = 0
     for batch in loader:
         batch_tokens = batch["tokens"]
         batch_lengths = batch["lengths"]
@@ -161,12 +174,24 @@ def _run_epoch(
         totals["kl"] += float(loss.kl.detach().cpu()) * batch_size
         examples += batch_size
         tokens += loss.token_count
+        predictions = output.logits.detach().argmax(dim=-1)
+        target_mask = output.targets.ne(model.pad_id)
+        eos_mask = output.targets.eq(model.eos_id)
+        correct_tokens += int(
+            predictions.eq(output.targets).logical_and(target_mask).sum().cpu()
+        )
+        eos_tokens += int(eos_mask.sum().cpu())
+        correct_eos += int(predictions.eq(model.eos_id).logical_and(eos_mask).sum().cpu())
     if examples == 0 or tokens == 0:
         raise RuntimeError("Data loader produced no usable batches")
+    reconstruction = totals["reconstruction"] / tokens
     return {
         "loss": totals["total"] / examples,
-        "reconstruction": totals["reconstruction"] / tokens,
+        "reconstruction": reconstruction,
         "kl": totals["kl"] / examples,
+        "perplexity": math.exp(min(reconstruction, 50.0)),
+        "token_accuracy": correct_tokens / tokens,
+        "eos_accuracy": correct_eos / eos_tokens if eos_tokens else 0.0,
         "examples": float(examples),
         "tokens": float(tokens),
     }
@@ -243,9 +268,15 @@ def _write_history(path: Path, history: list[dict[str, Any]]) -> None:
         "train_loss",
         "train_reconstruction",
         "train_kl",
+        "train_perplexity",
+        "train_token_accuracy",
+        "train_eos_accuracy",
         "validation_loss",
         "validation_reconstruction",
         "validation_kl",
+        "validation_perplexity",
+        "validation_token_accuracy",
+        "validation_eos_accuracy",
         "epoch_seconds",
     ]
     with path.open("w", encoding="utf-8", newline="") as stream:
@@ -427,9 +458,15 @@ def train_sequence_vae(
             "train_loss": train_metrics["loss"],
             "train_reconstruction": train_metrics["reconstruction"],
             "train_kl": train_metrics["kl"],
+            "train_perplexity": train_metrics["perplexity"],
+            "train_token_accuracy": train_metrics["token_accuracy"],
+            "train_eos_accuracy": train_metrics["eos_accuracy"],
             "validation_loss": validation_metrics["loss"],
             "validation_reconstruction": validation_metrics["reconstruction"],
             "validation_kl": validation_metrics["kl"],
+            "validation_perplexity": validation_metrics["perplexity"],
+            "validation_token_accuracy": validation_metrics["token_accuracy"],
+            "validation_eos_accuracy": validation_metrics["eos_accuracy"],
             "epoch_seconds": time.perf_counter() - started,
         }
         history.append(row)
@@ -630,6 +667,55 @@ def generate_candidates(
     manifest_path = destination / "generation_manifest.json"
     write_fasta(records, candidates_fasta)
     write_tsv(metadata_path, metadata, list(metadata[0]))
+
+    sequences = [record.sequence for record in records]
+    sequence_counts = Counter(sequences)
+    lengths = [len(sequence) for sequence in sequences]
+    training_path = root / output_config["data_dir"] / "train.fasta"
+    if not training_path.exists():
+        raise FileNotFoundError(f"Configured training FASTA is missing: {training_path}")
+    training_sequences = {record.sequence for record in read_fasta(training_path)}
+    reference_sequences: set[str] | None = None
+    reference_path_value = config["data"].get("reference_fasta")
+    reference_path: Path | None = None
+    if reference_path_value:
+        reference_path = root / reference_path_value
+        if not reference_path.exists():
+            raise FileNotFoundError(f"Configured reference FASTA is missing: {reference_path}")
+        reference_sequences = {record.sequence for record in read_fasta(reference_path)}
+    diagnostic_input_sha256 = {
+        training_path.relative_to(root).as_posix(): sha256_file(training_path)
+    }
+    if reference_path is not None:
+        diagnostic_input_sha256[reference_path.relative_to(root).as_posix()] = sha256_file(
+            reference_path
+        )
+    generation_diagnostics = {
+        "unique_sequence_count": len(sequence_counts),
+        "unique_sequence_rate": len(sequence_counts) / count,
+        "duplicate_candidate_count": sum(
+            occurrence_count - 1 for occurrence_count in sequence_counts.values()
+        ),
+        "duplicate_sequence_groups": sum(
+            occurrence_count > 1 for occurrence_count in sequence_counts.values()
+        ),
+        "empty_sequence_count": sum(not sequence for sequence in sequences),
+        "minimum_length": min(lengths),
+        "mean_length": sum(lengths) / count,
+        "maximum_length": max(lengths),
+        "nonstandard_sequence_count": sum(
+            bool(set(sequence) - set(vocabulary.amino_acids)) for sequence in sequences
+        ),
+        "exact_training_match_count": sum(
+            sequence in training_sequences for sequence in sequences
+        ),
+        "reference_match_checked": reference_sequences is not None,
+        "exact_reference_match_count": (
+            sum(sequence in reference_sequences for sequence in sequences)
+            if reference_sequences is not None
+            else None
+        ),
+    }
     write_json(
         manifest_path,
         {
@@ -655,6 +741,8 @@ def generate_candidates(
                 candidates_fasta.name: sha256_file(candidates_fasta),
                 metadata_path.name: sha256_file(metadata_path),
             },
+            "diagnostic_input_sha256": diagnostic_input_sha256,
+            "generation_diagnostics": generation_diagnostics,
             "terminated_by_eos": sum(row["terminated_by_eos"] == "true" for row in metadata),
             "hit_generation_cap": sum(row["hit_generation_cap"] == "true" for row in metadata),
             "dependencies": _dependency_versions(),
