@@ -116,6 +116,16 @@ Jensen–Shannon divergence 衡量每条序列相对该平均组成的偏离程�
 正式产物位于 `data/processed/gv02_03_qc/` 和 `results/gv02_03_qc/`，具体解释和
 复现边界见 [候选质量控制增量报告](reports/M3_候选质量控制增量.md)。
 
+## C 模块：独立全局相似度与距离
+
+运行 `python -B experiments/run_similarity.py --config configs/similarity.yaml`，
+输出成对比对证据、双向覆盖率、距离矩阵和对应 ID 顺序。
+未通过覆盖率、identity、得分或最小比对长度门槛的序列对标记 `unresolved`，
+矩阵中保留 NaN，不赋最大距离。原版 BLAST 评分与结果保持不变。
+默认输入为旧 T05 混合候选，仅作开发验证；正式主分析池与歧义池需分别输入。
+方法、公式、可靠性门槛、缺失值处理及 D 的接入说明见
+[全局相似度模块说明](docs/similarity.md)。本阶段尚未实现快速检索和自动家族分池。
+
 ## 四个指标（旧版基线）
 
 | 指标 | 实现 |
