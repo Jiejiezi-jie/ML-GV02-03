@@ -126,6 +126,18 @@ Jensen–Shannon divergence 衡量每条序列相对该平均组成的偏离程�
 方法、公式、可靠性门槛、缺失值处理及 D 的接入说明见
 [全局相似度模块说明](docs/similarity.md)。本阶段尚未实现快速检索和自动家族分池。
 
+## C：序列模式告警（QC-only）
+
+新增可配置的连续疏水片段、单残基重复、短 motif 串联重复告警，记录片段位置；
+`qc_warnings` 独立列出警告，旧 `qc_reasons` 保持兼容。新检测不新增淘汰条件。
+
+```bash
+python experiments/run_quality_audit.py --config configs/gv02_03_pattern_qc.yaml --output-dir results/my_qc_audit
+```
+
+输出目录须为空，运行不依赖外部生信工具。旧实验配置与结果不覆盖。
+阈值尚未正式校准，疏水告警不是跨膜预测；范围与字段见 [QC 模式告警说明](docs/qc-patterns.md)。
+
 ## 四个指标（旧版基线）
 
 | 指标 | 实现 |

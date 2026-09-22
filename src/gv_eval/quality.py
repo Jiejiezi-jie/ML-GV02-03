@@ -7,6 +7,10 @@ import math
 from pathlib import Path
 
 from .io import FastaRecord, STANDARD_AA, read_fasta
+from .sequence_patterns import (
+    hydrophobic_segments, homopolymer_segments, tandem_repeat_segments,
+    validate_pattern_options,
+)
 
 
 AA_ORDER = tuple(sorted(STANDARD_AA))
@@ -109,8 +113,20 @@ def assess_candidates(
     exact_reference_match_action: str = "warn",
     composition_outlier_quantile: float | None = None,
     composition_outlier_action: str = "warn",
+    hydrophobic_run_minimum: int | None = None,
+    homopolymer_minimum: int | None = None,
+    tandem_repeat_minimum_length: int | None = None,
+    tandem_repeat_minimum_copies: int = 3,
+    tandem_repeat_maximum_motif_length: int = 6,
 ) -> dict[str, dict[str, object]]:
     """Return auditable quality-control results for each candidate sequence."""
+    validate_pattern_options(
+        hydrophobic_run_minimum=hydrophobic_run_minimum,
+        homopolymer_minimum=homopolymer_minimum,
+        tandem_repeat_minimum_length=tandem_repeat_minimum_length,
+        tandem_repeat_minimum_copies=tandem_repeat_minimum_copies,
+        tandem_repeat_maximum_motif_length=tandem_repeat_maximum_motif_length,
+    )
     if minimum_length < 1 or maximum_length < minimum_length:
         raise ValueError("Candidate length bounds must satisfy 1 <= minimum <= maximum")
     if minimum_unique_residues < 1:
@@ -197,9 +213,28 @@ def assess_candidates(
                 else:
                     warnings.append("composition_outlier_warning")
 
-        reasons = [*failures, *warnings]
         if generation_cap_warning:
-            reasons.append("generation_cap_warning")
+            warnings.append("generation_cap_warning")
+        pattern_fields: dict[str, object] = {}
+        checks = (
+            ("hydrophobic", hydrophobic_run_minimum, hydrophobic_segments,
+             "hydrophobic_run_warning"),
+            ("homopolymer", homopolymer_minimum, homopolymer_segments,
+             "homopolymer_warning"),
+            ("tandem_repeat", tandem_repeat_minimum_length,
+             lambda seq, minimum: tandem_repeat_segments(
+                 seq, minimum, tandem_repeat_minimum_copies, tandem_repeat_maximum_motif_length),
+             "tandem_repeat_warning"),
+        )
+        for name, minimum, detector, warning in checks:
+            checked = minimum is not None and standard_aa_only
+            segments = detector(sequence, minimum) if checked else []
+            pattern_fields[f"{name}_checked"] = checked
+            pattern_fields[f"{name}_warning"] = bool(segments)
+            pattern_fields[f"{name}_segments"] = json.dumps(segments, ensure_ascii=False)
+            if segments:
+                warnings.append(warning)
+        reasons = [*failures, *warnings]
         result[record.identifier] = {
             "length": length,
             "standard_aa_only": standard_aa_only,
@@ -211,8 +246,10 @@ def assess_candidates(
             "composition_js_threshold": composition_threshold,
             "composition_outlier_warning": composition_outlier_warning,
             **match_fields,
+            **pattern_fields,
             "qc_pass": not failures,
             "qc_reasons": ";".join(reasons),
+            "qc_warnings": ";".join(warnings),
         }
     return result
 

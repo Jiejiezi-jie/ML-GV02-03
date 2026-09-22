@@ -1,2 +1,3 @@
 # Preserve exact bytes of generated audit artifacts, including CSV CRLF endings.
 /results/gv02_03_similarity_dev/* -text whitespace=-blank-at-eol,cr-at-eol
+/results/gv02_03_pattern_audit/* -text whitespace=-blank-at-eol,cr-at-eol

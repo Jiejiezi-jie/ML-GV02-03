@@ -1,0 +1,49 @@
+{
+  "config": {
+    "path": "D:\\HuaweiMoveData\\Users\\huawei\\Desktop\\AI知识库\\机器学习\\ML-GV02-03\\configs\\gv02_03_pattern_qc.yaml",
+    "sha256": "400c17dcfe63d7e564b46857a4a60b366071d4f0989b0664ae433b90dd846219"
+  },
+  "quality_options": {
+    "minimum_length": 50,
+    "maximum_length": 180,
+    "minimum_unique_residues": 8,
+    "maximum_single_residue_fraction": 0.35,
+    "generation_length_cap": null,
+    "exact_training_match_action": "warn",
+    "exact_reference_match_action": "warn",
+    "composition_outlier_quantile": 0.99,
+    "composition_outlier_action": "warn",
+    "hydrophobic_run_minimum": 18,
+    "homopolymer_minimum": 6,
+    "tandem_repeat_minimum_length": 12,
+    "tandem_repeat_minimum_copies": 3,
+    "tandem_repeat_maximum_motif_length": 6
+  },
+  "inputs": {
+    "candidates": {
+      "path": "D:\\HuaweiMoveData\\Users\\huawei\\Desktop\\AI知识库\\机器学习\\ML-GV02-03\\data\\candidates\\t05\\generated_gvp.fasta",
+      "sha256": "4be37ab575f7285035669955ed713dbcefb8fe2a1c2790de7ecd48e89cee9776"
+    },
+    "training": {
+      "path": "D:\\HuaweiMoveData\\Users\\huawei\\Desktop\\AI知识库\\机器学习\\ML-GV02-03\\data\\processed\\gv02_03_v2\\generator_data\\train.fasta",
+      "sha256": "6e1876d5240f92695cfdd8d5079fc780518956aaad54c7e8cfaf3fd7ed75416b"
+    },
+    "reference": {
+      "path": "D:\\HuaweiMoveData\\Users\\huawei\\Desktop\\AI知识库\\机器学习\\ML-GV02-03\\data\\processed\\gv02_03\\reference_clean.fasta",
+      "sha256": "559c274ddc726b63fa242ef16ba97155721793a4b219e9a04cd54135ee167cfc"
+    }
+  },
+  "outputs": {
+    "candidate_qc.tsv": "ca5401d05408fefbe49e41ad3ba0373c6855e247d14510f08f09c0c4858a8741",
+    "eligible_candidates.fasta": "a8456b30fe0c68689a4fa9b6a6c188ba6177a88d7c7e61a4964f801b9a4ada46",
+    "summary.json": "e6af6abfb5d74531727a27029805e658a14ef10607e32ed1977acf182b5dd83e"
+  },
+  "source_sha256": {
+    "src/gv_eval/quality.py": "5b033af169bddda91b3c6926ea791be24658b50d4a837d3d264a01adb6031e49",
+    "src/gv_eval/sequence_patterns.py": "925386dbca3bc7c2757fc60359928eb53d4c6354381d4403b8489b2093634f2f",
+    "src/gv_eval/io.py": "adc669cefd5f3fd495819c6cce35274eba3eb0e183e47fde61be243dca7a8873",
+    "experiments/run_quality_audit.py": "cc15a5c71ce9840835091d2cad5c3006d9d494cf97b1b167227a7f5518462adf"
+  },
+  "python_version": "3.13.13",
+  "pyyaml_version": "6.0.3"
+}
