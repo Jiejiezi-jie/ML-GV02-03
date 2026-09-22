@@ -1,0 +1,10 @@
+
+
+Building a new DB, current time: 09/22/2026 14:38:36
+New DB name:   /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/candidates/blastdb/references
+New DB title:  /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/candidates/similarity_references.fasta
+Sequence type: Protein
+Deleted existing Protein BLAST database named /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/candidates/blastdb/references
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 3063 sequences in 0.067162 seconds.

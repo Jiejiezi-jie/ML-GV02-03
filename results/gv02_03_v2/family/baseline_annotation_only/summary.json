@@ -1,0 +1,93 @@
+{
+  "source_records": 8099,
+  "unique_natural_sequences": 5099,
+  "seed_sequences": 3057,
+  "seed_clusters": 853,
+  "reference_status_counts": {
+    "possible_gvpa": 732,
+    "high_confidence_gvpa": 474,
+    "excluded_or_unresolved": 2566,
+    "other_gvp_negative_control": 1122,
+    "gvpj_negative_control": 205
+  },
+  "candidate_status_counts": {
+    "other_gvp": 153,
+    "unsupported": 37,
+    "supported_gvpa": 9,
+    "gvpa_gvpj_ambiguous": 1
+  },
+  "available_profiles": [
+    "gvpa",
+    "gvpc",
+    "gvpg",
+    "gvpj",
+    "gvpk",
+    "gvpl",
+    "gvpn",
+    "gvpv"
+  ],
+  "controls": {
+    "exact_duplicate": {
+      "total": 127,
+      "supported_gvpa": 5,
+      "non_gvpa_called_gvpa": 4
+    },
+    "natural_heldout": {
+      "total": 3057,
+      "supported_gvpa": 536,
+      "non_gvpa_called_gvpa": 62
+    },
+    "shuffled": {
+      "total": 127,
+      "supported_gvpa": 0,
+      "non_gvpa_called_gvpa": 0
+    },
+    "truncated": {
+      "total": 127,
+      "supported_gvpa": 0,
+      "non_gvpa_called_gvpa": 0
+    }
+  },
+  "pf00741_by_annotated_family": {
+    "gvpa": {
+      "total": 1206,
+      "pass_count": 1203
+    },
+    "gvpc": {
+      "total": 45,
+      "pass_count": 0
+    },
+    "gvpf": {
+      "total": 45,
+      "pass_count": 0
+    },
+    "gvpg": {
+      "total": 69,
+      "pass_count": 0
+    },
+    "gvpi": {
+      "total": 2,
+      "pass_count": 0
+    },
+    "gvpj": {
+      "total": 644,
+      "pass_count": 630
+    },
+    "gvpk": {
+      "total": 172,
+      "pass_count": 0
+    },
+    "gvpl": {
+      "total": 220,
+      "pass_count": 0
+    },
+    "gvpn": {
+      "total": 616,
+      "pass_count": 0
+    },
+    "gvpv": {
+      "total": 55,
+      "pass_count": 0
+    }
+  }
+}

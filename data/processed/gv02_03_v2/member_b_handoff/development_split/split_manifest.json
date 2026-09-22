@@ -1,0 +1,24 @@
+{
+  "dataset_status": "provisional_development_only",
+  "seed": 42,
+  "release_id": "member_a_v1_conservative_provisional",
+  "release_sha256": "958437108d8ed6d8f796d511365e8ef10d5fcaa9aa7fb72db1ae39cbca44efb6",
+  "total_sequences": 346,
+  "total_clusters": 31,
+  "splits": {
+    "train": 254,
+    "validation": 60,
+    "test": 32
+  },
+  "cluster_identity": 0.7,
+  "cluster_bidirectional_coverage": 0.8,
+  "algorithm": "seeded_largest_cluster_first_on_filtered_original_70_percent_clusters",
+  "warning": "Do not call this the final training set. Rebuild when A release changes; test set must not tune model or sampling.",
+  "outputs": {
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/train.fasta": "9340a39a96ec5a109c4d53b958b4d0ee1100cd26f50e33ab8071bfc25c5a4652",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/validation.fasta": "dbf3fe9569aa015e7b41051e2b978347a2cc7635fcf37de82b7299da7f2af548",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/test.fasta": "301cba4ef16d56301a4108832b5b164231483986d0c53160912cab8573340ce2",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/sequence_manifest.tsv": "eb60c8cdb4abc760a1d15852a51e93bce9d948226b67db8b209c3fe5df28f3b7",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/vocabulary.json": "ba3f38b7657c553861ae36562353533921e4da0755b3209e5709e882b997d8bf"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "reviewed_records": 14,
+  "exact_sequence_matches": 14,
+  "dispositions": {
+    "resolved_stale_local_gvpj_annotation": 6,
+    "adjudicated_ambiguous_not_gold_gvpj": 8
+  },
+  "resolved_annotation_changes": 6,
+  "biological_identity_still_ambiguous": 8,
+  "supported_reference_with_corrections": 687,
+  "scope": "Annotation adjudication and operational abstention; not a retrained or independently validated classifier.",
+  "classifier_errors_not_erased": true,
+  "final_scientific_status": "partial_resolution_eight_ambiguous",
+  "member_b": "Keep the conservative provisional release; do not restore quarantined clusters solely because six labels were corrected."
+}

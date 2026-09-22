@@ -1,0 +1,29 @@
+#                                                                                                --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                            accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                    ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+exact_duplicate_nat_45ceddea54f47745a1ad -             72 Gas_vesicle          PF00741.24    39     1e-19   63.4   6.2   1   1   2.8e-20   1.3e-19   63.1   6.2     1    39    11    49    11    49 0.99 -
+exact_duplicate_nat_cc9d0eca2af440c02e36 -            148 Gas_vesicle          PF00741.24    39   5.7e-19   61.0   4.4   1   1   1.7e-19   7.9e-19   60.6   4.4     1    39    27    65    27    65 0.97 -
+exact_duplicate_nat_278c7a3fd12af0319695 -             71 Gas_vesicle          PF00741.24    39   1.3e-18   59.9   7.0   1   1   3.3e-19   1.6e-18   59.7   7.0     1    39    11    49    11    49 0.99 -
+exact_duplicate_nat_626bf126ff6a42e860e1 -             86 Gas_vesicle          PF00741.24    39     1e-17   57.0   5.7   1   1   2.8e-18   1.3e-17   56.7   5.7     1    39    11    49    11    49 0.99 -
+exact_duplicate_nat_2d8e972f7b8e0b149992 -            114 Gas_vesicle          PF00741.24    39   1.2e-16   53.6   3.3   1   1   3.1e-17   1.5e-16   53.3   3.3     2    39    13    50    12    50 0.98 -
+exact_duplicate_nat_0739506f322325ee29fe -            139 Gas_vesicle          PF00741.24    39   4.3e-15   48.6   9.6   1   1   1.4e-15   6.7e-15   48.0   9.6     2    39    21    58    20    58 0.98 -
+exact_duplicate_nat_3fb1b2844ab87a8f4a72 -            138 Gas_vesicle          PF00741.24    39   1.6e-14   46.8   9.1   1   1   4.7e-15   2.2e-14   46.4   9.1     2    39    19    56    18    56 0.98 -
+truncated_nat_cc9d0eca2af440c02e36       -             49 Gas_vesicle          PF00741.24    39   3.1e-12   39.5   1.7   1   1   7.7e-13   3.7e-12   39.3   1.7     1    23    27    49    27    49 0.97 -
+truncated_nat_3fb1b2844ab87a8f4a72       -             46 Gas_vesicle          PF00741.24    39   1.1e-11   37.8   3.7   1   1   2.6e-12   1.2e-11   37.6   3.7     2    29    19    46    18    46 0.96 -
+truncated_nat_2d8e972f7b8e0b149992       -             38 Gas_vesicle          PF00741.24    39   2.9e-11   36.4   1.0   1   1   6.5e-12   3.1e-11   36.3   1.0     2    26    13    37    12    38 0.95 -
+truncated_nat_0739506f322325ee29fe       -             46 Gas_vesicle          PF00741.24    39   6.6e-11   35.2   4.9   1   1   1.6e-11   7.6e-11   35.0   4.9     2    27    21    46    20    46 0.97 -
+truncated_nat_626bf126ff6a42e860e1       -             28 Gas_vesicle          PF00741.24    39   1.6e-09   30.8   0.8   1   1   3.6e-10   1.7e-09   30.7   0.8     1    18    11    28    11    28 0.97 -
+truncated_nat_45ceddea54f47745a1ad       -             24 Gas_vesicle          PF00741.24    39   1.3e-06   21.5   0.2   1   1     3e-07   1.4e-06   21.4   0.2     1    14    11    24    11    24 0.97 -
+truncated_nat_278c7a3fd12af0319695       -             23 Gas_vesicle          PF00741.24    39   6.6e-06   19.2   0.1   1   1   1.5e-06   7.3e-06   19.1   0.1     1    13    11    23    11    23 0.98 -
+exact_duplicate_nat_eea50b6e1902af9b049c -            481 Gas_vesicle          PF00741.24    39       1.5    2.1   0.1   1   1      0.77       3.6    0.9   0.1     4    19   454   469   453   476 0.78 -
+shuffled_nat_b07496d6758a328c5961        -             85 Gas_vesicle          PF00741.24    39       3.5    0.9   0.1   1   1       1.3       5.9    0.2   0.1    27    34    39    46    38    50 0.83 -
+#
+# Program:         hmmsearch
+# Version:         3.3 (Nov 2019)
+# Pipeline mode:   SEARCH
+# Query file:      /mnt/d/endless/机器学习综合实践/ML-GV02-03/models/pfam/PF00741.hmm
+# Target file:     /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_0/synthetic/queries.fasta
+# Option settings: hmmsearch --domtblout /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_0/synthetic/pf00741.domtbl -T 0 --domT 0 --max --seed 42 --cpu 1 /mnt/d/endless/机器学习综合实践/ML-GV02-03/models/pfam/PF00741.hmm /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_0/synthetic/queries.fasta 
+# Current dir:     /mnt/d/endless/机器学习综合实践/ML-GV02-03
+# Date:            Tue Sep 22 14:34:37 2026
+# [ok]

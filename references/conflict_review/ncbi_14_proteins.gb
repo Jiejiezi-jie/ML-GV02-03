@@ -1,0 +1,663 @@
+LOCUS       WP_435763343              91 aa            linear   BCT 23-DEC-2025
+DEFINITION  gas vesicle structural protein GvpA [Oceanobacillus sp. CF4.6].
+ACCESSION   WP_435763343
+VERSION     WP_435763343.1
+KEYWORDS    RefSeq.
+SOURCE      Oceanobacillus sp. CF4.6
+  ORGANISM  Oceanobacillus sp. CF4.6
+            Bacteria; Bacillati; Bacillota; Bacilli; Caryophanales;
+            Bacillaceae; Oceanobacillus.
+REFERENCE   1  (residues 1 to 91)
+  AUTHORS   Offner,S., Hofacker,A., Wanner,G. and Pfeifer,F.
+  TITLE     Eight of fourteen gvp genes are sufficient for formation of gas
+            vesicles in halophilic archaea
+  JOURNAL   J Bacteriol 182 (15), 4328-4336 (2000)
+   PUBMED   10894744
+COMMENT     REFSEQ: This record represents a single, non-redundant, protein
+            sequence which may be annotated on many different RefSeq genomes
+            from the same, or different, species.
+            
+            ##Evidence-For-Name-Assignment-START##
+            Evidence Category  :: Conserved Domain (CDD)
+            Evidence Accession :: Domain architecture ID 10013203
+            Evidence Source    :: NCBI SPARCLE
+            ##Evidence-For-Name-Assignment-END##
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..91
+                     /organism="Oceanobacillus sp. CF4.6"
+                     /db_xref="taxon:3373080"
+     gene            1..91
+                     /gene="gvpA"
+     Protein         1..91
+                     /product="gas vesicle structural protein GvpA"
+                     /GO_component="GO:0033172 - gas vesicle shell [Evidence
+                     IEA]; GO:0012506 - vesicle membrane [Evidence IEA]"
+                     /calculated_mol_wt=9883
+     Region          4..66
+                     /region_name="PRK09371"
+                     /note="gas vesicle structural protein GvpA"
+                     /db_xref="CDD:181805"
+ORIGIN      
+        1 mpiqkstdgs slaevidril dkgividafv rvsvvgieli tvearvvias vdtwlryaea
+       61 vgllqddfee dglsdrlsar sdsleydeek a
+//
+
+LOCUS       WP_434971879              73 aa            linear   BCT 23-DEC-2025
+DEFINITION  gas vesicle structural protein GvpA [Longibacter sp.].
+ACCESSION   WP_434971879
+VERSION     WP_434971879.1
+KEYWORDS    RefSeq.
+SOURCE      Longibacter sp.
+  ORGANISM  Longibacter sp.
+            Bacteria; Pseudomonadati; Rhodothermota; Rhodothermia;
+            Rhodothermales; Salisaetaceae; Longibacter.
+REFERENCE   1  (residues 1 to 73)
+  AUTHORS   Offner,S., Hofacker,A., Wanner,G. and Pfeifer,F.
+  TITLE     Eight of fourteen gvp genes are sufficient for formation of gas
+            vesicles in halophilic archaea
+  JOURNAL   J Bacteriol 182 (15), 4328-4336 (2000)
+   PUBMED   10894744
+COMMENT     REFSEQ: This record represents a single, non-redundant, protein
+            sequence which may be annotated on many different RefSeq genomes
+            from the same, or different, species.
+            
+            ##Evidence-For-Name-Assignment-START##
+            Evidence Category  :: Conserved Domain (CDD)
+            Evidence Accession :: Domain architecture ID 10013203
+            Evidence Source    :: NCBI SPARCLE
+            ##Evidence-For-Name-Assignment-END##
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..73
+                     /organism="Longibacter sp."
+                     /db_xref="taxon:2045415"
+     gene            1..73
+                     /gene="gvpA"
+     Protein         1..73
+                     /product="gas vesicle structural protein GvpA"
+                     /GO_component="GO:0033172 - gas vesicle shell [Evidence
+                     IEA]; GO:0012506 - vesicle membrane [Evidence IEA]"
+                     /calculated_mol_wt=7461
+     Region          5..71
+                     /region_name="PRK09371"
+                     /note="gas vesicle structural protein GvpA"
+                     /db_xref="CDD:181805"
+ORIGIN      
+        1 maevqkstds sglaevvdri ldkgividaf arvslvgiel vsvearivia svetylkyae
+       61 gigltataaa pqa
+//
+
+LOCUS       WP_443127555              91 aa            linear   BCT 24-DEC-2025
+DEFINITION  gas vesicle structural protein GvpA [Gracilibacillus sp. D59].
+ACCESSION   WP_443127555
+VERSION     WP_443127555.1
+KEYWORDS    RefSeq.
+SOURCE      Gracilibacillus sp. D59
+  ORGANISM  Gracilibacillus sp. D59
+            Bacteria; Bacillati; Bacillota; Bacilli; Caryophanales;
+            Bacillaceae; Gracilibacillus.
+REFERENCE   1  (residues 1 to 91)
+  AUTHORS   Offner,S., Hofacker,A., Wanner,G. and Pfeifer,F.
+  TITLE     Eight of fourteen gvp genes are sufficient for formation of gas
+            vesicles in halophilic archaea
+  JOURNAL   J Bacteriol 182 (15), 4328-4336 (2000)
+   PUBMED   10894744
+COMMENT     REFSEQ: This record represents a single, non-redundant, protein
+            sequence which may be annotated on many different RefSeq genomes
+            from the same, or different, species.
+            
+            ##Evidence-For-Name-Assignment-START##
+            Evidence Category  :: Conserved Domain (CDD)
+            Evidence Accession :: Domain architecture ID 10013203
+            Evidence Source    :: NCBI SPARCLE
+            ##Evidence-For-Name-Assignment-END##
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..91
+                     /organism="Gracilibacillus sp. D59"
+                     /db_xref="taxon:3457434"
+     gene            1..91
+                     /gene="gvpA"
+     Protein         1..91
+                     /product="gas vesicle structural protein GvpA"
+                     /GO_component="GO:0033172 - gas vesicle shell [Evidence
+                     IEA]; GO:0012506 - vesicle membrane [Evidence IEA]"
+                     /calculated_mol_wt=9788
+     Region          4..66
+                     /region_name="PRK09371"
+                     /note="gas vesicle structural protein GvpA"
+                     /db_xref="CDD:181805"
+ORIGIN      
+        1 maiqkstdss glaevidril dkgividaya svsvvgieli tvearvvvas vdtwlryaea
+       61 vgllqdevee eglsdrlsar sesmeykeqs n
+//
+
+LOCUS       WP_441007279              80 aa            linear   BCT 24-DEC-2025
+DEFINITION  gas vesicle structural protein GvpA [Microcystis aeruginosa].
+ACCESSION   WP_441007279
+VERSION     WP_441007279.1
+KEYWORDS    RefSeq.
+SOURCE      Microcystis aeruginosa
+  ORGANISM  Microcystis aeruginosa
+            Bacteria; Bacillati; Cyanobacteriota; Cyanophyceae;
+            Oscillatoriophycideae; Chroococcales; Microcystaceae; Microcystis.
+REFERENCE   1  (residues 1 to 80)
+  AUTHORS   Offner,S., Hofacker,A., Wanner,G. and Pfeifer,F.
+  TITLE     Eight of fourteen gvp genes are sufficient for formation of gas
+            vesicles in halophilic archaea
+  JOURNAL   J Bacteriol 182 (15), 4328-4336 (2000)
+   PUBMED   10894744
+COMMENT     REFSEQ: This record represents a single, non-redundant, protein
+            sequence which may be annotated on many different RefSeq genomes
+            from the same, or different, species.
+            
+            ##Evidence-For-Name-Assignment-START##
+            Evidence Category  :: Conserved Domain (CDD)
+            Evidence Accession :: Domain architecture ID 10013203
+            Evidence Source    :: NCBI SPARCLE
+            ##Evidence-For-Name-Assignment-END##
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..80
+                     /organism="Microcystis aeruginosa"
+                     /db_xref="taxon:1126"
+     gene            1..80
+                     /gene="gvpA"
+     Protein         1..80
+                     /product="gas vesicle structural protein GvpA"
+                     /GO_component="GO:0033172 - gas vesicle shell [Evidence
+                     IEA]; GO:0012506 - vesicle membrane [Evidence IEA]"
+                     /calculated_mol_wt=8419
+     Region          13..80
+                     /region_name="PRK09371"
+                     /note="gas vesicle structural protein GvpA"
+                     /db_xref="CDD:181805"
+ORIGIN      
+        1 mkttkrsitm avektnssss laevidrild kgividawar vslvgiella iearvviasv
+       61 etylkyaeav gltqsasvpa
+//
+
+LOCUS       WP_439345357              72 aa            linear   BCT 24-DEC-2025
+DEFINITION  gas vesicle structural protein GvpA [Vacuolonema iberomarrocanum].
+ACCESSION   WP_439345357
+VERSION     WP_439345357.1
+KEYWORDS    RefSeq.
+SOURCE      Vacuolonema iberomarrocanum
+  ORGANISM  Vacuolonema iberomarrocanum
+            Bacteria; Bacillati; Cyanobacteriota; Cyanophyceae; Oculatellales;
+            Oculatellaceae; Vacuolonema.
+REFERENCE   1  (residues 1 to 72)
+  AUTHORS   Offner,S., Hofacker,A., Wanner,G. and Pfeifer,F.
+  TITLE     Eight of fourteen gvp genes are sufficient for formation of gas
+            vesicles in halophilic archaea
+  JOURNAL   J Bacteriol 182 (15), 4328-4336 (2000)
+   PUBMED   10894744
+COMMENT     REFSEQ: This record represents a single, non-redundant, protein
+            sequence which may be annotated on many different RefSeq genomes
+            from the same, or different, species.
+            
+            ##Evidence-For-Name-Assignment-START##
+            Evidence Category  :: Conserved Domain (CDD)
+            Evidence Accession :: Domain architecture ID 10013203
+            Evidence Source    :: NCBI SPARCLE
+            ##Evidence-For-Name-Assignment-END##
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..72
+                     /organism="Vacuolonema iberomarrocanum"
+                     /db_xref="taxon:3454632"
+     gene            1..72
+                     /gene="gvpA"
+     Protein         1..72
+                     /product="gas vesicle structural protein GvpA"
+                     /GO_component="GO:0033172 - gas vesicle shell [Evidence
+                     IEA]; GO:0012506 - vesicle membrane [Evidence IEA]"
+                     /calculated_mol_wt=7411
+     Region          4..71
+                     /region_name="PRK09371"
+                     /note="gas vesicle structural protein GvpA"
+                     /db_xref="CDD:181805"
+ORIGIN      
+        1 mavekvnsss slaevvdril dkgvvvdawv rvslvgiell avearivias vetylkyaea
+       61 vgltaqaavp sa
+//
+
+LOCUS       WP_439300212              85 aa            linear   BCT 24-DEC-2025
+DEFINITION  gas vesicle structural protein GvpA [Pseudalkalibacillus sp. Hm43].
+ACCESSION   WP_439300212
+VERSION     WP_439300212.1
+KEYWORDS    RefSeq.
+SOURCE      Pseudalkalibacillus sp. Hm43
+  ORGANISM  Pseudalkalibacillus sp. Hm43
+            Bacteria; Bacillati; Bacillota; Bacilli; Caryophanales;
+            Fictibacillaceae; Pseudalkalibacillus.
+REFERENCE   1  (residues 1 to 85)
+  AUTHORS   Offner,S., Hofacker,A., Wanner,G. and Pfeifer,F.
+  TITLE     Eight of fourteen gvp genes are sufficient for formation of gas
+            vesicles in halophilic archaea
+  JOURNAL   J Bacteriol 182 (15), 4328-4336 (2000)
+   PUBMED   10894744
+COMMENT     REFSEQ: This record represents a single, non-redundant, protein
+            sequence which may be annotated on many different RefSeq genomes
+            from the same, or different, species.
+            
+            ##Evidence-For-Name-Assignment-START##
+            Evidence Category  :: Conserved Domain (CDD)
+            Evidence Accession :: Domain architecture ID 10013203
+            Evidence Source    :: NCBI SPARCLE
+            ##Evidence-For-Name-Assignment-END##
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..85
+                     /organism="Pseudalkalibacillus sp. Hm43"
+                     /db_xref="taxon:3450742"
+     gene            1..85
+                     /gene="gvpA"
+     Protein         1..85
+                     /product="gas vesicle structural protein GvpA"
+                     /GO_component="GO:0033172 - gas vesicle shell [Evidence
+                     IEA]; GO:0012506 - vesicle membrane [Evidence IEA]"
+                     /calculated_mol_wt=9316
+     Region          4..63
+                     /region_name="PRK09371"
+                     /note="gas vesicle structural protein GvpA"
+                     /db_xref="CDD:181805"
+ORIGIN      
+        1 msiqkttdss slaevidril dkgividafa rvslvgieil tvearvvias vdtwlryana
+       61 vgllrddvqe egqieernrq aqfsi
+//
+
+LOCUS       WP_160913461              96 aa            linear   BCT 13-MAR-2026
+DEFINITION  MULTISPECIES: gas vesicle protein GvpJ [Halobacillus].
+ACCESSION   WP_160913461
+VERSION     WP_160913461.1
+KEYWORDS    RefSeq.
+SOURCE      Halobacillus
+  ORGANISM  Halobacillus
+            Bacteria; Bacillati; Bacillota; Bacilli; Caryophanales;
+            Bacillaceae.
+REFERENCE   1  (residues 1 to 96)
+  AUTHORS   Shukla,H.D. and DasSarma,S.
+  TITLE     Complexity of gas vesicle biogenesis in Halobacterium sp. strain
+            NRC-1: identification of five new proteins
+  JOURNAL   J Bacteriol 186 (10), 3182-3186 (2004)
+   PUBMED   15126480
+COMMENT     REFSEQ: This record represents a single, non-redundant, protein
+            sequence which may be annotated on many different RefSeq genomes
+            from the same, or different, species.
+            
+            ##Evidence-For-Name-Assignment-START##
+            Evidence Category  :: HMM
+            Evidence Accession :: NF012944.7
+            Evidence Source    :: EMBL-EBI
+            Source Identifier  :: PF00741.24
+            ##Evidence-For-Name-Assignment-END##
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..96
+                     /organism="Halobacillus"
+                     /db_xref="taxon:45667"
+     gene            1..96
+                     /gene="gvpJ"
+     Protein         1..96
+                     /product="gas vesicle protein GvpJ"
+                     /GO_component="GO:0012506 - vesicle membrane [Evidence
+                     IEA]"
+                     /GO_function="GO:0005198 - structural molecule activity
+                     [Evidence IEA]"
+                     /calculated_mol_wt=10251
+     Region          8..>64
+                     /region_name="Gas_vesicle"
+                     /note="Gas vesicle protein; cl02954"
+                     /db_xref="CDD:470703"
+ORIGIN      
+        1 maiqkstdss slaevvdril dkgividafa rvsvvgieli tiearvvias vdtwlryaea
+       61 vgllrdevee eglggrlgeg eetssrtsne rgefsi
+//
+
+LOCUS       WP_094886142              91 aa            linear   BCT 05-APR-2026
+DEFINITION  gas vesicle protein GvpJ [Virgibacillus indicus].
+ACCESSION   WP_094886142
+VERSION     WP_094886142.1
+KEYWORDS    RefSeq.
+SOURCE      Virgibacillus indicus
+  ORGANISM  Virgibacillus indicus
+            Bacteria; Bacillati; Bacillota; Bacilli; Caryophanales;
+            Bacillaceae; Virgibacillus.
+REFERENCE   1  (residues 1 to 91)
+  AUTHORS   Shukla,H.D. and DasSarma,S.
+  TITLE     Complexity of gas vesicle biogenesis in Halobacterium sp. strain
+            NRC-1: identification of five new proteins
+  JOURNAL   J Bacteriol 186 (10), 3182-3186 (2004)
+   PUBMED   15126480
+COMMENT     REFSEQ: This record represents a single, non-redundant, protein
+            sequence which may be annotated on many different RefSeq genomes
+            from the same, or different, species.
+            
+            ##Evidence-For-Name-Assignment-START##
+            Evidence Category  :: HMM
+            Evidence Accession :: NF012944.7
+            Evidence Source    :: EMBL-EBI
+            Source Identifier  :: PF00741.24
+            ##Evidence-For-Name-Assignment-END##
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..91
+                     /organism="Virgibacillus indicus"
+                     /db_xref="taxon:2024554"
+     gene            1..91
+                     /gene="gvpJ"
+     Protein         1..91
+                     /product="gas vesicle protein GvpJ"
+                     /GO_component="GO:0012506 - vesicle membrane [Evidence
+                     IEA]"
+                     /GO_function="GO:0005198 - structural molecule activity
+                     [Evidence IEA]"
+                     /calculated_mol_wt=9842
+     Region          8..>64
+                     /region_name="Gas_vesicle"
+                     /note="Gas vesicle protein; cl02954"
+                     /db_xref="CDD:470703"
+ORIGIN      
+        1 maiqkstdss slaevidril dkgividafa rvsvvgieli tvearvvvas vdtwlryaea
+       61 vgllrdeiee dglsdrlssr sdsveydeev s
+//
+
+LOCUS       WP_443256761              88 aa            linear   BCT 08-APR-2026
+DEFINITION  gas vesicle protein GvpJ [Virgibacillus sp. L01].
+ACCESSION   WP_443256761
+VERSION     WP_443256761.1
+KEYWORDS    RefSeq.
+SOURCE      Virgibacillus sp. L01
+  ORGANISM  Virgibacillus sp. L01
+            Bacteria; Bacillati; Bacillota; Bacilli; Caryophanales;
+            Bacillaceae; Virgibacillus.
+REFERENCE   1  (residues 1 to 88)
+  AUTHORS   Shukla,H.D. and DasSarma,S.
+  TITLE     Complexity of gas vesicle biogenesis in Halobacterium sp. strain
+            NRC-1: identification of five new proteins
+  JOURNAL   J Bacteriol 186 (10), 3182-3186 (2004)
+   PUBMED   15126480
+COMMENT     REFSEQ: This record represents a single, non-redundant, protein
+            sequence which may be annotated on many different RefSeq genomes
+            from the same, or different, species.
+            
+            ##Evidence-For-Name-Assignment-START##
+            Evidence Category  :: HMM
+            Evidence Accession :: NF012944.7
+            Evidence Source    :: EMBL-EBI
+            Source Identifier  :: PF00741.24
+            ##Evidence-For-Name-Assignment-END##
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..88
+                     /organism="Virgibacillus sp. L01"
+                     /db_xref="taxon:3457429"
+     gene            1..88
+                     /gene="gvpJ"
+     Protein         1..88
+                     /product="gas vesicle protein GvpJ"
+                     /GO_component="GO:0012506 - vesicle membrane [Evidence
+                     IEA]"
+                     /GO_function="GO:0005198 - structural molecule activity
+                     [Evidence IEA]"
+                     /calculated_mol_wt=9301
+     Region          9..>64
+                     /region_name="Gas_vesicle"
+                     /note="Gas vesicle protein; cl02954"
+                     /db_xref="CDD:470703"
+ORIGIN      
+        1 maiqkstess gladvvdril dkgividafa rvsvvgieli tvearvvvas vdtwlryaea
+       61 vgllrddvee dglsdrlsar sesveqga
+//
+
+LOCUS       WP_256227925              87 aa            linear   BCT 01-APR-2026
+DEFINITION  gas vesicle protein GvpJ [Fictibacillus sp. WQ 8-8].
+ACCESSION   WP_256227925
+VERSION     WP_256227925.1
+KEYWORDS    RefSeq.
+SOURCE      Fictibacillus sp. WQ 8-8
+  ORGANISM  Fictibacillus sp. WQ 8-8
+            Bacteria; Bacillati; Bacillota; Bacilli; Caryophanales;
+            Fictibacillaceae; Fictibacillus.
+REFERENCE   1  (residues 1 to 87)
+  AUTHORS   Shukla,H.D. and DasSarma,S.
+  TITLE     Complexity of gas vesicle biogenesis in Halobacterium sp. strain
+            NRC-1: identification of five new proteins
+  JOURNAL   J Bacteriol 186 (10), 3182-3186 (2004)
+   PUBMED   15126480
+COMMENT     REFSEQ: This record represents a single, non-redundant, protein
+            sequence which may be annotated on many different RefSeq genomes
+            from the same, or different, species.
+            
+            ##Evidence-For-Name-Assignment-START##
+            Evidence Category  :: HMM
+            Evidence Accession :: NF012944.7
+            Evidence Source    :: EMBL-EBI
+            Source Identifier  :: PF00741.24
+            ##Evidence-For-Name-Assignment-END##
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..87
+                     /organism="Fictibacillus sp. WQ 8-8"
+                     /db_xref="taxon:2938788"
+     gene            1..87
+                     /gene="gvpJ"
+                     /GO_component="GO:0012506 - vesicle membrane [Evidence
+                     IEA]"
+                     /GO_function="GO:0005198 - structural molecule activity
+                     [Evidence IEA]"
+     Protein         1..87
+                     /product="gas vesicle protein GvpJ"
+                     /GO_component="GO:0012506 - vesicle membrane [Evidence
+                     IEA]"
+                     /GO_function="GO:0005198 - structural molecule activity
+                     [Evidence IEA]"
+                     /calculated_mol_wt=9734
+     Region          7..>64
+                     /region_name="Gas_vesicle"
+                     /note="Gas vesicle protein; cl02954"
+                     /db_xref="CDD:470703"
+ORIGIN      
+        1 mhvkkysdgs slvevvdril dkgividvya kisvlgleli tvdarivvss ietwlryada
+       61 vdllkngeed hterepkell drllfpi
+//
+
+LOCUS       WP_101642268              86 aa            linear   BCT 03-APR-2026
+DEFINITION  gas vesicle protein GvpJ [Peribacillus deserti].
+ACCESSION   WP_101642268
+VERSION     WP_101642268.1
+KEYWORDS    RefSeq.
+SOURCE      Peribacillus deserti
+  ORGANISM  Peribacillus deserti
+            Bacteria; Bacillati; Bacillota; Bacilli; Caryophanales;
+            Bacillaceae; Peribacillus.
+REFERENCE   1  (residues 1 to 86)
+  AUTHORS   Shukla,H.D. and DasSarma,S.
+  TITLE     Complexity of gas vesicle biogenesis in Halobacterium sp. strain
+            NRC-1: identification of five new proteins
+  JOURNAL   J Bacteriol 186 (10), 3182-3186 (2004)
+   PUBMED   15126480
+COMMENT     REFSEQ: This record represents a single, non-redundant, protein
+            sequence which may be annotated on many different RefSeq genomes
+            from the same, or different, species.
+            
+            ##Evidence-For-Name-Assignment-START##
+            Evidence Category  :: HMM
+            Evidence Accession :: NF012944.7
+            Evidence Source    :: EMBL-EBI
+            Source Identifier  :: PF00741.24
+            ##Evidence-For-Name-Assignment-END##
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..86
+                     /organism="Peribacillus deserti"
+                     /db_xref="taxon:673318"
+     gene            1..86
+                     /gene="gvpJ"
+     Protein         1..86
+                     /product="gas vesicle protein GvpJ"
+                     /GO_component="GO:0012506 - vesicle membrane [Evidence
+                     IEA]"
+                     /GO_function="GO:0005198 - structural molecule activity
+                     [Evidence IEA]"
+                     /calculated_mol_wt=9239
+     Region          8..>64
+                     /region_name="Gas_vesicle"
+                     /note="Gas vesicle protein; cl02954"
+                     /db_xref="CDD:470703"
+ORIGIN      
+        1 msvqkstdss slaevidril dkgividafv rvslvgieil tvearvvias vdtwlryaea
+       61 vgllsdevqd eglmnrkqsa daqfst
+//
+
+LOCUS       WP_114298883              75 aa            linear   BCT 05-APR-2026
+DEFINITION  gas vesicle protein GvpJ [Anaerobacterium chartisolvens].
+ACCESSION   WP_114298883
+VERSION     WP_114298883.1
+KEYWORDS    RefSeq.
+SOURCE      Anaerobacterium chartisolvens
+  ORGANISM  Anaerobacterium chartisolvens
+            Bacteria; Bacillati; Bacillota; Clostridia; Eubacteriales;
+            Oscillospiraceae; Anaerobacterium.
+REFERENCE   1  (residues 1 to 75)
+  AUTHORS   Shukla,H.D. and DasSarma,S.
+  TITLE     Complexity of gas vesicle biogenesis in Halobacterium sp. strain
+            NRC-1: identification of five new proteins
+  JOURNAL   J Bacteriol 186 (10), 3182-3186 (2004)
+   PUBMED   15126480
+COMMENT     REFSEQ: This record represents a single, non-redundant, protein
+            sequence which may be annotated on many different RefSeq genomes
+            from the same, or different, species.
+            
+            ##Evidence-For-Name-Assignment-START##
+            Evidence Category  :: HMM
+            Evidence Accession :: NF012944.7
+            Evidence Source    :: EMBL-EBI
+            Source Identifier  :: PF00741.24
+            ##Evidence-For-Name-Assignment-END##
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..75
+                     /organism="Anaerobacterium chartisolvens"
+                     /db_xref="taxon:1297424"
+     gene            1..75
+                     /gene="gvpJ"
+     Protein         1..75
+                     /product="gas vesicle protein GvpJ"
+                     /GO_component="GO:0012506 - vesicle membrane [Evidence
+                     IEA]"
+                     /GO_function="GO:0005198 - structural molecule activity
+                     [Evidence IEA]"
+                     /calculated_mol_wt=7950
+     Region          8..>60
+                     /region_name="Gas_vesicle"
+                     /note="Gas vesicle protein; cl02954"
+                     /db_xref="CDD:470703"
+ORIGIN      
+        1 mkssavesss laevldrild kglvidifir vslvgielvt veariviasi esylvyadav
+       61 glttrsqkll meqgg
+//
+
+LOCUS       WP_256714828             115 aa            linear   BCT 08-APR-2026
+DEFINITION  gas vesicle protein GvpJ [Mycobacterium colombiense].
+ACCESSION   WP_256714828
+VERSION     WP_256714828.1
+KEYWORDS    RefSeq.
+SOURCE      Mycobacterium colombiense
+  ORGANISM  Mycobacterium colombiense
+            Bacteria; Bacillati; Actinomycetota; Actinomycetes;
+            Mycobacteriales; Mycobacteriaceae; Mycobacterium; Mycobacterium
+            avium complex (MAC).
+REFERENCE   1  (residues 1 to 115)
+  AUTHORS   Shukla,H.D. and DasSarma,S.
+  TITLE     Complexity of gas vesicle biogenesis in Halobacterium sp. strain
+            NRC-1: identification of five new proteins
+  JOURNAL   J Bacteriol 186 (10), 3182-3186 (2004)
+   PUBMED   15126480
+COMMENT     REFSEQ: This record represents a single, non-redundant, protein
+            sequence which may be annotated on many different RefSeq genomes
+            from the same, or different, species.
+            
+            ##Evidence-For-Name-Assignment-START##
+            Evidence Category  :: HMM
+            Evidence Accession :: NF012944.7
+            Evidence Source    :: EMBL-EBI
+            Source Identifier  :: PF00741.24
+            ##Evidence-For-Name-Assignment-END##
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..115
+                     /organism="Mycobacterium colombiense"
+                     /db_xref="taxon:339268"
+     gene            1..115
+                     /gene="gvpJ"
+                     /GO_component="GO:0012506 - vesicle membrane [Evidence
+                     IEA]"
+                     /GO_function="GO:0005198 - structural molecule activity
+                     [Evidence IEA]"
+     Protein         1..115
+                     /product="gas vesicle protein GvpJ"
+                     /GO_component="GO:0012506 - vesicle membrane [Evidence
+                     IEA]"
+                     /GO_function="GO:0005198 - structural molecule activity
+                     [Evidence IEA]"
+                     /calculated_mol_wt=12311
+     Region          1..112
+                     /region_name="Gas_vesicle"
+                     /note="Gas vesicle protein; cl02954"
+                     /db_xref="CDD:470703"
+ORIGIN      
+        1 madvidtild kglvidayar lslvgielit idariviasv dtylrfaqaa nrlqistnep
+       61 kgladlvqsv ksggsksktq gvleaasekl gdfltqaqqp qrqkvkrvss rrdat
+//
+
+LOCUS       WP_164214962              88 aa            linear   BCT 09-MAR-2026
+DEFINITION  gas vesicle protein GvpJ [Virgibacillus aidingensis].
+ACCESSION   WP_164214962
+VERSION     WP_164214962.1
+KEYWORDS    RefSeq.
+SOURCE      Virgibacillus aidingensis
+  ORGANISM  Virgibacillus aidingensis
+            Bacteria; Bacillati; Bacillota; Bacilli; Caryophanales;
+            Bacillaceae; Virgibacillus.
+REFERENCE   1  (residues 1 to 88)
+  AUTHORS   Shukla,H.D. and DasSarma,S.
+  TITLE     Complexity of gas vesicle biogenesis in Halobacterium sp. strain
+            NRC-1: identification of five new proteins
+  JOURNAL   J Bacteriol 186 (10), 3182-3186 (2004)
+   PUBMED   15126480
+COMMENT     REFSEQ: This record represents a single, non-redundant, protein
+            sequence which may be annotated on many different RefSeq genomes
+            from the same, or different, species.
+            
+            ##Evidence-For-Name-Assignment-START##
+            Evidence Category  :: HMM
+            Evidence Accession :: NF012944.7
+            Evidence Source    :: EMBL-EBI
+            Source Identifier  :: PF00741.24
+            ##Evidence-For-Name-Assignment-END##
+            COMPLETENESS: full length.
+FEATURES             Location/Qualifiers
+     source          1..88
+                     /organism="Virgibacillus aidingensis"
+                     /db_xref="taxon:2663533"
+     gene            1..88
+                     /gene="gvpJ"
+     Protein         1..88
+                     /product="gas vesicle protein GvpJ"
+                     /GO_component="GO:0012506 - vesicle membrane [Evidence
+                     IEA]"
+                     /GO_function="GO:0005198 - structural molecule activity
+                     [Evidence IEA]"
+                     /calculated_mol_wt=9661
+     Region          8..>64
+                     /region_name="Gas_vesicle"
+                     /note="Gas vesicle protein; cl02954"
+                     /db_xref="CDD:470703"
+ORIGIN      
+        1 mgvqkstdss slaevidril dkgividaya rvsvvgieil tvearvvias vdtwlryaea
+       61 vgllrdeled eelslenqen ernpqfsi
+//
+

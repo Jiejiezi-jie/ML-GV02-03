@@ -1,0 +1,35 @@
+# Frozen exploratory thresholds; not fitted on generated candidates.
+sources:
+  - data/raw/curated/uniprot_reviewed_gvpa_gvpj.fasta
+  - data/raw/t05/gvpa/GvpA_RefSeq.fasta
+  - data/raw/t05/gvpa/GvpA_NotPartial.fasta
+  - data/raw/t05/gvpa/rescued_GvpA_candidates.fasta
+  - data/raw/design/GvpA.fasta
+  - data/raw/t05/real_gvp.fasta
+candidates: data/candidates/t05/generated_gvp.fasta
+pfam_model: models/pfam/PF00741.hmm
+reference_dir: data/processed/gv02_03_v2/reference
+profile_dir: models/family_profiles
+result_dir: results/gv02_03_v2/family
+folds: 3
+cluster_identity: 0.70
+cluster_coverage: 0.80
+minimum_profile_sequences: 3
+seed: 42
+reviewed_snapshot: references/uniprot_reviewed_gvpa_gvpj.json
+reviewed_fasta: data/raw/curated/uniprot_reviewed_gvpa_gvpj.fasta
+pfam_metadata_snapshot: references/PF00741.interpro.json
+thresholds:
+  pfam_sequence_score: 25.0
+  pfam_domain_score: 25.0
+  pfam_coverage: 0.80
+  family_score: 25.0
+  family_model_coverage: 0.60
+  family_query_coverage: 0.60
+  margin_bits: 10.0
+  minimum_gvpa_length: 50
+  maximum_gvpa_length: 180
+  # Conservative agreement gate; fixed before inspecting candidate assignments.
+  similarity_coverage: 0.70
+  similarity_identity: 0.40
+  similarity_margin: 0.05

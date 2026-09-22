@@ -1,0 +1,177 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3 (Nov 2019); http://hmmer.org/
+# Copyright (C) 2019 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /mnt/d/endless/机器学习综合实践/ML-GV02-03/models/pfam/PF00741.hmm
+# target sequence database:        /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_1/synthetic/queries.fasta
+# per-dom hits tabular output:     /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_1/synthetic/pf00741.domtbl
+# sequence reporting threshold:    score >= 0
+# domain reporting threshold:      score >= 0
+# Max sensitivity mode:            on [all heuristic filters off]
+# number of worker threads:        1
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       Gas_vesicle  [M=39]
+Accession:   PF00741.24
+Description: Gas vesicle protein
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                 Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                 -----------
+    1.3e-19   62.9   6.2    1.6e-19   62.6   6.2    1.1  1  exact_duplicate_nat_307aae2a7a20a7f3cf48  
+    1.6e-19   62.6   9.7    2.5e-19   62.0   9.7    1.3  1  exact_duplicate_nat_3a3fe29b7daaadaf3131  
+    2.3e-19   62.1   9.0    3.2e-19   61.7   9.0    1.2  1  exact_duplicate_nat_7cb4140e283c8e67ca6a  
+    2.9e-18   58.6  10.1    3.6e-18   58.3  10.1    1.1  1  exact_duplicate_nat_d790919b750d218eb5d2  
+      6e-12   38.4   3.0    7.2e-12   38.1   3.0    1.1  1  truncated_nat_3a3fe29b7daaadaf3131        
+    4.6e-11   35.6   3.5      5e-11   35.4   3.5    1.0  1  truncated_nat_d790919b750d218eb5d2        
+    2.8e-07   23.4   0.6    3.2e-07   23.3   0.6    1.1  1  truncated_nat_7cb4140e283c8e67ca6a        
+    1.1e-06   21.5   0.2    1.3e-06   21.4   0.2    1.1  1  truncated_nat_307aae2a7a20a7f3cf48        
+  ------ inclusion threshold ------
+        2.6    1.2   0.2        9.7   -0.7   0.0    1.6  0  shuffled_nat_4d2e7e7faa72495fbae4         
+        2.7    1.1   0.3        7.4   -0.3   0.3    1.7  0  shuffled_nat_307aae2a7a20a7f3cf48         
+        3.7    0.7   0.2         12   -0.9   0.2    1.6  0  shuffled_nat_3a3fe29b7daaadaf3131         
+        4.1    0.5   0.1         10   -0.8   0.1    1.4  0  exact_duplicate_nat_f1576cf15faeaea3dbc6  
+        5.3    0.2   0.1         35   -2.5   0.0    1.6  0  shuffled_nat_d790919b750d218eb5d2         
+        5.8    0.0   0.5         14   -1.2   0.2    1.4  0  truncated_nat_4d2e7e7faa72495fbae4        
+        5.8    0.0   0.6        7.4   -0.3   0.0    1.4  0  truncated_nat_600cc7dd0b3564219e23        
+        5.8    0.0   0.1         15   -1.3   0.1    1.4  0  shuffled_nat_ba4b60d40b6ab3ab87c7         
+
+
+Domain annotation for each sequence (and alignments):
+>> exact_duplicate_nat_307aae2a7a20a7f3cf48  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   62.6   6.2   2.4e-20   1.6e-19       1      39 []      11      49 ..      11      49 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 62.6 bits;  conditional E-value: 2.4e-20
+                               Gas_vesicle  1 sLaDlLDrvLdkGvVIaGditisvagieLltikLrlvlA 39
+                                              sLa+++Dr+LdkG+VI++++++s++gieLl+i++r+v+A
+  exact_duplicate_nat_307aae2a7a20a7f3cf48 11 SLAEVIDRILDKGIVIDAWVRVSLVGIELLSIEARIVIA 49
+                                              8*************************************8 PP
+
+>> exact_duplicate_nat_3a3fe29b7daaadaf3131  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   62.0   9.7   3.7e-20   2.5e-19       1      39 []      11      49 ..      11      49 .. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 62.0 bits;  conditional E-value: 3.7e-20
+                               Gas_vesicle  1 sLaDlLDrvLdkGvVIaGditisvagieLltikLrlvlA 39
+                                              sL+D+LDrvLdkG+VI+++++is++gi+L+t+++r+v+A
+  exact_duplicate_nat_3a3fe29b7daaadaf3131 11 SLIDVLDRVLDKGIVIDAWVRISLVGIDLITVEARVVVA 49
+                                              8*************************************8 PP
+
+>> exact_duplicate_nat_7cb4140e283c8e67ca6a  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   61.7   9.0   4.7e-20   3.2e-19       1      39 []      21      59 ..      21      59 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 61.7 bits;  conditional E-value: 4.7e-20
+                               Gas_vesicle  1 sLaDlLDrvLdkGvVIaGditisvagieLltikLrlvlA 39
+                                              +LaD+L+rvLdkGvVIaGdi+i++ +ieLltikLrlv+A
+  exact_duplicate_nat_7cb4140e283c8e67ca6a 21 NLADILERVLDKGVVIAGDIKINLLDIELLTIKLRLVVA 59
+                                              69************************************8 PP
+
+>> exact_duplicate_nat_d790919b750d218eb5d2  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.3  10.1   5.4e-19   3.6e-18       1      39 []      11      49 ..      11      49 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 58.3 bits;  conditional E-value: 5.4e-19
+                               Gas_vesicle  1 sLaDlLDrvLdkGvVIaGditisvagieLltikLrlvlA 39
+                                              +++D+L+ +LdkGvVIaGdit+++a++eLltik+rl++A
+  exact_duplicate_nat_d790919b750d218eb5d2 11 TIVDVLEKILDKGVVIAGDITVGIADVELLTIKIRLIVA 49
+                                              69***********************************98 PP
+
+>> truncated_nat_3a3fe29b7daaadaf3131  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.1   3.0   1.1e-12   7.2e-12       1      22 [.      11      32 .]      11      32 .] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 38.1 bits;  conditional E-value: 1.1e-12
+                         Gas_vesicle  1 sLaDlLDrvLdkGvVIaGditi 22
+                                        sL+D+LDrvLdkG+VI+++++i
+  truncated_nat_3a3fe29b7daaadaf3131 11 SLIDVLDRVLDKGIVIDAWVRI 32
+                                        8*******************98 PP
+
+>> truncated_nat_d790919b750d218eb5d2  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.4   3.5   7.4e-12     5e-11       1      23 [.      11      33 .]      11      33 .] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 35.4 bits;  conditional E-value: 7.4e-12
+                         Gas_vesicle  1 sLaDlLDrvLdkGvVIaGditis 23
+                                        +++D+L+ +LdkGvVIaGdit++
+  truncated_nat_d790919b750d218eb5d2 11 TIVDVLEKILDKGVVIAGDITVG 33
+                                        69*******************96 PP
+
+>> truncated_nat_7cb4140e283c8e67ca6a  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.3   0.6   4.7e-08   3.2e-07       1      15 [.      21      35 .]      21      35 .] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 23.3 bits;  conditional E-value: 4.7e-08
+                         Gas_vesicle  1 sLaDlLDrvLdkGvV 15
+                                        +LaD+L+rvLdkGvV
+  truncated_nat_7cb4140e283c8e67ca6a 21 NLADILERVLDKGVV 35
+                                        69************9 PP
+
+>> truncated_nat_307aae2a7a20a7f3cf48  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.4   0.2   1.9e-07   1.3e-06       1      14 [.      11      24 .]      11      24 .] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 21.4 bits;  conditional E-value: 1.9e-07
+                         Gas_vesicle  1 sLaDlLDrvLdkGv 14
+                                        sLa+++Dr+LdkG+
+  truncated_nat_307aae2a7a20a7f3cf48 11 SLAEVIDRILDKGI 24
+                                        8************8 PP
+
+>> shuffled_nat_4d2e7e7faa72495fbae4  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> shuffled_nat_307aae2a7a20a7f3cf48  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> shuffled_nat_3a3fe29b7daaadaf3131  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> exact_duplicate_nat_f1576cf15faeaea3dbc6  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> shuffled_nat_d790919b750d218eb5d2  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> truncated_nat_4d2e7e7faa72495fbae4  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> truncated_nat_600cc7dd0b3564219e23  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> shuffled_nat_ba4b60d40b6ab3ab87c7  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (39 nodes)
+Target sequences:                        108  (19448 residues searched)
+Passed MSV filter:                       108  (1); expected 108.0 (1)
+Passed bias filter:                      108  (1); expected 108.0 (1)
+Passed Vit filter:                       108  (1); expected 108.0 (1)
+Passed Fwd filter:                       108  (1); expected 108.0 (1)
+Initial search space (Z):                108  [actual number of targets]
+Domain search space  (domZ):              16  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.01
+# Mc/sec: 71.73
+//
+[ok]

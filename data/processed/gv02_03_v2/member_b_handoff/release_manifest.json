@@ -1,0 +1,34 @@
+{
+  "release_id": "member_a_v1_conservative_provisional",
+  "status": "provisional_not_scientifically_final",
+  "permitted_use": "development_and_explicitly_provisional_training",
+  "final_training_gate": "requires resolution or documented expert adjudication of family conflicts",
+  "total_supported_gvpa": 681,
+  "training_eligible": 346,
+  "quarantined": 335,
+  "unresolved_negative_controls": 14,
+  "quarantine_reason_counts": {
+    "mixed_annotation_cluster": 330,
+    "unresolved_negative_cluster": 276,
+    "nearest_gvpa_to_unresolved_negative_cluster": 105
+  },
+  "inputs": {
+    "data/processed/gv02_03_v2/reference/high_confidence_gvpa.fasta": "ae5cb68b394b71825d0d4a5e716e946a8d1765bf6355bb2d520ccdabe781dea8",
+    "data/processed/gv02_03_v2/reference/seed_manifest.tsv": "916308aba2217120851d5b667bc148626e2af6a9e3aedb9d0cc03043026341f3",
+    "data/processed/gv02_03_v2/reference/reference_classification.tsv": "39f7c06cffe0fc8c2eba9ebd5569cd060045335157db171b7590998ed6c2c8e7",
+    "results/gv02_03_v2/family/unresolved_negative_controls.tsv": "bfe1b0b5ba799f1097c5fdf72a6975cf3e7ed573519c59954f0b2e3554b16ef7",
+    "results/gv02_03_v2/family/acceptance.json": "efbde95d53f7c7e18c2abf8d43ebbdf3997dddd0ad7c51ae5723817285e8a127"
+  },
+  "outputs": {
+    "data/processed/gv02_03_v2/member_b_handoff/gvpa_training_eligible.fasta": "9a38015ecd3aaf283af3501f354db3cc23ea4e89045cb75f53cc30a7f9635bc9",
+    "data/processed/gv02_03_v2/member_b_handoff/quarantined_gvpa.fasta": "1d6b360cd15e7aecd48f9e5e415f9c6e27ae5e83bc223ac0de1ea673c95c8588",
+    "data/processed/gv02_03_v2/member_b_handoff/release_audit.tsv": "352b22ea381f8ab6fdabb0cc90e8a5756c5a18fddcb269ff5eee369e0a05e864",
+    "data/processed/gv02_03_v2/member_b_handoff/unresolved_negative_controls.tsv": "bfe1b0b5ba799f1097c5fdf72a6975cf3e7ed573519c59954f0b2e3554b16ef7"
+  },
+  "code_sha256": "4bed333511d0eaa94aeefe36c2bf935feae38fa03a31d8be5ddbcf579604cb15",
+  "limitations": [
+    "Quarantine is a risk-control policy, not evidence that remaining sequences are experimentally confirmed.",
+    "CD-HIT clusters are heuristic; cross-cluster nearest-neighbor checks remain necessary.",
+    "Do not reuse the old 1224-sequence generator split; rebuild from this pinned release."
+  ]
+}
