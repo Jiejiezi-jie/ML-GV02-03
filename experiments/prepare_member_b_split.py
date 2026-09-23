@@ -2,14 +2,14 @@
 from __future__ import annotations
 
 import argparse
-from collections import defaultdict, Counter
+from collections import defaultdict
 import json
 from pathlib import Path
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
-from gv_eval.generation_data import cluster_aware_split
+from gv_eval.generation_data import constrained_cluster_split
 from gv_eval.io import read_fasta, write_fasta, write_json, write_tsv, sha256_file
 from prepare_member_b_handoff import read_table
 
@@ -32,7 +32,18 @@ def prepare(allow_provisional=False):
     # Preserve original mixed-family 70% clusters after filtering. Reassign
     # groups afresh; do not recycle generator or classification fold labels.
     clusters = [sorted(groups[k]) for k in sorted(groups)]
-    assigned, _ = cluster_aware_split(clusters, {"train":0.8,"validation":0.1,"test":0.1}, seed=42)
+    member_lengths = {record.identifier: len(record.sequence) for record in records}
+    target_sequences = {"train": 277, "validation": 33, "test": 36}
+    target_clusters = {"train": 16, "validation": 9, "test": 6}
+    target_total_lengths = {"train": 30151, "validation": 3590, "test": 4021}
+    assigned, split_cluster_ids = constrained_cluster_split(
+        clusters,
+        member_lengths,
+        target_sequences,
+        target_clusters,
+        target_total_lengths,
+        seed=42,
+    )
     output = directory / "development_split"
     paths = []
     for split in ("train", "validation", "test"):
@@ -41,14 +52,37 @@ def prepare(allow_provisional=False):
         paths.append(path)
     rows = [dict(**audit[r.identifier], split=assigned[r.identifier]) for r in records]
     write_tsv(output / "sequence_manifest.tsv", rows, list(rows[0]))
-    tokens = ["<PAD>","<BOS>","<EOS>","<UNK>"] + list("ACDEFGHIKLMNPQRSTVWY")
-    write_json(output / "vocabulary.json", dict(tokens=tokens, token_to_id={s:i for i,s in enumerate(tokens)}))
+    special_tokens = ["<PAD>", "<BOS>", "<EOS>", "<UNK>"]
+    amino_acids = list("ACDEFGHIKLMNPQRSTVWY")
+    tokens = special_tokens + amino_acids
+    write_json(
+        output / "vocabulary.json",
+        dict(
+            tokens=tokens,
+            token_to_id={symbol: index for index, symbol in enumerate(tokens)},
+            special_tokens=special_tokens,
+            amino_acids=amino_acids,
+        ),
+    )
     paths += [output / "sequence_manifest.tsv", output / "vocabulary.json"]
+    split_statistics = {}
+    for split in ("train", "validation", "test"):
+        lengths = [member_lengths[identifier] for identifier, value in assigned.items() if value == split]
+        split_statistics[split] = dict(
+            sequences=len(lengths),
+            clusters=len(split_cluster_ids[split]),
+            fraction=len(lengths) / len(records),
+            mean_length=sum(lengths) / len(lengths),
+            minimum_length=min(lengths),
+            maximum_length=max(lengths),
+            total_length=sum(lengths),
+        )
     summary = dict(dataset_status="provisional_development_only", seed=42,
         release_id=release["release_id"], release_sha256=sha256_file(manifest_path),
         total_sequences=len(records), total_clusters=len(clusters),
-        splits=dict(Counter(assigned.values())), cluster_identity=0.7, cluster_bidirectional_coverage=0.8,
-        algorithm="seeded_largest_cluster_first_on_filtered_original_70_percent_clusters",
+        splits=split_statistics, cluster_identity=0.7, cluster_bidirectional_coverage=0.8,
+        targets=dict(sequences=target_sequences, clusters=target_clusters, total_lengths=target_total_lengths),
+        algorithm="constrained_cluster_stratification_by_count_and_length",
         warning="Do not call this the final training set. Rebuild when A release changes; test set must not tune model or sampling.",
         outputs={p.relative_to(ROOT).as_posix():sha256_file(p) for p in paths})
     write_json(output / "split_manifest.json", summary)

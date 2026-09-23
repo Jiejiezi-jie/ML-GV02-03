@@ -31,6 +31,21 @@ def test_release_and_development_split_are_traceable_and_isolated():
     assert release["code_sha256"] == sha256_file(root / "experiments/prepare_member_b_handoff.py")
     split = json.loads((directory / "development_split/split_manifest.json").read_text(encoding="utf-8"))
     assert split["release_sha256"] == sha256_file(directory / "release_manifest.json")
+    assert {name: values["sequences"] for name, values in split["splits"].items()} == {
+        "train": 277,
+        "validation": 33,
+        "test": 36,
+    }
+    assert {name: values["clusters"] for name, values in split["splits"].items()} == {
+        "train": 16,
+        "validation": 9,
+        "test": 6,
+    }
+    assert [round(split["splits"][name]["mean_length"], 1) for name in ("train", "validation", "test")] == [
+        108.8,
+        108.8,
+        111.7,
+    ]
     for path, digest in split["outputs"].items():
         assert sha256_file(root / path) == digest
     with (directory / "development_split/sequence_manifest.tsv").open(encoding="utf-8") as stream:
@@ -44,3 +59,6 @@ def test_release_and_development_split_are_traceable_and_isolated():
     assert eligible.isdisjoint(rejected)
     assert {r["sequence_id"] for r in rows} == eligible
     assert len(eligible) + len(rejected) == release["total_supported_gvpa"]
+    vocabulary = json.loads((directory / "development_split/vocabulary.json").read_text(encoding="utf-8"))
+    assert vocabulary["special_tokens"] == ["<PAD>", "<BOS>", "<EOS>", "<UNK>"]
+    assert len(vocabulary["amino_acids"]) == 20

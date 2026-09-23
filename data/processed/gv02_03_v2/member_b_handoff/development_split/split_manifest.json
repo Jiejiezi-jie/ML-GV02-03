@@ -6,19 +6,60 @@
   "total_sequences": 346,
   "total_clusters": 31,
   "splits": {
-    "train": 254,
-    "validation": 60,
-    "test": 32
+    "train": {
+      "sequences": 277,
+      "clusters": 16,
+      "fraction": 0.8005780346820809,
+      "mean_length": 108.84837545126354,
+      "minimum_length": 67,
+      "maximum_length": 160,
+      "total_length": 30151
+    },
+    "validation": {
+      "sequences": 33,
+      "clusters": 9,
+      "fraction": 0.0953757225433526,
+      "mean_length": 108.78787878787878,
+      "minimum_length": 72,
+      "maximum_length": 156,
+      "total_length": 3590
+    },
+    "test": {
+      "sequences": 36,
+      "clusters": 6,
+      "fraction": 0.10404624277456648,
+      "mean_length": 111.69444444444444,
+      "minimum_length": 72,
+      "maximum_length": 158,
+      "total_length": 4021
+    }
   },
   "cluster_identity": 0.7,
   "cluster_bidirectional_coverage": 0.8,
-  "algorithm": "seeded_largest_cluster_first_on_filtered_original_70_percent_clusters",
+  "targets": {
+    "sequences": {
+      "train": 277,
+      "validation": 33,
+      "test": 36
+    },
+    "clusters": {
+      "train": 16,
+      "validation": 9,
+      "test": 6
+    },
+    "total_lengths": {
+      "train": 30151,
+      "validation": 3590,
+      "test": 4021
+    }
+  },
+  "algorithm": "constrained_cluster_stratification_by_count_and_length",
   "warning": "Do not call this the final training set. Rebuild when A release changes; test set must not tune model or sampling.",
   "outputs": {
-    "data/processed/gv02_03_v2/member_b_handoff/development_split/train.fasta": "9340a39a96ec5a109c4d53b958b4d0ee1100cd26f50e33ab8071bfc25c5a4652",
-    "data/processed/gv02_03_v2/member_b_handoff/development_split/validation.fasta": "dbf3fe9569aa015e7b41051e2b978347a2cc7635fcf37de82b7299da7f2af548",
-    "data/processed/gv02_03_v2/member_b_handoff/development_split/test.fasta": "301cba4ef16d56301a4108832b5b164231483986d0c53160912cab8573340ce2",
-    "data/processed/gv02_03_v2/member_b_handoff/development_split/sequence_manifest.tsv": "eb60c8cdb4abc760a1d15852a51e93bce9d948226b67db8b209c3fe5df28f3b7",
-    "data/processed/gv02_03_v2/member_b_handoff/development_split/vocabulary.json": "ba3f38b7657c553861ae36562353533921e4da0755b3209e5709e882b997d8bf"
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/train.fasta": "9a61890554773212d763cf0cbc99248f7631a4375bbb43e89db79f5285a02239",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/validation.fasta": "1713b8a31b509846354577b2b1c65be08ebf657b0229c271363489c7d4d88283",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/test.fasta": "64ce65c60b32e9b182808eb84131ca70bf39f39e7c97d2614f2a0641b9f9839f",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/sequence_manifest.tsv": "dd8ebe156114409bdc3a38c5c14a75472e1138f419b1f989601e670ac8b6ca27",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/vocabulary.json": "4664cb809825b7023ad6a8a90b9492f757446b7b97890595c397504646aa55d4"
   }
 }

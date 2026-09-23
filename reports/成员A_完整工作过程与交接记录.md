@@ -73,7 +73,7 @@ Windows 默认 Python 可运行 pytest，但没有 Bio/pyhmmer；本机 WSL Ubun
 
 ## 九、成员 B 的实际交接
 
-新增 `prepare_member_b_handoff.py`：生成独立保守 release，681=346保留+335隔离，逐条理由和哈希齐全；不覆盖 A 核验结果。新增 `prepare_member_b_split.py`：默认拒绝非最终 release，开发时明确 `--allow-provisional`，检查完整 release 哈希，按保留的 31 个原始同源簇重新分配为 train 254、validation 60、test 32。集合比例因整簇约束偏离目标，需如实记录；不会把大簇拆开凑比例。
+新增 `prepare_member_b_handoff.py`：生成独立保守 release，681=346保留+335隔离，逐条理由和哈希齐全；不覆盖 A 核验结果。新增 `prepare_member_b_split.py`：默认拒绝非最终 release，开发时明确 `--allow-provisional`，检查完整 release 哈希，按保留的 31 个原始同源簇做整簇约束分层：train 277 条/16 簇、validation 33 条/9 簇、test 36 条/6 簇，平均长度为 108.8/108.8/111.7 aa。过程不拆簇，也不使用下游模型结果。
 
 固定开发词表 PAD=0、BOS=1、EOS=2、UNK=3、20 AA=4..23；列出与旧 `gv/` 词表的冲突。实读 B 的现有代码，定位 PAD/EOS mask 错误、任一样本 EOS 导致全批终止、强制 EOS 冒充自然终止、长度头无有效梯度、自动补权重、缺验证/早停和错误物种解析等问题，形成独立实施指南。
 
