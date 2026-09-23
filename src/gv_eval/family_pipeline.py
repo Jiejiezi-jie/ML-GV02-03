@@ -296,6 +296,7 @@ def run_family_pipeline(root: Path, config_path: str, candidates_override: str |
                 root / config["reviewed_snapshot"], root / config["pfam_metadata_snapshot"]]},
         outputs={p.relative_to(root).as_posix():sha256_file(p) for p in outputs},
         code={p.relative_to(root).as_posix():sha256_file(p) for p in [Path(__file__),
-              root / "src/gv_eval/classification.py", root / "src/gv_eval/reference.py"]}))
+              root / "src/gv_eval/classification.py", root / "src/gv_eval/reference.py",
+              root / "src/gv_eval/external.py"]}))
     print(json.dumps(summary, indent=2), flush=True)
     return summary

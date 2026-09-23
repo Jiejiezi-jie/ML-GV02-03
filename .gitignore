@@ -6,9 +6,18 @@ __pycache__/
 
 # Trained generator weights and development runs are reproducible but may be large.
 models/generator/sequence_vae/*.pt
+models/generator/sequence_vae/**/*.pt
 data/processed/gv02_03_v2/generated_candidates/
 
 # Rebuildable local BLAST databases and transient logs for every experiment variant.
 results/*/work/blastdb/
 results/*/work/*.log
 results/gv02_03_v2/family/**/blastdb/
+
+# VAE V2 rebuildable bioinformatics intermediates; keep summaries, tables,
+# selections and manifests, but do not version hundreds of MB of raw searches.
+results/gv02_03_v2/vae_member_a_v1/family/*
+!results/gv02_03_v2/vae_member_a_v1/family/summary.json
+!results/gv02_03_v2/vae_member_a_v1/family/manifest.json
+results/gv02_03_v2/vae_member_a_v1/scoring/raw/
+results/gv02_03_v2/vae_member_a_v1/scoring/work/

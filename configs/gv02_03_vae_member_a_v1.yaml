@@ -1,0 +1,62 @@
+seed: 42
+threads: 16
+
+inputs:
+  candidates: data/processed/gv02_03_v2/vae_member_a_v1/main_supported_gvpa.fasta
+  prevalidated_reference_fasta: data/processed/gv02_03_v2/member_b_handoff/gvpa_training_eligible.fasta
+
+reference:
+  required_label: gvpa
+  excluded_labels: [gvpj]
+  excluded_header_terms: [partial, fragment, predicted]
+  min_length: 50
+  max_length: 180
+  cluster_identity: 0.90
+  cluster_word_length: 5
+
+pfam:
+  accession: PF00741
+  name: Gas_vesicle
+  url: https://www.ebi.ac.uk/interpro/wwwapi/entry/pfam/PF00741/?annotation=hmm
+  model_path: models/pfam/PF00741.hmm
+  permissive_sequence_evalue: 1000.0
+  permissive_domain_evalue: 1000.0
+  minimum_coverage_floor: 0.50
+  minimum_coverage_ceiling: 0.95
+
+conservation:
+  alignment_threads: 1
+  maximum_reference_gap_fraction: 0.10
+  minimum_consensus_fraction: 0.90
+
+blast:
+  evalue: 1000.0
+  maximum_reference_targets: 500
+  maximum_candidate_targets: 147
+
+selection:
+  primary_k: 20
+  budgets: [10, 20, 50]
+  require_domain_pass: true
+  metrics:
+    - constraint_score
+    - conservation_score
+    - novelty_score
+    - uniqueness_score
+  equal_weights:
+    constraint_score: 0.25
+    conservation_score: 0.25
+    novelty_score: 0.25
+    uniqueness_score: 0.25
+
+robustness:
+  weight_samples: 200
+  relative_weight_sigma: 0.20
+  random_baseline_samples: 1000
+  domain_cutoff_multipliers: [0.8, 1.0, 1.2]
+  coverage_offsets: [-0.10, 0.0, 0.10]
+
+outputs:
+  processed_dir: data/processed/gv02_03_v2/vae_member_a_v1/scoring
+  model_dir: models/pfam
+  result_dir: results/gv02_03_v2/vae_member_a_v1/scoring

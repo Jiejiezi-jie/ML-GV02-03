@@ -1,0 +1,5 @@
+	constraint_score	conservation_score	novelty_score	uniqueness_score
+constraint_score	1	0.3323460285	-0.350994203	-0.4349143516
+conservation_score	0.3323460285	1	-0.471135526	-0.4906720367
+novelty_score	-0.350994203	-0.471135526	1	0.9064937711
+uniqueness_score	-0.4349143516	-0.4906720367	0.9064937711	1

@@ -1,0 +1,468 @@
+>Cluster 0
+0	160aa, >nat_93acd62cda39262797de... *
+>Cluster 1
+0	155aa, >nat_e3ae3cb5783250fb742f... at 92.90%
+1	159aa, >nat_cefd53f493008d2ff90c... *
+2	155aa, >nat_47c6d3995b8146f9e99e... at 92.90%
+3	155aa, >nat_ab559af1ffee249b9549... at 92.90%
+4	159aa, >nat_82b87d3bb03732004ea1... at 98.74%
+>Cluster 2
+0	159aa, >nat_82d1db25aa951a1ad609... *
+>Cluster 3
+0	158aa, >nat_6bd198e130544a8380c7... *
+>Cluster 4
+0	158aa, >nat_1f2decc9d9629b127278... *
+1	158aa, >nat_e3bf29001a743e3b64f9... at 96.20%
+2	152aa, >nat_3d9edce97c58d4805f58... at 94.74%
+>Cluster 5
+0	157aa, >nat_70cf8e4638ff311302cb... *
+1	156aa, >nat_d69494036b1115ae54ae... at 95.51%
+2	154aa, >nat_48a350d902c4c631f095... at 94.16%
+3	153aa, >nat_e3077655950eb8305d3c... at 91.50%
+4	156aa, >nat_25e53f7654eeb15d035e... at 91.03%
+5	155aa, >nat_31b4ab378929e0c134fa... at 90.32%
+>Cluster 6
+0	157aa, >nat_d71b202a146af4e5c40e... *
+1	157aa, >nat_33d8dbb5443a9dadf56d... at 90.45%
+2	157aa, >nat_210e9a5f9b72676b9ce0... at 91.08%
+3	157aa, >nat_31ec72d1a2119ce61d3a... at 98.73%
+4	157aa, >nat_8bf5071aed606f94333c... at 98.73%
+>Cluster 7
+0	154aa, >nat_219e1145c7c5f874f9d7... at 92.86%
+1	154aa, >nat_be1dac504153ecab385d... at 94.81%
+2	153aa, >nat_074f333dec93d43ec001... at 91.50%
+3	153aa, >nat_4b01b5214abfe7d6396a... at 93.46%
+4	156aa, >nat_3997c1e8cae542beb07c... at 92.95%
+5	156aa, >nat_67d45ce3d0daa27e3aa3... at 92.95%
+6	156aa, >nat_0eb236c2a0a999a958fc... at 92.95%
+7	155aa, >nat_d53262c07427087628bb... at 92.26%
+8	156aa, >nat_f5d47642f8821cca8f9a... at 93.59%
+9	157aa, >nat_fb2578ea0ecaed2ea0af... *
+10	157aa, >nat_ae1ae553d673be7a537f... at 98.73%
+11	156aa, >nat_619107fa48650be1a768... at 92.31%
+12	156aa, >nat_2f6261679e76a403b7de... at 94.23%
+>Cluster 8
+0	157aa, >nat_038b08407425f0209cdb... *
+>Cluster 9
+0	156aa, >nat_747d60b2bd9f9baa6cfc... at 96.15%
+1	155aa, >nat_8430c66867e7555de5e1... at 95.48%
+2	154aa, >nat_f1843d79acb220241dfc... at 92.21%
+3	153aa, >nat_c730fb33477ca08f29e8... at 96.08%
+4	156aa, >nat_bbadf719897c45da08f0... at 96.15%
+5	157aa, >nat_234ee7db19bcd2cc0f16... *
+6	154aa, >nat_eac8d42dcf851f8eb6d8... at 96.75%
+>Cluster 10
+0	156aa, >nat_ff800aecb7c2e95dee99... *
+1	156aa, >nat_240500bb8aaece16c8a7... at 99.36%
+>Cluster 11
+0	156aa, >nat_fd6df642808b7adaae7d... *
+1	156aa, >nat_158c0216b95ce3304bfe... at 99.36%
+>Cluster 12
+0	156aa, >nat_13ee99e71183bcf01114... *
+>Cluster 13
+0	156aa, >nat_e1f5f0f2180e18c35aa7... *
+>Cluster 14
+0	154aa, >nat_c0749f9d4ae82bdc9955... at 94.81%
+1	151aa, >nat_945d9af2ef988f085e3c... at 96.03%
+2	154aa, >nat_84b5083183d75de0f365... at 94.16%
+3	156aa, >nat_1cefe08dae83aa5bd96d... *
+>Cluster 15
+0	155aa, >nat_b80283670de4d1ac6811... *
+1	150aa, >nat_3bac021c5495186db378... at 90.67%
+>Cluster 16
+0	155aa, >nat_9c754b1740d1977b7a29... *
+>Cluster 17
+0	155aa, >nat_05faae01597311327997... *
+1	150aa, >nat_6d257d8cbeb3f3af448a... at 92.00%
+>Cluster 18
+0	155aa, >nat_25ee00a9c2b4e74f79dd... *
+>Cluster 19
+0	155aa, >nat_bdb27357528f1d5d6c47... *
+>Cluster 20
+0	154aa, >nat_7b9e043074608d733fa7... *
+1	149aa, >nat_0f515c4258dc68fd3f9c... at 90.60%
+>Cluster 21
+0	154aa, >nat_29fc4eacaf44be490bad... *
+>Cluster 22
+0	152aa, >nat_4b3cb9501939449bf9be... at 100.00%
+1	154aa, >nat_dbbc85b2e6d8fc6f3682... *
+>Cluster 23
+0	153aa, >nat_51872cd8b900b7db59b4... *
+1	149aa, >nat_a8224f75d4d10d7151b8... at 100.00%
+>Cluster 24
+0	153aa, >nat_93fc211ea4b34cbb8750... *
+>Cluster 25
+0	152aa, >nat_81c712b2f98895c40a2d... *
+>Cluster 26
+0	151aa, >nat_a781ed1499476fa04028... at 94.70%
+1	152aa, >nat_c7e8400b87d18c0ef7e0... *
+2	151aa, >nat_e62ac75b3affa97a2f5a... at 96.69%
+3	151aa, >nat_cbdc755c61207d00c902... at 94.70%
+>Cluster 27
+0	152aa, >nat_6ec46415f5fc553cea18... *
+>Cluster 28
+0	150aa, >nat_101346775bd8fc719b54... *
+>Cluster 29
+0	150aa, >nat_65c51b0fd105cce694ee... *
+>Cluster 30
+0	149aa, >nat_d1717d58239a48d6df6a... *
+>Cluster 31
+0	148aa, >nat_4469cb3e6c41fb1309a3... *
+1	148aa, >nat_0942555d17806690a15c... at 90.54%
+>Cluster 32
+0	148aa, >nat_9065be60727dc7f9b388... *
+>Cluster 33
+0	148aa, >nat_f7d9d7742f0844e679ec... *
+1	139aa, >nat_55802cc1c7918b91c298... at 93.53%
+>Cluster 34
+0	147aa, >nat_fb63ecbac61c302167f9... *
+1	147aa, >nat_2b769a64bdbe24f6dbc7... at 91.84%
+2	147aa, >nat_754029d7fdddcf0dda8b... at 93.88%
+3	147aa, >nat_baa6b104c739419a55bf... at 93.88%
+>Cluster 35
+0	146aa, >nat_9c7fbca4e03cd6830bf2... at 97.26%
+1	147aa, >nat_45b0f1ea69baf732de14... *
+2	145aa, >nat_8bfb3056e00dc3525ee8... at 96.55%
+>Cluster 36
+0	147aa, >nat_47270a133b8b28fe68b5... *
+>Cluster 37
+0	146aa, >nat_16be3cd3d97ccaa2c7df... *
+>Cluster 38
+0	146aa, >nat_1ecba3351cb7c8c6d3e7... *
+>Cluster 39
+0	144aa, >nat_b44c98ec309ed12410ab... *
+>Cluster 40
+0	142aa, >nat_5c045ab07969cb21b0ad... *
+>Cluster 41
+0	137aa, >nat_5d7c3d0594612da43ea2... at 96.35%
+1	136aa, >nat_4a95098f433ac14617bc... at 97.79%
+2	140aa, >nat_495c2735bcdc48076ab6... *
+3	137aa, >nat_f4f90ca0708a5faa9c5b... at 98.54%
+4	137aa, >nat_d57269e318a762146774... at 99.27%
+>Cluster 42
+0	140aa, >nat_43e7561c7d05facf2895... *
+>Cluster 43
+0	139aa, >nat_45d8bf8bea0b0845fea0... *
+>Cluster 44
+0	137aa, >nat_d5cf1fda20a7d9852de3... *
+>Cluster 45
+0	137aa, >nat_db787bdce100ebe0b52f... *
+>Cluster 46
+0	136aa, >nat_8ea71d3ab15e5cf268b1... at 99.26%
+1	137aa, >nat_25f8dd28e9511c933322... *
+2	137aa, >nat_1aeb097a28c863a862e4... at 94.16%
+3	137aa, >nat_1cc68774b93a831e1a93... at 98.54%
+4	137aa, >nat_0e118acdc2771e80b4ea... at 99.27%
+5	136aa, >nat_7d62c45eb5711910c788... at 98.53%
+>Cluster 47
+0	137aa, >nat_15e32a2edd6bff0d0784... *
+1	136aa, >nat_2f6b62c5722bcacabd8e... at 93.38%
+>Cluster 48
+0	136aa, >nat_438c70c6875cb7fc8740... *
+1	135aa, >nat_942bc0624c6f9016a403... at 99.26%
+2	136aa, >nat_40df730c74b4411daafa... at 99.26%
+>Cluster 49
+0	135aa, >nat_8a4162d5996844339fef... *
+>Cluster 50
+0	135aa, >nat_6ee0ebbf185af1c7d346... *
+>Cluster 51
+0	135aa, >nat_e8032b7ad48d42a9adf3... *
+1	135aa, >nat_e10062d88e50908c95d3... at 96.30%
+>Cluster 52
+0	134aa, >nat_8d5392221648a605a7c2... at 91.04%
+1	135aa, >nat_0ccad4d436403131ae6a... *
+>Cluster 53
+0	133aa, >nat_c74d6e1106797b3a3d0f... *
+>Cluster 54
+0	133aa, >nat_4b655799ef9e19953b56... *
+>Cluster 55
+0	133aa, >nat_57c2b381c8bb4035d01c... *
+>Cluster 56
+0	109aa, >nat_4a87fc740463a61b2d05... at 90.83%
+1	111aa, >nat_9fd0842a53e077dc147a... *
+>Cluster 57
+0	109aa, >nat_b28a6bed955c267791e6... *
+>Cluster 58
+0	102aa, >nat_dc2b0da282a1a334132b... *
+>Cluster 59
+0	99aa, >nat_c7cb28cf54b6a88ff785... *
+>Cluster 60
+0	99aa, >nat_84eddb9c9ecca10afd5a... *
+>Cluster 61
+0	95aa, >nat_92d7d81f95603487cd9c... at 90.53%
+1	98aa, >nat_833a1708482ad34125e2... *
+2	95aa, >nat_9fda348180c612303cdb... at 91.58%
+3	97aa, >nat_dca06c4ca76aafac96e9... at 91.75%
+4	92aa, >nat_75679c0d4db585656573... at 92.39%
+5	92aa, >nat_ee10b37a92559cba1989... at 91.30%
+6	95aa, >nat_a7791ad55c70e7fd3462... at 92.63%
+7	95aa, >nat_a49cfe7d33cec22c3905... at 92.63%
+8	95aa, >nat_a9c10692b45d32f772b4... at 90.53%
+9	94aa, >nat_ccd25408209dd226eaf9... at 91.49%
+10	94aa, >nat_1eda5f35014077cd8e25... at 91.49%
+11	94aa, >nat_9ca97034ea4d97950343... at 90.43%
+12	94aa, >nat_3e6bf91c590be6684eed... at 90.43%
+13	94aa, >nat_c8490949e18e771ed8c8... at 92.55%
+14	95aa, >nat_842bc418f0682cd2a9c8... at 91.58%
+15	94aa, >nat_215f48254c804f1f2876... at 90.43%
+>Cluster 62
+0	97aa, >nat_c5a4c69d0879da5e6614... *
+>Cluster 63
+0	97aa, >nat_2257aec2c4abeff42ec4... *
+>Cluster 64
+0	96aa, >nat_461115b7000bfd74f566... at 92.71%
+1	97aa, >nat_3d7fc725cd17cf23a73c... *
+>Cluster 65
+0	93aa, >nat_a36a3359d46f89a3e9c6... at 91.40%
+1	95aa, >nat_49d3875a5ef4bbb644f9... at 94.74%
+2	95aa, >nat_38cb7bda240a833d36b3... at 91.58%
+3	95aa, >nat_4f76b230eb60279eb5dd... at 93.68%
+4	94aa, >nat_4cea385a8794a0b112c3... at 91.49%
+5	94aa, >nat_4e9e86277af05dbd050d... at 92.55%
+6	96aa, >nat_fca422d4ddd5dcd65605... *
+7	95aa, >nat_bf00fc1bb4a6bea076a5... at 92.63%
+8	92aa, >nat_fe2e069c7d192a9aa4be... at 92.39%
+9	95aa, >nat_d6e9dabc7155ae370ddb... at 90.53%
+10	92aa, >nat_d4ba65189ba86a477cc5... at 90.22%
+11	95aa, >nat_82e4660fb87f57daff30... at 91.58%
+12	96aa, >nat_1aef09f774a1818b7e24... at 94.79%
+13	94aa, >nat_dbd11e06d90ad48401af... at 90.43%
+14	95aa, >nat_bf5abb4d953e0d6aaa1f... at 93.68%
+15	96aa, >nat_48f4fc548c0153a5775e... at 94.79%
+16	96aa, >nat_0077c6cbf903d0b80137... at 95.83%
+17	95aa, >nat_bda4e304d446361a159c... at 92.63%
+18	95aa, >nat_1f7ab0dfc808b4ef03c3... at 92.63%
+19	92aa, >nat_87d470267a8c16ab7df9... at 92.39%
+20	95aa, >nat_d80e058d93177215aa4b... at 91.58%
+21	96aa, >nat_a8908cb0d732ddf5c6d4... at 92.71%
+22	95aa, >nat_acb38079c01f07d0de6f... at 92.63%
+23	96aa, >nat_69442765a7e1224b0435... at 94.79%
+24	96aa, >nat_1564401f2a553c444667... at 95.83%
+25	95aa, >nat_c0d8f1302fa41452efbc... at 93.68%
+26	96aa, >nat_729a9790a662e92ab379... at 93.75%
+27	93aa, >nat_62bc5089576517d5fad1... at 90.32%
+28	94aa, >nat_8189ed3c9ac18707f549... at 92.55%
+29	94aa, >nat_168a7720be25950ce7a5... at 92.55%
+30	95aa, >nat_dad443e0412ef646de5e... at 93.68%
+>Cluster 66
+0	95aa, >nat_8f3e753527c876cd94f0... at 90.53%
+1	95aa, >nat_4482775e0979509e45d2... at 91.58%
+2	95aa, >nat_7d8f193406ee761e1417... at 90.53%
+3	95aa, >nat_b47c8eec954491beb714... at 92.63%
+4	94aa, >nat_004ac783975534947324... at 93.62%
+5	93aa, >nat_140f5823a50b88bf41c9... at 91.40%
+6	96aa, >nat_fa2383cbfbff83286c61... *
+7	95aa, >nat_f49fe3672d6fdfda7cc7... at 90.53%
+8	95aa, >nat_05d62502987d9405b8af... at 91.58%
+9	94aa, >nat_dc6aa26cbe06c32b68c2... at 92.55%
+10	95aa, >nat_7d45d6cf3df5d3d36985... at 90.53%
+11	95aa, >nat_74aacbad701be1598660... at 93.68%
+12	94aa, >nat_6b2c0d4d7468a9bb7cde... at 91.49%
+13	95aa, >nat_4b58b860e36e01bdb682... at 90.53%
+14	95aa, >nat_d92cb9dcfcf48b731b50... at 90.53%
+15	93aa, >nat_86af2bea85657bdc848a... at 94.62%
+16	94aa, >nat_6681febe116459c77b18... at 92.55%
+17	95aa, >nat_94cdaea6b1db7bfe983f... at 92.63%
+18	95aa, >nat_78005b3dddedd0251b7e... at 91.58%
+19	92aa, >nat_b5ccff48f879b7cc34ad... at 91.30%
+20	93aa, >nat_b14dbbd56a14a6238029... at 90.32%
+21	95aa, >nat_d5d6f3cedb33fb3328b6... at 91.58%
+22	95aa, >nat_5d40201e59780a4578e1... at 90.53%
+23	94aa, >nat_0101bc590c89813c161a... at 91.49%
+24	95aa, >nat_1f956fdbc151f2ec0ffb... at 90.53%
+>Cluster 67
+0	94aa, >nat_edc787924d6392f7c1f5... at 90.43%
+1	95aa, >nat_4d4e00d31d935ed0527d... at 90.53%
+2	94aa, >nat_64b87c36790fe3acd4ba... at 91.49%
+3	95aa, >nat_0ae199fc6d044a2da135... at 91.58%
+4	95aa, >nat_8d29ff35edf68fc809de... at 91.58%
+5	95aa, >nat_7ee1d64f80049d71603c... at 91.58%
+6	95aa, >nat_9ba949b2aab9e2be6898... at 92.63%
+7	96aa, >nat_67dd37821af98e87666e... *
+8	95aa, >nat_c468502803b4ab5981f1... at 91.58%
+9	95aa, >nat_d07d112598796fe30d76... at 90.53%
+>Cluster 68
+0	95aa, >nat_144165ea4d3ea8a64b2e... *
+1	95aa, >nat_d1b057f953bd558c0457... at 90.53%
+2	94aa, >nat_30c8db5b2a48ec02340b... at 90.43%
+>Cluster 69
+0	95aa, >nat_07f90c8c92dbdb92b94e... *
+1	95aa, >nat_4dc9c1477d3d6b181da7... at 93.68%
+>Cluster 70
+0	95aa, >nat_0145b7d0415b25474bf7... *
+1	95aa, >nat_edcfcd19baadeee00eaf... at 92.63%
+>Cluster 71
+0	87aa, >nat_73e0b5aa88a198c56cae... at 93.10%
+1	93aa, >nat_b9de124a92fba0281b06... at 92.47%
+2	95aa, >nat_05a00477d12701f3890c... *
+3	95aa, >nat_4d722634e257d2a7d133... at 92.63%
+>Cluster 72
+0	95aa, >nat_53979ea823175001b77b... *
+1	95aa, >nat_0a5813d34fb4f832fd7d... at 92.63%
+2	95aa, >nat_373d638b02f47e751a57... at 95.79%
+>Cluster 73
+0	94aa, >nat_943ce15fb7773fa3a769... *
+1	94aa, >nat_d4bbfd09a62903f1dd61... at 92.55%
+2	94aa, >nat_3beea3bf721df3e90ae2... at 95.74%
+3	94aa, >nat_00058845722df3ede422... at 92.55%
+>Cluster 74
+0	94aa, >nat_dbcea97f4e8354ba3556... *
+>Cluster 75
+0	93aa, >nat_fc382b09fdd1c909c75c... *
+1	93aa, >nat_3ca11356bba8d59e0a37... at 93.55%
+2	93aa, >nat_42d774e2b731f8e5de6a... at 96.77%
+3	93aa, >nat_200ecff40f6b83ca60f9... at 93.55%
+>Cluster 76
+0	93aa, >nat_3dd2d389f45d6f0511d2... *
+1	93aa, >nat_5577d4ac8367231fcec5... at 95.70%
+>Cluster 77
+0	93aa, >nat_bc61cfaf37743c96bcc0... *
+>Cluster 78
+0	92aa, >nat_4132d6e9996d37d7483a... *
+>Cluster 79
+0	92aa, >nat_fd90bc846ac4fc169df6... *
+>Cluster 80
+0	92aa, >nat_81de2b78d291d512c1e2... *
+>Cluster 81
+0	90aa, >nat_e31d0685f6a3fa9a63fd... *
+1	90aa, >nat_3e013aaa6defa9421798... at 98.89%
+2	90aa, >nat_ebb2fb66a808274ef5cf... at 97.78%
+>Cluster 82
+0	90aa, >nat_b872ca2d5a2d145dce35... *
+>Cluster 83
+0	88aa, >nat_970873de163a6ff8ee05... *
+1	88aa, >nat_7d1d4ec0845163a487d6... at 98.86%
+>Cluster 84
+0	88aa, >nat_32fcf9c5b6202c499dc1... *
+>Cluster 85
+0	86aa, >nat_cd0ec9cc83e20bd818b3... at 95.35%
+1	86aa, >nat_76418c5d471b2873e6bf... at 94.19%
+2	84aa, >nat_7801d96d034213cf08c8... at 90.48%
+3	87aa, >nat_b9d147aeaac9ffa9d0f3... *
+4	87aa, >nat_63e94d96149b61e3547f... at 96.55%
+5	87aa, >nat_320fa412f1f1ad675d12... at 96.55%
+>Cluster 86
+0	87aa, >nat_f87e80c34ba5c8c8909b... *
+1	87aa, >nat_fb877ea45a36f28c6227... at 95.40%
+2	87aa, >nat_6dc60142a293ec7c6dcb... at 96.55%
+>Cluster 87
+0	87aa, >nat_6b94719ca1a990ee1d8f... *
+1	85aa, >nat_873dfd59523575571c0b... at 92.94%
+>Cluster 88
+0	87aa, >nat_ce5dc523b5749c0ad99a... *
+1	87aa, >nat_7bd6d00159b2d7ed0289... at 93.10%
+2	87aa, >nat_718f9add2c10ca08b4a5... at 96.55%
+>Cluster 89
+0	87aa, >nat_c477483bf308ed286daf... *
+>Cluster 90
+0	86aa, >nat_d5c2d4101839c4dee9b6... *
+>Cluster 91
+0	86aa, >nat_edf12e96625a3cd49854... *
+>Cluster 92
+0	86aa, >nat_0aeb545239a28bae61f9... *
+1	86aa, >nat_019e8d05123166c4099d... at 91.86%
+>Cluster 93
+0	85aa, >nat_d9b751580230ca0e5773... *
+>Cluster 94
+0	85aa, >nat_4a610b8daff21e476288... *
+>Cluster 95
+0	85aa, >nat_34e09ae9d7236edc844b... *
+>Cluster 96
+0	84aa, >nat_476885d73f2103224b29... *
+>Cluster 97
+0	84aa, >nat_5c03f7861ccf36dc0533... *
+1	84aa, >nat_0a6194eed91a047cb43e... at 96.43%
+2	84aa, >nat_1f1d6fdb82f348ed948e... at 92.86%
+>Cluster 98
+0	84aa, >nat_b14fdba1c12c78ac4485... *
+>Cluster 99
+0	82aa, >nat_f5db5c4704d592f947d9... *
+1	82aa, >nat_eb796c25a48cdf2ca2d4... at 96.34%
+2	82aa, >nat_07248f2d3ff700c7afcd... at 98.78%
+>Cluster 100
+0	76aa, >nat_49cef355c6ba3187ae5c... at 97.37%
+1	79aa, >nat_766d45336d56f5b42f24... *
+2	78aa, >nat_39696a92cfeac6f208a2... at 96.15%
+3	78aa, >nat_bf0dfc6c51956e5d54f7... at 94.87%
+4	72aa, >nat_61a382d08777524701b3... at 94.44%
+5	76aa, >nat_13dff233b6dfd04cb79c... at 96.05%
+6	76aa, >nat_440c141d3d83ed043c33... at 94.74%
+7	78aa, >nat_5d20f105b230fcb464d1... at 97.44%
+8	78aa, >nat_4f811102c58fb8e77080... at 93.59%
+9	72aa, >nat_ea5746ec582bf06f4e03... at 97.22%
+10	73aa, >nat_1ed909a554bd91f8870f... at 93.15%
+11	72aa, >nat_ac44a557fbffad89a437... at 97.22%
+12	78aa, >nat_4d627ec7ce40cceb1d25... at 93.59%
+13	76aa, >nat_cac8cf4903b24e69aca8... at 98.68%
+14	76aa, >nat_2a93193629740c6b70af... at 92.11%
+15	76aa, >nat_f7dbe09f7bde0afd3543... at 92.11%
+16	72aa, >nat_3cc2cb889cfdbbcaa17b... at 93.06%
+17	76aa, >nat_32d58e5d24419efe5e0e... at 96.05%
+18	78aa, >nat_145768217677e4dfa78e... at 94.87%
+>Cluster 101
+0	78aa, >nat_340bf83afc765d1b00fd... *
+>Cluster 102
+0	74aa, >nat_6cb2a4a67fad0b3f22b1... at 94.59%
+1	76aa, >nat_0da4fc315e8c5fa1925f... *
+2	76aa, >nat_62b65b4bdaad5382b6fd... at 96.05%
+3	76aa, >nat_644a625ed987b37152d8... at 94.74%
+4	74aa, >nat_90e82772d308676c7556... at 91.89%
+5	76aa, >nat_8f5ca23cd23d0262e12b... at 94.74%
+>Cluster 103
+0	76aa, >nat_27cf1e5aac6ec3dd931d... *
+>Cluster 104
+0	76aa, >nat_b3561a1e0242e2259486... *
+1	76aa, >nat_ede685c8031e89299cf7... at 98.68%
+>Cluster 105
+0	76aa, >nat_448d52f7c380acd65350... *
+1	76aa, >nat_f603a0bdb36b55f44821... at 98.68%
+2	76aa, >nat_a4ce46bc0db75edd2892... at 98.68%
+>Cluster 106
+0	76aa, >nat_2dee131e85e06a8f9fdd... *
+>Cluster 107
+0	75aa, >nat_1e070d0d2387bb202235... *
+>Cluster 108
+0	75aa, >nat_262acad32bf64e600812... *
+>Cluster 109
+0	71aa, >nat_278c7a3fd12af0319695... at 95.77%
+1	74aa, >nat_de6e45b17a1efe79f377... *
+2	71aa, >nat_444b2346dad8b8d36df2... at 94.37%
+3	68aa, >nat_25fcb1b7b6c3c6f6f29d... at 98.53%
+>Cluster 110
+0	72aa, >nat_5bc7120641a4b206dec6... *
+>Cluster 111
+0	72aa, >nat_5ff91e8d3cfc9ac60d0d... *
+>Cluster 112
+0	71aa, >nat_e9d0d8807aee29d8e61c... *
+1	69aa, >nat_2708b2500f3eefced6c0... at 94.20%
+>Cluster 113
+0	71aa, >nat_5fb53d83d56d48c68c10... *
+1	71aa, >nat_1f4f50f1349e137c7f32... at 92.96%
+>Cluster 114
+0	71aa, >nat_dd1c249d0891ddb7284f... *
+>Cluster 115
+0	71aa, >nat_b07305ca6f722d02988a... *
+>Cluster 116
+0	70aa, >nat_a1131689eff9ccc2bc1c... *
+1	70aa, >nat_eccab6536bed142192aa... at 98.57%
+2	70aa, >nat_38a86b2caad8351d20f8... at 95.71%
+3	70aa, >nat_ffde9c8a0aa4cd762cfd... at 97.14%
+4	70aa, >nat_9f8db13e803cecc901b7... at 97.14%
+5	70aa, >nat_505ccb0a3946a89f0437... at 97.14%
+6	70aa, >nat_d43d1d5ec03e055dcf06... at 98.57%
+7	70aa, >nat_8d6274f78693091697cf... at 92.86%
+>Cluster 117
+0	70aa, >nat_08ca607a70bf3998101a... *
+>Cluster 118
+0	69aa, >nat_39cf0fd21702af1ff2b1... *
+>Cluster 119
+0	69aa, >nat_0c143ad343586201fcf9... *
+>Cluster 120
+0	68aa, >nat_c8ff85651c16b5c02641... *
+1	68aa, >nat_6b39f5a7fb6bca78b4de... at 97.06%
+2	68aa, >nat_86ba936b09d3d4c2dbfa... at 97.06%
+3	68aa, >nat_c96b24fc03ee6b66c3d6... at 98.53%
+4	68aa, >nat_ed3338aeeaf3197e41d9... at 97.06%
+5	68aa, >nat_5883761e33f67abd193e... at 94.12%
+>Cluster 121
+0	67aa, >nat_d565583d15eb6f192c57... *

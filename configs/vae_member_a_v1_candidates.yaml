@@ -1,0 +1,23 @@
+version: 1
+seed: 42
+
+inputs:
+  candidates: data/generated/sequence_vae/member_a_v1_seed42/vae_candidates.fasta
+  generation_metadata: data/generated/sequence_vae/member_a_v1_seed42/generation_metadata.tsv
+  training_fasta: data/processed/gv02_03_v2/member_b_handoff/development_split/train.fasta
+  reference_fasta: data/processed/gv02_03_v2/member_b_handoff/gvpa_training_eligible.fasta
+  family_classification: data/processed/gv02_03_v2/vae_member_a_v1/family/candidate_family_classification.tsv
+
+quality:
+  minimum_length: 50
+  maximum_length: 180
+  minimum_unique_residues: 8
+  maximum_single_residue_fraction: 0.35
+  generation_length_cap: null
+  exact_training_match_action: exclude
+  exact_reference_match_action: exclude
+  composition_outlier_quantile: 0.99
+  composition_outlier_action: warn
+
+outputs:
+  processed_dir: data/processed/gv02_03_v2/vae_member_a_v1

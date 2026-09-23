@@ -50,15 +50,15 @@ class BlastHit:
         """Identity adjusted for unaligned tails, on a 0--1 scale."""
 
         denominator = max(self.query_length, self.target_length)
-        return (self.pident / 100.0) * self.alignment_length / denominator
+        return min(1.0, (self.pident / 100.0) * self.alignment_length / denominator)
 
     @property
     def query_coverage(self) -> float:
-        return self.alignment_length / self.query_length
+        return min(1.0, self.alignment_length / self.query_length)
 
     @property
     def target_coverage(self) -> float:
-        return self.alignment_length / self.target_length
+        return min(1.0, self.alignment_length / self.target_length)
 
 
 def require_tools(names: Iterable[str]) -> dict[str, str]:

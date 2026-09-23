@@ -23,6 +23,11 @@ def main() -> None:
     parser.add_argument("--maximum-epochs", type=int, default=None)
     parser.add_argument("--output-dir", default=None)
     parser.add_argument(
+        "--skip-test-evaluation",
+        action="store_true",
+        help="For smoke checks only: do not load or evaluate the held-out test split",
+    )
+    parser.add_argument(
         "--allow-provisional-data",
         action="store_true",
         help="Development only: permit the current not-yet-verified GvpA/GvpJ split",
@@ -36,6 +41,7 @@ def main() -> None:
         resume_checkpoint=args.resume,
         maximum_epochs=args.maximum_epochs,
         output_dir=args.output_dir,
+        evaluate_test=not args.skip_test_evaluation,
     )
     print(
         json.dumps(

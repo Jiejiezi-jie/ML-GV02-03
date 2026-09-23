@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import csv
 import importlib.metadata
+import json
 import math
 import os
 import platform
@@ -10,7 +11,7 @@ import time
 from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any
+from typing import Any, Mapping
 
 import numpy as np
 import torch
@@ -85,6 +86,7 @@ def resolve_device(requested: str) -> torch.device:
 
 def seed_everything(seed: int) -> None:
     os.environ.setdefault("PYTHONHASHSEED", str(seed))
+    os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
@@ -320,6 +322,73 @@ def _dependency_versions() -> dict[str, str | None]:
     return versions
 
 
+def _data_provenance(
+    root: Path,
+    config: dict[str, Any],
+    data_dir: Path,
+    vocabulary_path: Path,
+    split_sizes: Mapping[str, int] | None = None,
+) -> dict[str, Any]:
+    """Validate optional release/split manifests and return portable provenance."""
+
+    data_config = config["data"]
+    result: dict[str, Any] = {"input_sha256": {}}
+    manifests: dict[str, tuple[Path, dict[str, Any]]] = {}
+    for key in ("release_manifest", "split_manifest"):
+        value = data_config.get(key)
+        if value is None:
+            continue
+        path = root / value
+        if not path.exists():
+            raise FileNotFoundError(f"Configured {key} is missing: {path}")
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        manifests[key] = (path, payload)
+        result["input_sha256"][path.relative_to(root).as_posix()] = sha256_file(path)
+
+    if "split_manifest" in manifests:
+        split_path, split = manifests["split_manifest"]
+        if split_sizes is not None:
+            recorded = split.get("splits", {})
+            actual = {name: int(size) for name, size in split_sizes.items()}
+            expected = {
+                name: int(value["sequences"] if isinstance(value, dict) else value)
+                for name, value in recorded.items()
+            }
+            if any(expected.get(name) != size for name, size in actual.items()):
+                raise ValueError(
+                    "Configured split manifest counts do not match FASTA files: "
+                    f"expected={expected}, actual={actual}"
+                )
+        pinned_outputs = split.get("outputs", {})
+        required_paths = [
+            *(data_dir / f"{name}.fasta" for name in ("train", "validation", "test")),
+            vocabulary_path,
+        ]
+        for path in required_paths:
+            relative = path.relative_to(root).as_posix()
+            expected_digest = pinned_outputs.get(relative)
+            if expected_digest is None:
+                raise ValueError(f"Split manifest does not pin required artifact: {relative}")
+            if sha256_file(path) != expected_digest:
+                raise ValueError(f"Split manifest hash mismatch: {relative}")
+        result["release_id"] = split.get("release_id")
+        result["split_manifest_sha256"] = sha256_file(split_path)
+
+    if "release_manifest" in manifests:
+        release_path, release = manifests["release_manifest"]
+        if "split_manifest" in manifests:
+            split = manifests["split_manifest"][1]
+            expected_release_digest = split.get("release_sha256")
+            if expected_release_digest and sha256_file(release_path) != expected_release_digest:
+                raise ValueError("Split manifest points to a different release manifest")
+            if split.get("release_id") != release.get("release_id"):
+                raise ValueError("Split and release manifest identifiers do not match")
+        result.setdefault("release_id", release.get("release_id"))
+        result["release_status"] = release.get("status")
+        result["release_manifest_sha256"] = sha256_file(release_path)
+    return result
+
+
 def train_sequence_vae(
     root: str | Path,
     config_path: str | Path,
@@ -329,6 +398,7 @@ def train_sequence_vae(
     resume_checkpoint: str | Path | None = None,
     maximum_epochs: int | None = None,
     output_dir: str | Path | None = None,
+    evaluate_test: bool = True,
 ) -> TrainingArtifacts:
     root = Path(root).resolve()
     resolved_config_path, config = load_generation_config(root, config_path)
@@ -347,14 +417,22 @@ def train_sequence_vae(
     vocabulary = ProteinVocabulary.from_json(vocabulary_path)
     data_dir = root / output_config["data_dir"]
     maximum_sequence_length = int(config["model"]["maximum_sequence_length"])
+    dataset_names = ("train", "validation", "test") if evaluate_test else ("train", "validation")
     datasets = {
         split: ProteinSequenceDataset(
             data_dir / f"{split}.fasta",
             vocabulary,
             maximum_sequence_length=maximum_sequence_length,
         )
-        for split in ("train", "validation", "test")
+        for split in dataset_names
     }
+    provenance = _data_provenance(
+        root,
+        config,
+        data_dir,
+        vocabulary_path,
+        {name: len(dataset) for name, dataset in datasets.items()},
+    )
     data_hashes = {
         f"{split}.fasta": sha256_file(data_dir / f"{split}.fasta")
         for split in datasets
@@ -502,21 +580,23 @@ def train_sequence_vae(
         raise RuntimeError("Training did not create a best checkpoint")
     best_state = _load_torch_file(best_checkpoint, device)
     model.load_state_dict(best_state["model_state_dict"], strict=True)
-    test_metrics = _run_epoch(
-        model,
-        _loader(
-            datasets["test"],
-            batch_size=batch_size,
-            shuffle=False,
-            pad_id=vocabulary.pad_id,
-            seed=seed,
-            num_workers=num_workers,
-        ),
-        device=device,
-        beta=float(training_config["kl_beta"]),
-        optimizer=None,
-        gradient_clip_norm=gradient_clip_norm,
-    )
+    test_metrics = None
+    if evaluate_test:
+        test_metrics = _run_epoch(
+            model,
+            _loader(
+                datasets["test"],
+                batch_size=batch_size,
+                shuffle=False,
+                pad_id=vocabulary.pad_id,
+                seed=seed,
+                num_workers=num_workers,
+            ),
+            device=device,
+            beta=float(training_config["kl_beta"]),
+            optimizer=None,
+            gradient_clip_norm=gradient_clip_norm,
+        )
     _write_training_curve(curve_path, history)
     manifest = {
         "format_version": 1,
@@ -536,10 +616,15 @@ def train_sequence_vae(
             resolved_config_path.relative_to(root).as_posix(): config_sha256,
             vocabulary_path.relative_to(root).as_posix(): sha256_file(vocabulary_path),
             **{(data_dir / name).relative_to(root).as_posix(): digest for name, digest in data_hashes.items()},
+            **provenance["input_sha256"],
+        },
+        "data_provenance": {
+            key: value for key, value in provenance.items() if key != "input_sha256"
         },
         "best_epoch": best_epoch,
         "stopped_epoch": stopped_epoch,
         "best_validation_loss": best_validation_loss,
+        "test_evaluated": evaluate_test,
         "test_metrics": test_metrics,
         "posterior_collapse_diagnostic": {
             "best_epoch_validation_kl": history[best_epoch - 1]["validation_kl"],
@@ -585,6 +670,8 @@ def generate_candidates(
     output_config = config["outputs"]
     vocabulary_path = root / output_config["vocabulary"]
     vocabulary = ProteinVocabulary.from_json(vocabulary_path)
+    data_dir = root / output_config["data_dir"]
+    provenance = _data_provenance(root, config, data_dir, vocabulary_path)
     checkpoint_path = Path(checkpoint_path)
     if not checkpoint_path.is_absolute():
         checkpoint_path = root / checkpoint_path
@@ -616,6 +703,13 @@ def generate_candidates(
     generator.manual_seed(seed)
 
     checkpoint_digest = sha256_file(checkpoint_path)
+    try:
+        checkpoint_value = checkpoint_path.resolve().relative_to(root).as_posix()
+    except ValueError:
+        checkpoint_value = checkpoint_path.resolve().as_posix()
+    split_manifest_digest = provenance.get("split_manifest_sha256", "")
+    vocabulary_digest = sha256_file(vocabulary_path)
+    release_id = provenance.get("release_id", "")
     records: list[FastaRecord] = []
     metadata: list[dict[str, object]] = []
     for start in range(0, count, batch_size):
@@ -644,14 +738,21 @@ def generate_candidates(
                 {
                     "sequence_id": sequence_id,
                     "generator_type": "sequence_vae",
+                    "model_checkpoint": checkpoint_value,
                     "checkpoint_sha256": checkpoint_digest,
+                    "reference_release_id": release_id,
+                    "split_manifest_sha256": split_manifest_digest,
+                    "vocabulary_sha256": vocabulary_digest,
                     "generation_seed": seed,
+                    "sample_index": latent_id,
                     "temperature": temperature,
                     "top_k": top_k,
                     "top_p": top_p,
                     "latent_id": latent_id,
+                    "raw_token_length": len(result.token_ids) + int(result.terminated_by_eos),
                     "terminated_by_eos": str(result.terminated_by_eos).lower(),
                     "hit_generation_cap": str(result.hit_generation_cap).lower(),
+                    "stop_reason": "eos" if result.terminated_by_eos else "length_cap",
                     "sequence_length": len(sequence),
                     "sequence_sha256": sequence_sha256(sequence),
                 }
@@ -671,7 +772,7 @@ def generate_candidates(
     sequences = [record.sequence for record in records]
     sequence_counts = Counter(sequences)
     lengths = [len(sequence) for sequence in sequences]
-    training_path = root / output_config["data_dir"] / "train.fasta"
+    training_path = data_dir / "train.fasta"
     if not training_path.exists():
         raise FileNotFoundError(f"Configured training FASTA is missing: {training_path}")
     training_sequences = {record.sequence for record in read_fasta(training_path)}
@@ -734,8 +835,12 @@ def generate_candidates(
             },
             "input_sha256": {
                 resolved_config_path.relative_to(root).as_posix(): sha256_file(resolved_config_path),
-                vocabulary_path.relative_to(root).as_posix(): sha256_file(vocabulary_path),
-                str(checkpoint_path): checkpoint_digest,
+                vocabulary_path.relative_to(root).as_posix(): vocabulary_digest,
+                checkpoint_value: checkpoint_digest,
+                **provenance["input_sha256"],
+            },
+            "data_provenance": {
+                key: value for key, value in provenance.items() if key != "input_sha256"
             },
             "output_sha256": {
                 candidates_fasta.name: sha256_file(candidates_fasta),

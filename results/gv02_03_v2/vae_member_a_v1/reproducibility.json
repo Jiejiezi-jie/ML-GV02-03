@@ -1,0 +1,12 @@
+{
+  "best_model_state_sha256": "8ecb0bc9c0e6fc770c3745a595bc8cdecea94b935c24d85ed9ed5e6764784c89",
+  "repeated_best_model_state_sha256": "8ecb0bc9c0e6fc770c3745a595bc8cdecea94b935c24d85ed9ed5e6764784c89",
+  "training_history_equal_excluding_time": true,
+  "generated_fasta_equal": true,
+  "generation_metadata_equal": true,
+  "best_model_state_equal": true,
+  "qc_and_pool_repeat_sha256": "b70c80c3f514314a1019cf4a3eb443db1e4bbe22eb29eeef4b15db33c22aa00b",
+  "qc_and_pool_repeat_equal": true,
+  "scoring_manifest_repeat_equal": true,
+  "test_split_reused_during_reproducibility_check": false
+}

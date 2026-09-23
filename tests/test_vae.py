@@ -251,6 +251,11 @@ def test_tiny_training_resume_and_generation_are_auditable(tmp_path):
     assert len({row["sequence_id"] for row in rows}) == 3
     assert all(3 <= int(row["sequence_length"]) <= 20 for row in rows)
     assert all(row["checkpoint_sha256"] for row in rows)
+    assert [int(row["sample_index"]) for row in rows] == [0, 1, 2]
+    assert all(row["model_checkpoint"] for row in rows)
+    assert all(row["vocabulary_sha256"] for row in rows)
+    assert all(row["stop_reason"] in {"eos", "length_cap"} for row in rows)
+    assert all(int(row["raw_token_length"]) >= int(row["sequence_length"]) for row in rows)
     manifest = json.loads(generated.manifest_path.read_text(encoding="utf-8"))
     assert manifest["status"] == "development_provisional"
     assert manifest["candidate_count"] == 3
@@ -260,6 +265,19 @@ def test_tiny_training_resume_and_generation_are_auditable(tmp_path):
     assert training_manifest["test_metrics"]["perplexity"] > 0
     assert 0 <= training_manifest["test_metrics"]["token_accuracy"] <= 1
     assert 0 <= training_manifest["test_metrics"]["eos_accuracy"] <= 1
+
+    smoke = train_sequence_vae(
+        tmp_path,
+        config_path,
+        device_name="cpu",
+        allow_provisional_data=True,
+        maximum_epochs=1,
+        output_dir=tmp_path / "smoke_without_test",
+        evaluate_test=False,
+    )
+    smoke_manifest = json.loads(smoke.manifest_path.read_text(encoding="utf-8"))
+    assert smoke_manifest["test_evaluated"] is False
+    assert smoke_manifest["test_metrics"] is None
 
     repeated = generate_candidates(
         tmp_path,

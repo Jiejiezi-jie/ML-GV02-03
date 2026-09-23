@@ -1,0 +1,10 @@
+domain_cutoff_multiplier	domain_score_cutoff	coverage_offset	model_coverage_cutoff	eligible_count	selected_count	jaccard_with_baseline_gate
+0.8	20	-0.1	0.85	136	20	1
+0.8	20	0	0.95	136	20	1
+0.8	20	0.1	1	130	20	1
+1	25	-0.1	0.85	136	20	1
+1	25	0	0.95	136	20	1
+1	25	0.1	1	130	20	1
+1.2	30	-0.1	0.85	136	20	1
+1.2	30	0	0.95	136	20	1
+1.2	30	0.1	1	130	20	1

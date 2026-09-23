@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from gv_eval.external import parse_blast, parse_domtbl
+from gv_eval.external import BlastHit, parse_blast, parse_domtbl
 
 
 def test_parse_blast_tabular(tmp_path):
@@ -24,3 +24,9 @@ def test_parse_domtbl_keeps_best_domain(tmp_path):
     assert hit.hmm_from == 2
     assert hit.hmm_to == 69
 
+
+def test_blast_coverage_is_bounded_when_alignment_contains_gaps():
+    hit = BlastHit("q", "t", 95.0, 110, 100, 90, 1e-20, 100.0)
+    assert hit.query_coverage == 1.0
+    assert hit.target_coverage == 1.0
+    assert 0.0 <= hit.effective_identity <= 1.0
