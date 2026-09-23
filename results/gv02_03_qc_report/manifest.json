@@ -1,0 +1,37 @@
+{
+  "module_version": "1.0.0",
+  "inputs": {
+    "config": {
+      "path": "D:\\HuaweiMoveData\\Users\\huawei\\Desktop\\AI知识库\\机器学习\\ML-GV02-03\\configs\\qc_report.yaml",
+      "sha256": "1fe805c704896458484639e8dd486076903730c50a1c0c2394bc581f34813f9a"
+    },
+    "qc_manifest": {
+      "path": "D:\\HuaweiMoveData\\Users\\huawei\\Desktop\\AI知识库\\机器学习\\ML-GV02-03\\results\\gv02_03_pattern_audit\\manifest.json",
+      "sha256": "46a710171592e1a395f2688e11b46c9735ac27434582acb1197b0aa9d22b92d1"
+    },
+    "qc_table": {
+      "path": "D:\\HuaweiMoveData\\Users\\huawei\\Desktop\\AI知识库\\机器学习\\ML-GV02-03\\results\\gv02_03_pattern_audit\\candidate_qc.tsv",
+      "sha256": "ca5401d05408fefbe49e41ad3ba0373c6855e247d14510f08f09c0c4858a8741"
+    },
+    "nearest_manifest": {
+      "path": "D:\\HuaweiMoveData\\Users\\huawei\\Desktop\\AI知识库\\机器学习\\ML-GV02-03\\results\\gv02_03_nearest_reference_dev\\manifest.json",
+      "sha256": "c9a6c8fc7bfbe6e3f25fabef30627db90dc841216120ce22f6cef1e684cca493"
+    },
+    "nearest_table": {
+      "path": "D:\\HuaweiMoveData\\Users\\huawei\\Desktop\\AI知识库\\机器学习\\ML-GV02-03\\results\\gv02_03_nearest_reference_dev\\nearest_reference.tsv",
+      "sha256": "2d0b45168ef86a31f314b8099ae8d2dc8a931462f9a87a2e6749bc1697a2820b"
+    }
+  },
+  "source_sha256": {
+    "qc_report.py": "092f3306e61fd52c67cf689495be25a2fa61942b6a150eac314d75c473644d43",
+    "nearest_reference.py": "d2f6266c46dbc4b7ab3eab775d677bc38a1ec82f6d958f9e74dab4d38cdfb717",
+    "io.py": "adc669cefd5f3fd495819c6cce35274eba3eb0e183e47fde61be243dca7a8873"
+  },
+  "candidate_source_sha256": "4be37ab575f7285035669955ed713dbcefb8fe2a1c2790de7ecd48e89cee9776",
+  "outputs": {
+    "candidate_qc_summary.tsv": "e02520497792745adbc82c9d635724f28ee036ee36ee9e78841851fee71f1fc9",
+    "manual_review.tsv": "26e52efc76b420907aaff2de83a3bb2c2b1cc1ae5cdf7126792e8c51d917527e",
+    "summary.json": "d4a960fa0be666d9687391a7a5a4e9d8448ea57313ed4db090bf80c08e5779bc",
+    "report.md": "973e888cc2e71e4ae97a8fd904bbb6458a631b46dce68990a1216eb8407b98fa"
+  }
+}

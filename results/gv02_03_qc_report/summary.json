@@ -1,0 +1,43 @@
+{
+  "candidate_count": 200,
+  "qc_pass_count": 170,
+  "qc_fail_count": 30,
+  "resolved_count": 165,
+  "unresolved_count": 35,
+  "warning_candidate_count": 150,
+  "tie_candidate_count": 55,
+  "review_count": 180,
+  "no_review_trigger_count": 20,
+  "cross_counts": {
+    "pass_resolved": 165,
+    "pass_unresolved": 5,
+    "fail_resolved": 0,
+    "fail_unresolved": 30
+  },
+  "failure_reason_counts": {
+    "length_above_maximum": 30
+  },
+  "warning_counts": {
+    "composition_outlier_warning": 145,
+    "homopolymer_warning": 10
+  },
+  "not_checked_counts": {},
+  "review_reason_counts": {
+    "qc_failure": 30,
+    "qc_warning": 150,
+    "reference_tie": 55,
+    "reference_unresolved": 35
+  },
+  "not_assessed_by_report": [
+    "eos_metadata",
+    "transmembrane_topology",
+    "domain_architecture",
+    "family_assignment"
+  ],
+  "eligibility_policy": "preserve upstream qc_pass; review flags are not exclusions",
+  "source_labels": {
+    "pool": "legacy_t05_mixed_development_only",
+    "reference": "provisional_nominal_gvpa_unverified"
+  },
+  "candidate_source_sha256": "4be37ab575f7285035669955ed713dbcefb8fe2a1c2790de7ecd48e89cee9776"
+}
