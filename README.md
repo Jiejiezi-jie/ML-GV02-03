@@ -17,7 +17,9 @@
 
 阶段说明见 [M0–M1 生成数据准备](reports/M0_M1_生成数据准备.md)和
 [成员 B 的 VAE 开发版说明](reports/V2_B_VAE开发版.md)和
-[完整 VAE 实验报告](reports/V2_B_VAE完整实验.md)。
+[完整 VAE 实验报告](reports/V2_B_VAE完整实验.md)。成员 C 接续 QC 与相似度工作时，
+请使用 [成员 B → C 候选序列交接说明](reports/成员B_to_C_候选序列交接说明.md)中冻结的
+输入、字段约定、复现命令和验收清单。
 
 ## 成员 B 的 VAE 参考代码
 
