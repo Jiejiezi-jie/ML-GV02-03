@@ -1,0 +1,405 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3 (Nov 2019); http://hmmer.org/
+# Copyright (C) 2019 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_1/profiles/gvpn.hmm
+# target sequence database:        /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_1/synthetic/queries.fasta
+# per-dom hits tabular output:     /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_1/synthetic/gvpn.domtbl
+# sequence reporting threshold:    score >= 0
+# domain reporting threshold:      score >= 0
+# Max sensitivity mode:            on [all heuristic filters off]
+# number of worker threads:        1
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       gvpn  [M=364]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                 Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                 -----------
+   1.3e-133  438.2   0.0   1.6e-133  437.9   0.0    1.1  1  exact_duplicate_nat_1944acf2ada2119aa498  
+   2.2e-129  424.3   0.1   2.2e-129  424.3   0.1    3.3  1  exact_duplicate_nat_8343c46d763785dc6094  
+   2.4e-125  411.0   0.6   2.4e-125  411.0   0.6    1.9  1  exact_duplicate_nat_d93cc995798d0a5e81e9  
+   5.5e-125  409.8   3.5   5.5e-125  409.8   3.5    2.3  1  exact_duplicate_nat_56c649d91320de13c3d9  
+   3.3e-120  394.1   0.1   4.6e-120  393.6   0.1    1.2  1  exact_duplicate_nat_6b111238dff8d4fcf344  
+    4.6e-82  268.5   0.0    5.1e-82  268.4   0.0    1.0  1  truncated_nat_1944acf2ada2119aa498        
+    3.7e-43  140.6   0.0      4e-43  140.5   0.0    1.1  1  truncated_nat_6b111238dff8d4fcf344        
+  ------ inclusion threshold ------
+      0.014    7.0   0.3      0.015    6.9   0.3    1.2  1  exact_duplicate_nat_0ce4f366361b92c40e72  
+       0.27    2.8   2.2       0.15    3.7   0.5    1.5  1  truncated_nat_f1576cf15faeaea3dbc6        
+        0.4    2.3   0.7       0.42    2.2   0.7    1.2  1  truncated_nat_a575c7521c67f51d5d35        
+       0.44    2.1   1.6       0.51    1.9   1.6    1.2  1  truncated_nat_65195e1884dba2d18322        
+       0.59    1.7   0.2       0.66    1.5   0.2    1.2  1  shuffled_nat_287dc8e13316bfa21d5b         
+       0.67    1.5   2.0       0.73    1.4   2.0    1.1  1  shuffled_nat_70c3a6e184ca96d89510         
+       0.68    1.5  11.6        1.3    0.5  10.4    2.2  1  exact_duplicate_nat_f1576cf15faeaea3dbc6  
+       0.96    1.0   0.1       0.91    1.1   0.1    1.1  1  exact_duplicate_nat_5af1dad025fd9ae899db  
+        1.2    0.7   0.8        1.2    0.7   0.8    1.2  1  exact_duplicate_nat_287dc8e13316bfa21d5b  
+        1.3    0.5   0.8        1.4    0.4   0.7    1.2  1  shuffled_nat_0ce4f366361b92c40e72         
+        1.4    0.5   2.2        1.2    0.7   2.2    1.0  1  truncated_nat_70c3a6e184ca96d89510        
+        1.5    0.4   0.8        3.7   -0.9   0.8    1.4  0  shuffled_nat_d93cc995798d0a5e81e9         
+        1.9    0.0   1.4        3.7   -0.9   1.3    1.5  0  shuffled_nat_995571f9bd05bfb87fdc         
+        1.9    0.0   3.9        2.5   -0.4   3.9    1.4  0  truncated_nat_09800a748cfbe77d8d9f        
+
+
+Domain annotation for each sequence (and alignments):
+>> exact_duplicate_nat_1944acf2ada2119aa498  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  437.9   0.0  3.1e-134  1.6e-133      28     323 ..       2     296 ..       1     341 [. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 437.9 bits;  conditional E-value: 3.1e-134
+                                      gvpn  28 kevekeaseefvetpeveelaeRalrYlkagypvHltGpaGtGKTtLAlhvAkklgrpvvlihGdeelk 96 
+                                               ++v ++++++fv+tp++e+ + RalrYl++gy++Hl+GpaGtGKTtLAlh+A+ l rp++l++Gd+e+k
+  exact_duplicate_nat_1944acf2ada2119aa498   2 NTVLQARPRNFVSTPTLERTTLRALRYLQSGYSIHLKGPAGTGKTTLALHLADLLARPIMLLFGDDEFK 70 
+                                               5788999************************************************************** PP
+
+                                      gvpn  97 tsdLiGeesgytrkkvvDnyihsVvkkeeevkeewvdnrLteAvkeGytLvYDEFtRsrPeannvlLsv 165
+                                               tsdLiG++sgytrkkvvDnyihsV+k+e+e++++w+d+rLt A++eG+t+vYDEF+RsrPe+nnvlLs+
+  exact_duplicate_nat_1944acf2ada2119aa498  71 TSDLIGNQSGYTRKKVVDNYIHSVMKVEDELRHNWIDSRLTLACREGFTMVYDEFNRSRPEVNNVLLSA 139
+                                               ********************************************************************* PP
+
+                                      gvpn 166 LeEkvLelpgkkekeeyikVhpeFraIfTSNpeEYaGvhktqdALlDRlitieldeldeeteveivaak 234
+                                               LeEk+L+lp+++++ eyi+V p+FraI+TSNpeEY+Gvh tqdAL DRliti+++e+de ++++i+++k
+  exact_duplicate_nat_1944acf2ada2119aa498 140 LEEKLLVLPPSNNRAEYIRVSPHFRAILTSNPEEYCGVHGTQDALQDRLITINMPEPDELAQQQILVQK 208
+                                               ********************************************************************* PP
+
+                                      gvpn 235 tglseeeaekivdlvrelreeaekekapslRaaimiAkilkeeeikvdaedeefrqvclDvlaskvsks 303
+                                               +g++ ++a +iv+lv++++++a  +  +slR ++miA+i+++++i   ae+++fr+vc D+l++++++ 
+  exact_duplicate_nat_1944acf2ada2119aa498 209 VGIDGSAALQIVQLVKAFQASAAPDMVSSLRPSLMIATICHDHGILPLAENADFRDVCSDILLARSKEP 277
+                                               ********************************************************************9 PP
+
+                                      gvpn 304 eeeeekeeleelieelikkv 323
+                                                 + ++++l++l+++ + + 
+  exact_duplicate_nat_1944acf2ada2119aa498 278 APD-ATRHLWNLFNRFVVSQ 296
+                                               997.8899999999887763 PP
+
+>> exact_duplicate_nat_8343c46d763785dc6094  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  424.3   0.1  4.2e-130  2.2e-129      21     322 ..     381     684 ..     344     685 .] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 424.3 bits;  conditional E-value: 4.2e-130
+                                      gvpn  21 eeekeeekevekeaseefvetpeveelaeRalrYlkagypvHltGpaGtGKTtLAlhvAkklgrpvvli 89 
+                                               ++++++++++++ + ++fvet++++++a+Ra+rY+++gypvH+tGp G+GKT+LAlh+A+k ++pv+l+
+  exact_duplicate_nat_8343c46d763785dc6094 381 QKKDDKSSNKRRIDMDNFVETDYIKQIADRAQRYIESGYPVHFTGPVGVGKTSLALHLASKYDKPVMLL 449
+                                               455677777888899****************************************************** PP
+
+                                      gvpn  90 hGdeelktsdLiGeesgytrkkvvDnyihsVvkkeeevkeewvdnrLteAvkeGytLvYDEFtRsrPea 158
+                                               +G++el+++dL+G+ +g+++k+v+Dn++++V+kke e++e+w+ +rL+eAvk+GytL+YDEF+Rs+Pe+
+  exact_duplicate_nat_8343c46d763785dc6094 450 QGNSELSNQDLLGSITGVSTKSVIDNFVRQVHKKEGEINEKWTPGRLVEAVKNGYTLIYDEFNRSKPEI 518
+                                               ********************************************************************* PP
+
+                                      gvpn 159 nnvlLsvLeEkvLelpgkkekeeyikVhpeFraIfTSNpeEYaGvhktqdALlDRlitieldeldeete 227
+                                               n ++LsvLeE+vL+l+g+k+++ + +Vhp+F++IfTSNp EY Gvh++q+ALlDRlitie++ + ee+e
+  exact_duplicate_nat_8343c46d763785dc6094 519 NSLFLSVLEEGVLPLYGTKQNKPFERVHPDFKVIFTSNPVEYQGVHQPQEALLDRLITIEVNGVGEEAE 587
+                                               ********************************************************************* PP
+
+                                      gvpn 228 veivaaktglseeeaekivdlvrelreeae..kekapslRaaimiAkilkeeeikvdaedeefrqvclD 294
+                                                eiva+++g++ e+aekiv++v+++ +++e  + + pslR+ +miA+i+k+++i+++ +de+f+++c+D
+  exact_duplicate_nat_8343c46d763785dc6094 588 SEIVAERAGIDPEKAEKIVEFVNKIGKRCEkeDAQGPSLRSMLMIASIAKQNDISIKGDDEQFEDLCMD 656
+                                               *************************99999778899********************************* PP
+
+                                      gvpn 295 vlaskvskseeeeekeeleelieelikk 322
+                                               vl ++++++   +++ee++++i+e++k 
+  exact_duplicate_nat_8343c46d763785dc6094 657 VLGAQLARCLGYNQTEEVHSIIKEELKA 684
+                                               ***********************99875 PP
+
+>> exact_duplicate_nat_d93cc995798d0a5e81e9  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  411.0   0.6  4.7e-126  2.4e-125      21     322 ..     199     503 ..     183     504 .] 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 411.0 bits;  conditional E-value: 4.7e-126
+                                      gvpn  21 eeekeeekevekeaseefvetpeveelaeRalrYlkagypvHltGpaGtGKTtLAlhvAkklgrpvvli 89 
+                                               ++++e+ +++++ + e+fv t+eve++++R+++Yl+agypvH+tGpaG+GKT+LAl++A+  ++pvv++
+  exact_duplicate_nat_d93cc995798d0a5e81e9 199 RQDRESVRRSRNIELENFVVTDEVEKIVARSKHYLNAGYPVHFTGPAGVGKTSLALYLASLYDQPVVFL 267
+                                               4456666777788899***************************************************** PP
+
+                                      gvpn  90 hGdeelktsdLiGeesgytrkkvvDnyihsVvkkeeevkeewvdnrLteAvkeGytLvYDEFtRsrPea 158
+                                               +G++e+ + dLiG++sgy+ +k vDn++++V+k++ee++e+ +++ L +Avk+Gyt+vYDEFtRs Pe+
+  exact_duplicate_nat_d93cc995798d0a5e81e9 268 QGNHEMANVDLIGGTSGYKATKNVDNFVRTVYKHTEELNEKRSEGLLAKAVKNGYTVVYDEFTRSLPET 336
+                                               ********************************************************************* PP
+
+                                      gvpn 159 nnvlLsvLeEkvLelpgkkekeeyikVhpeFraIfTSNpeEYaGvhktqdALlDRlitieldeldeete 227
+                                               nn+lLsv+eE++L+l+g+k++e +i+Vhp+F++IfTSNp EYaGv+++qdAL DRlit+el++  +ete
+  exact_duplicate_nat_d93cc995798d0a5e81e9 337 NNLLLSVIEEGILPLYGTKQDEAFIRVHPDFKIIFTSNPVEYAGVYQSQDALRDRLITLELSRGSSETE 405
+                                               ********************************************************************* PP
+
+                                      gvpn 228 veivaaktglseeeaekivdlvrelreeae..kekapslRaaimiAkilkeeeikvdaedeefrqvclD 294
+                                               v +++++tg+++eeae+i++lv+++r+ +e  + + ps+Ra+imi++i+++++i++d++de+f+++c D
+  exact_duplicate_nat_d93cc995798d0a5e81e9 406 VYMIQERTGIKKEEAETIIELVESIRNFCEkeEVQGPSFRASIMIGDIARHNDIPIDSSDEDFVTLCKD 474
+                                               *****************************9666789********************************* PP
+
+                                      gvpn 295 vlaskvskseeeee.keeleelieelikk 322
+                                               +l+  v+++++ee+  +e+++ i +++kk
+  exact_duplicate_nat_d93cc995798d0a5e81e9 475 ILSDAVNRCMKEEKnDTEAKDKIAKELKK 503
+                                               *********98766588899999988876 PP
+
+>> exact_duplicate_nat_56c649d91320de13c3d9  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  409.8   3.5  1.1e-125  5.5e-125      21     322 ..     204     508 ..     152     509 .] 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 409.8 bits;  conditional E-value: 1.1e-125
+                                      gvpn  21 eeekeeekevekeaseefvetpeveelaeRalrYlkagypvHltGpaGtGKTtLAlhvAkklgrpvvli 89 
+                                               ++++e+ +++++ + e+fv t+ ve+l++R+ +Yl+agypvH+tGpaG+GKT+LAl++A+  ++pvv++
+  exact_duplicate_nat_56c649d91320de13c3d9 204 SSDRESVRRSRNIDLENFVVTDDVEKLVARSRQYLNAGYPVHFTGPAGVGKTSLALYLASLYDQPVVFL 272
+                                               3446666777778889***************************************************** PP
+
+                                      gvpn  90 hGdeelktsdLiGeesgytrkkvvDnyihsVvkkeeevkeewvdnrLteAvkeGytLvYDEFtRsrPea 158
+                                               +G++e+ + dLiG++sgy+ +k vDn+i++V+k +ee++e+ +++ L +A+k+Gyt+vYDEFtRsrPe+
+  exact_duplicate_nat_56c649d91320de13c3d9 273 QGNHEMANVDLIGGTSGYKASKNVDNFIRTVYKYTEELNEKRSEGLLAKAAKNGYTVVYDEFTRSRPET 341
+                                               ********************************************************************* PP
+
+                                      gvpn 159 nnvlLsvLeEkvLelpgkkekeeyikVhpeFraIfTSNpeEYaGvhktqdALlDRlitieldeldeete 227
+                                               nn+lLsvLeE+vL+l+g+k++e +i+Vhp+F++IfTSNp EYaGv+++qdA+ DRlit+el +  +ete
+  exact_duplicate_nat_56c649d91320de13c3d9 342 NNLLLSVLEEGVLPLYGTKQDEAFIRVHPNFKIIFTSNPVEYAGVFQSQDAIRDRLITLELARGSNETE 410
+                                               ********************************************************************* PP
+
+                                      gvpn 228 veivaaktglseeeaekivdlvrelreeae..kekapslRaaimiAkilkeeeikvdaedeefrqvclD 294
+                                               +++++++tg+++eeae+iv+lv+++r+ +e  + + ps+Ra+imi++i+k+++i+++++de+f ++c D
+  exact_duplicate_nat_56c649d91320de13c3d9 411 AQMIKDRTGIEQEEAETIVELVENIRKFCEkeEVQGPSFRASIMIGDIAKHNNIPINSSDEDFITLCKD 479
+                                               *****************************9666789********************************* PP
+
+                                      gvpn 295 vlaskvskseeeee.keeleelieelikk 322
+                                               vl+  v++++ee++  +++++ i +++kk
+  exact_duplicate_nat_56c649d91320de13c3d9 480 VLSDAVKRCMEEKSsDTDAKDKIAKELKK 508
+                                               *********99877678888889888876 PP
+
+>> exact_duplicate_nat_6b111238dff8d4fcf344  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  393.6   0.1    9e-121  4.6e-120      24     347 ..      48     369 ..      19     393 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 393.6 bits;  conditional E-value: 9e-121
+                                      gvpn  24 keeekevekeaseefvetpeveelaeRalrYlkagypvHltGpaGtGKTtLAlhvAkklgrpvvlihGd 92 
+                                                +eek+    + e f+++ e+++l eR++ ++k+gypvHl+Gp+G+GKT+LA+h+Ak++grpv++i+Gd
+  exact_duplicate_nat_6b111238dff8d4fcf344  48 CSEEKKYLVPEMEYFINNTEIQKLSERIKLWIKVGYPVHLIGPTGCGKTSLAVHIAKEIGRPVIWINGD 116
+                                               45677778888999******************************************************* PP
+
+                                      gvpn  93 eelktsdLiGeesgytrkkvvDnyihsVvkkeeevkeewvdnrLteAvkeGytLvYDEFtRsrPeannv 161
+                                               e+l+t+dLiG+++++++++++Dnyih+V k+ + +k ew+dn+L  A++ GytL+Y+EF+R++P annv
+  exact_duplicate_nat_6b111238dff8d4fcf344 117 ESLTTKDLIGGYAQIKQESIRDNYIHNVFKSSDIIKPEWIDNPLAIACRYGYTLIYNEFSRAKPIANNV 185
+                                               ********************************************************************* PP
+
+                                      gvpn 162 lLsvLeEkvLelpgkkekeeyikVhpeFraIfTSNpeEYaGvhktqdALlDRlitieldeldeetevei 230
+                                               lLsv+eE++Lelp++ ++e+yikVhp+FraI+TSN+ EYaGvh +qdALlDR+++i +d++  etev+i
+  exact_duplicate_nat_6b111238dff8d4fcf344 186 LLSVFEEGILELPSRFGGEKYIKVHPDFRAILTSNSIEYAGVHVPQDALLDRMVGIYMDYYSFETEVQI 254
+                                               ********************************************************************* PP
+
+                                      gvpn 231 vaaktglseeeaekivdlvrelreeaekekapslRaaimiAkilkeeeikvdaedeefrqvclDvlask 299
+                                               v+++tgl e+++ekiv+++r++r+++++ ++p++R+ im++k +k+ +    ++++ f q+++Dv+a+k
+  exact_duplicate_nat_6b111238dff8d4fcf344 255 VKEHTGLPEKDTEKIVSIIRKIRDQTDDVQKPGIRSGIMVGKAMKKLN---GNTKDYFDQLFVDVIATK 320
+                                               **********************************************99...567899************ PP
+
+                                      gvpn 300 vskseeeee.keeleelieelikkvkeeeeeseiek..kavealkslakkg 347
+                                               +s++ e  + ++ ++e+i el ++   e++++e+++  k+v+++   ++k+
+  exact_duplicate_nat_6b111238dff8d4fcf344 321 TSSNVELLKkEKIVNEVILELNSEK--ESSNAEVHEadKSVDKTAPEINKK 369
+                                               *999986551444455555554442..222222222223333333322222 PP
+
+>> truncated_nat_1944acf2ada2119aa498  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  268.4   0.0   9.9e-83   5.1e-82      28     184 ..       2     158 .]       1     158 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 268.4 bits;  conditional E-value: 9.9e-83
+                                gvpn  28 kevekeaseefvetpeveelaeRalrYlkagypvHltGpaGtGKTtLAlhvAkklgrpvvlihGdeelktsdLiG 102
+                                         ++v ++++++fv+tp++e+ + RalrYl++gy++Hl+GpaGtGKTtLAlh+A+ l rp++l++Gd+e+ktsdLiG
+  truncated_nat_1944acf2ada2119aa498   2 NTVLQARPRNFVSTPTLERTTLRALRYLQSGYSIHLKGPAGTGKTTLALHLADLLARPIMLLFGDDEFKTSDLIG 76 
+                                         578899********************************************************************* PP
+
+                                gvpn 103 eesgytrkkvvDnyihsVvkkeeevkeewvdnrLteAvkeGytLvYDEFtRsrPeannvlLsvLeEkvLelpgkk 177
+                                         ++sgytrkkvvDnyihsV+k+e+e++++w+d+rLt A++eG+t+vYDEF+RsrPe+nnvlLs+LeEk+L+lp+++
+  truncated_nat_1944acf2ada2119aa498  77 NQSGYTRKKVVDNYIHSVMKVEDELRHNWIDSRLTLACREGFTMVYDEFNRSRPEVNNVLLSALEEKLLVLPPSN 151
+                                         *************************************************************************** PP
+
+                                gvpn 178 ekeeyik 184
+                                         ++ eyi+
+  truncated_nat_1944acf2ada2119aa498 152 NRAEYIR 158
+                                         ****996 PP
+
+>> truncated_nat_6b111238dff8d4fcf344  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  140.5   0.0   7.7e-44     4e-43      24     136 ..      48     160 .]      14     160 .] 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 140.5 bits;  conditional E-value: 7.7e-44
+                                gvpn  24 keeekevekeaseefvetpeveelaeRalrYlkagypvHltGpaGtGKTtLAlhvAkklgrpvvlihGdeelkts 98 
+                                          +eek+    + e f+++ e+++l eR++ ++k+gypvHl+Gp+G+GKT+LA+h+Ak++grpv++i+Gde+l+t+
+  truncated_nat_6b111238dff8d4fcf344  48 CSEEKKYLVPEMEYFINNTEIQKLSERIKLWIKVGYPVHLIGPTGCGKTSLAVHIAKEIGRPVIWINGDESLTTK 122
+                                         56677788889999************************************************************* PP
+
+                                gvpn  99 dLiGeesgytrkkvvDnyihsVvkkeeevkeewvdnrL 136
+                                         dLiG+++++++++++Dnyih+V k+ + +k ew+dn+L
+  truncated_nat_6b111238dff8d4fcf344 123 DLIGGYAQIKQESIRDNYIHNVFKSSDIIKPEWIDNPL 160
+                                         ************************************97 PP
+
+>> exact_duplicate_nat_0ce4f366361b92c40e72  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.9   0.3    0.0029     0.015     218     270 ..      50     102 ..      21     111 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 6.9 bits;  conditional E-value: 0.0029
+                                      gvpn 218 eldeldeeteveivaaktglseeeaekivdlvrelreeaekekapslRaaimi 270
+                                               + d +  ++ + +++++ ++ ++++e+  +++++lr+  +++ +  +R+ i +
+  exact_duplicate_nat_0ce4f366361b92c40e72  50 QRDMYSIKERMGLLQQRLDILNQQIEATEKTIHKLRQPHSNTAQNIVRSNIFV 102
+                                               5567788889999***********************************99976 PP
+
+>> truncated_nat_f1576cf15faeaea3dbc6  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.7   0.5     0.029      0.15     225     295 ..      61     131 ..      47     138 .] 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 3.7 bits;  conditional E-value: 0.029
+                                gvpn 225 eteveivaaktglseeeaekivdlvrelreeaekekapslRaaimiAkilkeeeikvdaedeefrqvclDv 295
+                                         +  +++  ++   + + ae++  +v++lr+++ +  + +    i++A+ l++   +++ + ++ +++ +  
+  truncated_nat_f1576cf15faeaea3dbc6  61 DFLADVADQRQMQAAQLAEHLQAFVQTLRQQTAELISLTAADRIIMAQQLAQDLSEFHGNLTTSVTLLRQT 131
+                                         44456677777778888999999999999999999999999999999998887777766666555555555 PP
+
+>> truncated_nat_a575c7521c67f51d5d35  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.2   0.7     0.081      0.42     310     343 ..      19      53 ..       5     104 .. 0.47
+
+  Alignments for each domain:
+  == domain 1  score: 2.2 bits;  conditional E-value: 0.081
+                                gvpn 310 eeleelieelikkvkeeeeeseiek..kavealksl 343
+                                         +e +++++ ++++  ++e++ ++++  +  +a  s+
+  truncated_nat_a575c7521c67f51d5d35  19 AERQQQLRATVDS-WQQERHIQAQTlqEERRAFVSQ 53 
+                                         3334444444444.2222222111111111111111 PP
+
+>> truncated_nat_65195e1884dba2d18322  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.9   1.6       0.1      0.51     279     290 ..      60      71 ..       7     122 .. 0.40
+
+  Alignments for each domain:
+  == domain 1  score: 1.9 bits;  conditional E-value: 0.1
+                                gvpn 279 ikvdaedeefrq 290
+                                          ++ a+ ++ rq
+  truncated_nat_65195e1884dba2d18322  60 QTFLAQASQQRQ 71 
+                                         111111111111 PP
+
+>> shuffled_nat_287dc8e13316bfa21d5b  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.5   0.2      0.13      0.66     218     257 ..      39      78 ..      32     112 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 1.5 bits;  conditional E-value: 0.13
+                               gvpn 218 eldeldeeteveivaaktglseeeaekivdlvrelreeae 257
+                                        ++ ++  e ++++v ++t++s+ +++ i ++ ++   +++
+  shuffled_nat_287dc8e13316bfa21d5b  39 SIRSQKLEIQTQLVYRRTEISKPQINPIPNFRQKQELSMQ 78 
+                                        5566667778888888888888888888776655444444 PP
+
+>> shuffled_nat_70c3a6e184ca96d89510  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.4   2.0      0.14      0.73     297     334 ..      73     109 ..      32     140 .. 0.48
+
+  Alignments for each domain:
+  == domain 1  score: 1.4 bits;  conditional E-value: 0.14
+                               gvpn 297 askvskseeeeekeeleelieelikkvkeeeeeseiek 334
+                                         s+++ +e++++ +e ++ +++  ++ + +++++++++
+  shuffled_nat_70c3a6e184ca96d89510  73 RSQAKLNERSRKVDEKQRRVSQKSNN-AARTHQANVDH 109
+                                        22222233333333333333333333.22222222222 PP
+
+>> exact_duplicate_nat_f1576cf15faeaea3dbc6  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.5  10.4      0.26       1.3     227     340 ..      63     172 ..      48     317 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 0.5 bits;  conditional E-value: 0.26
+                                      gvpn 227 eveivaaktglseeeaekivdlvrelreeaekekapslRaaimiAkilkeeeikvdaedeefrqvclDv 295
+                                                +++  ++   + + ae++  +v++lr+++ +  + +    i++A+ l++   +++ + ++ +++ +  
+  exact_duplicate_nat_f1576cf15faeaea3dbc6  63 LADVADQRQMQAAQLAEHLQAFVQTLRQQTAELISLTAADRIIMAQQLAQDLSEFHGNLTTSVTLLRQT 131
+                                               4556777777788899*************99999*********************************** PP
+
+                                      gvpn 296 laskvskseeeee...keeleelieelikkvkeeeeeseiekkaveal 340
+                                               l++++++ ++e +   +++ ++ i+e++++++  ee  +       +l
+  exact_duplicate_nat_f1576cf15faeaea3dbc6 132 LQHRIQEIQQEVHtllQTSEQQRIQEHLQRMQALEEWVN-------TL 172
+                                               *****9999874433344455555555555322222211.......11 PP
+
+>> exact_duplicate_nat_5af1dad025fd9ae899db  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   0.1      0.18      0.91     305     339 ..      44      81 ..       3     103 .. 0.43
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 0.18
+                                      gvpn 305 eeeekeeleelieelikkv...keeeeeseiekkavea 339
+                                               +++e+e++++ i ++ +++    +e++   ++++a++a
+  exact_duplicate_nat_5af1dad025fd9ae899db  44 RTREREAASSRIASIDERIadiDKEKAALLADATAASA 81 
+                                               33334444444443333331111111111111111111 PP
+
+>> exact_duplicate_nat_287dc8e13316bfa21d5b  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.7   0.8      0.23       1.2     229     253 ..      52      76 ..       8     111 .. 0.51
+
+  Alignments for each domain:
+  == domain 1  score: 0.7 bits;  conditional E-value: 0.23
+                                      gvpn 229 eivaaktglseeeaekivdlvrelr 253
+                                               ++++++ g+ ++++e   + +++lr
+  exact_duplicate_nat_287dc8e13316bfa21d5b  52 QLLRQQLGILDSQIENTEKNIQSLR 76 
+                                               2222222222222222222222222 PP
+
+>> shuffled_nat_0ce4f366361b92c40e72  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.4   0.7      0.28       1.4     289     323 ..      72     106 ..      18     114 .] 0.54
+
+  Alignments for each domain:
+  == domain 1  score: 0.4 bits;  conditional E-value: 0.28
+                               gvpn 289 rqvclDvlaskvskseeeeekeeleelieelikkv 323
+                                          + +D + +++ ++++ +++ ++ ++i++ ++++
+  shuffled_nat_0ce4f366361b92c40e72  72 ILIAQDPTVMRIIRKRQVSQEMSITNMINNKFQNY 106
+                                        23344444555555555545555555555555554 PP
+
+>> truncated_nat_70c3a6e184ca96d89510  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.7   2.2      0.24       1.2     306     324 ..       8      25 ..       1      48 [] 0.31
+
+  Alignments for each domain:
+  == domain 1  score: 0.7 bits;  conditional E-value: 0.24
+                                gvpn 306 eeekeeleelieelikkvk 324
+                                         ++e+++ +  ++ +i++  
+  truncated_nat_70c3a6e184ca96d89510   8 KHEQKARQARVKAQINR-D 25 
+                                         11222222222222222.1 PP
+
+>> shuffled_nat_d93cc995798d0a5e81e9  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> shuffled_nat_995571f9bd05bfb87fdc  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> truncated_nat_09800a748cfbe77d8d9f  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (364 nodes)
+Target sequences:                        108  (19448 residues searched)
+Passed MSV filter:                       108  (1); expected 108.0 (1)
+Passed bias filter:                      108  (1); expected 108.0 (1)
+Passed Vit filter:                       108  (1); expected 108.0 (1)
+Passed Fwd filter:                       108  (1); expected 108.0 (1)
+Initial search space (Z):                108  [actual number of targets]
+Domain search space  (domZ):              21  [number of targets reported over threshold]
+# CPU time: 0.13u 0.01s 00:00:00.14 Elapsed: 00:00:00.14
+# Mc/sec: 49.38
+//
+[ok]

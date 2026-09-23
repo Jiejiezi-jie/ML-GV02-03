@@ -1,0 +1,25 @@
+{
+  "inputs": {
+    "references/conflict_review/ncbi_14_proteins.gb": "149ea8221b6f2485c04c312cffc2dbf4d78293a5196832fbc8c2ac9cb0e65042",
+    "results/gv02_03_v2/family/unresolved_negative_controls.tsv": "bfe1b0b5ba799f1097c5fdf72a6975cf3e7ed573519c59954f0b2e3554b16ef7",
+    "data/processed/gv02_03_v2/reference/high_confidence_gvpa.fasta": "ae5cb68b394b71825d0d4a5e716e946a8d1765bf6355bb2d520ccdabe781dea8",
+    "results/gv02_03_v2/family/natural_unique.fasta": "0fe6de6cb02c3e6ca2bfacd688961a71184c070bec8aa3ea1db4650a5b61ca3a",
+    "results/gv02_03_v2/family/control_classification.tsv": "9ff6bc1723160a0137b2d55a53716bbba748a86996ead5a2b6cb50d7b2b8ed95",
+    "data/processed/gv02_03_v2/candidate_family_classification.tsv": "d7ab0860abe55d3b4e6c2b411ad88382889558e7320a43b6f2b66afb935b5cff"
+  },
+  "outputs": {
+    "results/gv02_03_v2/family/adjudication/annotation_conflict_ambiguous.fasta": "4a5fad3a6ecd673c71c507e31ec22e7a3183202579e1a6d17853c8c8bf3ccb94",
+    "results/gv02_03_v2/family/adjudication/candidates_reviewed_view.tsv": "904f40b51118f3f4fb8a42c6ab7fc9f66cc1a834834d537b751c699db881aa4d",
+    "results/gv02_03_v2/family/adjudication/conflict_adjudication.tsv": "9250ccc8141abc92e1959c06f9ec2d7447618b410506060027739d8c922c19d9",
+    "results/gv02_03_v2/family/adjudication/controls_reviewed_view.tsv": "36380cc5c10c32fb871e2acfdb4e4db30677a3cf2b9de7e3b2479f576b250213",
+    "results/gv02_03_v2/family/adjudication/gvpa_reference_with_ncbi_corrections.fasta": "266176de63a649de814195a39452afd31bb7ee7ffdd3f30c1eaaa0c42fe60928",
+    "results/gv02_03_v2/family/adjudication/ncbi_resolved_gvpa.fasta": "ae5231dbdb59469610c94d6dceba0e39a6005b8609eece4b14ab7adef22008f7",
+    "results/gv02_03_v2/family/adjudication/summary.json": "e9f72ae371e53361e2752c62d92643d2413524528021ec0d4d6be693dd1f4e18"
+  },
+  "code": {
+    "experiments/adjudicate_family_conflicts.py": "9f3613ca302b76eb53abd6030ff9b8edf0e0fc1a3ba20a807f1e3ee37971a297",
+    "src/gv_eval/adjudication.py": "6210e179b7c61d322e112baaaac8ec5bf65e77c3a8e19ca7c70d2deaf599e76f"
+  },
+  "retrieved_on": "2026-09-22",
+  "source_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=protein&id=WP_435763343.1%2CWP_434971879.1%2CWP_443127555.1%2CWP_441007279.1%2CWP_439345357.1%2CWP_439300212.1%2CWP_160913461.1%2CWP_094886142.1%2CWP_443256761.1%2CWP_256227925.1%2CWP_101642268.1%2CWP_114298883.1%2CWP_256714828.1%2CWP_164214962.1&rettype=gb&retmode=text"
+}

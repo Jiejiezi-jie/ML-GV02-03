@@ -23,9 +23,22 @@
 [`experiments/train_generator.py`](experiments/train_generator.py)和
 [`experiments/generate_candidates.py`](experiments/generate_candidates.py)。
 
-当前数据仍待 GvpA/GvpJ 核验，训练脚本默认拒绝使用；仅开发验证可显式加入
-`--allow-provisional-data`。模型权重和临时候选不提交 Git，正式 checkpoint 必须等成员 A
-提供高可信参考并重新划分数据后训练。
+最新交接请先阅读 [成员 A 完整工作记录](reports/成员A_完整工作过程与交接记录.md)
+和 [成员 B 实施指南](reports/成员B_VAE实施与数据交接指南.md)。
+独立保守开发包位于 `data/processed/gv02_03_v2/member_b_handoff/`，346 条参考已按簇重新划分；
+它明确属于暂定开发版本，不能代替仍需核查的最终科学参考。
+
+成员 A 的参考核验和竞争分类入口为 `python -B experiments/run_family_classification.py`，
+验收入口为 `python -B experiments/verify_family_deliverables.py`。
+完整复现还须依次运行裁决、保守发布包和开发划分脚本，且**顺序不可调换**（验收表会被后续步骤按哈希钉住），
+六步顺序见下文方法文档。
+交付路径、PF00741 官方边界、规则、结果和未解决的负对照冲突详见
+[成员 A 方法与验收](reports/成员A_家族鉴定方法与验收.md)。
+当前为计算支持参考，科学验收仍有 14 条名义 GvpJ 对照冲突待核查；
+不能把现有生成训练划分视为已经完成高可信参考替换。
+
+训练脚本默认拒绝暂定数据；仅开发验证可显式加入 `--allow-provisional-data`。
+模型权重和临时候选不提交 Git，正式 checkpoint 必须等保守参考发布状态明确后重新训练。
 
 ## 关键结果
 

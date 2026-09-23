@@ -1,0 +1,30 @@
+#                                                                                                --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                            accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                    ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+truncated_nat_68d2bce649ad98618d0c       -             82 Gas_vesicle          PF00741.24    39   1.9e-19   62.4   4.4   1   1   4.7e-20   2.2e-19   62.2   4.4     1    39    22    60    22    60 0.97 -
+exact_duplicate_nat_44abe1cc1d8456dc6c46 -            126 Gas_vesicle          PF00741.24    39   5.8e-19   60.8   7.2   1   1   2.7e-19   1.3e-18   59.8   7.2     1    39    18    56    18    56 0.99 -
+exact_duplicate_nat_130e62fc868ae20abbc4 -             70 Gas_vesicle          PF00741.24    39   8.8e-19   60.3   7.4   1   1   2.4e-19   1.1e-18   59.9   7.4     1    39    11    49    11    49 0.99 -
+exact_duplicate_nat_68d2bce649ad98618d0c -            248 Gas_vesicle          PF00741.24    39   8.8e-19   60.3   4.4   1   1   3.9e-19   1.8e-18   59.2   4.4     1    39    22    60    22    60 0.97 -
+exact_duplicate_nat_ff88219e90de45ec84dd -            114 Gas_vesicle          PF00741.24    39   6.1e-17   54.4   3.3   1   1   1.6e-17   7.7e-17   54.0   3.3     2    39    13    50    12    50 0.98 -
+exact_duplicate_nat_39696a92cfeac6f208a2 -             78 Gas_vesicle          PF00741.24    39   7.9e-17   54.0   5.5   1   1   2.2e-17     1e-16   53.6   5.5     1    39     8    46     8    46 0.98 -
+truncated_nat_44abe1cc1d8456dc6c46       -             42 Gas_vesicle          PF00741.24    39   1.6e-13   43.5   2.7   1   1   3.8e-14   1.8e-13   43.3   2.7     1    24    18    41    18    42 0.97 -
+truncated_nat_ff88219e90de45ec84dd       -             38 Gas_vesicle          PF00741.24    39   1.3e-11   37.3   0.9   1   1     3e-12   1.4e-11   37.2   0.9     2    26    13    37    12    38 0.95 -
+truncated_nat_39696a92cfeac6f208a2       -             26 Gas_vesicle          PF00741.24    39     1e-09   31.3   0.8   1   1   2.3e-10   1.1e-09   31.2   0.8     1    18     8    25     8    26 0.93 -
+truncated_nat_130e62fc868ae20abbc4       -             23 Gas_vesicle          PF00741.24    39   9.4e-06   18.6   0.1   1   1   2.4e-06   1.1e-05   18.3   0.1     1    13    11    23    11    23 0.97 -
+exact_duplicate_nat_0e37face31f27f3afe2e -            355 Gas_vesicle          PF00741.24    39   0.00052   13.0   0.1   1   1   0.00028    0.0013   11.7   0.1     3    19   328   344   328   349 0.95 -
+truncated_nat_26c7b3dfaf246cf1a8c9       -             40 Gas_vesicle          PF00741.24    39       0.8    2.8   0.8   1   1      0.25       1.2    2.3   0.8    18    30    14    26    13    29 0.82 -
+shuffled_nat_0191a16db7363afe30ed        -            444 Gas_vesicle          PF00741.24    39      0.91    2.6   0.0   1   1       0.8       3.8    0.6   0.0    18    30   148   160   147   163 0.86 -
+truncated_nat_e8cdf7701819b67c0045       -             40 Gas_vesicle          PF00741.24    39       1.7    1.7   0.8   1   1      0.95       4.5    0.4   0.7    23    25    18    20    10    29 0.58 -
+shuffled_nat_c1fe0a4a727199d7f1bd        -             84 Gas_vesicle          PF00741.24    39       2.3    1.3   0.1   1   1      0.81       3.8    0.6   0.1    17    26    55    64    52    69 0.86 -
+shuffled_nat_130e62fc868ae20abbc4        -             70 Gas_vesicle          PF00741.24    39       2.8    1.1   1.1   1   1       1.1       5.1    0.2   1.0    20    32    19    31    14    38 0.76 -
+truncated_nat_165370dde2f43a2ea77b       -             27 Gas_vesicle          PF00741.24    39       3.7    0.7   0.3   1   1       0.8       3.8    0.6   0.3    14    20    12    18     3    24 0.50 -
+#
+# Program:         hmmsearch
+# Version:         3.3 (Nov 2019)
+# Pipeline mode:   SEARCH
+# Query file:      /mnt/d/endless/机器学习综合实践/ML-GV02-03/models/pfam/PF00741.hmm
+# Target file:     /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_2/synthetic/queries.fasta
+# Option settings: hmmsearch --domtblout /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_2/synthetic/pf00741.domtbl -T 0 --domT 0 --max --seed 42 --cpu 1 /mnt/d/endless/机器学习综合实践/ML-GV02-03/models/pfam/PF00741.hmm /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_2/synthetic/queries.fasta 
+# Current dir:     /mnt/d/endless/机器学习综合实践/ML-GV02-03
+# Date:            Tue Sep 22 14:38:07 2026
+# [ok]

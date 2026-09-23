@@ -94,10 +94,12 @@ def sequence_sha256(sequence: str) -> str:
 def write_json(path: str | Path, value: object) -> None:
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(
-        json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + "\n",
-        encoding="utf-8",
-    )
+    # newline="\n" keeps byte-level hashes identical on Windows and Linux; the
+    # default write_text would emit CRLF on Windows and break manifest digests.
+    with path.open("w", encoding="utf-8", newline="\n") as stream:
+        stream.write(
+            json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + "\n"
+        )
 
 
 def write_tsv(path: str | Path, rows: Iterable[dict], fieldnames: Sequence[str]) -> None:

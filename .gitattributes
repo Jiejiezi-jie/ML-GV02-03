@@ -1,0 +1,11 @@
+# Keep audited text artifacts byte-identical on Windows and Linux.
+*.py text eol=lf
+*.md text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+*.tsv text eol=lf
+*.fasta text eol=lf
+*.faa text eol=lf
+*.hmm text eol=lf
+*.clstr text eol=lf

@@ -1,0 +1,34 @@
+#                                                                                                --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                            accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                    ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+exact_duplicate_nat_307aae2a7a20a7f3cf48 -             73 gvpa                 -            121   5.4e-40  129.5   3.7   1   1   1.6e-40   5.7e-40  129.4   3.7     1    71     1    71     1    73 0.97 -
+exact_duplicate_nat_3a3fe29b7daaadaf3131 -             98 gvpa                 -            121   1.1e-35  115.6   2.6   1   1   3.4e-36   1.2e-35  115.5   2.6     1    71     1    71     1    95 0.87 -
+exact_duplicate_nat_7cb4140e283c8e67ca6a -            106 gvpa                 -            121   1.3e-15   50.8   0.3   1   1   5.6e-16   1.9e-15   50.2   0.3     7    52    17    62     8    67 0.93 -
+truncated_nat_3a3fe29b7daaadaf3131       -             32 gvpa                 -            121   2.1e-14   46.9   1.0   1   1   6.4e-15   2.2e-14   46.8   1.0     1    32     1    32     1    32 0.98 -
+exact_duplicate_nat_d790919b750d218eb5d2 -            100 gvpa                 -            121   5.6e-14   45.5   5.7   1   1   2.9e-14     1e-13   44.7   5.7     1    52     1    52     1    99 0.96 -
+truncated_nat_307aae2a7a20a7f3cf48       -             24 gvpa                 -            121     1e-10   34.9   0.2   1   1   3.1e-11   1.1e-10   34.9   0.2     1    24     1    24     1    24 0.98 -
+truncated_nat_d790919b750d218eb5d2       -             33 gvpa                 -            121   1.6e-08   27.9   0.5   1   1   4.8e-09   1.7e-08   27.8   0.5     1    27     1    27     1    32 0.94 -
+truncated_nat_7cb4140e283c8e67ca6a       -             35 gvpa                 -            121   4.1e-06   20.1   0.0   1   1   1.2e-06   4.1e-06   20.1   0.0     7    25    17    35     2    35 0.88 -
+truncated_nat_995571f9bd05bfb87fdc       -            124 gvpa                 -            121         2    1.8   0.6   1   1       0.9       3.1    1.1   0.6    64    93    37    64    28   115 0.47 -
+exact_duplicate_nat_5af1dad025fd9ae899db -            105 gvpa                 -            121         2    1.7   2.1   1   1      0.76       2.6    1.4   2.0    74   109    55    90    24   104 0.49 -
+exact_duplicate_nat_600cc7dd0b3564219e23 -             84 gvpa                 -            121       2.9    1.2   0.2   1   1      0.88       3.1    1.2   0.1    61   104    30    75    10    84 0.60 -
+truncated_nat_026e3420597e6acb04ba       -             41 gvpa                 -            121       3.3    1.0   0.0   1   1      0.81       2.8    1.3   0.0    71    79    23    30     2    41 0.46 -
+truncated_nat_04ce3ef0cebc48437e9d       -             33 gvpa                 -            121       3.5    1.0   0.0   1   1      0.83       2.9    1.2   0.0    59    82     6    28     1    33 0.44 -
+exact_duplicate_nat_155ce5a12a657fff67bd -             84 gvpa                 -            121       3.9    0.8   0.0   1   1       1.4         5    0.5   0.0    75   103    47    77    28    84 0.51 -
+shuffled_nat_5af1dad025fd9ae899db        -            105 gvpa                 -            121       4.4    0.6   0.1   1   1       1.3       4.6    0.6   0.1    77    77    58    58     4   104 0.59 -
+shuffled_nat_307aae2a7a20a7f3cf48        -             73 gvpa                 -            121       4.8    0.5   0.9   1   1       1.8       6.2    0.2   0.9    17    27    36    46    13    73 0.58 -
+exact_duplicate_nat_026e3420597e6acb04ba -            125 gvpa                 -            121       4.9    0.5   0.1   1   1       1.7       5.8    0.3   0.1   106   106    44    44     5   105 0.63 -
+exact_duplicate_nat_4bb2d1867476b81ae8d0 -             84 gvpa                 -            121       4.9    0.5   0.1   1   1       1.4       4.7    0.5   0.1    64    80    33    49     3    83 0.56 -
+truncated_nat_70c3a6e184ca96d89510       -             48 gvpa                 -            121       5.4    0.4   0.6   1   1       1.3       4.4    0.6   0.6    95    95    20    20     1    48 0.44 -
+truncated_nat_a575c7521c67f51d5d35       -            109 gvpa                 -            121       6.1    0.2   0.1   1   1       1.7         6    0.2   0.1   109   109    63    63     9   104 0.62 -
+truncated_nat_4bb2d1867476b81ae8d0       -             28 gvpa                 -            121       6.8    0.0   0.1   1   1       1.9       6.7    0.1   0.1    24    34     3    15     2    26 0.61 -
+#
+# Program:         hmmsearch
+# Version:         3.3 (Nov 2019)
+# Pipeline mode:   SEARCH
+# Query file:      /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_1/profiles/gvpa.hmm
+# Target file:     /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_1/synthetic/queries.fasta
+# Option settings: hmmsearch --domtblout /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_1/synthetic/gvpa.domtbl -T 0 --domT 0 --max --seed 42 --cpu 1 /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_1/profiles/gvpa.hmm /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_1/synthetic/queries.fasta 
+# Current dir:     /mnt/d/endless/机器学习综合实践/ML-GV02-03
+# Date:            Tue Sep 22 14:36:25 2026
+# [ok]

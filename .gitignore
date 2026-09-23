@@ -11,3 +11,4 @@ data/processed/gv02_03_v2/generated_candidates/
 # Rebuildable local BLAST databases and transient logs for every experiment variant.
 results/*/work/blastdb/
 results/*/work/*.log
+results/gv02_03_v2/family/**/blastdb/

@@ -1,0 +1,31 @@
+#                                                                                                --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                            accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                    ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+exact_duplicate_nat_2e67a9559a5d385089e1 -            546 gvpn                 -            330  4.1e-130  426.6   0.0   1   1  9.7e-131  5.7e-130  426.1   0.0    10   295     2   286     1   306 0.96 -
+exact_duplicate_nat_b6bdb8734681bcea444a -            506 gvpn                 -            330  1.6e-129  424.6   0.0   1   1  3.5e-130    2e-129  424.3   0.0    10   303     2   294     1   318 0.96 -
+exact_duplicate_nat_9c8132712ea576438b26 -            452 gvpn                 -            330  1.6e-129  424.6   0.0   1   1  3.3e-130    2e-129  424.3   0.0    10   300     2   292     1   328 0.96 -
+exact_duplicate_nat_5322cde66edfa53888a3 -            490 gvpn                 -            330  1.7e-129  424.5   0.0   1   1  3.9e-130  2.3e-129  424.1   0.0    10   305     2   296     1   369 0.94 -
+exact_duplicate_nat_eea50b6e1902af9b049c -            481 gvpn                 -            330  6.4e-123  402.9   0.0   1   1  1.7e-123    1e-122  402.3   0.0    11   305     3   308     1   382 0.93 -
+truncated_nat_2e67a9559a5d385089e1       -            182 gvpn                 -            330   1.3e-95  313.1   0.0   1   1   2.4e-96   1.4e-95  313.0   0.0    10   190     2   182     1   182 0.99 -
+truncated_nat_b6bdb8734681bcea444a       -            168 gvpn                 -            330   3.8e-85  278.7   0.0   1   1   7.2e-86   4.2e-85  278.6   0.0    10   176     2   168     1   168 0.99 -
+truncated_nat_5322cde66edfa53888a3       -            163 gvpn                 -            330     2e-81  266.5   0.0   1   1   3.8e-82   2.2e-81  266.4   0.0    10   171     2   163     1   163 0.98 -
+truncated_nat_eea50b6e1902af9b049c       -            160 gvpn                 -            330   1.4e-76  250.6   0.0   1   1   2.6e-77   1.5e-76  250.5   0.0    11   168     3   160     1   160 0.98 -
+truncated_nat_9c8132712ea576438b26       -            150 gvpn                 -            330     5e-76  248.8   0.0   1   1   9.3e-77   5.5e-76  248.6   0.0    10   157     2   149     1   150 0.98 -
+shuffled_nat_68254939d0e81bc7115c        -            114 gvpn                 -            330      0.71    1.8   1.0   1   1      0.13      0.77    1.6   1.0   262   317    34    85     4   104 0.44 -
+exact_duplicate_nat_68254939d0e81bc7115c -            114 gvpn                 -            330      0.77    1.6   0.4   1   1      0.15      0.87    1.5   0.4   182   224    45    85    29   111 0.57 -
+exact_duplicate_nat_153267792920bb4475d5 -            113 gvpn                 -            330      0.93    1.4   0.8   1   1      0.17         1    1.3   0.8   235   305    17    85     8   109 0.52 -
+truncated_nat_2e48b321b528f593d735       -            113 gvpn                 -            330       1.1    1.2   2.4   1   1       0.2       1.2    1.1   2.4   220   251    44    76     8   111 0.54 -
+exact_duplicate_nat_08f506a8e9498c03b468 -            112 gvpn                 -            330       1.1    1.1   0.2   1   1      0.18       1.1    1.2   0.2   207   240    34    67    13   107 0.63 -
+shuffled_nat_b07496d6758a328c5961        -             85 gvpn                 -            330       1.1    1.1   0.2   1   1      0.19       1.1    1.1   0.2   263   282    27    46     4    83 0.52 -
+exact_duplicate_nat_42c70c8520ebfd69a3a8 -            112 gvpn                 -            330       1.7    0.5   0.0   1   1      0.33       1.9    0.3   0.0   201   239    34    72    20    80 0.80 -
+shuffled_nat_08f506a8e9498c03b468        -            112 gvpn                 -            330       1.9    0.4   0.1   1   1      0.29       1.7    0.5   0.1   278   297    58    77     8   108 0.55 -
+#
+# Program:         hmmsearch
+# Version:         3.3 (Nov 2019)
+# Pipeline mode:   SEARCH
+# Query file:      /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_0/profiles/gvpn.hmm
+# Target file:     /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_0/synthetic/queries.fasta
+# Option settings: hmmsearch --domtblout /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_0/synthetic/gvpn.domtbl -T 0 --domT 0 --max --seed 42 --cpu 1 /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_0/profiles/gvpn.hmm /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_0/synthetic/queries.fasta 
+# Current dir:     /mnt/d/endless/机器学习综合实践/ML-GV02-03
+# Date:            Tue Sep 22 14:34:38 2026
+# [ok]

@@ -1,0 +1,2936 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3 (Nov 2019); http://hmmer.org/
+# Copyright (C) 2019 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_2/profiles/gvpc.hmm
+# target sequence database:        /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_2/natural/queries.fasta
+# per-dom hits tabular output:     /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_2/natural/gvpc.domtbl
+# sequence reporting threshold:    score >= 0
+# domain reporting threshold:      score >= 0
+# Max sensitivity mode:            on [all heuristic filters off]
+# number of worker threads:        1
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       gvpc  [M=357]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                 Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                 -----------
+    7.4e-72  239.2  88.2    1.5e-68  228.3  88.2    3.6  1  nat_69c6a080a2aae0003e51  
+    2.9e-65  217.5  59.7    8.4e-63  209.4  59.7    2.7  1  nat_5624b7649cf855dfcd25  
+      9e-61  202.7  58.0    2.9e-57  191.2  58.0    2.2  1  nat_c0d36e0c836a1b4958e3  
+    1.2e-60  202.2  77.4    8.8e-46  153.4  72.4    3.2  2  nat_ffc430cd837976f6c9f6  
+    3.8e-60  200.7  92.6    5.2e-20   68.6  19.1    4.0  4  nat_3bbdaa8f9c8e98649ebc  
+    1.2e-58  195.7  53.1    1.1e-48  162.9  47.0    2.6  2  nat_0e37face31f27f3afe2e  
+      1e-47  159.7  67.9    9.5e-21   71.0  17.2    3.0  3  nat_ed4e907ebf18517ba73b  
+    2.2e-24   83.0  66.6    2.2e-24   83.0  66.6    3.7  2  nat_751560713494d34e3694  
+    1.2e-16   57.5   5.0    1.8e-16   57.0   5.0    1.2  1  nat_af4dd8eeb92221642da5  
+    6.3e-16   55.2   1.9    9.3e-16   54.6   1.9    1.1  1  nat_b73eed73eb852a72ba5a  
+    1.2e-13   47.6   1.0      2e-13   47.0   1.0    1.2  1  nat_f31c98742504249bd8b1  
+    1.6e-13   47.3   0.1    2.4e-13   46.7   0.1    1.2  1  nat_f082034c255acfb4220b  
+      2e-13   46.9   0.2    3.4e-13   46.2   0.2    1.3  1  nat_17f71edb92fc68b2218c  
+    2.4e-13   46.7   0.6    3.6e-13   46.1   0.6    1.2  1  nat_c969850f1da43f74401f  
+    5.4e-13   45.5   0.1    5.4e-13   45.5   0.1    1.8  1  nat_6041dd5ee0473abd30f2  
+    7.4e-11   38.5   0.2    1.1e-10   37.9   0.2    1.2  1  nat_aea83ae7d90d55b47242  
+    2.7e-09   33.3   0.2    4.7e-09   32.6   0.2    1.3  1  nat_0191a16db7363afe30ed  
+    6.7e-09   32.1   0.9    6.7e-09   32.1   0.9    3.2  1  nat_aa024521c48af22f0cac  
+    7.7e-08   28.6   0.0    7.7e-08   28.6   0.0    3.1  1  nat_8e3261c808d07fdff696  
+    3.5e-06   23.1   0.2    5.5e-06   22.5   0.2    1.2  1  nat_51a971d9f338f8db29b2  
+      1e-05   21.6  17.0     0.0003   16.8  10.7    2.6  2  nat_9b7ed4f515de0180e861  
+      1e-05   21.6   3.9    1.5e-05   21.0   3.9    1.2  1  nat_2fcd2fc7cc42472e48ca  
+     0.0086   12.0   0.4      0.013   11.3   0.4    1.2  1  nat_8b9e6b66305e8c27f352  
+  ------ inclusion threshold ------
+      0.064    9.1   0.0       0.13    8.1   0.0    1.4  1  nat_748023a818ca467884d7  
+      0.084    8.7   0.1       0.13    8.1   0.1    1.2  1  nat_8b87e4f22868b02a4a4a  
+      0.089    8.6   2.1      0.093    8.6   2.1    1.2  1  nat_0d84dbf97ab2b46ef91f  
+      0.094    8.6   0.1       0.15    7.9   0.1    1.2  1  nat_bd6d641af5173919983b  
+      0.097    8.5   0.1       0.16    7.8   0.1    1.2  1  nat_b13a30afcbd95f756c01  
+       0.21    7.4   3.4       0.23    7.3   3.4    1.2  1  nat_ba3ce50a83eb19a0e206  
+       0.25    7.2   1.7       0.32    6.8   1.7    1.1  1  nat_58ae7bce228410bcb763  
+       0.51    6.1   0.6       0.75    5.6   0.6    1.3  1  nat_144f47620afa1a7c4163  
+       0.54    6.1   0.3       0.53    6.1   0.3    1.1  1  nat_35cbbb25f10deebd7391  
+       0.64    5.8   0.2       0.84    5.4   0.2    1.1  1  nat_cabdc6eb27bf25bd595f  
+        1.1    5.1   0.3        1.5    4.6   0.3    1.1  1  nat_8494188a300564c49d3c  
+        1.1    5.1   2.0        1.6    4.5   2.0    1.3  1  nat_bd0342686b2f502068cb  
+        1.2    4.9   1.8        1.6    4.5   1.8    1.1  1  nat_e187f5b07b99b6b9b6f1  
+        1.3    4.9   1.4        1.4    4.7   1.4    1.3  1  nat_2e9855a6be3700c23fe5  
+        1.3    4.8   0.7        2.2    4.1   0.7    1.3  1  nat_a62b75f57dd811b31d67  
+        1.3    4.8   0.3        1.8    4.4   0.3    1.1  1  nat_0d3a44444fb3cfa6ea64  
+        1.3    4.8   3.9        1.3    4.8   3.9    1.1  1  nat_eefbcc5767c120619040  
+        1.3    4.8   6.2        1.6    4.5   6.2    1.1  1  nat_c3864be3a36de85b74e8  
+        1.4    4.7   0.8        2.1    4.1   0.8    1.2  1  nat_7fc3d35f6609a93d0dd1  
+        1.4    4.7   2.3        2.1    4.1   2.3    1.3  1  nat_56c10a8b67a275eb077d  
+        1.4    4.7   2.3        1.6    4.5   2.3    1.1  1  nat_a780429eddf249c23975  
+        1.5    4.6   0.5        2.2    4.1   0.5    1.2  1  nat_a69301e4ba1c03b7790b  
+        1.6    4.5   0.3        2.1    4.1   0.3    1.2  1  nat_03528e1685b91151e0fe  
+        1.7    4.4   0.2        2.1    4.1   0.2    1.2  1  nat_1366f335f603b634243f  
+        1.9    4.3   0.3        2.6    3.8   0.3    1.1  1  nat_97f185fb614d6fb1882a  
+        2.1    4.1   1.2          3    3.6   1.2    1.1  1  nat_f9785b60713e991b45d7  
+        2.2    4.1   0.6        2.8    3.7   0.6    1.2  1  nat_4df28bd64c5d145f4a45  
+        2.3    4.0   2.3        2.7    3.7   2.3    1.2  1  nat_efdc2424c09acf398858  
+        2.3    4.0   0.3        2.6    3.8   0.3    1.2  1  nat_d7ae49ed1ac2f86b33c1  
+        2.3    4.0   0.1        3.1    3.6   0.1    1.1  1  nat_cd2718b64a671e091f03  
+        2.4    3.9   0.0        3.4    3.4   0.0    1.2  1  nat_1027009e86e43030bf4d  
+        2.5    3.9   0.4        3.4    3.4   0.4    1.2  1  nat_26f12393040d80ef19bd  
+        2.5    3.9   0.5        2.6    3.8   0.5    1.1  1  nat_04ba7db7d0670b52f7bf  
+        2.6    3.8   1.7        3.6    3.4   1.7    1.1  1  nat_eda5ec1e6fe7d62d083c  
+        2.9    3.7   9.1        3.8    3.3   9.1    1.2  1  nat_8c5563b595d2c6f99a2c  
+        3.1    3.6   1.4        4.3    3.1   1.4    1.1  1  nat_fb5841aa8d78c29f15ce  
+        3.2    3.5   1.2        4.6    3.0   1.2    1.2  1  nat_9bd1a6cead0a9a834c1f  
+        3.3    3.5   0.0        4.6    3.0   0.0    1.2  1  nat_c6a9f832eed0a9cab749  
+        3.4    3.4   1.1        4.8    3.0   1.1    1.2  1  nat_8963a103455e220442bf  
+        3.9    3.2   0.8        4.2    3.1   0.8    1.1  1  nat_ba3ba5496951fc0249d5  
+        4.2    3.1   0.0          6    2.6   0.0    1.2  1  nat_3d86e49e4c25ff3762f1  
+        4.2    3.1   0.6          6    2.6   0.6    1.1  1  nat_6baf6abd9a9510c8f68e  
+        4.3    3.1   0.2        4.8    2.9   0.2    1.2  1  nat_55f831f992234588cedd  
+        4.3    3.1   4.7          7    2.4   4.7    1.3  1  nat_b16e56dd0f1b4227b07c  
+        4.4    3.1   0.1          5    2.9   0.1    1.2  1  nat_3c70afdab9e7af2e1189  
+        4.6    3.0   0.1        4.3    3.1   0.1    1.1  1  nat_f993bd13f890ef7ea4b0  
+        4.9    2.9   0.8          7    2.4   0.8    1.2  1  nat_51153cf6705a7b788462  
+        4.9    2.9   1.3        6.1    2.6   1.3    1.2  1  nat_1e71a0923f759cc709c7  
+        4.9    2.9   1.4        6.8    2.4   1.4    1.1  1  nat_226a88fc48e62ac725f3  
+        5.2    2.8   5.2        5.3    2.8   5.2    1.1  1  nat_08188f300b849b1f3d48  
+        5.2    2.8   0.3        5.7    2.7   0.3    1.0  1  nat_2a684226bc7fc883848d  
+        5.2    2.8   0.3          7    2.4   0.3    1.1  1  nat_c9b15453866afc61beb3  
+        5.2    2.8   0.6        7.6    2.3   0.6    1.3  1  nat_2b6741a82f5537860280  
+        5.4    2.8   0.5        8.3    2.2   0.5    1.2  1  nat_1bb8c3052c79ed7b3013  
+        5.5    2.8   0.4        6.9    2.4   0.4    1.1  1  nat_759f3fabb12a0655cffe  
+        5.7    2.7   0.9        8.5    2.1   0.9    1.1  1  nat_d3968a7170c9ad3e58f2  
+        5.8    2.7   1.0          9    2.0   1.0    1.2  1  nat_9b5f9b7ef68b10434976  
+        5.8    2.7   0.3        7.6    2.3   0.3    1.2  1  nat_1c83b7230e48b0f9f02d  
+          6    2.6   1.7        7.7    2.3   1.7    1.2  1  nat_8f2388b1e2d08d14e65c  
+          6    2.6   0.0        9.3    2.0   0.0    1.2  1  nat_d0019d622a7986c35070  
+        6.1    2.6   0.3        8.7    2.1   0.3    1.2  1  nat_228e5aa9fefc15a241e7  
+        6.2    2.6   1.2        6.9    2.4   1.2    1.1  1  nat_1c11fdd132ba32e51d7d  
+        6.4    2.5   0.7        8.8    2.1   0.7    1.1  1  nat_dc4d448b28633f62a82f  
+        6.5    2.5   1.0        9.4    2.0   1.0    1.2  1  nat_657f8ed615a48f36fbc2  
+        6.7    2.5   0.8        7.4    2.3   0.8    1.1  1  nat_504214d77faf9ddeefbb  
+        6.8    2.4   0.1        8.3    2.2   0.1    1.1  1  nat_1aeb097a28c863a862e4  
+          7    2.4   0.3         10    1.9   0.3    1.2  1  nat_8e55878fc5504bc64f4e  
+        7.3    2.3   0.3         11    1.8   0.3    1.3  1  nat_786b39c5c0e4d775092e  
+        7.3    2.3   0.0          8    2.2   0.0    1.1  1  nat_dbc1c002e29cf315f4b5  
+        7.5    2.3   0.3        8.2    2.2   0.3    1.1  1  nat_a3571b1c51affce50627  
+        7.8    2.2   1.3        8.3    2.2   1.3    1.1  1  nat_6d2bef4d44f7bf3ac9b4  
+        8.3    2.2   0.4         12    1.6   0.4    1.2  1  nat_c599808be516a1f982a6  
+        8.7    2.1   0.7         12    1.6   0.7    1.2  1  nat_a62ee5e456230e34d781  
+        8.8    2.1   0.9         12    1.6   0.9    1.1  1  nat_0acc418a158f7c4abf47  
+        8.9    2.1   0.6         13    1.5   0.6    1.2  1  nat_6741f22002745c69f35f  
+          9    2.0   0.2         14    1.4   0.2    1.2  1  nat_b2284ef968ad70670927  
+        9.1    2.0   0.4         12    1.7   0.4    1.2  1  nat_2cbf128e14aef1559fc0  
+        9.2    2.0   0.6         12    1.6   0.6    1.2  1  nat_81137907f8a802f93802  
+        9.7    1.9   2.6         13    1.5   2.6    1.2  1  nat_09c215899b8b45d9948f  
+         10    1.9   0.8         14    1.4   0.8    1.1  1  nat_49f263ff81959560428d  
+         11    1.8  12.3         15    1.3  12.3    1.3  1  nat_fe11696e82e1518b1111  
+         11    1.8   0.2         12    1.6   0.2    1.1  1  nat_cb92aed15bdbfa6f9474  
+         11    1.8   0.2         17    1.1   0.2    1.2  1  nat_dbae310253aa128f5396  
+         11    1.7   0.5         14    1.4   0.5    1.2  1  nat_9f5b9c362628d07b156e  
+         12    1.7   0.6         16    1.2   0.6    1.2  1  nat_282cc75ff49edff67190  
+         12    1.7   0.7         18    1.1   0.7    1.1  1  nat_4f69ec38a495fd9e0185  
+         12    1.7   1.5         13    1.5   1.5    1.1  1  nat_b55ecf6ba9a45824ac09  
+         12    1.6   0.2         17    1.2   0.2    1.2  1  nat_2d6ae3851377c5ea8190  
+         12    1.6   0.7         18    1.1   0.7    1.2  1  nat_4bee481aaaf6d2cbaeaf  
+         12    1.6   0.1         14    1.4   0.1    1.1  1  nat_6bca999a70c09bc7d8d3  
+         12    1.6   0.1         13    1.5   0.1    1.1  1  nat_216c871a89607e7b1e8c  
+         12    1.6   0.2         12    1.6   0.2    1.1  1  nat_21ab82e3101cd9bff5e5  
+         13    1.6   2.0         18    1.0   2.0    1.2  1  nat_ffdf982027d2763f7932  
+         13    1.6   3.7         16    1.2   3.7    1.3  1  nat_7b672bf4b057eba2ffac  
+         13    1.5   1.5         18    1.1   1.5    1.2  1  nat_a7888708ef06ff429137  
+         13    1.5   0.1         14    1.4   0.1    1.1  1  nat_26c7b3dfaf246cf1a8c9  
+         13    1.5   0.6         19    0.9   0.6    1.2  1  nat_9ffee07beb2709c0f0bd  
+         14    1.5   0.8         25    0.6   0.8    1.3  1  nat_ebcd2a7f6128cf55e939  
+         14    1.5   0.4         18    1.0   0.4    1.2  1  nat_3f3d58aff4160c1472ae  
+         14    1.4   0.6         20    0.9   0.6    1.2  1  nat_edf9aac73d55bd51bb53  
+         14    1.4   0.7         18    1.0   0.7    1.1  1  nat_7aeb2efcf40db3e46e7e  
+         14    1.4   0.3         21    0.8   0.3    1.2  1  nat_6ee31a02fdf1277873e8  
+         14    1.4   0.2         17    1.1   0.2    1.2  1  nat_a7d56953c9eb5522cd12  
+         14    1.4   0.3         15    1.3   0.3    1.1  1  nat_76bd47c3dff544aa7f3b  
+         14    1.4   0.1         17    1.1   0.1    1.1  1  nat_7d62c45eb5711910c788  
+         14    1.4   1.7         20    0.9   1.7    1.2  1  nat_966e28ed9f738f4867a4  
+         14    1.4   1.0         16    1.2   1.0    1.2  1  nat_2726d22ebeb8d26c79ba  
+         15    1.3   0.3         19    1.0   0.3    1.1  1  nat_f41f39c57e294fe1a02f  
+         15    1.3   0.1         18    1.1   0.1    1.1  1  nat_8ea71d3ab15e5cf268b1  
+         15    1.3   0.2         20    0.9   0.2    1.2  1  nat_bc9a679038febf60d01a  
+         15    1.3   0.0         24    0.7   0.0    1.2  1  nat_944e12d4a525f631f49f  
+         15    1.3   1.0         16    1.2   1.0    1.3  1  nat_e5ceabb21180b04662ae  
+         15    1.3   0.7         19    1.0   0.7    1.1  1  nat_67ae4c013d963c0fb979  
+         15    1.3   0.1         20    0.9   0.1    1.1  1  nat_1cc68774b93a831e1a93  
+         16    1.2   0.7         27    0.5   0.7    1.2  1  nat_90aff439e5b13407840a  
+         16    1.2  10.8         25    0.6  10.8    1.3  1  nat_9af7854b4cc48e7d4db5  
+         16    1.2   0.0         14    1.4   0.0    1.1  1  nat_b872ca2d5a2d145dce35  
+         16    1.2   0.3         23    0.7   0.3    1.2  1  nat_71c932e8fba7c6f5dfc0  
+         16    1.2   0.3         24    0.7   0.3    1.2  1  nat_88b9978da1fe9dc46015  
+         16    1.2   1.2         23    0.7   1.2    1.2  1  nat_c0018dcc0c8798a4a59b  
+         17    1.1   0.3         22    0.7   0.3    1.1  1  nat_8ebdf27dab289f7c10f4  
+         17    1.1   0.1         18    1.0   0.1    1.1  1  nat_b73460f69f417dd9c10a  
+         17    1.1   0.7         18    1.1   0.7    1.1  1  nat_51872cd8b900b7db59b4  
+         17    1.1   0.7         18    1.1   0.7    1.1  1  nat_575d455e710e37b166bf  
+         17    1.1   1.0         28    0.4   1.0    1.3  1  nat_5b21333ca43991c18adf  
+         18    1.1   0.1         26    0.5   0.1    1.2  1  nat_e20da7d5ac77292299bb  
+         18    1.1   0.7         18    1.1   0.7    1.0  1  nat_a7d49e90e07b90d64e4e  
+         18    1.1   0.9         25    0.6   0.9    1.2  1  nat_28794773350b0e96f58a  
+         18    1.0   0.8         19    1.0   0.8    1.2  1  nat_c4a69bd076e3206cdf7d  
+         18    1.0   1.9         28    0.4   1.9    1.3  1  nat_beb805c37fa10dd2a9f6  
+         18    1.0   0.4         18    1.0   0.4    1.1  1  nat_54a094b6383fa8729a8a  
+         18    1.0   0.2         19    1.0   0.2    1.1  1  nat_a5318d3663daa1e5ee23  
+         18    1.0   0.5         28    0.4   0.5    1.1  1  nat_75a033ca7183447c8e24  
+         19    1.0   0.9         27    0.5   0.9    1.1  1  nat_21d7ed4fbf6b3e9197c9  
+         19    1.0   0.2         25    0.6   0.2    1.2  1  nat_3140e24fc354e74b1db5  
+         19    1.0   0.0         29    0.4   0.0    1.3  1  nat_ebc44a87237f68a7c915  
+         19    1.0   1.0         26    0.5   1.0    1.1  1  nat_cc3b644590efb749343f  
+         20    0.9   0.1         22    0.7   0.1    1.1  1  nat_38af8bf96acabf2df8a2  
+         20    0.9   1.2         29    0.4   1.2    1.2  1  nat_11b2a80a41a28a82fe14  
+         20    0.9   0.4         21    0.9   0.4    1.1  1  nat_a8224f75d4d10d7151b8  
+         20    0.9   0.2         21    0.8   0.2    1.1  1  nat_7c25847a55db32659928  
+         20    0.9   0.3         29    0.4   0.3    1.2  1  nat_3512bc187bf6b327c25b  
+         20    0.9   0.9         25    0.6   0.9    1.2  1  nat_46dfa99150a76ad6b330  
+         20    0.9   2.1         23    0.7   2.1    1.1  1  nat_18287ab709e4536a8a89  
+         20    0.9   0.4         26    0.5   0.4    1.1  1  nat_8b728da9bc94157561e8  
+         21    0.9   1.5         20    0.9   1.5    1.1  1  nat_d9f4961baff7df57d2fd  
+         21    0.9   0.1         26    0.5   0.1    1.1  1  nat_2f6b62c5722bcacabd8e  
+         21    0.8   0.6         24    0.6   0.6    1.1  1  nat_ff6380bfdca9331d95d6  
+         21    0.8   1.2         24    0.6   1.2    1.2  1  nat_0fa964bd081fca56521b  
+         21    0.8   0.1         25    0.6   0.1    1.1  1  nat_4a610b8daff21e476288  
+         22    0.8   0.0         24    0.6   0.0    1.1  1  nat_953542b6961a34556ee5  
+         22    0.8   0.3         28    0.4   0.3    1.2  1  nat_fe7f89d5b48d6e6d7028  
+         22    0.7   2.7         23    0.7   1.8    1.4  1  nat_73fdcd529802590b2b7b  
+         23    0.7   1.5         28    0.4   1.5    1.1  1  nat_6de015df518c3c1fe74e  
+         23    0.7   0.2         28    0.4   0.2    1.1  1  nat_fd4bf5387ee8f62ffaee  
+         23    0.7   0.1         30    0.3   0.1    1.2  1  nat_c5038f463e5d201e8120  
+         24    0.7   0.5         22    0.7   0.5    1.1  1  nat_4b6c3be4d3bf82e021a0  
+         25    0.6   6.4         36    0.1   6.4    1.1  1  nat_a50f26e29ce18976c2e6  
+         25    0.6   0.1         23    0.7   0.1    1.1  1  nat_5fba4ec9aa874b4658b9  
+         25    0.6   0.6         28    0.4   0.6    1.2  1  nat_b0f226cab132da339d39  
+         25    0.6   0.0         37    0.0   0.0    1.2  1  nat_8d6eb3dba5f66ed00c36  
+         26    0.5   0.7         35    0.1   0.7    1.2  1  nat_66da46cd547656a41784  
+         26    0.5   0.1         29    0.4   0.1    1.1  1  nat_4148f2a81e7132b20b9f  
+         26    0.5   0.1         30    0.3   0.1    1.1  1  nat_57ae02b5e430d2b2bc5a  
+         26    0.5   0.0         21    0.8   0.0    1.1  1  nat_d9e2c3510c30c0589662  
+         27    0.5   0.3         27    0.5   0.3    1.1  1  nat_d78c925145ff9cdee9e2  
+         27    0.5   0.1         30    0.3   0.1    1.1  1  nat_c8771a5c10fa1c296db8  
+         28    0.4   0.1         35    0.1   0.1    1.1  1  nat_0e118acdc2771e80b4ea  
+         28    0.4   0.1         32    0.2   0.1    1.1  1  nat_0f8d9d1627be026a1e6b  
+         28    0.4   0.1         29    0.4   0.1    1.1  1  nat_165370dde2f43a2ea77b  
+         28    0.4   0.9         43   -0.2   1.0    1.4  0  nat_dd2f32ef247b4c80fbc3  
+         29    0.4   0.2         39   -0.0   0.2    1.1  0  nat_44abe1cc1d8456dc6c46  
+         30    0.3   0.1         31    0.3   0.1    1.1  1  nat_e5df3d986da0fca5374f  
+         31    0.3   0.3         31    0.3   0.3    1.1  1  nat_e92400776b88a8a20901  
+         31    0.3   1.6         37    0.0   1.6    1.1  1  nat_e8d11648d866d89f021b  
+         31    0.3   1.1         43   -0.2   1.1    1.1  0  nat_050407e325dd39fb5a81  
+         31    0.3   1.0         58   -0.6   0.8    1.4  0  nat_9a0abc7123e25547e268  
+         33    0.2   0.3         34    0.2   0.3    1.1  1  nat_c0cbaeb838a26d617958  
+         33    0.2   0.0         44   -0.2   0.0    1.1  0  nat_8d5392221648a605a7c2  
+         33    0.2   0.7         54   -0.5   0.7    1.3  0  nat_e5b12747050c4d0b3cf5  
+         33    0.2   0.2         33    0.2   0.2    1.1  1  nat_155ff0e1a28c900ffd67  
+         34    0.2   0.1         32    0.2   0.1    1.1  1  nat_1be8da2500a3aec3282a  
+         34    0.2   0.1         48   -0.3   0.1    1.2  0  nat_545d493608c2e165bf9c  
+         34    0.1   0.1         48   -0.4   0.1    1.1  0  nat_2df69daa3558ff90d6d4  
+         34    0.1   0.1         43   -0.2   0.1    1.1  0  nat_8ef96f328be5cf2ac1ef  
+         34    0.1   0.2         56   -0.6   0.2    1.2  0  nat_f6a69c0e0736bb18b1ef  
+         34    0.1   0.4         49   -0.4   0.4    1.1  0  nat_3bdd2e4a8cfc279acbef  
+         36    0.1   0.2    1.1e+02   -1.5   0.2    1.2  0  nat_6392ee051886d826e69f  
+         37    0.0   0.4         45   -0.3   0.4    1.1  0  nat_25ee00a9c2b4e74f79dd  
+
+
+Domain annotation for each sequence (and alignments):
+>> nat_69c6a080a2aae0003e51  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  228.3  88.2   3.8e-69   1.5e-68       1     355 [.       1     356 [.       1     365 [. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 228.3 bits;  conditional E-value: 3.8e-69
+                      gvpc   1 MmsLqekwrqerqsrqqevaerqqevqstlsevqqeRqeqaqalaeelqqfq.........................tqlqqqtq 60 
+                               M++L+  w+++r++rqq++a+rqq+vq+tl +++q+Rq +a +l  +l  f+                         + lqq+tq
+  nat_69c6a080a2aae0003e51   1 MVALRHLWQEQRRQRQQQLAQRQQQVQATLAATRQQRQVKADQLHHNLATFRadlteeselwqanqhlfrlqlqqsvQALQQETQ 85 
+                               99*********************************************************************************** PP
+
+                      gvpc  61 afLadtaqerlaqaaqqaeeLkefvqqlqqetaeflsdtaqeRaaqaeqlaqeLsefrenLeatvedlladya............ 133
+                               +fLa  + er+ qa++ ae+L  fvqqlqq+ta+fls ta eR+ +aeqlaqeL++f+ +L+a+v+ l+++++            
+  nat_69c6a080a2aae0003e51  86 NFLAYSRLERQIQAEEIAEQLDTFVQQLQQQTADFLSLTAIERSLMAEQLAQELRQFHSKLNASVTLLRQEIQtrvstlqqetqa 170
+                               ************************************************************************************* PP
+
+                      gvpc 134 ......qqriaaaeqlqqeLaaFrqtLrqevqkylaeLdllrqqlaqqlqqeLaqtaqerlaeaqalfqdLaaFRaeLrdyrral 212
+                                      +r+ ++ q+++eL  F+++L+++vq+yl eL+llr+++aqqlqq+L+q++++r+a++ alfq++a+FR+eL++y+ +l
+  nat_69c6a080a2aae0003e51 171 llstsqHERVLMRTQQAKELTTFVEKLSADVQSYLWELELLREDRAQQLQQTLSQSRSDRQARVAALFQSFATFRTELQQYCTHL 255
+                               *****99****************************************************************************** PP
+
+                      gvpc 213 qqsvwGnsitesepaavaeekassvkapasapkaaevappeakaaksaapaepepevvvaapepeappaevaPpdvevePtteea 297
+                               ++svwG   +++       +++ s+ +p  +++       ++  + s   +ep        +++  ppa++       +P++   
+  nat_69c6a080a2aae0003e51 256 RTSVWGADLENQLT-----QSQTSPPSPLLQER------GATDGQRS--NSEP--------TSAPIPPAQP-------TPVD--- 309
+                               *********99988.....33445566666666......33444443..2222........2222334444.......4444... PP
+
+                      gvpc 298 pepvneyvaqtldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvvtqr 355
+                                           ++ +y++i++ +gaRLae+e++l inr+q+vd LR+l+ +g++tqr
+  nat_69c6a080a2aae0003e51 310 -----------IEKEVYNYIHQVQGARLAELETALTINRIQAVDVLRSLITKGLITQR 356
+                               ...........7899******************************************9 PP
+
+>> nat_5624b7649cf855dfcd25  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  209.4  59.7   2.1e-63   8.4e-63       1     355 [.       1     304 [.       1     313 [. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 209.4 bits;  conditional E-value: 2.1e-63
+                      gvpc   1 MmsLqekwrqerqsrqqevaerqqevqstlsevqqeRqeqaqalaeelqqfqtqlqqqtqafLadtaqerlaqaaqqaeeLkefv 85 
+                               M++L++ w+++rq+rqqe+a+rqq+v++tl ++qq+Rq+ a++l+++l+ fq +lqq+tq fLa +++ r++qa+++a+eL++f+
+  nat_5624b7649cf855dfcd25   1 MIALKDLWQEQRQQRQQEIAQRQQQVRETLAAFQQQRQQSAAQLRDDLSLFQLGLQQETQVFLAHLSDRRQVQAQELAQELHNFH 85 
+                               99*********************************************************************************** PP
+
+                      gvpc  86 qqlqqetaeflsdtaqeRaaqaeqlaqeLsefrenLeatvedlladyaqqriaaaeqlqqeLaaFrqtLrqevqkylaeLdllrq 170
+                                +l+q++a                l+qeL+   ++ +a+v+ ll++ +qqr + + ql+q+LaaF++ L +evq yl+eL+l+rq
+  nat_5624b7649cf855dfcd25  86 IDLNQSVAS---------------LRQELKIKVQAIQAEVQLLLETNQQQRAQVQMQLAQDLAAFMESLHSEVQTYLSELELMRQ 155
+                               ******986...............688899899999999********************************************** PP
+
+                      gvpc 171 qlaqqlqqeLaqtaqerlaeaqalfqdLaaFRaeLrdyrralqqsvwGnsitesepaavaeekassvkapasapkaaevappeak 255
+                               ++a+qlqqeL q +++rlae+ al       RaeLrdy+ +l++ +wGn+++  ++     e+ s      +     +v+p +a+
+  nat_5624b7649cf855dfcd25 156 DRANQLQQELEQNRAKRLAEMTAL-------RAELRDYCTSLRTMIWGNGSSDVSS-----EPGSA-----AL---NSVSPVAAS 220
+                               *******************99887.......78889999999********999988.....22222.....22...235566666 PP
+
+                      gvpc 256 aaksaapaepepevvvaapepeappaevaPpdvevePtteeapepvneyvaqtldltiyqvigeregaRLaeiesdlginrsqiv 340
+                                + + +pa      ++a+ +p++ +  + P     +  ++ +++p       +l++ iy  i + +gaRL+e+e++lginr+q+v
+  nat_5624b7649cf855dfcd25 221 VTIALTPAL-----PTAPVRPQPVQVTSVP-----QALNSLQKDP------VQLEEEIYYHIYQVQGARLTELETALGINRFQAV 289
+                               666656644.....4556667766666777.....5567788888......569******************************* PP
+
+                      gvpc 341 daLRrlvkqgvvtqr 355
+                               daLR+l+k+g+vtqr
+  nat_5624b7649cf855dfcd25 290 DALRSLIKKGLVTQR 304
+                               **************9 PP
+
+>> nat_c0d36e0c836a1b4958e3  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  191.2  58.0   7.2e-58   2.9e-57       1     221 [.       1     222 [.       1     223 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 191.2 bits;  conditional E-value: 7.2e-58
+                      gvpc   1 MmsLqekwrqerqsrqqevaerqqevqstlsevqqeRqeqaqalaeelqqfqtqlqqqtqafLadtaqerlaqaaqqaeeLkefv 85 
+                               M +L+e++rq ++s+++ev       + +lse++++R +qa+++aeel+qfq+ql+q+t++fL+++a+er+aq++qqa+eL ef+
+  nat_c0d36e0c836a1b4958e3   1 MAALMERIRQGNNSIFEEV-------NLFLSETKSNRFTQAKKQAEELRQFQQQLKQTTDEFLTNAAKERIAQTNQQAKELDEFY 78 
+                               89*****************.......*********************************************************** PP
+
+                      gvpc  86 qqlqqetaeflsdtaqeRaaqaeqlaqeLsefrenLeatvedlladyaqqriaaaeqlqqeLaaFrqtLrqevqkyla....... 163
+                               qql+q+t+efl+++a++R+aq++q+a+eL ef ++L++t++++la+ a++ria+ae++++eL+ F+q+L+q+++++la       
+  nat_c0d36e0c836a1b4958e3  79 QQLKQATDEFLANAAKKRIAQTNQQAKELDEFYQQLKKTTDEFLANAAKERIAKAEAQAKELSDFHQQLEQTTDEFLAntakeri 163
+                               ************************************************************************************* PP
+
+                      gvpc 164 ........eLdllrqqlaqqlqqeLaqtaqerlaeaqalfqdLaaFRaeLrdyrralqqsvwGnsi 221
+                                       eL+ ++qql+q+++++La+t++er+a+a+a++q L++FR++L       + sv+Gns+
+  nat_c0d36e0c836a1b4958e3 164 akaeaqakELSDFHQQLEQTTDKFLANTTKERIAKAEAQKQYLRQFRQDL-------FASVIGNSR 222
+                               **************************************************.......******997 PP
+
+>> nat_ffc430cd837976f6c9f6  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  153.4  72.4   2.2e-46   8.8e-46       1     241 [.       1     278 [.       1     294 [. 0.96
+   2 !   48.1   0.0   2.2e-14   8.9e-14     307     355 ..     293     341 ..     264     350 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 153.4 bits;  conditional E-value: 2.2e-46
+                      gvpc   1 MmsLqekwrqerqsrqqevaerqqevqstlsevqqeRqeqaqalaeelqqfq..................tqlqqqtqafLadta 67 
+                               M++L+++w+ +rq+r q  a+r+q+v++tl ++qqeRq+++  l+ +l +fq                  +ql q+tqafLa++ 
+  nat_ffc430cd837976f6c9f6   1 MVALKQQWQVQRQQRHQDAAQRRQQVRQTLASIQQERQARTLRLRRDLDAFQaqlhqdsrdrhqrqqqfrQQLHQETQAFLASAG 85 
+                               99*********************************************************************************** PP
+
+                      gvpc  68 qerlaqaaqqaeeLkefvqqlqqetaeflsdtaqeRaaqaeqlaqeLsefrenLeatvedlladya..................q 134
+                               q+r+a a++ a+ L++ v++lq++ta+fl+ ta+eR+ +a+q++++L++f+++L+ + + l+ +++                  q
+  nat_ffc430cd837976f6c9f6  86 QQRRAMAQEMAQTLEAYVASLQASTAQFLALTAAERSLMAQQIHRDLRQFHADLTGAIAALRHTLQgevqalraavqadlathqQ 170
+                               ************************************************************************************* PP
+
+                      gvpc 135 qriaaaeqlqqeLaaFrqtLrqevqkylaeLdllrqqlaqqlqqeLaqtaqerlaeaqalfqdLaaFRaeLrdyrralqqsvwGn 219
+                               qr  ++ q+ ++La F +tLr++vq+yl eL+l+r++ a ql+q+L +++++r ++  +l qd a+ R++L++yr+ l+ +vwG+
+  nat_ffc430cd837976f6c9f6 171 QRCLMKAQMTRDLALFLKTLRSDVQSYLWELELVRKDQAYQLRQRLDRSRSDRAQTLTRLTQDWATLRRDLQQYRQTLRSQVWGD 255
+                               ************************************************************************************* PP
+
+                      gvpc 220 sitesepa.avaeekassvkapa 241
+                                +  s+   av ++ a++v +pa
+  nat_ffc430cd837976f6c9f6 256 DSGTSDALeAVVPSVAIPVIPPA 278
+                               99888876667777777666665 PP
+
+  == domain 2  score: 48.1 bits;  conditional E-value: 2.2e-14
+                      gvpc 307 qtldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvvtqr 355
+                                  ++++y+++++  ga+L eie +lginr+q+vdaL++l+++g+++qr
+  nat_ffc430cd837976f6c9f6 293 PSIEKQVYAYLHNVRGAKLSEIELALGINRVQTVDALKALIQKGLISQR 341
+                               56799*******************************************9 PP
+
+>> nat_3bbdaa8f9c8e98649ebc  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   68.6  19.1   1.3e-20   5.2e-20       1      85 [.       1      85 [.       1      87 [. 0.98
+   2 !   53.1  20.3   6.6e-16   2.6e-15      51     117 ..      77     143 ..      75     144 .. 0.96
+   3 !   53.5  19.8     5e-16     2e-15      53     117 ..     138     202 ..     138     203 .. 0.98
+   4 !   54.2  22.3   3.2e-16   1.3e-15      53     121 ..     197     265 ..     196     268 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 68.6 bits;  conditional E-value: 1.3e-20
+                      gvpc  1 MmsLqekwrqerqsrqqevaerqqevqstlsevqqeRqeqaqalaeelqqfqtqlqqqtqafLadtaqerlaqaaqqaeeLkefv 85
+                              M++L+ek+rqe++s+++ev+++ +e+ ++ls+++++R+eqa+++a+ l+qf+++lqq++++fL++t +erl+qa+++ +eL+++ 
+  nat_3bbdaa8f9c8e98649ebc  1 MTALMEKIRQEHKSIAEEVSQLFRETHEFLSATTANREEQAKKQAQYLHQFHQNLQQTNREFLTETTKERLVQAQALHQELEQTN 85
+                              9********************************************************************************9975 PP
+
+  == domain 2  score: 53.1 bits;  conditional E-value: 6.6e-16
+                      gvpc  51 fqtqlqqqtqafLadtaqerlaqaaqqaeeLkefvqqlqqetaeflsdtaqeRaaqaeqlaqeLsef 117
+                                +++l+q++++fL+++++er aqa++qa+ L+ef+q+l+q+t efl++t +eR+aqa++l+qeL+++
+  nat_3bbdaa8f9c8e98649ebc  77 LHQELEQTNREFLTEANKERFAQAQAQAKFLHEFYQELKQTTHEFLTETNKERLAQAQALHQELEQT 143
+                               579*************************************************************986 PP
+
+  == domain 3  score: 53.5 bits;  conditional E-value: 5e-16
+                      gvpc  53 tqlqqqtqafLadtaqerlaqaaqqaeeLkefvqqlqqetaeflsdtaqeRaaqaeqlaqeLsef 117
+                               ++l+q++++fL+++++er aqa++qa++L+ef+q+l+q+t efl++t +eR+aqa++l+qeL+++
+  nat_3bbdaa8f9c8e98649ebc 138 QELEQTNREFLTEANKERFAQAQAQAKSLQEFYQELKQTTHEFLTETNKERLAQAQALHQELEQT 202
+                               68************************************************************986 PP
+
+  == domain 4  score: 54.2 bits;  conditional E-value: 3.2e-16
+                      gvpc  53 tqlqqqtqafLadtaqerlaqaaqqaeeLkefvqqlqqetaeflsdtaqeRaaqaeqlaqeLsefrenL 121
+                               ++l+q++++fL+++ +er aqa++qa+ L+ef+q+l+q+t efl++ta++R++qa++++q L++fr++L
+  nat_3bbdaa8f9c8e98649ebc 197 QELEQTNREFLTEATKERFAQAQAQAKFLQEFYQELEQTTHEFLAETAKNRTEQAKAQKQYLHQFRQDL 265
+                               89*****************************************************************98 PP
+
+>> nat_0e37face31f27f3afe2e  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  162.9  47.0   2.8e-49   1.1e-48       2     236 ..      17     277 ..      16     295 .. 0.94
+   2 !   35.8   0.3   1.2e-10   4.8e-10     307     354 ..     295     342 ..     279     346 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 162.9 bits;  conditional E-value: 2.8e-49
+                      gvpc   2 msLqekwrqerqsrqqevaerqqevqstlsevqqeRqeqaqalaeelqqfq..............................tqlq 56 
+                               m+L++kw++ r +r+qe+ +rqq+v++ l e +++R   ++   ++l+                                  ql+
+  nat_0e37face31f27f3afe2e  17 MALKDKWQELRAQRRQEITQRQQQVRHSLAEKRKQRRGLSALAPAALNTGElspvgegalpegtiagreaqhrlslaqqfyPQLK 101
+                               9*******************************99998888888888988888999***********************999**** PP
+
+                      gvpc  57 qqtqafLadtaqerlaqaaqqaeeLkefvqqlqqetaeflsdtaqeRaaqaeqlaqeLsefrenLeatvedlladyaqqriaaae 141
+                               + tqafL++t  er+a+a q+a+ L + v +lqq+t++fl+ ta eR+++   l+++L++f++ L+ tv++l++++++q++  +e
+  nat_0e37face31f27f3afe2e 102 KHTQAFLSSTGSERQARARQLAARLDQYVCSLQQQTRQFLALTATERSQMRASLTKDLRDFHKTLTVTVARLRQSIQSQQRLTRE 186
+                               ************************************************************************************* PP
+
+                      gvpc 142 qlqqeLaaFrqtLrqevqkylaeLdllrqqlaqqlqqeLaqtaqerlaeaqalfqdLaaFRaeLrdyrralqqsvwGnsitesep 226
+                               +l+++La + + Lr++  ++l++L+l r+++aq+lqq L+q ++er+a ++alfq++a FR +Lr+yr++l+qsvwG+  +++ep
+  nat_0e37face31f27f3afe2e 187 KLAEDLATYIESLRSDMGSFLQQLKLARAERAQKLQQSLQQNRAERTASMRALFQSFASFRGQLREYRANLRQSVWGTPAPAPEP 271
+                               ************************************************************************************* PP
+
+                      gvpc 227 aavaeekass 236
+                                a a     +
+  nat_0e37face31f27f3afe2e 272 TARAT----T 277
+                               64443....2 PP
+
+  == domain 2  score: 35.8 bits;  conditional E-value: 1.2e-10
+                      gvpc 307 qtldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvvtq 354
+                                + ++++y++i+  + +R+a+ie  lg+nr+q+vd L +l+ +g+++q
+  nat_0e37face31f27f3afe2e 295 LADEQQVYDYIQRCDVVRVADIEATLGLNRVQAVDILNSLLTKGLIVQ 342
+                               556899****************************************98 PP
+
+>> nat_ed4e907ebf18517ba73b  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.0  17.2   2.4e-21   9.5e-21       1      84 [.       1      84 [.       1      85 [. 0.99
+   2 !   54.4  20.2   2.7e-16   1.1e-15      53     117 ..      79     143 ..      78     144 .. 0.98
+   3 !   53.8  21.7     4e-16   1.6e-15      53     121 ..     138     206 ..     137     209 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 71.0 bits;  conditional E-value: 2.4e-21
+                      gvpc  1 MmsLqekwrqerqsrqqevaerqqevqstlsevqqeRqeqaqalaeelqqfqtqlqqqtqafLadtaqerlaqaaqqaeeLkef 84
+                              M++L+ek+rqe++s+++ev+++ +e+ ++ls+++++R+eqa+++a+ l+qf+++l+q+t++fL++t +erlaqa+++ +eL+++
+  nat_ed4e907ebf18517ba73b  1 MTALMEKIRQEHKSIAEEVSQLFKETHEFLSATTANREEQAKKQAQYLHQFHQELKQTTHEFLTETTKERLAQAQALHQELEQT 84
+                              9********************************************************************************985 PP
+
+  == domain 2  score: 54.4 bits;  conditional E-value: 2.7e-16
+                      gvpc  53 tqlqqqtqafLadtaqerlaqaaqqaeeLkefvqqlqqetaeflsdtaqeRaaqaeqlaqeLsef 117
+                               ++l+q++++fL++t +er aqa++qa++L+ef+q+l+q+t efl++t +eR+aqa++l+qeL+++
+  nat_ed4e907ebf18517ba73b  79 QELEQTNREFLTETTKERFAQAQAQAKSLQEFYQELKQTTHEFLTETNKERLAQAQALHQELEQT 143
+                               89************************************************************986 PP
+
+  == domain 3  score: 53.8 bits;  conditional E-value: 4e-16
+                      gvpc  53 tqlqqqtqafLadtaqerlaqaaqqaeeLkefvqqlqqetaeflsdtaqeRaaqaeqlaqeLsefrenL 121
+                               ++l+q++++fL+++ +er aqa++qa+ L+ef+q+l+q+t +fl++ta++R++qa++++q L++fr++L
+  nat_ed4e907ebf18517ba73b 138 QELEQTNREFLTEATKERFAQAQAQAKFLQEFYQELEQTTHDFLAETAKNRTEQAKAQKQYLHQFRQDL 206
+                               899****************************************************************98 PP
+
+>> nat_751560713494d34e3694  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.7  13.8       5.8        23       1      72 [.       1      57 [.       1      69 [. 0.72
+   2 !   83.0  66.6   5.4e-25   2.2e-24      13     348 ..      71     374 ..      63     377 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 0.7 bits;  conditional E-value: 5.8
+                      gvpc  1 MmsLqekwrqerqsrqqevaerqqevqstlsevqqeRqeqaqalaeelqqfqtqlqqqtqafLadtaqerla 72
+                              M sL++ ++++rq+r qe         ++l e q  Rqe+ +al+++         + t a+La ++q+rla
+  nat_751560713494d34e3694  1 MASLMQGFAEARQQRLQER-------AKFLAEQQLARQEREKALQTQS--------EATAAYLAHAEQTRLA 57
+                              8899999999999999999.......9999999999988888887654........4555555555555544 PP
+
+  == domain 2  score: 83.0 bits;  conditional E-value: 5.4e-25
+                      gvpc  13 qsrqqevaerqqevqstlsevqqeRqeqaqalaeelqqfqtqlqqqtqafLadtaqerlaqaaqqaeeLkefvqqlqqetaefls 97 
+                                srq+e+++r+++v ++l++  ++R +qa ++ ee+ q ++  + +t+++L+ +++ r+   +++++++++ +q++++ t+  ++
+  nat_751560713494d34e3694  71 ASRQEELQNRANQVSQYLQDLSSNRAQQATEDSEERAQEVRTRTFKTRSQLKHIHKARIRTGQADRAQRQQLTQERAAFTQMQIE 155
+                               69*********************************************************************************** PP
+
+                      gvpc  98 dtaqeRaaqaeqlaqeLsefrenLeatvedlladyaqqriaaaeqlqqeLaaFrqtLrqevqkylaeLdllrqqlaqqlqqeLaq 182
+                               d+ ++R+a a++ aq+  +  ++ +a+v    + +++qr+a+a+q ++ +    q+L+               ++a+ +++ La 
+  nat_751560713494d34e3694 156 DINKARLANAKAAAQQRAQETQARTAEVSAQIQATSEQRLAQAKQDAASR---NQELS---------------DRAANVKESLAH 222
+                               ****************99999999****99999999*********77777...55554...............56889******* PP
+
+                      gvpc 183 taqerlaeaqalfqdLaaFRaeLrdyrralqqsvwGnsitesepaavaeekassvkapasapkaaevappeakaaksaapaepep 267
+                                +++rla+a+a+ ++L aFR  L       + svw++s++ + p+ v++   +s   p+ ++++a++++++ak++++ ap + ++
+  nat_751560713494d34e3694 223 LEANRLATAEAQANQLSAFRVNL-------SNSVWAGSRSLAVPQPVTK--VVSNPIPERTDTPAKSKKKAAKEPETVAPPVATK 298
+                               ***********************.......**********999954444..5566677777778899999998888877755444 PP
+
+                      gvpc 268 evvvaapepeappaevaPpdvevePtteeapep.vneyva.qtldltiyqvigeregaR..LaeiesdlginrsqivdaLRrlvk 348
+                               +v+v+ +++e+p ++         P  + + e+ v +yva    ++++++v+++r+ +R  La++++ l++++s+i+++L ++ +
+  nat_751560713494d34e3694 299 PVEVKETPKETPKEA---------PKSSGKIEQfVVDYVAqLSTNSSLLEVVNDRDTVRdlLAQGANTLKVDPSDILNTLLQMAE 374
+                               444444444444443.........3445555667999**966899***********************************88865 PP
+
+>> nat_af4dd8eeb92221642da5  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   57.0   5.0   4.4e-17   1.8e-16     258     355 ..     318     404 ..     297     414 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 57.0 bits;  conditional E-value: 4.4e-17
+                      gvpc 258 ksaapae....pep.evvvaapepeappaevaPpdvevePtteeapepvneyvaqtldltiyqvigeregaRLaeiesdlginrs 337
+                               +     e      + e  +a  ep ap a+++P    ++Pt +++p p        +++ i++++++++ga+L++ie++l+++r+
+  nat_af4dd8eeb92221642da5 318 E-----EiaqhLDAlEADAATAEPIAPIAQPNP---APQPTSTASPIP--------YEQEILEYLEQSNGAKLTQIEKALKLDRV 386
+                               2.....123333444556777888888888888...789999888888........9**************************** PP
+
+                      gvpc 338 qivdaLRrlvkqgvvtqr 355
+                               q+vd+LR l +qg+v+qr
+  nat_af4dd8eeb92221642da5 387 QTVDTLRLLREQGKVIQR 404
+                               *****************9 PP
+
+>> nat_b73eed73eb852a72ba5a  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   54.6   1.9   2.3e-16   9.3e-16     252     355 ..     327     435 ..     299     443 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 54.6 bits;  conditional E-value: 2.3e-16
+                      gvpc 252 peakaaksaapaepepevvvaapepeappaevaP.pdvevePtt..eeapep......vneyvaqtldltiyqvigeregaRLae 327
+                               +e+ a+ +++++ p++  +  a+e e+p+ +++P ++ + ++ +  +e p+p       n++++  + ++i++++++++gaRL +
+  nat_b73eed73eb852a72ba5a 327 NELAAEAETTETNPAA--QSLASETETPLSQTNPvETSNHSEIRgeQEMPSPiphppsPNSEIP--HGEKILAYLKQTKGARLSQ 407
+                               2333333333333322..4455566666666666422223333321222222333333366777..9999*************** PP
+
+                      gvpc 328 iesdlginrsqivdaLRrlvkqgvvtqr 355
+                               ie +l ++r+q+vdaLR lv++g+v+ r
+  nat_b73eed73eb852a72ba5a 408 IERSLHLDRFQTVDALRLLVENGRVVMR 435
+                               *************************977 PP
+
+>> nat_f31c98742504249bd8b1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   47.0   1.0     5e-14     2e-13     294     355 ..     336     396 ..     309     399 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 47.0 bits;  conditional E-value: 5e-14
+                      gvpc 294 teeapepvneyvaqtldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvvtqr 355
+                               + e  +++ +  ++  ++ +y +++++ gaR+ eie +lginr+q++daLR+l+k+gv+ q+
+  nat_f31c98742504249bd8b1 336 Q-ELTQELMNRAQALCEEEVYTYLQNSRGARVGEIEAALGINRVQTIDALRSLIKKGVLKQQ 396
+                               2.3333345556678899****************************************9886 PP
+
+>> nat_f082034c255acfb4220b  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.7   0.1     6e-14   2.4e-13     287     355 ..     329     397 ..     308     402 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 46.7 bits;  conditional E-value: 6e-14
+                      gvpc 287 dvevePtteeapepvneyvaqtldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvvtqr 355
+                               +v  +P+ +++++ + e+ a   ++ i++++++ +gaRL +ie  l+++r+q+vd+LR+l+++g ++ r
+  nat_f082034c255acfb4220b 329 EVPTQPVPSSEAQAIPETAAPSCEQEILNLLRKMGGARLSQIERTLKLDRFQTVDTLRVLMEKGDIVLR 397
+                               33444444445555557777899******************************************9965 PP
+
+>> nat_17f71edb92fc68b2218c  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.2   0.2   8.5e-14   3.4e-13     273     354 ..     313     382 ..     304     392 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 46.2 bits;  conditional E-value: 8.5e-14
+                      gvpc 273 apepeappaevaPpdvevePtteeapepvneyvaqtldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvvtq 354
+                                pep+a p +++P + ++ Pt+     p       t ++++y+++++++gaR+ eies+lg+nr+q+ daLR+l+++  + q
+  nat_17f71edb92fc68b2218c 313 EPEPAALPPSPEP-QLSPAPTR----LP-------TTEEKVYAYLKQSNGARVSEIESALGLNRVQTTDALRSLLRKSYLRQ 382
+                               3555555555555.66667776....22.......66777************************************998776 PP
+
+>> nat_c969850f1da43f74401f  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   46.1   0.6   8.9e-14   3.6e-13     277     355 ..     339     413 ..     291     420 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 46.1 bits;  conditional E-value: 8.9e-14
+                      gvpc 277 eappaevaPpdvevePtteeapep..vneyva...qtldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvvtqr 355
+                               + + +++ P     e+  e+ pe+  v    +    ++++ iy+++ +++++R+a+iesdlg+ r+q++da+R l k+g+v+ r
+  nat_c969850f1da43f74401f 339 TESAEAALP-----EELPEALPEEapV----TeasIAHEQEIYEYLLKSGAVRIAQIESDLGLTRVQALDAIRTLAKKGLVVHR 413
+                               223333333.....1111222222222....133346********************************************987 PP
+
+>> nat_6041dd5ee0473abd30f2  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   45.5   0.1   1.4e-13   5.4e-13     292     355 ..     320     383 ..     310     386 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 45.5 bits;  conditional E-value: 1.4e-13
+                      gvpc 292 Ptt.eeapepvneyvaqtldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvvtqr 355
+                               P++ e   + v + ++ + +++iy +i++++gaR+ eie +lg+nr+q+ daLR+l+++  +tq+
+  nat_6041dd5ee0473abd30f2 320 PPReELTTSSVPNNLS-DTEQKIYTYIKDSDGARVSEIEIALGLNRVQTTDALRSLLRKSYLTQQ 383
+                               4553444444666666.999*****************************************9986 PP
+
+>> nat_aea83ae7d90d55b47242  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.9   0.2   2.9e-11   1.1e-10     297     354 ..     367     421 ..     319     426 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 37.9 bits;  conditional E-value: 2.9e-11
+                      gvpc 297 apepvneyvaqtldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvvtq 354
+                               +pep   + ++  +++i+++++ ++g +L eie +l ++r+q+vd+LR l++  +++ 
+  nat_aea83ae7d90d55b47242 367 EPEP---QTTASSEQAILDYLQRSKGSKLSEIERALRLDRFQTVDTLRLLMEGSKIVL 421
+                               3333...44478899*************************************999985 PP
+
+>> nat_0191a16db7363afe30ed  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.6   0.2   1.2e-09   4.7e-09     293     355 ..     360     427 ..     301     434 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 32.6 bits;  conditional E-value: 1.2e-09
+                      gvpc 293 tteeapepvneyva..........qtldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvvtqr 355
+                               t+     +v+++v+           + d  i ++++e+egaRL eie+dl + r++ ++aL+ l+++ +v+q 
+  nat_0191a16db7363afe30ed 360 TK-----QVENTVKsnelkslepqIAIDRHIINYLQETEGARLLEIEQDLELSRIELIAALKTLLREKKVIQH 427
+                               22.....23334444444556665679*******************************************985 PP
+
+>> nat_aa024521c48af22f0cac  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.1   0.9   1.7e-09   6.7e-09     241     353 ..     601     728 ..     567     732 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 32.1 bits;  conditional E-value: 1.7e-09
+                      gvpc 241 asapk.aaevappeakaaksaapae.......pep.evvvaapepeappaevaPpdvevePtt.eeapep...vneyva...... 306
+                               ++++  a+  +  ++ a ++a+pa+       pep   v  a  ++a  ++ aP  +  +Pt+ +   +    v    +      
+  nat_aa024521c48af22f0cac 601 QTMEDeATDESITAVDAVSPAEPAVetiplaaPEPmISVPVAAVANANSDAFAP-VMVDSPTNgNGLTNGngvV----Tqpspqt 680
+                               222222111111222222222222222233234443333333333344444555.5555666644444444432....3455666 PP
+
+                      gvpc 307 .qtldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvvt 353
+                                   +++i++++++ + a   +ie+dlg+ r+q+v+aL++++ qg++ 
+  nat_aa024521c48af22f0cac 681 eSPIEERIFNFLDTVGSASFSRIETDLGLTRFQVVNALKSMLDQGLIE 728
+                               67789****************************************985 PP
+
+>> nat_8e3261c808d07fdff696  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.6   0.0   1.9e-08   7.7e-08     246     353 ..     642     736 ..     613     740 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 28.6 bits;  conditional E-value: 1.9e-08
+                      gvpc 246 aaevappeakaaksaapaepepevvvaapepeappaevaPpdvevePtteeapepvneyvaqtldltiyqvigeregaRLaeies 330
+                               ++ va p+++ a + +p++ + +v+v +p+    +a+ +   ++++P+t    +p         +++i++++++ + a   +ie+
+  nat_8e3261c808d07fdff696 642 ETFVAAPVVTVAAA-EPEAFA-PVMVDSPANGNGLANGNGAATQPSPPT---ESP--------IEERIFNFLDTVGSASFSRIET 713
+                               23333333333333.333322.234444443333333333566666666...334........6789****************** PP
+
+                      gvpc 331 dlginrsqivdaLRrlvkqgvvt 353
+                               dlg+ r+q+v+aL++l+ qg++ 
+  nat_8e3261c808d07fdff696 714 DLGLTRFQVVNALKSLLDQGLIE 736
+                               ********************985 PP
+
+>> nat_51a971d9f338f8db29b2  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.5   0.2   1.4e-06   5.5e-06     292     352 ..     342     401 ..     317     405 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 22.5 bits;  conditional E-value: 1.4e-06
+                      gvpc 292 Ptt.eeapepvneyva.qtldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvv 352
+                               P++ +e+p+    +v+   +++ +y +++++ +aR   i   l + r+q++da+ +l ++g++
+  nat_51a971d9f338f8db29b2 342 PVAgTEEPSV---EVSdVPHEQEVYRYLQDHPRARTSAIQATLRLSRVQVIDAIQSLSQKGLL 401
+                               4443333332...2223459****************************************975 PP
+
+>> nat_9b7ed4f515de0180e861  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.8  10.7   7.3e-05    0.0003      10     225 ..       8     207 ..       1     222 [. 0.47
+   2 ?    7.8   1.2      0.04      0.16     269     321 ..     216     274 ..     200     279 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 16.8 bits;  conditional E-value: 7.3e-05
+                      gvpc  10 qerqsrqqevaerqqevqstlsevqqeRqeqaqalaeelqqfqtqlqqqtqafLadtaqerlaqaaqqaeeLkefvqqlqqetae 94 
+                               +++ ++++ v + ++ ++++ +e++++                             ++  r+   ++ +e+++++ ++  ++ a 
+  nat_9b7ed4f515de0180e861   8 EAMIEARAAVTDVREAMDAYAEEFAAD-----------------------------VNSIRAD--SRHRENIRDMRAAVDAYCAS 61 
+                               444444444433333333333333333.............................2222222..23445555555555555555 PP
+
+                      gvpc  95 flsdtaqeRaaqaeqlaqeLsefrenLeatvedlladya.....qqriaaaeqlqqeLaaFrqtLrqev.qkylaeLdllrqqla 173
+                               f++ ++    + + +l+++L+++ +++ a+++ ++ad a     ++ +   e+l++e+ a+ +++++++ +++      l+++ a
+  nat_9b7ed4f515de0180e861  62 FATAVSTH-HDETAALRADLEATAAAFDAYTTAFAADAAamhdvSALHRDIEALREEFRAVTTDFEDYTtDEFAPAVGALHADAA 145
+                               55554433.3444455666666666666666666666555555555555555555555555555555431334445555555555 PP
+
+                      gvpc 174 qq......lqqeLaqta.qerlaeaqalfqdLaaFRaeLr...dyrralqqsvwGnsitese 225
+                               ++       q+ +   + +  ++++ al  d+aa Ra++    + ++a ++ ++G+   + +
+  nat_9b7ed4f515de0180e861 146 ETaasftaKQEGFEAYRhDVHESAVHALTADIAATRADFDdtaASFAAYARAFYGHTDDATT 207
+                               55444443333333333033333446666666666666653333444455555555555555 PP
+
+  == domain 2  score: 7.8 bits;  conditional E-value: 0.04
+                      gvpc 269 vvvaapepeappaevaPpdvevePtteeapep......vneyva.......qtldltiyqvigere 321
+                                ++ + + +a  ++++P       +++  pe+      ++ey++       qt+++ti  +++e++
+  nat_9b7ed4f515de0180e861 216 AQTDVLSGQATVTRAQP-------EEDDTPEDmvqcrvCEEYYQaitephlQTHEMTIDGYRDEYG 274
+                               34555556666666666.......33333333444456999999******************9987 PP
+
+>> nat_2fcd2fc7cc42472e48ca  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.0   3.9   3.8e-06   1.5e-05     256     353 ..     341     433 ..     318     436 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 21.0 bits;  conditional E-value: 3.8e-06
+                      gvpc 256 aaksaapae..pep.evvvaapepeappaevaPpdvevePtteeapepvneyvaqtld.ltiyqvigeregaRLaeiesdlginr 336
+                               +++  +p++  p++ +v+ a p+ + ++a++a  d   eP+  ++++       q+ld  ++ q++ ++ +aR  +i  +l i r
+  nat_2fcd2fc7cc42472e48ca 341 QES-ETPEAgaPASeTVPDAEPSQAKAEAAIAE-DGTIEPPS-SQADA------QNLDvDAVHQYMLKHPNARPSQIQAELEISR 416
+                               223.34544444555677777777777777777.77778887.44555......67773479*********************** PP
+
+                      gvpc 337 sqivdaLRrlvkqgvvt 353
+                               + i+daL +l + g++ 
+  nat_2fcd2fc7cc42472e48ca 417 VRIIDALHILQESGAIA 433
+                               ***********999885 PP
+
+>> nat_8b9e6b66305e8c27f352  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   11.3   0.4    0.0033     0.013      87     116 ..     170     199 ..     152     203 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 11.3 bits;  conditional E-value: 0.0033
+                      gvpc  87 qlqqetaeflsdtaqeRaaqaeqlaqeLse 116
+                               + q++tae ls t++eR+aqa+ l++eL +
+  nat_8b9e6b66305e8c27f352 170 NYQKATAEKLSLTEEERSAQAQWLKAELAK 199
+                               7799**********************9976 PP
+
+>> nat_748023a818ca467884d7  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.1   0.0     0.032      0.13     291     352 ..     328     388 ..     319     392 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 8.1 bits;  conditional E-value: 0.032
+                      gvpc 291 ePtt.eeapepvneyvaqtldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvv 352
+                               +Pt+ ++  +++ + v+   ++ +y+++ +++   La + ++l ++r  i +aLR+l ++ ++
+  nat_748023a818ca467884d7 328 SPTEvSQTNSELDNIVP--FEKEVYNYLLQEKSEGLAGLQKALHLERNIISNALRSLEQKCLI 388
+                               56664455555778888..9***********9999**********************998776 PP
+
+>> nat_8b87e4f22868b02a4a4a  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.1   0.1     0.033      0.13     298     352 ..     289     341 ..     270     345 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 8.1 bits;  conditional E-value: 0.033
+                      gvpc 298 pepvneyvaqtldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvv 352
+                               +ep  + v+   ++ +y+++ ++    ++ + + l ++r  +++aLR+l ++ +v
+  nat_8b87e4f22868b02a4a4a 289 SEPTDNDVP--FEKEVYNYLVQQRSEGITGLQKGLNLDRNIVLNALRSLEQKSLV 341
+                               566667777..99*******9999888**********************999877 PP
+
+>> nat_0d84dbf97ab2b46ef91f  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.6   2.1     0.023     0.093     132     183 ..      44      94 ..       7     110 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 8.6 bits;  conditional E-value: 0.023
+                      gvpc 132 yaqqriaaaeqlqqeLaaFrqtLrqevqkylaeLdllrqqlaqqlqqeLaqt 183
+                               ++++ i++ + + q+L+   + L+q+ ++ +ae +++r++l +  ++ + q 
+  nat_0d84dbf97ab2b46ef91f  44 LSEDEIERLGRQLQALEDELERLKQQ-EDIDAEVSEFREDLDHVIRDAIEQL 94 
+                               34666777777777777777777777.6777777777777777777776664 PP
+
+>> nat_bd6d641af5173919983b  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.9   0.1     0.037      0.15     298     352 ..     317     369 ..     298     373 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 7.9 bits;  conditional E-value: 0.037
+                      gvpc 298 pepvneyvaqtldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvv 352
+                               +ep  + v+   ++ +y+++ ++    ++ + + l ++r  +++aLR+l ++ +v
+  nat_bd6d641af5173919983b 317 SEPTDNDVP--FEKEVYNYLVQQRSEGITGLQKGLNLDRNIVLNALRSLEQKSLV 369
+                               566667777..99*******9999888**********************999877 PP
+
+>> nat_b13a30afcbd95f756c01  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.8   0.1      0.04      0.16     292     353 ..     329     389 ..     318     393 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 7.8 bits;  conditional E-value: 0.04
+                      gvpc 292 Ptteeapep.vneyvaqtldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvvt 353
+                               Pt+ e+++p v + v+   ++ +y+++ ++++  ++ + ++l ++r  i++aL +l ++ +v 
+  nat_b13a30afcbd95f756c01 329 PTEVEQSSPdVDNVVP--FEKEVYNYLLHQKNEGITGLQKALQLERNVILNALHSLEQKSLVN 389
+                               7775566666999999..********99999888**********************9998875 PP
+
+>> nat_ba3ce50a83eb19a0e206  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.3   3.4     0.058      0.23     132     182 ..      44      93 ..       8     109 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 7.3 bits;  conditional E-value: 0.058
+                      gvpc 132 yaqqriaaaeqlqqeLaaFrqtLrqevqkylaeLdllrqqlaqqlqqeLaq 182
+                               ++++ i++ +q+ q+L+   + L+q+ ++ + + + ++q+l + +++ + q
+  nat_ba3ce50a83eb19a0e206  44 LSEEEIEQLGQQLQALEDELKRLKQQ-EDIDDDVSDFKQDLDHVVRDAIDQ 93 
+                               23444444444444444444444444.344444444444444444444333 PP
+
+>> nat_58ae7bce228410bcb763  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.8   1.7      0.08      0.32     155     212 ..     137     208 ..      99     216 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 6.8 bits;  conditional E-value: 0.08
+                      gvpc 155 rqevqkylaeLdllrqqlaqq...........lqqeLaqtaqerlaea.qalfqdLaaFRaeLr..dyrral 212
+                               r+e ++++ eL+ lr+ +++            +  ++ + +q+r+a+  ++l+++L  F +e++  d r++l
+  nat_58ae7bce228410bcb763 137 REELESDDDELADLRGRIEEAsegtafllekqYGSRIRDLRQDRKADHtNRLREELEPFAREFEvlDSRQNL 208
+                               455566677999999999999999999998889999**********998*************9766666665 PP
+
+>> nat_144f47620afa1a7c4163  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.6   0.6      0.19      0.75     160     195 ..     192     227 ..     124     230 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 5.6 bits;  conditional E-value: 0.19
+                      gvpc 160 kylaeLdllrqqlaqqlqqeLaqtaqerlaeaqalf 195
+                               k ++ L++lr+++++ l  +L++  +er  e+ al+
+  nat_144f47620afa1a7c4163 192 KLDQRLAELRAARRESLTADLQDRLAERAREVHALE 227
+                               455678888888888888888888888888888775 PP
+
+>> nat_35cbbb25f10deebd7391  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.1   0.3      0.13      0.53     249     289 ..      72     116 ..      25     120 .] 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 6.1 bits;  conditional E-value: 0.13
+                      gvpc 249 vappeakaaksaapae.............pepevvvaapepeappaevaP.pdve 289
+                               + p          pa+             +++ +v+ ap+p++ pa +aP p + 
+  nat_35cbbb25f10deebd7391  72 TTP----------PAVpagqglagtygllTTSVPVAVAPSPQPVPAMAAPaPATG 116
+                               333..........444444555555688766778888999999999999933333 PP
+
+>> nat_cabdc6eb27bf25bd595f  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.4   0.2      0.21      0.84     144     174 ..      77     107 ..      70     112 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 5.4 bits;  conditional E-value: 0.21
+                      gvpc 144 qqeLaaFrqtLrqevqkylaeLdllrqqlaq 174
+                               ++ L +  ++L ++ q  +aeL+ +++qla+
+  nat_cabdc6eb27bf25bd595f  77 ARGLTQQNEQLLARIQTLEAELERVQNQLAP 107
+                               4455555566666666666666666666665 PP
+
+>> nat_8494188a300564c49d3c  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.6   0.3      0.37       1.5     166     205 ..     166     217 ..     146     233 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 4.6 bits;  conditional E-value: 0.37
+                      gvpc 166 dllrqqlaqq...........lqqeLaqtaqerlaea.qalfqdLaaFRaeL 205
+                               ++l++++ +            l+q+La  +++r++ a ++l+++La+  +e+
+  nat_8494188a300564c49d3c 166 QELHEKIDDSeegtafllekkLDQRLAAVRANRRESAtDDLEDRLATVAREI 217
+                               4455555444555555555558888888888888888788888888755555 PP
+
+>> nat_bd0342686b2f502068cb  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.5   2.0      0.39       1.6     175     195 ..     171     202 ..     126     229 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 4.5 bits;  conditional E-value: 0.39
+                      gvpc 175 q...........lqqeLaqtaqerlaeaqalf 195
+                                           ++q+L++ + er++e  ++ 
+  nat_bd0342686b2f502068cb 171 SgagkrfllekqYDQRLQELKRERQTELAEQL 202
+                               23333333333366666666666666653332 PP
+
+>> nat_e187f5b07b99b6b9b6f1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.5   1.8      0.41       1.6     172     205 ..     184     218 ..     164     246 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 4.5 bits;  conditional E-value: 0.41
+                      gvpc 172 laqqlqqeLaqtaqerlaea.qalfqdLaaFRaeL 205
+                               l+qq +q+L++ ++ r++ +  +l+++Laa  +e 
+  nat_e187f5b07b99b6b9b6f1 184 LEQQFEQRLTERRAARRESVtADLQERLAAEAREV 218
+                               67899999999999999999888999999844444 PP
+
+>> nat_2e9855a6be3700c23fe5  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.7   1.4      0.36       1.4     136     158 ..      39      58 ..       7      95 .. 0.50
+
+  Alignments for each domain:
+  == domain 1  score: 4.7 bits;  conditional E-value: 0.36
+                      gvpc 136 riaaaeqlqqeLaaFrqtLrqev 158
+                               ri++  ql++++    q+L+++ 
+  nat_2e9855a6be3700c23fe5  39 RIQKELQLMEQR---LQQLKNRL 58 
+                               111111111111...11111111 PP
+
+>> nat_a62b75f57dd811b31d67  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.1   0.7      0.54       2.2      21      82 ..     175     236 ..     170     247 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 4.1 bits;  conditional E-value: 0.54
+                      gvpc  21 erqqevqstlsevqqeRqeqaqalaeelqqfqtqlqqqtqafLadtaqerlaqaaqqaeeLk 82 
+                               er  ++q++ +++  +    +  l ++l+q+ t+l++  ++  ++  q+rla+aa+  ++L+
+  nat_a62b75f57dd811b31d67 175 ERDDRLQELADRIDDSGSGTSFLLEKKLEQRLTELRAARRESITADLQDRLADAAREVHSLE 236
+                               55666666666666666666667777777777777777777777777777777777777776 PP
+
+>> nat_0d3a44444fb3cfa6ea64  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.4   0.3      0.44       1.8     172     200 ..     176     205 ..     144     221 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 4.4 bits;  conditional E-value: 0.44
+                      gvpc 172 laqqlqqeLaqtaqerlaea.qalfqdLaa 200
+                               l+++l+q+La+ +++r++ a ++l+++Laa
+  nat_0d3a44444fb3cfa6ea64 176 LEKKLDQRLATVRANRRESAtDDLEDRLAA 205
+                               4455999*****999999998999999997 PP
+
+>> nat_eefbcc5767c120619040  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.8   3.9      0.33       1.3       6      39 ..      48      80 ..      29      83 .] 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 4.8 bits;  conditional E-value: 0.33
+                      gvpc  6 ekwrqerqsrqqevaerqqevqstlsevqqeRqe 39
+                              e+  +e+q+r qe+ e+q e+ + ++e  ++R e
+  nat_eefbcc5767c120619040 48 ERSEEEHQQRKQEL-ESQLEMAEQIQEQMRDRME 80
+                              56678999999999.9999999999988888876 PP
+
+>> nat_c3864be3a36de85b74e8  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.5   6.2      0.39       1.6      38      82 ..      24      77 ..      19      97 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 4.5 bits;  conditional E-value: 0.39
+                      gvpc 38 qeqaqalaeelqqfq.........tqlqqqtqafLadtaqerlaqaaqqaeeLk 82
+                               +q + l+++l+qfq         + lq++++++ +++++  +aqa +q++ + 
+  nat_c3864be3a36de85b74e8 24 KNQLARLKQDLEQFQgrgagaavqSSLQSRIRELQTSLSEAEAAQARRQQARRA 77
+                              578888999999999999999999889999999988888888888888777665 PP
+
+>> nat_7fc3d35f6609a93d0dd1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.1   0.8      0.53       2.1     159     195 ..     200     236 ..     191     245 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 4.1 bits;  conditional E-value: 0.53
+                      gvpc 159 qkylaeLdllrqqlaqqlqqeLaqtaqerlaeaqalf 195
+                               +k+++ L++lr+++++ l  +L++  +++  e+ al+
+  nat_7fc3d35f6609a93d0dd1 200 KKFDQRLSELRAARRESLTADLQDRLADAAREVHALE 236
+                               4688888888888888877777777777777776664 PP
+
+>> nat_56c10a8b67a275eb077d  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.1   2.3      0.51       2.1      50     196 ..     166     204 ..     119     242 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 4.1 bits;  conditional E-value: 0.51
+                      gvpc  50 qfqtqlqqqtqafLadtaqerlaqaaqqaeeLkefvqqlqqetaeflsdtaqeRaaqaeqlaqeLsefrenLeatvedlladyaq 134
+                               q+q                                                                                  
+  nat_56c10a8b67a275eb077d 166 QRQ---------------------------------------------------------------------------------- 168
+                               111.................................................................................. PP
+
+                      gvpc 135 qriaaaeqlqqeLaaFrqtLrqevqkylaeLdllrqqlaqq...........lqqeLaqtaqerlaea.qalfq 196
+                                                                     +q             +q+L++ + er++e  ++l++
+  nat_56c10a8b67a275eb077d 169 --------------------------------------QQSgagkkfllekqSDQRLQELKRERRTELaDQLKE 204
+                               ......................................111222222222223333333333333333222222 PP
+
+>> nat_a780429eddf249c23975  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.5   2.3      0.39       1.6     247     286 ..     118     152 ..      71     156 .] 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 4.5 bits;  conditional E-value: 0.39
+                      gvpc 247 aevappeakaaksaapae..pepevvvaapepeappaevaPp 286
+                                + + p+       a+a+   epev v++ +p++p ++++P+
+  nat_a780429eddf249c23975 118 GKQSDPA-------AEAAmdDEPEVSVEQQRPAPPRRKIRPK 152
+                               2222222.......2222333446788888888888888883 PP
+
+>> nat_a69301e4ba1c03b7790b  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.1   0.5      0.54       2.2      46      81 ..     200     235 ..     173     261 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 4.1 bits;  conditional E-value: 0.54
+                      gvpc  46 eelqqfqtqlqqqtqafLadtaqerlaqaaqqaeeL 81 
+                               ++l+q+ t+l++  ++  ++  qerla+aa+  ++L
+  nat_a69301e4ba1c03b7790b 200 KKLEQRLTELRAARRESITADLQERLADAAREVHSL 235
+                               344444444444444444444444444444444444 PP
+
+>> nat_03528e1685b91151e0fe  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.1   0.3      0.53       2.1     172     200 ..     183     212 ..     128     224 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 4.1 bits;  conditional E-value: 0.53
+                      gvpc 172 laqqlqqeLaqtaqerlaea.qalfqdLaa 200
+                               l+++l+q+La  +++r++ a ++l+++Laa
+  nat_03528e1685b91151e0fe 183 LEKKLDQRLAAVRANRRESAtDDLEERLAA 212
+                               345599999999999999888889999987 PP
+
+>> nat_1366f335f603b634243f  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.1   0.2      0.53       2.1      94     120 ..     191     217 ..     124     246 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 4.1 bits;  conditional E-value: 0.53
+                      gvpc  94 eflsdtaqeRaaqaeqlaqeLsefren 120
+                               +f +++a+ Raa+ e l+++L+e+ ++
+  nat_1366f335f603b634243f 191 QFDQRLAELRAARRESLTTDLKERLAA 217
+                               333333333444444444444443333 PP
+
+>> nat_97f185fb614d6fb1882a  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.8   0.3      0.65       2.6      72     103 ..      73     104 ..      68     108 .. 0.50
+
+  Alignments for each domain:
+  == domain 1  score: 3.8 bits;  conditional E-value: 0.65
+                      gvpc  72 aqaaqqaeeLkefvqqlqqetaeflsdtaqeR 103
+                                + ++  + L+e v+ql+ + ++  s t++eR
+  nat_97f185fb614d6fb1882a  73 DKIQEENQALHERVKQLEERLENESSLTSEER 104
+                               44445555555555555555444444444444 PP
+
+>> nat_f9785b60713e991b45d7  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.6   1.2      0.75         3      20      82 ..     164     226 ..     159     237 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 3.6 bits;  conditional E-value: 0.75
+                      gvpc  20 aerqqevqstlsevqqeRqeqaqalaeelqqfqtqlqqqtqafLadtaqerlaqaaqqaeeLk 82 
+                                er ++++++ +++  +R+  a  l ++  q+ t+l++  ++ L++ ++erla  a+  + L+
+  nat_f9785b60713e991b45d7 164 IERDERLRELDDQIGDSREGTAFLLEKKFDQRLTELRAARRESLTADVEERLAAEAREVHTLE 226
+                               577888888889999999999999999999999******************999998888776 PP
+
+>> nat_4df28bd64c5d145f4a45  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.7   0.6      0.71       2.8     160     194 ..     171     205 ..     124     211 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 3.7 bits;  conditional E-value: 0.71
+                      gvpc 160 kylaeLdllrqqlaqqlqqeLaqtaqerlaeaqal 194
+                               +y++ Ld+lr +++++   eLa+  +   +e+++l
+  nat_4df28bd64c5d145f4a45 171 QYEQRLDELRHERQAERTRELAERLEPHASEVREL 205
+                               37777777777777777777777666666666555 PP
+
+>> nat_efdc2424c09acf398858  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.7   2.3      0.68       2.7     164     239 ..     157     235 ..     110     289 .. 0.52
+
+  Alignments for each domain:
+  == domain 1  score: 3.7 bits;  conditional E-value: 0.68
+                      gvpc 164 eLdllrqqlaqq..lqqeLaqtaqerlaeaqalfqdLaaFRaeLr.dyrral.....qqsvwGnsitesepaavaeekassvka 239
+                               eL++lr+  +q         ++    ++  q+l+++L++ R+eL  ++rr +     + +v G +++  ++   ae++a+ v+a
+  nat_efdc2424c09acf398858 157 ELRSLRARTEQAdaG-----TSFLLEKQYDQQLRKRLREHRQELLeALRRRIaphveRAEVLGRRRATLDGVDAAEQPAQRVAA 235
+                               555555444443332.....2222222233556666666666664333333322222456677777777665444444444433 PP
+
+>> nat_d7ae49ed1ac2f86b33c1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.8   0.3      0.64       2.6     185     203 ..      21      39 ..      17      78 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 3.8 bits;  conditional E-value: 0.64
+                      gvpc 185 qerlaeaqalfqdLaaFRa 203
+                               +e++++  +l+qdL +F a
+  nat_d7ae49ed1ac2f86b33c1  21 AEQKSQLARLKQDLEQFKA 39 
+                               4566666666666666643 PP
+
+>> nat_cd2718b64a671e091f03  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.6   0.1      0.77       3.1     153     209 ..     146     207 ..     135     276 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 3.6 bits;  conditional E-value: 0.77
+                      gvpc 153 tLrqevqkylaeLdllrqqlaqq..lqqeLaqtaqerl...aeaqalfqdLaaFRaeLrdyr 209
+                                L ++v  ++ eL+ l   +a       +L + + er    a+a+  ++ +aa Ra+L +  
+  nat_cd2718b64a671e091f03 146 RLADRVAADDDELAALADRRAGAseGTAFLLDKQYERAlsaATADHRSSVMAALRADLDAQA 207
+                               57778888888888887766655446677777777775211344556667888888883211 PP
+
+>> nat_1027009e86e43030bf4d  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.4   0.0      0.85       3.4     306     353 ..     334     384 ..     298     388 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 3.4 bits;  conditional E-value: 0.85
+                      gvpc 306 a...qtldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvvt 353
+                               +      ++ +y+++ ++    +  i + l  +   +++aLR+l ++g+v+
+  nat_1027009e86e43030bf4d 334 TakvVPFEKEVYNYLLQKRSESVNGIKKFLNSEYHTALNALRSLEQKGLVS 384
+                               23334589999**999999888999999999999***************98 PP
+
+>> nat_26f12393040d80ef19bd  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.4   0.4      0.86       3.4     159     192 ..     173     206 ..     107     213 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 3.4 bits;  conditional E-value: 0.86
+                      gvpc 159 qkylaeLdllrqqlaqqlqqeLaqtaqerlaeaq 192
+                               ++y++ L++l + +++   +eL  + + r+ e++
+  nat_26f12393040d80ef19bd 173 KQYDKRLSELVKRRRRARADELVAELESRTDEVR 206
+                               1344455555555555555555555555555554 PP
+
+>> nat_04ba7db7d0670b52f7bf  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.8   0.5      0.66       2.6     255     283 ..      68      96 ..      43      97 .] 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 3.8 bits;  conditional E-value: 0.66
+                      gvpc 255 kaaksaapaepepevvvaapepeappaev 283
+                               + +  +apa p+p++v+  p+p +pp e+
+  nat_04ba7db7d0670b52f7bf  68 SLPRRTAPALPAPSPVAVYPQPVVPPVET 96 
+                               55567789888888999999999999876 PP
+
+>> nat_eda5ec1e6fe7d62d083c  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.4   1.7      0.89       3.6     172     200 ..     180     209 ..     150     220 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 3.4 bits;  conditional E-value: 0.89
+                      gvpc 172 laqqlqqeLaqtaqerlaea.qalfqdLaa 200
+                               l+++l+q+La  +++r++ a ++l+q+La 
+  nat_eda5ec1e6fe7d62d083c 180 LEKKLEQRLAAVRANRRESAtDDLEQRLAS 209
+                               445599999999999999988899999985 PP
+
+>> nat_8c5563b595d2c6f99a2c  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.3   9.1      0.95       3.8      53      93 ..      27      69 ..      10      79 .. 0.39
+
+  Alignments for each domain:
+  == domain 1  score: 3.3 bits;  conditional E-value: 0.95
+                      gvpc 53 tqlqqqtqaf..LadtaqerlaqaaqqaeeLkefvqqlqqeta 93
+                              +ql+ + q++    ++ qer+ q ++   e++++ q +qqe++
+  nat_8c5563b595d2c6f99a2c 27 QQLTVEKQRLnqELEFIQERQGQIQARLREIEQALQRFQQEAE 69
+                              2222222222111112233333333333333333333333333 PP
+
+>> nat_fb5841aa8d78c29f15ce  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.1   1.4       1.1       4.3     172     199 ..     180     208 ..     150     219 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 3.1 bits;  conditional E-value: 1.1
+                      gvpc 172 laqqlqqeLaqtaqerlaea.qalfqdLa 199
+                               l+++l+q+La  +++r++ a ++l+q+La
+  nat_fb5841aa8d78c29f15ce 180 LEKKLEQRLAAVRANRRESAtDDLEQRLA 208
+                               44559999999999999998889999987 PP
+
+>> nat_9bd1a6cead0a9a834c1f  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.0   1.2       1.1       4.6      93     127 ..     174     208 ..     146     218 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 3.0 bits;  conditional E-value: 1.1
+                      gvpc  93 aeflsdtaqeRaaqaeqlaqeLsefrenLeatved 127
+                               ++f +++a+ Raa+ e l+++L+e+ ++   +v  
+  nat_9bd1a6cead0a9a834c1f 174 KQFDQRLAERRAARRESLTADLEERLAAEAREVHT 208
+                               57888888888888888888888876655555555 PP
+
+>> nat_c6a9f832eed0a9cab749  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.0   0.0       1.1       4.6     308     353 ..     338     383 ..     299     387 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 3.0 bits;  conditional E-value: 1.1
+                      gvpc 308 tldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvvt 353
+                                 ++ +y+++ ++    +  i + l  +   +++aLR+l ++g+v+
+  nat_c6a9f832eed0a9cab749 338 PFEKEVYNYLLQKRSESVNGIKKFLNSEYHTALNALRSLEQKGLVS 383
+                               579999999999998889999999999999**************98 PP
+
+>> nat_8963a103455e220442bf  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.0   1.1       1.2       4.8     160     187 ..     193     220 ..     127     235 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 3.0 bits;  conditional E-value: 1.2
+                      gvpc 160 kylaeLdllrqqlaqqlqqeLaqtaqer 187
+                               ++++ L++lr+++++ l  +L ++ +  
+  nat_8963a103455e220442bf 193 QFDQRLAELRAARRESLTADLEEQLAAE 220
+                               3444444444444444444443333333 PP
+
+>> nat_ba3ba5496951fc0249d5  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.1   0.8         1       4.2     176     207 ..      51      84 ..      26     107 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 3.1 bits;  conditional E-value: 1
+                      gvpc 176 lqqeLaqtaq..erlaeaqalfqdLaaFRaeLrd 207
+                               l q+La +++  erl++ q+  +d a  R +L  
+  nat_ba3ba5496951fc0249d5  51 LGQQLAAMEDelERLKDDQDIDDDVARLRGDLDS 84 
+                               3344443333113444444445555544444432 PP
+
+>> nat_3d86e49e4c25ff3762f1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.6   0.0       1.5         6     308     353 ..     340     385 ..     301     389 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 2.6 bits;  conditional E-value: 1.5
+                      gvpc 308 tldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvvt 353
+                                 ++ +y+++ ++    +  i + l  +   +++aLR+l ++g+v+
+  nat_3d86e49e4c25ff3762f1 340 PFEKEVYNYLLQKRSESVNGIKKFLNSEYHTALNALRSLEQKGLVS 385
+                               478999999999998889999999999999**************98 PP
+
+>> nat_6baf6abd9a9510c8f68e  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.6   0.6       1.5         6     160     191 ..     195     226 ..     184     245 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 2.6 bits;  conditional E-value: 1.5
+                      gvpc 160 kylaeLdllrqqlaqqlqqeLaqtaqerlaea 191
+                               k+++ L +lr+++++    +L++  +e   e+
+  nat_6baf6abd9a9510c8f68e 195 KFDQRLTELRAARRESITADLQDRLAEHAREV 226
+                               34444445555444443333333333333333 PP
+
+>> nat_55f831f992234588cedd  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.9   0.2       1.2       4.8     186     201 ..      22      37 ..      13      76 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 2.9 bits;  conditional E-value: 1.2
+                      gvpc 186 erlaeaqalfqdLaaF 201
+                               e++++  +l+qdL +F
+  nat_55f831f992234588cedd  22 EQKSQLARLKQDLEQF 37 
+                               5555555555555555 PP
+
+>> nat_b16e56dd0f1b4227b07c  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.4   4.7       1.7         7     118     190 ..     101     185 ..      98     200 .. 0.52
+
+  Alignments for each domain:
+  == domain 1  score: 2.4 bits;  conditional E-value: 1.7
+                      gvpc 118 renLeatvedlladya........qqriaaaeqlqqeLaaFrqtLrq.evqkyla...eLdllrqqlaqqlqqeLaqtaqerlae 190
+                               re+L+ + e+l+ +++        +  i+++e+ +++L++  ++L+  +++ ++a      ll qq +++lq++L q + ++ + 
+  nat_b16e56dd0f1b4227b07c 101 REWLQSESERLEPELSalsghweyRVEITHHEDARAALSEADEELSTlQTKIDDAesgTAYLLEQQYEKELQKQLRQHRHQQAQS 185
+                               6666666666666666666666665555555555555555554443312333333222234455555555555555555444433 PP
+
+>> nat_3c70afdab9e7af2e1189  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.9   0.1       1.3         5     186     201 ..      22      37 ..      14      75 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 2.9 bits;  conditional E-value: 1.3
+                      gvpc 186 erlaeaqalfqdLaaF 201
+                               e++++  +l+qdL +F
+  nat_3c70afdab9e7af2e1189  22 EQKSQLARLKQDLEQF 37 
+                               5555555666666555 PP
+
+>> nat_f993bd13f890ef7ea4b0  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.1   0.1       1.1       4.3     127     224 ..      33      82 ..      10      89 .] 0.50
+
+  Alignments for each domain:
+  == domain 1  score: 3.1 bits;  conditional E-value: 1.1
+                      gvpc 127 dlladyaqqriaaaeqlqqeLaaFrqtLrqevqkylaeLdllrqqlaqqlqqeLaqtaqerlaeaqalfqdLaaFRaeLrdyrra 211
+                               +ll+  a  r++a + + ++ +a   +Lr+ ++    +L                                            + 
+  nat_f993bd13f890ef7ea4b0  33 ELLERQAIRRVDAGDLTDDQIEALGSALRDAAE----QL--------------------------------------------QT 69 
+                               333333333333333333333333333333333....33............................................45 PP
+
+                      gvpc 212 lqqsvwGnsites 224
+                               l++ v G s+t+s
+  nat_f993bd13f890ef7ea4b0  70 LHRAVAGPSRTPS 82 
+                               5555555555555 PP
+
+>> nat_51153cf6705a7b788462  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.4   0.8       1.8         7      94     121 ..     191     218 ..     158     232 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 2.4 bits;  conditional E-value: 1.8
+                      gvpc  94 eflsdtaqeRaaqaeqlaqeLsefrenL 121
+                               +f +++a+ Raa+ e l+++L+e+ ++ 
+  nat_51153cf6705a7b788462 191 QFDQRLAELRAARRESLTADLEERLAAE 218
+                               4555555555555555555555544443 PP
+
+>> nat_1e71a0923f759cc709c7  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.6   1.3       1.5       6.1     164     199 ..     170     217 ..     124     269 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 2.6 bits;  conditional E-value: 1.5
+                      gvpc 164 eLdllrqqlaqq...........lqqeLaqtaqerlaea.qalfqdLa 199
+                               eL++lr+  +             ++q+L++  ++ ++e  ++l+q +a
+  nat_1e71a0923f759cc709c7 170 ELRSLRARTESAsegksfllekqYDQQLSKLVSQHRQELlEELRQHIA 217
+                               444444333333333333333334444444433333332244444443 PP
+
+>> nat_226a88fc48e62ac725f3  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.4   1.4       1.7       6.8     159     195 ..     184     220 ..     157     223 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 2.4 bits;  conditional E-value: 1.7
+                      gvpc 159 qkylaeLdllrqqlaqqlqqeLaqtaqerlaeaqalf 195
+                               +++++ L++lr+ +++ l  +L++  +e   e+ al+
+  nat_226a88fc48e62ac725f3 184 KQFDQRLKELRAVRRESLTADLQTRLDEHAREVHALE 220
+                               4689999999999999999999999999999998886 PP
+
+>> nat_08188f300b849b1f3d48  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.8   5.2       1.3       5.3      35     182 ..      37      68 ..       2      89 .. 0.40
+
+  Alignments for each domain:
+  == domain 1  score: 2.8 bits;  conditional E-value: 1.3
+                      gvpc  35 qeRqeqaqalaeelqqfqtqlqqqtqafLadtaqerlaqaaqqaeeLkefvqqlqqetaeflsdtaqeRaaqaeqlaqeLsefre 119
+                               +eR+eq                                                                       q+L+++r 
+  nat_08188f300b849b1f3d48  37 KERLEQEL---------------------------------------------------------------------QKLEARRH 52 
+                               23333332.....................................................................22222222 PP
+
+                      gvpc 120 nLeatvedlladyaqqriaaaeqlqqeLaaFrqtLrqevqkylaeLdllrqqlaqqlqqeLaq 182
+                               + +++ + l +++                                                a+
+  nat_08188f300b849b1f3d48  53 QIQQRLAILNSQII-----------------------------------------------AE 68 
+                               22222222222211...............................................11 PP
+
+>> nat_2a684226bc7fc883848d  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.7   0.3       1.4       5.7     174     205 ..      29      58 ..      19      69 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 2.7 bits;  conditional E-value: 1.4
+                      gvpc 174 qqlqqeLaqtaqerlaeaqalfqdLaaFRaeL 205
+                                 ++q L ++++   a++++l q+L a   eL
+  nat_2a684226bc7fc883848d  29 VLERQALRRMETLTPAQVEDLGQALIA--LEL 58 
+                               346899999999999999999999987..555 PP
+
+>> nat_c9b15453866afc61beb3  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.4   0.3       1.7         7      47     122 ..     190     218 ..     161     248 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 2.4 bits;  conditional E-value: 1.7
+                      gvpc  47 elqqfqtqlqqqtqafLadtaqerlaqaaqqaeeLkefvqqlqqetaeflsdtaqeRaaqaeqlaqeLsefrenLe 122
+                               + +q++++lq+  ++  +d  qerla+                                               ++
+  nat_c9b15453866afc61beb3 190 QYEQRVKELQRARRESITDDLQERLAD-----------------------------------------------VT 218
+                               222222333333333333333333332...............................................22 PP
+
+>> nat_2b6741a82f5537860280  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.3   0.6       1.9       7.6      94     197 ..     191     214 ..     128     233 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 2.3 bits;  conditional E-value: 1.9
+                      gvpc  94 eflsdtaqeRaaqaeqlaqeLsefrenLeatvedlladyaqqriaaaeqlqqeLaaFrqtLrqevqkylaeLdllrqqlaqqlqq 178
+                               +f +++a+ Raa+ e l+++L+e                                                              
+  nat_2b6741a82f5537860280 191 QFDQRLADLRAARRESLTADLEE-------------------------------------------------------------- 213
+                               33333333334444444444433.............................................................. PP
+
+                      gvpc 179 eLaqtaqerlaeaqalfqd 197
+                                                 +
+  nat_2b6741a82f5537860280 214 ------------------E 214
+                               ..................2 PP
+
+>> nat_1bb8c3052c79ed7b3013  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.2   0.5       2.1       8.3      94     127 ..     210     243 ..     201     255 .. 0.52
+
+  Alignments for each domain:
+  == domain 1  score: 2.2 bits;  conditional E-value: 2.1
+                      gvpc  94 eflsdtaqeRaaqaeqlaqeLsefrenLeatved 127
+                               ++ +++ + Raa+ e l+++L+e+ ++   +v +
+  nat_1bb8c3052c79ed7b3013 210 KLDQRLNEVRAARRESLTADLEERLADAAREVHS 243
+                               2333334444444444444444444444444433 PP
+
+>> nat_759f3fabb12a0655cffe  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.4   0.4       1.7       6.9      61     104 ..     177     220 ..     111     229 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 2.4 bits;  conditional E-value: 1.7
+                      gvpc  61 afLad.taqerlaqaaqqaeeLkefvqqlqqetaeflsdtaqeRa 104
+                               +++ d +++ r+a+++++ ++L+e  +  ++e++e+ ++ta+ R+
+  nat_759f3fabb12a0655cffe 177 KQFDDrIRERRRARRDAVSTDLRERLEPHAREVREL-ERTASTRV 220
+                               334331566777777888888888777777777774.56666665 PP
+
+>> nat_d3968a7170c9ad3e58f2  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.1   0.9       2.1       8.5     159     195 ..     183     219 ..     176     224 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 2.1 bits;  conditional E-value: 2.1
+                      gvpc 159 qkylaeLdllrqqlaqqlqqeLaqtaqerlaeaqalf 195
+                               +++++ L ++r+++++    +L++  +e   e+ al+
+  nat_d3968a7170c9ad3e58f2 183 KQFDQRLTEVRANRRESITADLQTRLDEHAREVHALE 219
+                               3577777777777777777777777777777777765 PP
+
+>> nat_9b5f9b7ef68b10434976  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.0   1.0       2.2         9      94     127 ..     192     225 ..     186     240 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 2.0 bits;  conditional E-value: 2.2
+                      gvpc  94 eflsdtaqeRaaqaeqlaqeLsefrenLeatved 127
+                               +f +++++ Raa+ e l+++L+e+ ++   +v  
+  nat_9b5f9b7ef68b10434976 192 QFDQRLTELRAARRESLTADLEERLAAKAREVHA 225
+                               4444455555555555555554444433333333 PP
+
+>> nat_1c83b7230e48b0f9f02d  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.3   0.3       1.9       7.6      94     120 ..     192     218 ..     126     235 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 2.3 bits;  conditional E-value: 1.9
+                      gvpc  94 eflsdtaqeRaaqaeqlaqeLsefren 120
+                               +f +++++ Raa+ e l+++L+e+ ++
+  nat_1c83b7230e48b0f9f02d 192 KFDQRLTEIRAARRESLTADLEERLAA 218
+                               344444444455555555554444333 PP
+
+>> nat_8f2388b1e2d08d14e65c  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.3   1.7       1.9       7.7     131     198 ..     171     195 ..     133     243 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 2.3 bits;  conditional E-value: 1.9
+                      gvpc 131 dyaqqriaaaeqlqqeLaaFrqtLrqevqkylaeLdllrqqlaqqlqqeLaqtaqerlaeaqalfqdL 198
+                               +                             y++ Ld+lr +++++   eL               ++L
+  nat_8f2388b1e2d08d14e65c 171 Q-----------------------------YEQRLDELRHERQAERTREL--------------AERL 195
+                               2.............................33333333333333333333..............3332 PP
+
+>> nat_d0019d622a7986c35070  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.0   0.0       2.3       9.3     297     353 ..     332     386 ..     301     390 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 2.0 bits;  conditional E-value: 2.3
+                      gvpc 297 apepvneyvaqtldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvvt 353
+                                 e +++ v+   ++ +y ++ e++   +  + ++l +++  i +aL +l ++ +v 
+  nat_d0019d622a7986c35070 332 DLENLENIVP--FEKEVYHYLTEHKSEGINGLQKALNLDKNVIFNALHSLKQKSLVN 386
+                               3333666777..99***********888**********************9998875 PP
+
+>> nat_228e5aa9fefc15a241e7  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.1   0.3       2.2       8.7     160     194 ..     190     224 ..     171     238 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 2.1 bits;  conditional E-value: 2.2
+                      gvpc 160 kylaeLdllrqqlaqqlqqeLaqtaqerlaeaqal 194
+                               ++++ L ++r+++++    +L++  +e   e+ +l
+  nat_228e5aa9fefc15a241e7 190 QFDQRLTEVRANRRESITADLQTRIDEHAREVHSL 224
+                               45555555555555555555555555555555544 PP
+
+>> nat_1c11fdd132ba32e51d7d  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.4   1.2       1.7       6.9      38      63 ..      21      53 ..       2      64 .. 0.40
+
+  Alignments for each domain:
+  == domain 1  score: 2.4 bits;  conditional E-value: 1.7
+                      gvpc 38 qeqaqalaeelqqfq.......tqlqqqtqafL 63
+                               ++ qa a +l+ ++       ++lq++t ++L
+  nat_1c11fdd132ba32e51d7d 21 RDELQAKAHRLRFRRgvqrllnEELQRTTTELL 53
+                              111112222222111333333333333333333 PP
+
+>> nat_dc4d448b28633f62a82f  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.1   0.7       2.2       8.8     174     200 ..     188     215 ..     156     230 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 2.1 bits;  conditional E-value: 2.2
+                      gvpc 174 qqlqqeLaqtaqerlaea.qalfqdLaa 200
+                               +q +q+L++ ++ r++ +  +l+++La+
+  nat_dc4d448b28633f62a82f 188 KQFDQRLTELRAARRESVtADLRERLAT 215
+                               4444555555555544444444444443 PP
+
+>> nat_657f8ed615a48f36fbc2  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.0   1.0       2.3       9.4      93     117 ..     162     186 ..     131     202 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 2.0 bits;  conditional E-value: 2.3
+                      gvpc  93 aeflsdtaqeRaaqaeqlaqeLsef 117
+                               ++f +++a+ Raa+ e l+++L+++
+  nat_657f8ed615a48f36fbc2 162 KQFDQRLAERRAARRESLTADLEKR 186
+                               4677888888888888888888765 PP
+
+>> nat_504214d77faf9ddeefbb  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.3   0.8       1.8       7.4      97     124 ..      35      64 ..      14      80 .. 0.50
+
+  Alignments for each domain:
+  == domain 1  score: 2.3 bits;  conditional E-value: 1.8
+                      gvpc  97 sdtaqeR..aaqaeqlaqeLsefrenLeat 124
+                               +++++++  ++  e  ++e++e++++Le +
+  nat_504214d77faf9ddeefbb  35 DELKENQllYEVGERSQAEYEERKQELELR 64 
+                               333333333344444444444444444443 PP
+
+>> nat_1aeb097a28c863a862e4  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.2   0.1       2.1       8.3      24      39 ..     113     128 ..     100     136 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 2.2 bits;  conditional E-value: 2.1
+                      gvpc  24 qevqstlsevqqeRqe 39 
+                               ++v ++l evqq+R++
+  nat_1aeb097a28c863a862e4 113 EKVSEFLGEVQQQREA 128
+                               5667777777777765 PP
+
+>> nat_8e55878fc5504bc64f4e  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.9   0.3       2.6        10      46      81 ..     210     245 ..     185     256 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 1.9 bits;  conditional E-value: 2.6
+                      gvpc  46 eelqqfqtqlqqqtqafLadtaqerlaqaaqqaeeL 81 
+                               ++l+q+ +++++  ++ L++  ++rla+aa+  ++L
+  nat_8e55878fc5504bc64f4e 210 KKLTQRLKEVRAARRESLTADLEDRLADAAREVHSL 245
+                               344444444444444444444444444444444444 PP
+
+>> nat_786b39c5c0e4d775092e  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.8   0.3       2.6        11     159     177 ..     170     189 ..     104     206 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 1.8 bits;  conditional E-value: 2.6
+                      gvpc 159 qkylaeLdl.lrqqlaqqlq 177
+                               q+y++e++  lrq ++qq++
+  nat_786b39c5c0e4d775092e 170 QQYDKEINKrLRQHRQQQAR 189
+                               33444443224444444433 PP
+
+>> nat_dbc1c002e29cf315f4b5  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.2   0.0         2         8      87     114 ..      48      75 ..      15      80 .. 0.51
+
+  Alignments for each domain:
+  == domain 1  score: 2.2 bits;  conditional E-value: 2
+                      gvpc  87 qlqqetaeflsdtaqeRaaqaeqlaqeL 114
+                               +l++e  e+ +d   +R+a ae+ ++ L
+  nat_dbc1c002e29cf315f4b5  48 ELSREEYELRQDDVRDRIALAEEAREHL 75 
+                               4455555555555555555555555544 PP
+
+>> nat_a3571b1c51affce50627  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.2   0.3         2       8.2     130     146 ..      53      75 ..      19      83 .. 0.46
+
+  Alignments for each domain:
+  == domain 1  score: 2.2 bits;  conditional E-value: 2
+                      gvpc 130 adya......qqriaaaeqlqqe 146
+                               a+y+      +qr++ aeq +++
+  nat_a3571b1c51affce50627  53 AEYEerradiEQRLDVAEQAREQ 75 
+                               33332222223333333333333 PP
+
+>> nat_6d2bef4d44f7bf3ac9b4  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.2   1.3       2.1       8.3     267     289 ..      70      92 ..      49      97 .] 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 2.2 bits;  conditional E-value: 2.1
+                      gvpc 267 pevvvaapepeappaevaPpdve 289
+                                 ++ a + p app +v P++  
+  nat_6d2bef4d44f7bf3ac9b4  70 RATPPALTTPVAPPVAVYPQQST 92 
+                               23444555555555555553332 PP
+
+>> nat_c599808be516a1f982a6  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.6   0.4       2.9        12      93     129 ..     197     233 ..     167     239 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 1.6 bits;  conditional E-value: 2.9
+                      gvpc  93 aeflsdtaqeRaaqaeqlaqeLsefrenLeatvedll 129
+                               ++f ++++q R+ + e l+++L+++ ++   +v +l+
+  nat_c599808be516a1f982a6 197 KQFDQRITQLRVSRRESLTADLEDRLADEAREVHSLE 233
+                               4566666666666666666666666666555555554 PP
+
+>> nat_a62ee5e456230e34d781  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.6   0.7         3        12     160     183 ..     160     183 ..     129     204 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 1.6 bits;  conditional E-value: 3
+                      gvpc 160 kylaeLdllrqqlaqqlqqeLaqt 183
+                               +y++ L++l  ++++ +q+ L + 
+  nat_a62ee5e456230e34d781 160 QYEQRLSELARERKAAEQDALESR 183
+                               355555555555555555555544 PP
+
+>> nat_0acc418a158f7c4abf47  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.6   0.9         3        12      92     129 ..     181     223 ..     155     234 .. 0.53
+
+  Alignments for each domain:
+  == domain 1  score: 1.6 bits;  conditional E-value: 3
+                      gvpc  92 taeflsdtaqeR.....aaqaeqlaqeLsefrenLeatvedll 129
+                               +a +l++  ++R      a+ e l+++L+e+ ++++ +v  l+
+  nat_0acc418a158f7c4abf47 181 AAFLLEKQYDQRvkelqRARRESLTDDLRERLADVTREVHALE 223
+                               4444444444443333334444455555555555555555544 PP
+
+>> nat_6741f22002745c69f35f  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.5   0.6       3.2        13      94     122 ..     191     219 ..     166     232 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 1.5 bits;  conditional E-value: 3.2
+                      gvpc  94 eflsdtaqeRaaqaeqlaqeLsefrenLe 122
+                               +f +++++ Raa+ e l+++L+e+ ++  
+  nat_6741f22002745c69f35f 191 KFDQRLTELRAARRESLTADLEERLAAEA 219
+                               45555555555555555555555443333 PP
+
+>> nat_b2284ef968ad70670927  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.4   0.2       3.5        14     218     284 ..      13      74 ..       5      97 .. 0.46
+
+  Alignments for each domain:
+  == domain 1  score: 1.4 bits;  conditional E-value: 3.5
+                      gvpc 218 Gnsitesepaavaeekassvkapasapk........aaevappeakaaksaapaepepevvvaapepeappaeva 284
+                               G +i++ ++  +   ka + + +a++++        +a ++ ++++ ++s            aapep +++++v+
+  nat_b2284ef968ad70670927  13 GRKIRSDRSVKERR-KAEKQRRRAAKENgngsgatgTADASTDVLRSPQS------------AAPEPFVSTDAVE 74 
+                               55555555522222.22222222222223344433334444444444444............4444444444444 PP
+
+>> nat_2cbf128e14aef1559fc0  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.7   0.4       2.9        12     160     193 ..     182     215 ..     115     223 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 1.7 bits;  conditional E-value: 2.9
+                      gvpc 160 kylaeLdllrqqlaqqlqqeLaqtaqerlaeaqa 193
+                               ++++ L++l++++++ l  +L++   e + e+ a
+  nat_2cbf128e14aef1559fc0 182 QFDQRLSELQAARRESLTADLKDRLGEETREVHA 215
+                               3455555555555555555554444444444444 PP
+
+>> nat_81137907f8a802f93802  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.6   0.6         3        12     236     259 ..      83     106 ..      60     113 .. 0.50
+
+  Alignments for each domain:
+  == domain 1  score: 1.6 bits;  conditional E-value: 3
+                      gvpc 236 svkapasapk...aaevappeakaaks 259
+                               +   ++ +++   ++ ++p+ea++++s
+  nat_81137907f8a802f93802  83 E---SEHQSReriETDSQPKEAEKEES 106
+                               1...12222223455555555555555 PP
+
+>> nat_09c215899b8b45d9948f  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.5   2.6       3.3        13     148     205 ..     138     196 ..     101     210 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 1.5 bits;  conditional E-value: 3.3
+                      gvpc 148 aaFrqtLrqevqkylaeLdllrqqlaqq........lqqeLaqtaqerlaeaqalfqdLaaFRaeL 205
+                               +++r++L++e    ++eL+ lr+ + +         ++q  +++++ r+a+ +al ++L++   eL
+  nat_09c215899b8b45d9948f 138 EQVRDELESE----DEELADLRERIDDSeegtafllEKQYDTRIRDLRQARKEALTNRLRE---EL 196
+                               5566666666....55999999999888888888875555556666666666666666654...44 PP
+
+>> nat_49f263ff81959560428d  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.4   0.8       3.5        14     160     194 ..     186     220 ..     179     236 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 1.4 bits;  conditional E-value: 3.5
+                      gvpc 160 kylaeLdllrqqlaqqlqqeLaqtaqerlaeaqal 194
+                               k+++ L +lr+++++    +L++  +e   e+ +l
+  nat_49f263ff81959560428d 186 KFEQRLTELRAARRESITADLQDRLDEHAREVHSL 220
+                               56666666666666666666665555555555554 PP
+
+>> nat_fe11696e82e1518b1111  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.3  12.3       3.7        15      61     116 ..      20      70 ..       9      86 .. 0.44
+
+  Alignments for each domain:
+  == domain 1  score: 1.3 bits;  conditional E-value: 3.7
+                      gvpc  61 afLadtaqerlaqaaqqaeeLkefvqqlqqetaeflsdtaqeRaaqaeqlaqeLse 116
+                               + L ++ q+  ++++++ +eL ef++++q +    l++++q+     + l+qe ++
+  nat_fe11696e82e1518b1111  20 SALYAEMQQLTVEKQRLNQEL-EFIRERQGQIHARLQEIEQA----MQHLQQEAKA 70 
+                               333333333333333333333.23333333333333333321....2222222222 PP
+
+>> nat_cb92aed15bdbfa6f9474  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.6   0.2         3        12      56      72 ..      75      91 ..      44     112 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 1.6 bits;  conditional E-value: 3
+                      gvpc 56 qqqtqafLadtaqerla 72
+                                q+q++La+++q+r  
+  nat_cb92aed15bdbfa6f9474 75 PGQSQEQLASENQSRER 91
+                              44555555555555532 PP
+
+>> nat_dbae310253aa128f5396  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   0.2       4.3        17     224     294 ..      19      75 ..       5     100 .. 0.38
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 4.3
+                      gvpc 224 sepaavaeekassvkapasapk.aaevappeakaaksaapaepepevvvaapepeappaevaPpdvevePtt 294
+                                ++a +  ++ ++++ +as+ k + e++ ++               + +++++   p+ ++a+  + +eP+ 
+  nat_dbae310253aa128f5396  19 DREAKQRRKARKKLARSASETKtEGETSGKSG-------------GTHTQRTSEDDPLIDPAD--AAPEPFV 75 
+                               44432222122222222222222222222222.............222222222222222222..3334444 PP
+
+>> nat_9f5b9c362628d07b156e  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.4   0.5       3.5        14      14      34 ..     160     180 ..      96     208 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 1.4 bits;  conditional E-value: 3.5
+                      gvpc  14 srqqevaerqqevqstlsevq 34 
+                               +r q+vae+++e ++ +++  
+  nat_9f5b9c362628d07b156e 160 QRDQRVAELARERKAAVQDDL 180
+                               233333333333333333333 PP
+
+>> nat_282cc75ff49edff67190  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.2   0.6         4        16     160     185 ..     189     214 ..     154     238 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 1.2 bits;  conditional E-value: 4
+                      gvpc 160 kylaeLdllrqqlaqqlqqeLaqtaq 185
+                               ++++ L +lr+++++ l  +L +  +
+  nat_282cc75ff49edff67190 189 QFEQRLTELRAARRESLTADLERRLA 214
+                               23333444444444333333333322 PP
+
+>> nat_4f69ec38a495fd9e0185  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   0.7       4.4        18     174     200 ..     186     213 ..     180     227 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 4.4
+                      gvpc 174 qqlqqeLaqtaqerlaea.qalfqdLaa 200
+                               +q++q+L++ +  r++   ++l+ +La+
+  nat_4f69ec38a495fd9e0185 186 KQYEQRLTELQRARRESLsDDLQGRLAD 213
+                               4555555555555444444445544443 PP
+
+>> nat_b55ecf6ba9a45824ac09  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.5   1.5       3.2        13     222     281 ..      67     128 ..      51     143 .] 0.53
+
+  Alignments for each domain:
+  == domain 1  score: 1.5 bits;  conditional E-value: 3.2
+                      gvpc 222 tesepaavaeekassvkapasapkaaevappeakaaksaapae...pepevvvaapepeappa 281
+                               +++   ++a+ +  +++a ++a + a++a p+++a+ + +pa    + +++v + ++p+ap  
+  nat_b55ecf6ba9a45824ac09  67 VSRPRGVEAPGRYEELSAEIAALR-AQLAAPPLRAEPQLQPAGrarTRKTIVLEDERPAAPAP 128
+                               444333555555555555555555.55555555555555665555544455555555555433 PP
+
+>> nat_2d6ae3851377c5ea8190  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.2   0.2       4.1        17      67     163 ..      88     107 ..      78     114 .. 0.43
+
+  Alignments for each domain:
+  == domain 1  score: 1.2 bits;  conditional E-value: 4.1
+                      gvpc  67 aqerlaqaaqqaeeLkefvqqlqqetaeflsdtaqeRaaqaeqlaqeLsefrenLeatvedlladyaqqriaaaeqlqqeLaaFr 151
+                               aq+ + +  q++e L                                                                      
+  nat_2d6ae3851377c5ea8190  88 AQTLIDENRQLQERL---------------------------------------------------------------------- 102
+                               333333333333333...................................................................... PP
+
+                      gvpc 152 qtLrqevqkyla 163
+                                      q+ +a
+  nat_2d6ae3851377c5ea8190 103 -------QSLEA 107
+                               .......33333 PP
+
+>> nat_4bee481aaaf6d2cbaeaf  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   0.7       4.4        18     160     185 ..     189     214 ..     153     235 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 4.4
+                      gvpc 160 kylaeLdllrqqlaqqlqqeLaqtaq 185
+                               ++++ L +lr+++++ l  +L +  +
+  nat_4bee481aaaf6d2cbaeaf 189 QFEQRLTELRAARRESLTADLERRLA 214
+                               23334444444444443333333322 PP
+
+>> nat_6bca999a70c09bc7d8d3  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.4   0.1       3.6        14      25     138 ..      97     111 ..      84     119 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 1.4 bits;  conditional E-value: 3.6
+                      gvpc  25 evqstlsevqqeRqeqaqalaeelqqfqtqlqqqtqafLadtaqerlaqaaqqaeeLkefvqqlqqetaeflsdtaqeRaaqaeq 109
+                               +                                                                                    
+  nat_6bca999a70c09bc7d8d3  97 K------------------------------------------------------------------------------------ 97 
+                               3.................................................................................... PP
+
+                      gvpc 110 laqeLsefrenLeatvedlladyaqqria 138
+                                              v ++l d+++qr+ 
+  nat_6bca999a70c09bc7d8d3  98 ---------------VSEFLGDVQEQRQP 111
+                               ...............44455555555544 PP
+
+>> nat_216c871a89607e7b1e8c  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.5   0.1       3.2        13     113     128 ..      85     100 ..      53     107 .] 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 1.5 bits;  conditional E-value: 3.2
+                      gvpc 113 eLsefrenLeatvedl 128
+                                L+e  ++L+++ + l
+  nat_216c871a89607e7b1e8c  85 ALQEENQELRERLKAL 100
+                               2222222222222222 PP
+
+>> nat_21ab82e3101cd9bff5e5  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.6   0.2       3.1        12     108     126 ..      48      66 ..      29      83 .] 0.54
+
+  Alignments for each domain:
+  == domain 1  score: 1.6 bits;  conditional E-value: 3.1
+                      gvpc 108 eqlaqeLsefrenLeatve 126
+                               e  ++e++e++++Lea+ e
+  nat_21ab82e3101cd9bff5e5  48 ERPKAEYEERKQELEAELE 66 
+                               4445556666666655532 PP
+
+>> nat_ffdf982027d2763f7932  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.0   2.0       4.5        18     131     167 ..     188     221 ..     120     228 .. 0.50
+
+  Alignments for each domain:
+  == domain 1  score: 1.0 bits;  conditional E-value: 4.5
+                      gvpc 131 dyaqqriaaaeqlqqeLaaFrqtLrqevqkylaeLdl 167
+                               +y++   +++ + +++L    ++Lr++  +y  e ++
+  nat_ffdf982027d2763f7932 188 QYDRRVTERRRARREAL---TADLRERLAEYAREVHE 221
+                               33333333333333333...33444443333333333 PP
+
+>> nat_7b672bf4b057eba2ffac  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.2   3.7       3.9        16     167     195 ..      89     117 ..      50     119 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 1.2 bits;  conditional E-value: 3.9
+                      gvpc 167 llrqqlaqqlqqeLaqtaqerlaeaqalf 195
+                               + +q l+q+ qqe +q++ e+  e+++++
+  nat_7b672bf4b057eba2ffac  89 EWKQSLQQESQQESQQEEPEQAVEIESQS 117
+                               34566666666666666666666666555 PP
+
+>> nat_a7888708ef06ff429137  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   1.5       4.4        18     232     272 ..      97     136 ..      80     144 .. 0.45
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 4.4
+                      gvpc 232 ekassvkapasapkaaevappeakaaksaapaepepevvva 272
+                               e+++ +++ ++a + a +a p+++a+++a+p   +++ ++a
+  nat_a7888708ef06ff429137  97 EENQRLREQIEALR-ADAALPPVSAPEAATPRRRPAKRPTA 136
+                               33344444444444.44444444444444554422222333 PP
+
+>> nat_26c7b3dfaf246cf1a8c9  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.4   0.1       3.5        14     107     153 ..      48      61 ..      23     100 .. 0.54
+
+  Alignments for each domain:
+  == domain 1  score: 1.4 bits;  conditional E-value: 3.5
+                      gvpc 107 aeqlaqeLsefrenLeatvedlladyaqqriaaaeqlqqeLaaFrqt 153
+                               +eql q+L++  +                                 +
+  nat_26c7b3dfaf246cf1a8c9  48 IEQLGQQLQAIEA---------------------------------E 61 
+                               2222222222222.................................2 PP
+
+>> nat_9ffee07beb2709c0f0bd  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.9   0.6       4.8        19     151     189 ..     152     194 ..     114     208 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 0.9 bits;  conditional E-value: 4.8
+                      gvpc 151 rqtLrqevqkylaeLdllrqqlaqq........lqqeLaqtaqerla 189
+                               r++L++e    ++eL+ lr+q+++         ++q  +++++ r++
+  nat_9ffee07beb2709c0f0bd 152 REELESE----DEELADLREQIEASeegtafllEKQYDNRIRDLRQS 194
+                               3333333....346666666666654544444422222233333333 PP
+
+>> nat_ebcd2a7f6128cf55e939  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.6   0.8       6.3        25      94     128 ..     207     241 ..     203     252 .. 0.54
+
+  Alignments for each domain:
+  == domain 1  score: 0.6 bits;  conditional E-value: 6.3
+                      gvpc  94 eflsdtaqeRaaqaeqlaqeLsefrenLeatvedl 128
+                               +f +++++ Raa+ e ++ +L+++  +   +v +l
+  nat_ebcd2a7f6128cf55e939 207 KFDQRLTELRAARRESITGDLQARLDEHAREVHQL 241
+                               34444444444444444444444444444444444 PP
+
+>> nat_3f3d58aff4160c1472ae  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.0   0.4       4.6        18     160     190 ..     184     214 ..     117     225 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 1.0 bits;  conditional E-value: 4.6
+                      gvpc 160 kylaeLdllrqqlaqqlqqeLaqtaqerlae 190
+                               +++  L++lr+++++ l+++  +  +    e
+  nat_3f3d58aff4160c1472ae 184 QFDRRLSELRAARRESLSDDVRERLTAEARE 214
+                               2555666666666666665555544444444 PP
+
+>> nat_edf9aac73d55bd51bb53  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.9   0.6       4.9        20     151     199 ..     139     191 ..     102     204 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: 0.9 bits;  conditional E-value: 4.9
+                      gvpc 151 rqtLrqevqkylaeLdllrqqlaqq........lqqeLaqtaqerlaeaqalfqdLa 199
+                               r++L++e    ++eL+ lr+ + +         ++q  +++++ r+a+ ++l ++L+
+  nat_edf9aac73d55bd51bb53 139 RDELESE----DEELADLRERIDDSeegtafllEKQYDTRIRDLRQARKESLTNRLR 191
+                               3444444....3466666666666666666665333333333334433333333333 PP
+
+>> nat_7aeb2efcf40db3e46e7e  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.0   0.7       4.5        18     238     261 ..      82     108 ..      65     113 .. 0.52
+
+  Alignments for each domain:
+  == domain 1  score: 1.0 bits;  conditional E-value: 4.5
+                      gvpc 238 kapasapk...aaevappeakaaksaa 261
+                                +++ +++   ++ ++p+ea++++s++
+  nat_7aeb2efcf40db3e46e7e  82 LESEHQSReriETDSQPKEAEKEESKQ 108
+                               222222223456666666666666633 PP
+
+>> nat_6ee31a02fdf1277873e8  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.8   0.3       5.2        21      97     129 ..     196     228 ..     160     245 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 0.8 bits;  conditional E-value: 5.2
+                      gvpc  97 sdtaqeRaaqaeqlaqeLsefrenLeatvedll 129
+                               +++a+ Ra + e l+++L+++  ++  +v +l+
+  nat_6ee31a02fdf1277873e8 196 QRLAELRAHRRESLTADLETRLDEVAREVHSLE 228
+                               223333355555555556555555555555554 PP
+
+>> nat_a7d56953c9eb5522cd12  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   0.2       4.3        17     159     180 ..     167     188 ..      99     220 .. 0.52
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 4.3
+                      gvpc 159 qkylaeLdllrqqlaqqlqqeL 180
+                               ++y++ ++ lrq++++ l  +L
+  nat_a7d56953c9eb5522cd12 167 KQYDSRIRDLRQARKESLTSRL 188
+                               1233344444444444333333 PP
+
+>> nat_76bd47c3dff544aa7f3b  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.3   0.3       3.7        15      68      87 ..      52      71 ..      18      80 .. 0.48
+
+  Alignments for each domain:
+  == domain 1  score: 1.3 bits;  conditional E-value: 3.7
+                      gvpc 68 qerlaqaaqqaeeLkefvqq 87
+                              +e+  +++++++eL+ ++++
+  nat_76bd47c3dff544aa7f3b 52 TEYERRKDELEAELEVAQKA 71
+                              22223333333333333333 PP
+
+>> nat_7d62c45eb5711910c788  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   0.1       4.3        17      24     138 ..     112     127 ..     100     135 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 4.3
+                      gvpc  24 qevqstlsevqqeRqeqaqalaeelqqfqtqlqqqtqafLadtaqerlaqaaqqaeeLkefvqqlqqetaeflsdtaqeRaaqae 108
+                               ++v ++l +vq++R                                                                       
+  nat_7d62c45eb5711910c788 112 ERVSEFLGDVQEQR----------------------------------------------------------------------- 125
+                               34444444444444....................................................................... PP
+
+                      gvpc 109 qlaqeLsefrenLeatvedlladyaqqria 138
+                                                           + 
+  nat_7d62c45eb5711910c788 126 ----------------------------QP 127
+                               ............................43 PP
+
+>> nat_966e28ed9f738f4867a4  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.9   1.7       5.1        20      93     122 ..     188     217 ..     163     232 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 0.9 bits;  conditional E-value: 5.1
+                      gvpc  93 aeflsdtaqeRaaqaeqlaqeLsefrenLe 122
+                               ++f +++++ R+a+ e l+++L+e+ ++  
+  nat_966e28ed9f738f4867a4 188 KQFDQRLTELRSARRESLTADLEERLAAEA 217
+                               344555555555555555555555444333 PP
+
+>> nat_2726d22ebeb8d26c79ba  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.2   1.0       4.1        16     110     124 ..      50      64 ..      14      81 .. 0.47
+
+  Alignments for each domain:
+  == domain 1  score: 1.2 bits;  conditional E-value: 4.1
+                      gvpc 110 laqeLsefrenLeat 124
+                                 +e++e+r++Le++
+  nat_2726d22ebeb8d26c79ba  50 SEAEYRERRAELEER 64 
+                               333333333333332 PP
+
+>> nat_f41f39c57e294fe1a02f  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.0   0.3       4.7        19     145     167 ..      80     102 ..      70     108 .. 0.48
+
+  Alignments for each domain:
+  == domain 1  score: 1.0 bits;  conditional E-value: 4.7
+                      gvpc 145 qeLaaFrqtLrqevqkylaeLdl 167
+                               qeL a  q+L ++v+  + eL+ 
+  nat_f41f39c57e294fe1a02f  80 QELLASNQQLLERVNLLERELAA 102
+                               33333333333333333333333 PP
+
+>> nat_8ea71d3ab15e5cf268b1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   0.1       4.4        18      25     138 ..     113     127 ..     100     135 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 4.4
+                      gvpc  25 evqstlsevqqeRqeqaqalaeelqqfqtqlqqqtqafLadtaqerlaqaaqqaeeLkefvqqlqqetaeflsdtaqeRaaqaeq 109
+                               +                                                                                    
+  nat_8ea71d3ab15e5cf268b1 113 K------------------------------------------------------------------------------------ 113
+                               3.................................................................................... PP
+
+                      gvpc 110 laqeLsefrenLeatvedlladyaqqria 138
+                                              v ++l d+++qr+ 
+  nat_8ea71d3ab15e5cf268b1 114 ---------------VSEFLGDVQEQRQP 127
+                               ...............44455555555544 PP
+
+>> nat_bc9a679038febf60d01a  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.9   0.2       5.1        20     159     193 ..     185     219 ..     119     232 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 0.9 bits;  conditional E-value: 5.1
+                      gvpc 159 qkylaeLdllrqqlaqqlqqeLaqtaqerlaeaqa 193
+                               +++++ L++lr ++++ l  +L+   +e   e+ a
+  nat_bc9a679038febf60d01a 185 KQFDQRLSELRVARRESLTADLKGRLAEDAREVHA 219
+                               24666666666666666655555555555555544 PP
+
+>> nat_944e12d4a525f631f49f  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.7   0.0       5.9        24     298     353 ..     330     383 ..     298     387 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 0.7 bits;  conditional E-value: 5.9
+                      gvpc 298 pepvneyvaqtldltiyqvigeregaRLaeiesdlginrsqivdaLRrlvkqgvvt 353
+                                e +++ v+   ++ +y ++ e++   +  + ++l +++  i +aL +l ++ +v 
+  nat_944e12d4a525f631f49f 330 LETLENIVP--FEKEVYYYLTEHKSEGINGLQKALNLDKNVIFNALHSLKQKSLVN 383
+                               233556666..999*********988899*******************99998875 PP
+
+>> nat_e5ceabb21180b04662ae  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.2   1.0         4        16     187     208 ..      14      35 ..       8      98 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 1.2 bits;  conditional E-value: 4
+                      gvpc 187 rlaeaqalfqdLaaFRaeLrdy 208
+                               r++   +++ +L   R++L++ 
+  nat_e5ceabb21180b04662ae  14 RRSSLAEMKGQLVRLRQDLEQI 35 
+                               6666666777777777777543 PP
+
+>> nat_67ae4c013d963c0fb979  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.0   0.7       4.7        19     173     199 ..     185     212 ..     124     240 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 1.0 bits;  conditional E-value: 4.7
+                      gvpc 173 aqqlqqeLaqtaqerlaea.qalfqdLa 199
+                               +qq +q+ ++ ++ r++ +  +l+ +La
+  nat_67ae4c013d963c0fb979 185 EQQFEQRVTELRAARRESVtADLQGRLA 212
+                               3333333333333333333333333333 PP
+
+>> nat_1cc68774b93a831e1a93  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.9   0.1         5        20      24     138 ..     113     128 ..     101     135 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 0.9 bits;  conditional E-value: 5
+                      gvpc  24 qevqstlsevqqeRqeqaqalaeelqqfqtqlqqqtqafLadtaqerlaqaaqqaeeLkefvqqlqqetaeflsdtaqeRaaqae 108
+                               ++v ++                                                                               
+  nat_1cc68774b93a831e1a93 113 EKVSEF------------------------------------------------------------------------------- 118
+                               344444............................................................................... PP
+
+                      gvpc 109 qlaqeLsefrenLeatvedlladyaqqria 138
+                                                   l d+++qr+ 
+  nat_1cc68774b93a831e1a93 119 --------------------LGDVQEQRQP 128
+                               ....................4444444443 PP
+
+>> nat_90aff439e5b13407840a  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.5   0.7       6.7        27     160     186 ..     189     215 ..     183     228 .. 0.49
+
+  Alignments for each domain:
+  == domain 1  score: 0.5 bits;  conditional E-value: 6.7
+                      gvpc 160 kylaeLdllrqqlaqqlqqeLaqtaqe 186
+                               k+++ L++lr+++++ l   L +  + 
+  nat_90aff439e5b13407840a 189 KFDQRLAELRAARRESLTASLEERLAT 215
+                               344444444444444444444333333 PP
+
+>> nat_9af7854b4cc48e7d4db5  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.6  10.8       6.2        25     230     306 ..       7      80 ..       1     108 [. 0.45
+
+  Alignments for each domain:
+  == domain 1  score: 0.6 bits;  conditional E-value: 6.2
+                      gvpc 230 aeekassvkapasapk.aaevappeakaaksaapaepepevvvaapepeappaevaPpdvevePtt.eeapepvneyva 306
+                               +e+++s++++  ++pk +a++++++ +a++s + +  + ++  +a++++ p ++++ +d++ +  + + ++e     v 
+  nat_9af7854b4cc48e7d4db5   7 EEQSKSKTEEETTSPKsKANTSSSSSRAKSSSSSSS-STKNSSSASAKSSPSNSSKNTDTSSKKNDsSDKKEA----VY 80 
+                               333334444444444454444444444444422222.223455555566666666665555554442333332....22 PP
+
+>> nat_b872ca2d5a2d145dce35  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.4   0.0       3.5        14     250     272 ..      61      78 ..      21      90 .] 0.54
+
+  Alignments for each domain:
+  == domain 1  score: 1.4 bits;  conditional E-value: 3.5
+                      gvpc 250 appeakaaksaapaepepevvva 272
+                               a+ e  a+++  +     ev+v 
+  nat_b872ca2d5a2d145dce35  61 AKIEQAAEQEELE-----EVEVD 78 
+                               2222222222111.....12222 PP
+
+>> nat_71c932e8fba7c6f5dfc0  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.7   0.3       5.6        23      47      81 ..     191     225 ..     160     238 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 0.7 bits;  conditional E-value: 5.6
+                      gvpc  47 elqqfqtqlqqqtqafLadtaqerlaqaaqqaeeL 81 
+                               +  q+ t+l++  ++ L++ ++erla  a+  + L
+  nat_71c932e8fba7c6f5dfc0 191 KFDQRLTELRAARRESLTADVEERLAAEAREVHAL 225
+                               34444455555555555555555555555544444 PP
+
+>> nat_88b9978da1fe9dc46015  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.7   0.3       5.9        24      49     129 ..     193     226 ..     158     240 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 0.7 bits;  conditional E-value: 5.9
+                      gvpc  49 qqfqtqlqqqtqafLadtaqerlaqaaqqaeeLkefvqqlqqetaeflsdtaqeRaaqaeqlaqeLsefrenLeatvedll 129
+                               +q+ ++l                                               Ra + e l+++L+++  ++  +v +l+
+  nat_88b9978da1fe9dc46015 193 NQRLAEL-----------------------------------------------RAHRRESLTADLETRLDEVAREVHSLE 226
+                               2222223...............................................344444455555555555555554444 PP
+
+>> nat_c0018dcc0c8798a4a59b  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.7   1.2       5.7        23      95     199 ..     183     207 ..     152     223 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 0.7 bits;  conditional E-value: 5.7
+                      gvpc  95 flsdtaqeRaaqaeqlaqeLsefrenLeatvedlladyaqqriaaaeqlqqeLaaFrqtLrqevqkylaeLdllrqqlaqqlqqe 179
+                               f +++a+ +aa+ e l+++L+e                                                               
+  nat_c0018dcc0c8798a4a59b 183 FGQRLAELQAARRESLTADLQE--------------------------------------------------------------- 204
+                               2222222223333333333332............................................................... PP
+
+                      gvpc 180 LaqtaqerlaeaqalfqdLa 199
+                                                +La
+  nat_c0018dcc0c8798a4a59b 205 -----------------RLA 207
+                               .................222 PP
+
+>> nat_8ebdf27dab289f7c10f4  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.7   0.3       5.6        22     159     194 ..     183     218 ..     117     223 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 0.7 bits;  conditional E-value: 5.6
+                      gvpc 159 qkylaeLdllrqqlaqqlqqeLaqtaqerlaeaqal 194
+                               +++++ L +lr+ +++   ++L++  +e+  e+  l
+  nat_8ebdf27dab289f7c10f4 183 KQFDKRLTELRAGRRESMTTDLKTRLDEQAREVHTL 218
+                               357778888888888888888888888888777766 PP
+
+>> nat_b73460f69f417dd9c10a  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.0   0.1       4.5        18     111     124 ..      51      64 ..      28      82 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 1.0 bits;  conditional E-value: 4.5
+                      gvpc 111 aqeLsefrenLeat 124
+                               a+e++ +re+Le++
+  nat_b73460f69f417dd9c10a  51 AEEYERRREELETQ 64 
+                               33334444433333 PP
+
+>> nat_51872cd8b900b7db59b4  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   0.7       4.4        18     262     293 ..     125     148 ..      81     153 .] 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 4.4
+                      gvpc 262 paepepevvvaapepeappaevaPpdvevePt 293
+                               +     e +++ pe e+pp++ +P   +  P+
+  nat_51872cd8b900b7db59b4 125 Q-----EEPEEEPEEEPPPRKRRP---SRRPV 148
+                               2.....345667788888888888...33344 PP
+
+>> nat_575d455e710e37b166bf  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   0.7       4.4        18      67      77 ..      51      61 ..      15      79 .. 0.47
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 4.4
+                      gvpc 67 aqerlaqaaqq 77
+                              + e+ +q+a++
+  nat_575d455e710e37b166bf 51 KAEYEQQKAEL 61
+                              11122222222 PP
+
+>> nat_5b21333ca43991c18adf  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.4   1.0         7        28     161     190 ..     168     183 ..     101     205 .. 0.51
+
+  Alignments for each domain:
+  == domain 1  score: 0.4 bits;  conditional E-value: 7
+                      gvpc 161 ylaeL.dllrqqlaqqlqqeLaqtaqerlae 190
+                               y+ e+ + lrq ++q               +
+  nat_5b21333ca43991c18adf 168 YETEItKRLRQHRRQ---------------Q 183
+                               111211112222222...............2 PP
+
+>> nat_e20da7d5ac77292299bb  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.5   0.1       6.5        26     307     329 ..     179     205 ..     141     225 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 0.5 bits;  conditional E-value: 6.5
+                      gvpc 307 qtldltiyqvigeregaR....Laeie 329
+                               +++d+++  +++ r +aR    +ae+e
+  nat_e20da7d5ac77292299bb 179 KQYDKRLSTLVNRRRRARseelVAELE 205
+                               444444444444444444333333333 PP
+
+>> nat_a7d49e90e07b90d64e4e  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   0.7       4.4        18     166     200 ..      24      55 ..      18      71 .] 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 4.4
+                      gvpc 166 dllrqqlaqqlqqeLaqtaqerlaeaqalfqdLaa 200
+                               d+lr+ l++   q L + ++   a++++l q+L a
+  nat_a7d49e90e07b90d64e4e  24 DILREVLER---QALRRLETLTPAQVEDLGQALIA 55 
+                               555555554...44555555555666666666654 PP
+
+>> nat_28794773350b0e96f58a  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.6   0.9       6.3        25     161     190 ..     190     219 ..     159     233 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 0.6 bits;  conditional E-value: 6.3
+                      gvpc 161 ylaeLdllrqqlaqqlqqeLaqtaqerlae 190
+                               +++ L++lr+++++ l  +L +  +    e
+  nat_28794773350b0e96f58a 190 FDQRLRELRAARRESLTADLEERLAAEARE 219
+                               444455555555555444444443333333 PP
+
+>> nat_c4a69bd076e3206cdf7d  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.0   0.8       4.8        19     101     114 ..      63      76 ..      19      83 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 1.0 bits;  conditional E-value: 4.8
+                      gvpc 101 qeRaaqaeqlaqeL 114
+                               ++R++ aeq +++L
+  nat_c4a69bd076e3206cdf7d  63 ENRLEVAEQAREQL 76 
+                               23333333333333 PP
+
+>> nat_beb805c37fa10dd2a9f6  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.4   1.9       6.9        28     160     194 ..     184     218 ..     152     248 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 0.4 bits;  conditional E-value: 6.9
+                      gvpc 160 kylaeLdllrqqlaqqlqqeLaqtaqerlaeaqal 194
+                               +y++ L++l+ +++ +l   L++t +    e q++
+  nat_beb805c37fa10dd2a9f6 184 QYDKRLRELKSERRTELTAALKRTVEPTARELQEQ 218
+                               34455555555555555555555544444444444 PP
+
+>> nat_54a094b6383fa8729a8a  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.0   0.4       4.6        18     174     185 ..      38      54 ..      11      81 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 1.0 bits;  conditional E-value: 4.6
+                      gvpc 174 qq.....lqqeLaqtaq 185
+                               +q     ++ eL+++++
+  nat_54a094b6383fa8729a8a  38 RQairraENSELTEQQE 54 
+                               11111112222222222 PP
+
+>> nat_a5318d3663daa1e5ee23  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.0   0.2       4.7        19      16      39 ..      51      74 ..      27      82 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 1.0 bits;  conditional E-value: 4.7
+                      gvpc 16 qqevaerqqevqstlsevqqeRqe 39
+                              ++e ++rq e+++ l+  ++ R++
+  nat_a5318d3663daa1e5ee23 51 VEEYERRQDELRTQLDVAREARET 74
+                              556666666666666666666654 PP
+
+>> nat_75a033ca7183447c8e24  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.4   0.5         7        28     160     194 ..     210     244 ..     204     250 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 0.4 bits;  conditional E-value: 7
+                      gvpc 160 kylaeLdllrqqlaqqlqqeLaqtaqerlaeaqal 194
+                               k+++ L +lr+++++    +L +  +e   e+ al
+  nat_75a033ca7183447c8e24 210 KFDQRLTELRAARRESITADLRDRLDEHAREVHAL 244
+                               57777777777777776666666666655555555 PP
+
+>> nat_21d7ed4fbf6b3e9197c9  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.5   0.9       6.7        27     174     200 ..     188     215 ..     166     228 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 0.5 bits;  conditional E-value: 6.7
+                      gvpc 174 qqlqqeLaqtaqerlaea.qalfqdLaa 200
+                               ++ +q+La+ ++ r++ +  +l+++Laa
+  nat_21d7ed4fbf6b3e9197c9 188 KKFDQRLAERRAARRESVtADLRKRLAA 215
+                               4455566666666655555555555554 PP
+
+>> nat_3140e24fc354e74b1db5  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.6   0.2       6.1        25     160     194 ..     160     194 ..      96     199 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 0.6 bits;  conditional E-value: 6.1
+                      gvpc 160 kylaeLdllrqqlaqqlqqeLaqtaqerlaeaqal 194
+                               +y++  ++l  ++++ +q+ L +  +   ++++al
+  nat_3140e24fc354e74b1db5 160 QYEQRVSELARERKAAEQDALESRVEPHAKAVKAL 194
+                               45555555666666666666665555555555555 PP
+
+>> nat_ebc44a87237f68a7c915  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.4   0.0       7.3        29     307     329 ..     189     215 ..     127     243 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 0.4 bits;  conditional E-value: 7.3
+                      gvpc 307 qtldltiyqvigeregaR....Laeie 329
+                               +++d+++  +i+ r + R    +ae+e
+  nat_ebc44a87237f68a7c915 189 KQYDKRLSTLIDRRRRGRseelVAELE 215
+                               334444444444444333333333333 PP
+
+>> nat_cc3b644590efb749343f  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.5   1.0       6.4        26     161     189 ..     190     218 ..     153     235 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: 0.5 bits;  conditional E-value: 6.4
+                      gvpc 161 ylaeLdllrqqlaqqlqqeLaqtaqerla 189
+                               +++ L +lr+++++ l  +L +  +    
+  nat_cc3b644590efb749343f 190 FDQRLTELRAARRDSLTADLEERLAAEAR 218
+                               44444444444444444444333333333 PP
+
+>> nat_38af8bf96acabf2df8a2  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.7   0.1       5.6        22     112     127 ..      85     100 ..      53     110 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 0.7 bits;  conditional E-value: 5.6
+                      gvpc 112 qeLsefrenLeatved 127
+                               + L+e   +L+++ ++
+  nat_38af8bf96acabf2df8a2  85 NALQEENRDLRQRLKE 100
+                               2222222222222222 PP
+
+>> nat_11b2a80a41a28a82fe14  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.4   1.2       7.3        29     160     186 ..     192     218 ..     166     232 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 0.4 bits;  conditional E-value: 7.3
+                      gvpc 160 kylaeLdllrqqlaqqlqqeLaqtaqe 186
+                               ++++ L +lr+++++ l  +L +  + 
+  nat_11b2a80a41a28a82fe14 192 QFDQRLMELRAARRESLTADLEERLAA 218
+                               334444444444444433333333333 PP
+
+>> nat_a8224f75d4d10d7151b8  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.9   0.4       5.1        21     265     293 ..     118     144 ..      78     149 .] 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 0.9 bits;  conditional E-value: 5.1
+                      gvpc 265 pep.evvvaapepeappaevaPpdvevePt 293
+                                ++ +  ++ pe e+pp++ +P   +  P+
+  nat_a8224f75d4d10d7151b8 118 LTGrSGKQEEPEEEPPPRKRRP---SRRPV 144
+                               3444667888889999999888...33444 PP
+
+>> nat_7c25847a55db32659928  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.8   0.2       5.3        21     165     204 ..      24      69 ..       8      85 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 0.8 bits;  conditional E-value: 5.3
+                      gvpc 165 Ldllrqqlaqq.....lqqeLaqtaqerlaea.qalfqdLaaFRae 204
+                               Ldl+r+ +++q        +L++++ er+ +  +al +++++ R+ 
+  nat_7c25847a55db32659928  24 LDLVRELMERQalrriDVGDLSDEQVERIGDTlMALDERMRELRER 69 
+                               5555655555544444556788888888877668888888887765 PP
+
+>> nat_3512bc187bf6b327c25b  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.4   0.3       7.2        29     160     193 ..     201     234 ..     175     249 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 0.4 bits;  conditional E-value: 7.2
+                      gvpc 160 kylaeLdllrqqlaqqlqqeLaqtaqerlaeaqa 193
+                               k+++ L +lr+++++    +L +  ++   e+ a
+  nat_3512bc187bf6b327c25b 201 KFDQRLTELRAARRESITSDLRTRLDDHAREVHA 234
+                               3444444444444444444444433333333333 PP
+
+>> nat_46dfa99150a76ad6b330  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.6   0.9       6.3        25     128     160 ..     166     195 ..     126     246 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 0.6 bits;  conditional E-value: 6.3
+                      gvpc 128 lladyaqqriaaaeqlqqeLaaFrqtLrqevqk 160
+                               l+++y+q r + + + ++e+     +L ++ + 
+  nat_46dfa99150a76ad6b330 166 LETQYEQRRDELRHERRAER---THELAERLEP 195
+                               44444444333333333333...2333333222 PP
+
+>> nat_18287ab709e4536a8a89  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.7   2.1       5.7        23     241     276 ..     108     143 ..      85     150 .] 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 0.7 bits;  conditional E-value: 5.7
+                      gvpc 241 asapkaaevappeakaaksaapaepepevvvaapep 276
+                                + +kaa++  ++ +++++ a++ep    ++   +p
+  nat_18287ab709e4536a8a89 108 DTVSKAAQTVADAIRPSEEEAEEEPRRRRPARKAAP 143
+                               455667777777777777766666444222222222 PP
+
+>> nat_8b728da9bc94157561e8  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.5   0.4       6.4        26      65      94 ..     180     209 ..     152     258 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 0.5 bits;  conditional E-value: 6.4
+                      gvpc  65 dtaqerlaqaaqqaeeLkefvqqlqqetae 94 
+                                ++q r+ +++++a+e +e+v++ + + a 
+  nat_8b728da9bc94157561e8 180 REKQARQRERSLVATEWQETVAAVRESLAS 209
+                               344555555555555555555544444333 PP
+
+>> nat_d9f4961baff7df57d2fd  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.9   1.5       4.9        20      69      88 ..      53      72 ..      15      84 .] 0.48
+
+  Alignments for each domain:
+  == domain 1  score: 0.9 bits;  conditional E-value: 4.9
+                      gvpc 69 erlaqaaqqaeeLkefvqql 88
+                              e+  ++a++++eL+ + q+ 
+  nat_d9f4961baff7df57d2fd 53 EYTERKAELEAELETAEQAH 72
+                              22222222222222222222 PP
+
+>> nat_2f6b62c5722bcacabd8e  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.5   0.1       6.6        26      17      41 ..     105     129 ..      96     135 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 0.5 bits;  conditional E-value: 6.6
+                      gvpc  17 qevaerqqevqstlsevqqeRqeqa 41 
+                                 +++  ++v ++l +vq +Rq+ +
+  nat_2f6b62c5722bcacabd8e 105 GALEAAGEKVMDFLGDVQDKRQTTS 129
+                               4444555666666666666666654 PP
+
+>> nat_ff6380bfdca9331d95d6  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.6   0.6         6        24     251     268 ..      52      69 ..      39      83 .. 0.50
+
+  Alignments for each domain:
+  == domain 1  score: 0.6 bits;  conditional E-value: 6
+                      gvpc 251 ppeakaaksaapaepepe 268
+                               p + +++++a+paep+++
+  nat_ff6380bfdca9331d95d6  52 PRARRPSEPAEPAEPAEP 69 
+                               233333333333332221 PP
+
+>> nat_0fa964bd081fca56521b  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.6   1.2         6        24     136     144 ..      57      65 ..      14      81 .. 0.43
+
+  Alignments for each domain:
+  == domain 1  score: 0.6 bits;  conditional E-value: 6
+                      gvpc 136 riaaaeqlq 144
+                               r+++ e+  
+  nat_0fa964bd081fca56521b  57 RRTELEERL 65 
+                               222222222 PP
+
+>> nat_4a610b8daff21e476288  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.6   0.1       6.2        25      91     110 ..      49      69 ..      39      81 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 0.6 bits;  conditional E-value: 6.2
+                      gvpc  91 etaeflsd.taqeRaaqaeql 110
+                               ++++fl+  t+++R++qae+ 
+  nat_4a610b8daff21e476288  49 SVDTFLQYaTEMARLEQAEAS 69 
+                               566666641455677776654 PP
+
+>> nat_953542b6961a34556ee5  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.6   0.0         6        24     112     127 ..      84      99 ..      52     106 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 0.6 bits;  conditional E-value: 6
+                      gvpc 112 qeLsefrenLeatved 127
+                               + L++   +L+++v++
+  nat_953542b6961a34556ee5  84 DALQDENRELRERVKE 99 
+                               2222222222222222 PP
+
+>> nat_fe7f89d5b48d6e6d7028  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.4   0.3         7        28     306     332 ..     175     201 ..     108     221 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 0.4 bits;  conditional E-value: 7
+                      gvpc 306 aqtldltiyqvigeregaRLaeiesdl 332
+                               ++++d ++ +++ er + R a ++++l
+  nat_fe7f89d5b48d6e6d7028 175 EKQYDRRVSELVTERRRTRSASLDEEL 201
+                               244444444444444444444444333 PP
+
+>> nat_73fdcd529802590b2b7b  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.7   1.8       5.8        23     159     186 ..     164     191 ..      97     201 .. 0.50
+
+  Alignments for each domain:
+  == domain 1  score: 0.7 bits;  conditional E-value: 5.8
+                      gvpc 159 qkylaeLdllrqqlaqqlqqeLaqtaqe 186
+                               +ky++ L++l q+++++l+ +L +ta+ 
+  nat_73fdcd529802590b2b7b 164 KKYEKRLRSLMQERRDELRSKLWRTAES 191
+                               3566677777777777777777777665 PP
+
+>> nat_6de015df518c3c1fe74e  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.4   1.5         7        28      38      51 ..      82      95 ..      59     114 .. 0.50
+
+  Alignments for each domain:
+  == domain 1  score: 0.4 bits;  conditional E-value: 7
+                      gvpc 38 qeqaqalaeelqqf 51
+                              ++   +++++++q+
+  nat_6de015df518c3c1fe74e 82 LSGDTNQQQQISQQ 95
+                              22222222222222 PP
+
+>> nat_fd4bf5387ee8f62ffaee  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.4   0.2       6.9        28     119     134 ..      79     101 ..      69     114 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 0.4 bits;  conditional E-value: 6.9
+                      gvpc 119 enLeatvedlladya.......q 134
+                                +L+ ++e+l+a+++       q
+  nat_fd4bf5387ee8f62ffaee  79 SQLQLENEKLRAQIRrleqgdgQ 101
+                               56666666666666533322223 PP
+
+>> nat_c5038f463e5d201e8120  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.3   0.1       7.6        30     174     191 ..     167     184 ..     101     204 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 0.3 bits;  conditional E-value: 7.6
+                      gvpc 174 qqlqqeLaqtaqerlaea 191
+                               +q++q+L++  q r++e+
+  nat_c5038f463e5d201e8120 167 KQYEQRLTERLQGRREEV 184
+                               233333333333333333 PP
+
+>> nat_4b6c3be4d3bf82e021a0  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.7   0.5       5.5        22     169     188 ..      17      36 ..       5      63 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 0.7 bits;  conditional E-value: 5.5
+                      gvpc 169 rqqlaqqlqqeLaqtaqerl 188
+                               rq+l++  q +L+++++er+
+  nat_4b6c3be4d3bf82e021a0  17 RQALRRVDQGDLTEEQEERM 36 
+                               55555556667777777765 PP
+
+>> nat_a50f26e29ce18976c2e6  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.1   6.4       8.8        36     110     207 ..     102     198 ..      97     205 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 0.1 bits;  conditional E-value: 8.8
+                      gvpc 110 laqeLsefrenLeatvedlladyaqqriaaaeqlq.qeLaaFrqtLrqevqkylaeLdllrqqlaqqlqqeLaqt.aqerlaeaq 192
+                               l++e ++fr  L a + +++  ++ +r ++a + +  e  a  ++Lr++v+   +  +  r  l++q++ +L ++ +++r+a+a 
+  nat_a50f26e29ce18976c2e6 102 LREESETFRTHLDALAGHWEYRIEVARDEEAAAEAvVEGDAELRELRDRVD---EASEGTRFLLEKQYERQLRRElRARREAQAG 183
+                               667777788888888888777777555554444111111122234444443...3334566666677777776543888999999 PP
+
+                      gvpc 193 alfqdLaaFRaeLrd 207
+                               +l ++L+   +eL+d
+  nat_a50f26e29ce18976c2e6 184 SLADRLRPHVRELHD 198
+                               999999988888865 PP
+
+>> nat_5fba4ec9aa874b4658b9  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.7   0.1       5.7        23      69      87 ..      53      71 ..      19      82 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 0.7 bits;  conditional E-value: 5.7
+                      gvpc 69 erlaqaaqqaeeLkefvqq 87
+                              e+  ++a++++eL+++ ++
+  nat_5fba4ec9aa874b4658b9 53 EYERRRAELEAELEAAERA 71
+                              3333344444444444444 PP
+
+>> nat_b0f226cab132da339d39  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.4   0.6       7.1        28     246     273 ..      80     108 ..      44     113 .] 0.45
+
+  Alignments for each domain:
+  == domain 1  score: 0.4 bits;  conditional E-value: 7.1
+                      gvpc 246 aaevappeakaaksaapaepep.evvvaa 273
+                               + + a +e++ +++ a +++ + +vv ++
+  nat_b0f226cab132da339d39  80 ESSDANSETQSETELAREATDEhSVVSSP 108
+                               11222222222222222222222333333 PP
+
+>> nat_8d6eb3dba5f66ed00c36  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.0   0.0       9.1        37      27      52 ..     229     254 ..     219     315 .] 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 0.0 bits;  conditional E-value: 9.1
+                      gvpc  27 qstlsevqqeRqeqaqalaeelqqfq 52 
+                                + +++ + +R eq+ +l+ el+++ 
+  nat_8d6eb3dba5f66ed00c36 229 AARVESLRGDRIEQVVDLVRELRDRL 254
+                               55566777789999999999998876 PP
+
+>> nat_66da46cd547656a41784  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.1   0.7       8.8        35      95     331 ..     170     197 ..     134     238 .. 0.49
+
+  Alignments for each domain:
+  == domain 1  score: 0.1 bits;  conditional E-value: 8.8
+                      gvpc  95 flsdtaqeRaaqaeqlaqeLsefrenLeatvedlladyaqqriaaaeqlqqeLaaFrqtLrqevqkylaeLdllrqqlaqqlqqe 179
+                               + ++  ++R                                                                            
+  nat_66da46cd547656a41784 170 MVDKQYENR---------------------------------------------------------------------------- 178
+                               333333333............................................................................ PP
+
+                      gvpc 180 LaqtaqerlaeaqalfqdLaaFRaeLrdyrralqqsvwGnsitesepaavaeekassvkapasapkaaevappeakaaksaapae 264
+                                                                                                                    
+  nat_66da46cd547656a41784   - -------------------------------------------------------------------------------------   -
+                               ..................................................................................... PP
+
+                      gvpc 265 pepevvvaapepeappaevaPpdvevePtteeapepvneyvaqtldltiyqvigeregaRLaeiesd 331
+                                                                               + +v ++  +aR   +es 
+  nat_66da46cd547656a41784 179 ------------------------------------------------LREVKRTAREARTSSLESR 197
+                               ................................................2222222222222222222 PP
+
+>> nat_4148f2a81e7132b20b9f  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.4   0.1       7.2        29     173     200 ..      33      61 ..      20      79 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 0.4 bits;  conditional E-value: 7.2
+                      gvpc 173 aqqlqqeLaqtaqerlaea.qalfqdLaa 200
+                               ++ +  eL++++qerl +a  +l +++++
+  nat_4148f2a81e7132b20b9f  33 RRLEGGELTEEEQERLGQAlLDLDDAIGQ 61 
+                               44466678888888888877777777776 PP
+
+>> nat_57ae02b5e430d2b2bc5a  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.3   0.1       7.3        30      15      27 ..      86      98 ..      57     115 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 0.3 bits;  conditional E-value: 7.3
+                      gvpc 15 rqqevaerqqevq 27
+                               q+e+ e++++++
+  nat_57ae02b5e430d2b2bc5a 86 LQEENRELRERLK 98
+                              2222211111111 PP
+
+>> nat_d9e2c3510c30c0589662  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.8   0.0       5.2        21     264     282 ..      46      64 ..       7      70 .] 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 0.8 bits;  conditional E-value: 5.2
+                      gvpc 264 epepevvvaapepeappae 282
+                               +p ++  v++ + ea++++
+  nat_d9e2c3510c30c0589662  46 APRQSDTVTPRQSEAALDA 64 
+                               1222233333333444444 PP
+
+>> nat_d78c925145ff9cdee9e2  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.5   0.3       6.8        27     171     191 ..      34      59 ..       9      79 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 0.5 bits;  conditional E-value: 6.8
+                      gvpc 171 qlaqq.....lqqeLaqtaqerlaea 191
+                                +++q      + +L+ +++erl +a
+  nat_d78c925145ff9cdee9e2  34 LMERQavrrfDEGTLSAEQEERLGTA 59 
+                               33333333333444444444444333 PP
+
+>> nat_c8771a5c10fa1c296db8  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.3   0.1       7.4        30      99     114 ..      29      58 ..       5      65 .. 0.40
+
+  Alignments for each domain:
+  == domain 1  score: 0.3 bits;  conditional E-value: 7.4
+                      gvpc  99 taqeR..............aaqaeqlaqeL 114
+                               ++  R              +  +e l+qeL
+  nat_c8771a5c10fa1c296db8  29 AHRRRhrlsrlpgltgelkTVTTELLKQEL 58 
+                               222222222222222222233344444444 PP
+
+>> nat_0e118acdc2771e80b4ea  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.1   0.1       8.7        35      25      38 ..     114     127 ..     101     136 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 0.1 bits;  conditional E-value: 8.7
+                      gvpc  25 evqstlsevqqeRq 38 
+                               +v ++l +vq++R+
+  nat_0e118acdc2771e80b4ea 114 KVSEFLGDVQEQRE 127
+                               44444444444443 PP
+
+>> nat_0f8d9d1627be026a1e6b  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.2   0.1       7.9        32     284     317 ..      12      44 ..       5      73 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 0.2 bits;  conditional E-value: 7.9
+                      gvpc 284 aPpdve.vePtteeapepvneyvaqtldltiyqvi 317
+                               aPp+v+ + P +  a +p   +++q+l   ++ ++
+  nat_0f8d9d1627be026a1e6b  12 APPPVQpMAPLARIALDP--ATIEQDLARLVLTLV 44 
+                               332333034555666666..666666666665554 PP
+
+>> nat_165370dde2f43a2ea77b  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.4   0.1       7.2        29      21      34 ..      56      69 ..      29      82 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 0.4 bits;  conditional E-value: 7.2
+                      gvpc 21 erqqevqstlsevq 34
+                              +r++e+++ l+  +
+  nat_165370dde2f43a2ea77b 56 RRREELRTQLDVAR 69
+                              22222222222222 PP
+
+>> nat_dd2f32ef247b4c80fbc3  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> nat_44abe1cc1d8456dc6c46  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> nat_e5df3d986da0fca5374f  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.3   0.1       7.7        31     179     198 ..      39      59 ..      16      88 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 0.3 bits;  conditional E-value: 7.7
+                      gvpc 179 eLaqtaqerlaea.qalfqdL 198
+                               eL++++qerl +a  +l  ++
+  nat_e5df3d986da0fca5374f  39 ELTEEEQERLGQAlLDLDAAI 59 
+                               455555555544433443333 PP
+
+>> nat_e92400776b88a8a20901  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.3   0.3       7.7        31     180     199 ..      43      63 ..      23     100 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 0.3 bits;  conditional E-value: 7.7
+                      gvpc 180 Laqtaqerlaea.qalfqdLa 199
+                               L++++ erl ++  a++++L 
+  nat_e92400776b88a8a20901  43 LTDEEIERLGRQlAAMEDELE 63 
+                               333333333333233333332 PP
+
+>> nat_e8d11648d866d89f021b  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.0   1.6       9.2        37     227     252 ..      81     106 ..      66     111 .. 0.53
+
+  Alignments for each domain:
+  == domain 1  score: 0.0 bits;  conditional E-value: 9.2
+                      gvpc 227 aavaeekassvkapasapkaaevapp 252
+                               ++++e++++++ +++s+pk+ +++ +
+  nat_e8d11648d866d89f021b  81 KIENESQSAEKLESNSQPKESKAKES 106
+                               24444455555555555554444333 PP
+
+>> nat_050407e325dd39fb5a81  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> nat_9a0abc7123e25547e268  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> nat_c0cbaeb838a26d617958  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.2   0.3       8.4        34     258     279 ..      74      95 ..      46      99 .] 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 0.2 bits;  conditional E-value: 8.4
+                      gvpc 258 ksaapaepepevvvaapepeap 279
+                               ++a pa+  ++v+v + +p++p
+  nat_c0cbaeb838a26d617958  74 TPALPAAMVSPVAVYPQQPAPP 95 
+                               2222333222333334444433 PP
+
+>> nat_8d5392221648a605a7c2  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> nat_e5b12747050c4d0b3cf5  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> nat_155ff0e1a28c900ffd67  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.2   0.2       8.3        33     182     201 ..      59      78 ..      28      94 .. 0.52
+
+  Alignments for each domain:
+  == domain 1  score: 0.2 bits;  conditional E-value: 8.3
+                      gvpc 182 qtaqerlaeaqalfqdLaaF 201
+                               +++ erl+e  + +++  + 
+  nat_155ff0e1a28c900ffd67  59 EDEVERLKELHDIEDSVDEL 78 
+                               22233333333333333333 PP
+
+>> nat_1be8da2500a3aec3282a  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.2   0.1         8        32      75      82 ..      59      66 ..      20      81 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 0.2 bits;  conditional E-value: 8
+                      gvpc 75 aqqaeeLk 82
+                              ++++++L+
+  nat_1be8da2500a3aec3282a 59 EELRTQLE 66
+                              22222222 PP
+
+>> nat_545d493608c2e165bf9c  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> nat_2df69daa3558ff90d6d4  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> nat_8ef96f328be5cf2ac1ef  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> nat_f6a69c0e0736bb18b1ef  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> nat_3bdd2e4a8cfc279acbef  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> nat_6392ee051886d826e69f  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+>> nat_25ee00a9c2b4e74f79dd  
+   [No individual domains that satisfy reporting thresholds (although complete target did)]
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (357 nodes)
+Target sequences:                        852  (147449 residues searched)
+Passed MSV filter:                       852  (1); expected 852.0 (1)
+Passed bias filter:                      852  (1); expected 852.0 (1)
+Passed Vit filter:                       852  (1); expected 852.0 (1)
+Passed Fwd filter:                       852  (1); expected 852.0 (1)
+Initial search space (Z):                852  [actual number of targets]
+Domain search space  (domZ):             212  [number of targets reported over threshold]
+# CPU time: 0.44u 0.01s 00:00:00.45 Elapsed: 00:00:00.49
+# Mc/sec: 105.95
+//
+[ok]

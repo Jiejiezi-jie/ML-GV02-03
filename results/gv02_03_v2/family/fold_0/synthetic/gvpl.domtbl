@@ -1,0 +1,52 @@
+#                                                                                                --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                            accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                    ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+exact_duplicate_nat_3cabc956bfd183de1f63 -            332 gvpl                 -            280  1.8e-115  378.0   3.6   1   1  8.5e-116  2.6e-115  377.5   3.6     2   279     2   314     1   315 0.97 -
+exact_duplicate_nat_1b6af661fda31bf1e196 -            323 gvpl                 -            280  1.9e-115  377.9   1.2   1   1    8e-116  2.5e-115  377.6   1.2     9   278    20   312     9   314 0.98 -
+exact_duplicate_nat_492035bd7857aca04ece -            342 gvpl                 -            280  4.8e-109  356.9   0.4   1   1    2e-109    6e-109  356.6   0.4     7   278    27   316    14   318 0.97 -
+exact_duplicate_nat_14bf89de72ffebc8daf2 -            319 gvpl                 -            280  1.7e-103  338.7   0.3   1   1  6.4e-104    2e-103  338.5   0.3     7   277     8   285     1   288 0.96 -
+exact_duplicate_nat_119eeb16038b1399924f -            346 gvpl                 -            280  6.1e-100  327.1   0.0   1   1  9.7e-100     3e-99  324.8   0.0     1   277     1   339     1   342 0.98 -
+truncated_nat_3cabc956bfd183de1f63       -            110 gvpl                 -            280   1.7e-48  158.3   0.1   1   1   5.9e-49   1.8e-48  158.2   0.1     1   109     1   108     1   110 0.93 -
+truncated_nat_1b6af661fda31bf1e196       -            107 gvpl                 -            280   3.1e-40  131.2   0.0   1   1   1.1e-40   3.3e-40  131.1   0.0     9    98    20   107     6   107 0.95 -
+truncated_nat_14bf89de72ffebc8daf2       -            106 gvpl                 -            280   3.9e-33  107.9   0.1   1   1   1.3e-33   4.1e-33  107.8   0.1     6   100     7   106     1   106 0.94 -
+truncated_nat_492035bd7857aca04ece       -            114 gvpl                 -            280   2.8e-26   85.4   0.2   1   1     1e-26   3.1e-26   85.3   0.2     6    82    26   114    10   114 0.94 -
+truncated_nat_119eeb16038b1399924f       -            115 gvpl                 -            280     1e-19   63.9   0.1   1   1   2.4e-19   7.5e-19   61.0   0.1     1    76     1   115     1   115 0.96 -
+exact_duplicate_nat_68254939d0e81bc7115c -            114 gvpl                 -            280     0.015    7.6   0.7   1   1    0.0055     0.017    7.4   0.7   125   194    30   102    17   111 0.74 -
+exact_duplicate_nat_08f506a8e9498c03b468 -            112 gvpl                 -            280      0.12    4.5   0.7   1   1     0.041      0.13    4.5   0.7   177   221    37    77    13   106 0.61 -
+truncated_nat_69cee74069ea570841b6       -            134 gvpl                 -            280      0.36    3.0   8.9   1   1      0.14      0.42    2.8   8.9   112   214    16   118     8   132 0.80 -
+exact_duplicate_nat_00dad4d9eb9c6aee9740 -            131 gvpl                 -            280      0.48    2.6   0.2   1   1      0.16       0.5    2.6   0.2   174   217    45    87     9   117 0.51 -
+exact_duplicate_nat_ac4b5fca0de2eeea6c28 -             84 gvpl                 -            280       0.6    2.3   1.5   1   1       0.2      0.61    2.3   1.5   174   212    37    74    14    84 0.60 -
+exact_duplicate_nat_cc9d0eca2af440c02e36 -            148 gvpl                 -            280      0.64    2.2   0.2   1   1      0.24      0.75    2.0   0.2   190   219    90   119    60   145 0.61 -
+exact_duplicate_nat_9bea7cdc12e000d2c3ea -            130 gvpl                 -            280      0.65    2.2   0.6   1   1      0.26      0.81    1.9   0.6   188   244    32    91    24    99 0.49 -
+truncated_nat_ee215e560b3bde143fef       -            127 gvpl                 -            280      0.67    2.1   1.5   1   1      0.32      0.98    1.6   1.5   191   196    56    61     3   124 0.46 -
+shuffled_nat_1b6af661fda31bf1e196        -            323 gvpl                 -            280      0.68    2.1   0.2   1   1      0.42       1.3    1.2   0.2   206   260    91   144    49   146 0.75 -
+exact_duplicate_nat_b07496d6758a328c5961 -             85 gvpl                 -            280      0.72    2.0   1.9   1   1      0.24      0.75    2.0   1.9   180   201    48    69    15    84 0.54 -
+exact_duplicate_nat_d4b37ab9b761d79418a8 -            110 gvpl                 -            280       0.8    1.9   0.2   1   1      0.27      0.83    1.8   0.2   168   215    41    67     4    91 0.51 -
+exact_duplicate_nat_b0c47871cce8c048b264 -            129 gvpl                 -            280      0.83    1.8   0.1   1   1      0.34         1    1.5   0.1   182   246    36   103    29   109 0.71 -
+shuffled_nat_08f506a8e9498c03b468        -            112 gvpl                 -            280      0.84    1.8   0.3   1   1      0.25      0.77    1.9   0.3   173   195    56    75     6   108 0.56 -
+exact_duplicate_nat_f3cee6b4b1ac4fbe31cd -             83 gvpl                 -            280      0.87    1.8   1.8   1   1       0.3      0.93    1.7   1.8   174   212    37    74    20    82 0.59 -
+exact_duplicate_nat_82b15fd1e2a58ca3c8d0 -             85 gvpl                 -            280      0.88    1.7   2.4   1   1      0.31      0.97    1.6   2.4   174   213    38    77    21    84 0.65 -
+shuffled_nat_ac4b5fca0de2eeea6c28        -             84 gvpl                 -            280      0.91    1.7   0.4   1   1      0.31      0.94    1.7   0.4   150   180    13    43     2    81 0.63 -
+shuffled_nat_82b15fd1e2a58ca3c8d0        -             85 gvpl                 -            280      0.92    1.7   0.3   1   1       0.3      0.91    1.7   0.3   160   172    32    44     5    76 0.52 -
+exact_duplicate_nat_153267792920bb4475d5 -            113 gvpl                 -            280       1.1    1.4   4.0   1   1       0.4       1.2    1.3   4.0   184   242    14    74     5    98 0.54 -
+truncated_nat_626bf126ff6a42e860e1       -             28 gvpl                 -            280       1.2    1.3   0.0   1   1      0.34         1    1.5   0.0    64    86     5    27     1    28 0.72 -
+shuffled_nat_153267792920bb4475d5        -            113 gvpl                 -            280       1.2    1.3   2.8   1   1      0.43       1.3    1.2   2.8   183   239    22    81     4   109 0.49 -
+exact_duplicate_nat_fd79a669594ad1a1ef23 -            120 gvpl                 -            280       1.3    1.2   0.0   1   1      0.41       1.3    1.2   0.0   201   250    52   101    28   119 0.62 -
+shuffled_nat_68254939d0e81bc7115c        -            114 gvpl                 -            280       1.3    1.1   0.6   1   1      0.43       1.3    1.2   0.6   182   216    53    87    15   109 0.58 -
+exact_duplicate_nat_2d8e972f7b8e0b149992 -            114 gvpl                 -            280       1.5    1.0   0.0   1   1      0.75       2.3    0.4   0.0   121   144    44    67    41    97 0.74 -
+shuffled_nat_935d7d0e66b4d7c7301a        -             84 gvpl                 -            280       1.6    0.9   0.1   1   1       0.5       1.5    0.9   0.1   140   162    12    34     3    74 0.69 -
+exact_duplicate_nat_0121f9805d9138155c94 -             84 gvpl                 -            280       1.8    0.7   0.5   1   1      0.62       1.9    0.7   0.5   184   204    47    67    17    84 0.61 -
+exact_duplicate_nat_935d7d0e66b4d7c7301a -             84 gvpl                 -            280       2.1    0.5   3.5   1   1      0.94       2.9    0.1   3.5   183   206    46    69    17    83 0.54 -
+shuffled_nat_3d03178d5c86075982f0        -            121 gvpl                 -            280       2.3    0.4   0.1   1   1      0.87       2.7    0.2   0.1   185   240    14    67     6    84 0.61 -
+exact_duplicate_nat_c25d7e556c15742553a1 -             84 gvpl                 -            280       2.7    0.2   1.4   1   1      0.86       2.6    0.2   1.4   179   203    54    76    14    84 0.58 -
+truncated_nat_153267792920bb4475d5       -             37 gvpl                 -            280       2.8    0.1   0.2   1   1      0.76       2.3    0.4   0.2   188   194    18    24     2    37 0.40 -
+#
+# Program:         hmmsearch
+# Version:         3.3 (Nov 2019)
+# Pipeline mode:   SEARCH
+# Query file:      /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_0/profiles/gvpl.hmm
+# Target file:     /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_0/synthetic/queries.fasta
+# Option settings: hmmsearch --domtblout /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_0/synthetic/gvpl.domtbl -T 0 --domT 0 --max --seed 42 --cpu 1 /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_0/profiles/gvpl.hmm /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_0/synthetic/queries.fasta 
+# Current dir:     /mnt/d/endless/机器学习综合实践/ML-GV02-03
+# Date:            Tue Sep 22 14:34:38 2026
+# [ok]
