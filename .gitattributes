@@ -4,3 +4,5 @@
 /results/gv02_03_nearest_reference_dev/* -text whitespace=-blank-at-eol,cr-at-eol
 /results/gv02_03_qc_report/* -text whitespace=-blank-at-eol,cr-at-eol
 /results/gv02_03_c_handoff_member_a_v1/* -text whitespace=-blank-at-eol,cr-at-eol
+/results/gv02_03_c_tm_member_a_v1/* -text whitespace=-blank-at-eol,cr-at-eol
+/results/gv02_03_c_domains_member_a_v1/* -text whitespace=-blank-at-eol,cr-at-eol

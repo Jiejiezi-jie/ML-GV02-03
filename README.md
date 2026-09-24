@@ -165,7 +165,9 @@ python experiments/run_qc_report.py --config configs/qc_report.yaml --output-dir
 
 对 B 的冻结批次（1,000 条候选）进行导出元数据/EOS 审计、基础 QC 复算与扩展警告、
 346 条参考的全局最近匹配，以及主池 147 / 模糊池 47 的独立距离矩阵。
-读取外部 B 快照，不改变原家族分池；额外结构域和跨膜拓扑仍标为未检查。
+读取外部 B 快照，不改变原家族分池。原交接运行未纳入额外结构域和跨膜拓扑；
+后续已分别补充 [本地 Pfam 域架构复核](results/gv02_03_c_domains_member_a_v1/README.md)
+和 [本地跨膜预警检查](results/gv02_03_c_tm_member_a_v1/README.md)，均不改变 B 分池。
 运行方式与文件含义见 [真实批次 C 交接说明](docs/c-handoff.md)。
 
 ## 四个指标（旧版基线）
