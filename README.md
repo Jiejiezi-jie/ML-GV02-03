@@ -169,6 +169,7 @@ python experiments/run_qc_report.py --config configs/qc_report.yaml --output-dir
 后续已分别补充 [本地 Pfam 域架构复核](results/gv02_03_c_domains_member_a_v1/README.md)
 和 [本地跨膜预警检查](results/gv02_03_c_tm_member_a_v1/README.md)，均不改变 B 分池。
 运行方式与文件含义见 [真实批次 C 交接说明](docs/c-handoff.md)。
+三批证据的逐条汇总及下游边界见 [C→下游统一复核交接](docs/c-final-handoff.md)。
 
 ## 四个指标（旧版基线）
 

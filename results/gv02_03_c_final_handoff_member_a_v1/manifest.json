@@ -1,0 +1,19 @@
+{
+  "implementation_sha256_lf": "9b80c016e341fab1e0016947f3bc68e378ed28384a635cd5620b62b732220186",
+  "config_sha256": "a861f8a205cde52cc52278ae0cf7a4451356b896212f7b8590bf91fcaf68e6e2",
+  "frozen_input_sha256": {
+    "candidates": "d93b92170977fad475104f58c3a6579d2dd6bee4d99c935d94978db454af7d88",
+    "reference_fasta": "9a38015ecd3aaf283af3501f354db3cc23ea4e89045cb75f53cc30a7f9635bc9",
+    "pool_audit": "49fd057655b814b12688142985060fc9c7c554d51a65d563c3604bdc7c968e17"
+  },
+  "source_manifest_sha256": {
+    "base": "362724c10be7d61cea1dd03884ffec9b372980b6c29026853ee8dc80a56b7784",
+    "domains": "ef3cb26399882258d2cbedae2c29ff34874cc1bb36343fbef1c728b3d66da65e",
+    "tm": "51a458a3ebc74181024a30803d4752425db110979596cb3759606fb68af3d375"
+  },
+  "output_sha256": {
+    "candidate_c_review.tsv": "1c500e93b18aab7ea3bbbc12f47d0e6486735e8ffec070a6a693d023c4c97b13",
+    "manual_review_c.tsv": "48f2433d8f84618ca4077529d6800be736e9f1d0c5ae71a7012ea592fa032cf7",
+    "summary.json": "0fac5d79a579c8a1283ee25795485239c95bc0e4236c5190982bb1bb8e00f09f"
+  }
+}
