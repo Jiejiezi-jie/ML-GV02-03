@@ -1,0 +1,8 @@
+# Minimal dependencies for the frozen V2 entry; observed acceptance environment.
+# No Torch, CUDA, HMMER, BLAST or seaborn needed for this entry.
+numpy==2.4.6
+pandas==2.3.3
+scipy==1.17.1
+matplotlib==3.11.1
+pytest==8.4.2
+PyYAML==6.0.3

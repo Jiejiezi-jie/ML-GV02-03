@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "compared_artifact_count": 44,
+  "source_commits": {
+    "b": "10d9da8ef31cd8ec998ab53bec84252f331c64a6",
+    "c": "894f1fa80a8a0f5854e3816a9298c0c320197dbf"
+  },
+  "python": "3.11.16",
+  "isolation": "Separate Git checkout and new virtualenv; no PYTHONPATH or user-site packages. Dependencies inherited from the selected interpreter via system-site-packages; not a fresh package installation.",
+  "snapshot_sha256": {
+    ".gitignore": "acf413fa4a1a66af1bc3759361beaee72f42d914b75fff1688c3faf828ca1989",
+    "README.md": "ad67bb8a726e04c5333386797bcd221482482a15f435149d8f5a6e7f45061e2e",
+    "docs/GV02-03_待做内容与改进计划.md": "b9bf817925938ff1fbd2e5c6840d6aa20e46097a36b00e2bac64becc518e7bf7",
+    "docs/GV02-03_项目流程进度与分工.md": "d1a40ea233f2d27056e230c58f2a2d97650c8d1d1f1c589c6668f7fc9f9f1c46",
+    "docs/冻结批次集成验收.md": "d848e23cfe9404f0af332f085bc3d5668bbaadac132b29c03f167f973c7255ed",
+    "experiments/check_frozen_checkout.py": "e25ee9fe7a316e43b2956fe50d1daa72c3adcacba20a61e26530e062469d94d9",
+    "experiments/run_full_experiment.py": "ff14029c46f68fcaae978a2972dec4b2ad65a919a2db4c516a7c8909271c86a6",
+    "reports/验收清单.md": "e7b41e95289a44c9d04bb789f5ae35c05eb59d18f60ded182836c3e244081e9a",
+    "requirements-frozen-v2.txt": "3f91f8d40c6e3d14c12ee1e15ace094db4f5f898d00c1e9d941091e4657d22f0",
+    "results/gv02_03_v2/d_evaluation_member_a_v1_acceptance.json": "9e9995d7bda9421ca593d0a345ef654dab661c07a3bfd34b6520041ab30df1aa",
+    "src/gv_eval/release.py": "a263fc9479965f208596bc65eafe627e85816796da2f8a484ce452f5e983a50d",
+    "tests/test_release.py": "27b23f2904500a05b47e71a3378b31b103a64410e769beed7aefa483aa6bf808"
+  },
+  "scope": "Frozen B/C artifacts through evaluation, selection and all repository tests; no training or sampling replay."
+}

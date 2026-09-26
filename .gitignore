@@ -2,6 +2,7 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .coverage
+.venv-frozen/
 .DS_Store
 
 # Rebuildable local BLAST databases and transient logs for every experiment variant.

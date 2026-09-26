@@ -9,21 +9,23 @@
 - D 已沿用该批次完成评价：147 条家族支持、136 条通过联合门槛、114 条满足四维评分证据要求，三种策略 Top-10/20/50 均已生成。
 - 原 1224 条参考的生成数据准备保留为历史材料。本次没有重新训练，继续保留上游暂定版本的限定。
 
-获取 B/C 源提交后，可直接运行下游评价，无需切换或合并其分支：
+获取 B/C 源提交后，可从总入口运行冻结 V2 批次，无需切换或合并其分支：
 
 ```bash
 git fetch origin
-python experiments/run_d_evaluation.py
+python experiments/run_full_experiment.py --output /tmp/gv02_03_v2_run
 ```
 
 已发布目录不会覆盖。核验现有结果并独立复跑：
 
 ```bash
-python experiments/run_d_evaluation.py --verify-existing
+python experiments/run_full_experiment.py --verify-existing
 ```
 
 输入接口、未解析距离规则及 E 的集成说明见 [D 评价与筛选交接](docs/D_现有批次评价与筛选交接.md)。
 结果位于 `results/gv02_03_v2/d_evaluation_member_a_v1/`，复现证据位于同级 JSON 文件。
+最小已验收依赖见 `requirements-frozen-v2.txt`；工程集成和隔离副本检查见
+[冻结批次集成验收](docs/冻结批次集成验收.md)。
 
 阶段说明见 [M0–M1 生成数据准备](reports/M0_M1_生成数据准备.md)。
 
