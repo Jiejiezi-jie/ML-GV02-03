@@ -1,0 +1,40 @@
+#                                                                                                --- full sequence --- -------------- this domain -------------   hmm coord   ali coord   env coord
+# target name                            accession   tlen query name           accession   qlen   E-value  score  bias   #  of  c-Evalue  i-Evalue  score  bias  from    to  from    to  from    to  acc description of target
+#                    ------------------- ---------- ----- -------------------- ---------- ----- --------- ------ ----- --- --- --------- --------- ------ ----- ----- ----- ----- ----- ----- ----- ---- ---------------------
+exact_duplicate_nat_09800a748cfbe77d8d9f -            340 gvpc                 -            348   1.9e-85  280.6  44.3   1   1     6e-86   2.2e-85  280.4  44.3     2   344     1   338     1   340 0.89 -
+exact_duplicate_nat_f1576cf15faeaea3dbc6 -            414 gvpc                 -            348   8.4e-79  258.7  58.9   1   1   4.6e-77   1.7e-76  251.1  58.9     1   347     1   413     1   414 0.86 -
+exact_duplicate_nat_65195e1884dba2d18322 -            380 gvpc                 -            348   1.3e-76  251.5  48.1   1   1   1.5e-75   5.5e-75  246.2  48.1     1   347     1   379     1   380 0.90 -
+exact_duplicate_nat_995571f9bd05bfb87fdc -            372 gvpc                 -            348   6.1e-74  242.8  36.1   1   1   1.9e-74   7.1e-74  242.5  36.1     2   348    26   367    25   367 0.90 -
+exact_duplicate_nat_a575c7521c67f51d5d35 -            327 gvpc                 -            348   2.6e-69  227.5  35.4   1   1   8.1e-70     3e-69  227.3  35.4     2   341     1   324     1   327 0.87 -
+truncated_nat_f1576cf15faeaea3dbc6       -            138 gvpc                 -            348   2.5e-30   99.3  35.4   1   1   7.4e-31   2.8e-30   99.2  35.4     1   151     1   137     1   138 0.96 -
+truncated_nat_65195e1884dba2d18322       -            126 gvpc                 -            348   3.6e-26   85.6  39.6   1   1   1.1e-26     4e-26   85.5  39.6     1   138     1   126     1   126 0.99 -
+truncated_nat_09800a748cfbe77d8d9f       -            113 gvpc                 -            348   1.2e-23   77.3  34.6   1   1   4.2e-24   1.6e-23   77.0  34.6     2   126     1   113     1   113 0.97 -
+truncated_nat_a575c7521c67f51d5d35       -            109 gvpc                 -            348   3.1e-19   62.9  21.6   1   1     1e-19   3.7e-19   62.6  21.6     2   120     1   107     1   109 0.95 -
+truncated_nat_995571f9bd05bfb87fdc       -            124 gvpc                 -            348   6.7e-15   48.6  31.2   1   1   2.3e-15   8.4e-15   48.3  31.2     2   109    26   121    25   123 0.97 -
+exact_duplicate_nat_1944acf2ada2119aa498 -            476 gvpc                 -            348   4.4e-10   32.8   1.2   1   1   2.1e-10   7.7e-10   32.0   1.2   237   335   358   461   336   470 0.67 -
+exact_duplicate_nat_287dc8e13316bfa21d5b -            115 gvpc                 -            348     0.005    9.6   4.5   1   1    0.0015    0.0057    9.4   4.5   177   256    16   102     7   110 0.66 -
+exact_duplicate_nat_04ce3ef0cebc48437e9d -            101 gvpc                 -            348     0.025    7.2   0.0   1   1    0.0069     0.026    7.2   0.0    36    83    22    66    13    99 0.66 -
+shuffled_nat_a44f859048f80cee9e81        -            124 gvpc                 -            348      0.19    4.4   0.4   1   1     0.053       0.2    4.3   0.4   199   252    16    72     4   111 0.69 -
+exact_duplicate_nat_c94da6ff72ddadbf903d -            313 gvpc                 -            348      0.47    3.1   0.5   1   1      0.23      0.86    2.2   0.5    40    73   184   228   153   241 0.45 -
+exact_duplicate_nat_5af1dad025fd9ae899db -            105 gvpc                 -            348      0.47    3.1   0.3   1   1      0.14      0.51    2.9   0.3    95   122    49    76    14   101 0.46 -
+exact_duplicate_nat_0ce4f366361b92c40e72 -            114 gvpc                 -            348      0.51    2.9   0.6   1   1      0.14      0.53    2.9   0.6    56    87    50    90    16   105 0.60 -
+exact_duplicate_nat_2c9bf16622aacddb165e -            313 gvpc                 -            348      0.52    2.9   0.1   1   1       0.2      0.76    2.4   0.1   170   203   169   206   129   249 0.80 -
+exact_duplicate_nat_098a41409ea5eda0829f -            341 gvpc                 -            348       0.8    2.3   0.3   1   1       0.3       1.1    1.8   0.3    34   225   214   231   151   267 0.55 -
+exact_duplicate_nat_0400bc6bebe746f9e951 -             84 gvpc                 -            348       1.4    1.5   0.1   1   1      0.37       1.4    1.5   0.1    48    82    31    73    11    81 0.65 -
+exact_duplicate_nat_026e3420597e6acb04ba -            125 gvpc                 -            348       1.4    1.5   0.2   1   1      0.39       1.4    1.5   0.2    35    44    33    42     5   107 0.49 -
+exact_duplicate_nat_155ce5a12a657fff67bd -             84 gvpc                 -            348       1.7    1.3   0.7   1   1      0.51       1.9    1.1   0.7   144   171    48    79    16    83 0.64 -
+truncated_nat_026e3420597e6acb04ba       -             41 gvpc                 -            348       1.7    1.2   0.1   1   1      0.38       1.4    1.5   0.1    99   102    30    33     2    41 0.46 -
+exact_duplicate_nat_4bb2d1867476b81ae8d0 -             84 gvpc                 -            348       2.6    0.6   0.6   1   1      0.68       2.5    0.7   0.6    41    76    23    66    13    84 0.45 -
+shuffled_nat_0ce4f366361b92c40e72        -            114 gvpc                 -            348       2.7    0.6   0.5   1   1      0.69       2.6    0.6   0.5   271   271    75    75     2   114 0.47 -
+exact_duplicate_nat_ba4b60d40b6ab3ab87c7 -             85 gvpc                 -            348       2.9    0.5   0.1   1   1      0.72       2.7    0.6   0.1    43    44    60    61    15    84 0.57 -
+shuffled_nat_0400bc6bebe746f9e951        -             84 gvpc                 -            348         4    0.0   0.1   1   1      0.96       3.6    0.2   0.1   161   179    54    70     7    82 0.59 -
+#
+# Program:         hmmsearch
+# Version:         3.3 (Nov 2019)
+# Pipeline mode:   SEARCH
+# Query file:      /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_1/profiles/gvpc.hmm
+# Target file:     /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_1/synthetic/queries.fasta
+# Option settings: hmmsearch --domtblout /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_1/synthetic/gvpc.domtbl -T 0 --domT 0 --max --seed 42 --cpu 1 /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_1/profiles/gvpc.hmm /mnt/d/endless/机器学习综合实践/ML-GV02-03/results/gv02_03_v2/family/fold_1/synthetic/queries.fasta 
+# Current dir:     /mnt/d/endless/机器学习综合实践/ML-GV02-03
+# Date:            Tue Sep 22 14:36:25 2026
+# [ok]

@@ -1,0 +1,39 @@
+================================================================
+Program: CD-HIT, V4.8.1 (+OpenMP), Mar 22 2020, 15:35:52
+Command: cd-hit -i
+         /mnt/d/endless/机器学习综合实践/ML-GV02-03/data/processed/gv02_03_v2/reference/provisional_seeds.fasta
+         -o
+         /mnt/d/endless/机器学习综合实践/ML-GV02-03/data/processed/gv02_03_v2/reference/seed_cluster_representatives.fasta
+         -c 0.7 -n 4 -aS 0.8 -aL 0.8 -g 1 -d 0 -T 1 -M 2000
+
+Started: Tue Sep 22 14:32:38 2026
+================================================================
+                            Output                              
+----------------------------------------------------------------
+Your word length is 4, using 5 may be faster!
+total seq: 3063
+longest and shortest : 757 and 54
+Total letters: 501922
+Sequences have been sorted
+
+Approximated minimal memory consumption:
+Sequence        : 0M
+Buffer          : 1 X 10M = 10M
+Table           : 1 X 3M = 3M
+Miscellaneous   : 0M
+Total           : 14M
+
+Table limit with the given memory limit:
+Max number of representatives: 4000000
+Max number of word counting entries: 248148193
+
+comparing sequences from          0  to       3063
+...
+     3063  finished        855  clusters
+
+Approximated maximum memory consumption: 16M
+writing new database
+writing clustering information
+program completed !
+
+Total CPU time 0.64

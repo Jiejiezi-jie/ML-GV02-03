@@ -3,6 +3,8 @@ from __future__ import annotations
 from collections import Counter
 from pathlib import Path
 from typing import Iterable
+import re
+import json
 
 from .io import FastaRecord, STANDARD_AA, header_has_label, read_fasta, sequence_sha256
 
@@ -90,4 +92,85 @@ def build_clean_reference(
         "unique_sequences_first_seen_by_source": dict(sorted(source_counts.items())),
     }
     return clean_records, mapping, summary
+
+
+def audit_family_sources(sources: Iterable[str | Path]):
+    """Inventory local database annotations, never infer family from filenames.
+
+    Return unique sequence records plus a row for EVERY source occurrence.
+    Conflicting annotations (sequence or accession) quarantine all occurrences.
+    These are provisional seeds; the caller must add independent domain and
+    out-of-cluster evidence before calling a reference high confidence.
+    """
+    rows = []
+    unique = {}
+    sequence_labels = {}
+    accession_labels = {}
+    for source in sources:
+        for index, record in enumerate(read_fasta(source), 1):
+            digest = sequence_sha256(record.sequence)
+            identifier = "nat_" + digest[:20]
+            unique.setdefault(identifier, FastaRecord(identifier, "", record.sequence))
+            labels = sorted(set(re.findall(
+                r"(?i)(?<![a-z0-9])gvp[a-z](?![a-z0-9])", record.description.lower()
+            )))
+            accession = re.split(r"[|.]", record.identifier)[0]
+            sequence_labels.setdefault(digest, set()).update(labels)
+            accession_labels.setdefault(accession, set()).update(labels)
+            reasons = []
+            if not labels:
+                reasons.append("missing_family_annotation")
+            if not record.sequence or set(record.sequence) - STANDARD_AA:
+                reasons.append("empty_or_nonstandard_sequence")
+            if re.search(r"(?i)partial|fragment|predicted|rescued|probable", record.description):
+                reasons.append("incomplete_or_provisional_annotation")
+            family = labels[0] if len(labels) == 1 else ""
+            bounds = (50, 180) if family == "gvpa" else (40, 1000)
+            if not bounds[0] <= len(record.sequence) <= bounds[1]:
+                reasons.append("length_outside_seed_range")
+            rows.append(dict(reference_id=identifier, source_path=Path(source).as_posix(),
+                             source_record_index=index, source_id=record.identifier,
+                             source_accession=accession, source_header=record.description,
+                             sequence_sha256=digest, length=len(record.sequence),
+                             annotated_family=family, annotation_reasons=";".join(reasons)))
+    for row in rows:
+        labels = sequence_labels[row["sequence_sha256"]] | accession_labels[row["source_accession"]]
+        if len(labels) > 1:
+            row["annotation_reasons"] = ";".join(filter(None, [
+                row["annotation_reasons"], "conflicting_family_annotation"]))
+        row["seed_eligible"] = not row["annotation_reasons"]
+    return list(unique.values()), rows
+
+
+def prepare_reviewed_references(snapshot: str | Path, output: str | Path):
+    """Extract explicit A/J recommended names from a pinned UniProt JSON snapshot.
+
+    Reviewed does not mean experimentally proven. Preserve evidence codes,
+    fragment/probable status and record version in a separate source manifest.
+    """
+    from .io import write_fasta
+    payload = json.loads(Path(snapshot).read_text(encoding="utf-8"))
+    records, rows = [], []
+    for entry in payload["results"]:
+        if entry["entryType"] != "UniProtKB reviewed (Swiss-Prot)":
+            raise ValueError("Non-reviewed entry in curated snapshot")
+        description = entry["proteinDescription"]
+        name = description["recommendedName"]["fullName"]["value"]
+        match = re.search(r"(?i)gas vesicle protein ([AJ])(?:\d+)?$", name)
+        if not match:
+            raise ValueError(f"Unrecognized reviewed family: {name}")
+        family = "gvp" + match[1].lower()
+        accession = entry["primaryAccession"]
+        flag = description.get("flag", "")
+        record = FastaRecord(accession, f"{family} reviewed {name} {flag}", entry["sequence"]["value"])
+        records.append(record)
+        rows.append(dict(accession=accession, family=family, recommended_name=name,
+                         organism=entry["organism"]["scientificName"], flag=flag,
+                         sequence_sha256=sequence_sha256(record.sequence),
+                         evidence_codes=";".join(sorted(set(re.findall(r'ECO:\d+', json.dumps(entry))))),
+                         entry_version=entry["entryAudit"]["entryVersion"],
+                         last_updated=entry["entryAudit"]["lastAnnotationUpdateDate"],
+                         source_url=f"https://www.uniprot.org/uniprotkb/{accession}/entry"))
+    write_fasta(records, output)
+    return records, rows
 
