@@ -1,0 +1,10 @@
+strategy	budget	jaccard_with_b_local_alignment
+weighted_sum	10	0.333333333333
+pareto	10	0.176470588235
+dimension_round_robin	10	0.428571428571
+weighted_sum	20	0.333333333333
+pareto	20	0.25
+dimension_round_robin	20	0.333333333333
+weighted_sum	50	0.492537313433
+pareto	50	0.449275362319
+dimension_round_robin	50	0.470588235294

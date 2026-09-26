@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "compared_artifact_count": 44,
+  "source_commits": {
+    "b": "10d9da8ef31cd8ec998ab53bec84252f331c64a6",
+    "c": "894f1fa80a8a0f5854e3816a9298c0c320197dbf"
+  },
+  "manifest_sha256": "abd4e0626f44bddf421333b16d1f795df7c8f49e16f9075a9c020686155da22c",
+  "scope": "Same frozen inputs, code, configuration and environment; all output hashes including figures match."
+}

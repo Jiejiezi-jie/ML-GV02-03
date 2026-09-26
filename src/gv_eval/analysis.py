@@ -10,7 +10,6 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import seaborn as sns
 from scipy.stats import spearmanr
 
 from .metrics import subset_diversity
@@ -352,6 +351,8 @@ def save_figures(
     threshold_rows: pd.DataFrame,
     output_dir: str | Path,
 ) -> None:
+    import seaborn as sns
+
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     sns.set_theme(style="whitegrid", context="notebook")
