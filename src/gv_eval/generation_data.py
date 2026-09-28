@@ -90,6 +90,136 @@ def cluster_aware_split(
     return member_to_split, cluster_ids
 
 
+def constrained_cluster_split(
+    clusters: Sequence[Sequence[str]],
+    member_lengths: Mapping[str, int],
+    target_sequences: Mapping[str, int],
+    target_clusters: Mapping[str, int],
+    target_total_lengths: Mapping[str, int],
+    *,
+    seed: int,
+) -> tuple[dict[str, str], dict[str, list[int]]]:
+    """Find an exact, deterministic cluster-level stratified split.
+
+    Whole homology clusters are assigned with mixed-integer programming.  The
+    constraints pin the number of sequences, number of clusters and aggregate
+    sequence length in each split; the seeded objective only breaks ties
+    between otherwise equivalent feasible assignments.
+    """
+
+    mappings = (target_sequences, target_clusters, target_total_lengths)
+    if any(tuple(mapping) != _SPLIT_NAMES for mapping in mappings):
+        raise ValueError(f"Split names and order must be {_SPLIT_NAMES}")
+    if not clusters or any(not cluster for cluster in clusters):
+        raise ValueError("Clusters must be non-empty")
+
+    members = [member for cluster in clusters for member in cluster]
+    duplicates = sorted(member for member, count in Counter(members).items() if count > 1)
+    if duplicates:
+        raise ValueError(f"Duplicate cluster member: {duplicates[0]}")
+    if set(member_lengths) != set(members):
+        missing = sorted(set(members) - set(member_lengths))
+        unexpected = sorted(set(member_lengths) - set(members))
+        raise ValueError(
+            f"Length mapping mismatch; missing={missing[:5]}, unexpected={unexpected[:5]}"
+        )
+    if any(int(length) <= 0 for length in member_lengths.values()):
+        raise ValueError("All sequence lengths must be positive")
+    if sum(int(value) for value in target_sequences.values()) != len(members):
+        raise ValueError("Target sequence counts do not cover every member")
+    if sum(int(value) for value in target_clusters.values()) != len(clusters):
+        raise ValueError("Target cluster counts do not cover every cluster")
+    if sum(int(value) for value in target_total_lengths.values()) != sum(
+        int(member_lengths[member]) for member in members
+    ):
+        raise ValueError("Target total lengths do not match the input sequences")
+
+    try:
+        import numpy as np
+        from scipy.optimize import Bounds, LinearConstraint, milp
+    except ImportError as error:  # pragma: no cover - fixed by environment.yml
+        raise RuntimeError("constrained_cluster_split requires NumPy and SciPy") from error
+
+    split_count = len(_SPLIT_NAMES)
+    cluster_count = len(clusters)
+    variable_count = split_count * cluster_count
+    cluster_sizes = np.asarray([len(cluster) for cluster in clusters], dtype=float)
+    cluster_lengths = np.asarray(
+        [sum(int(member_lengths[member]) for member in cluster) for cluster in clusters],
+        dtype=float,
+    )
+
+    constraint_rows: list[object] = []
+    lower_bounds: list[float] = []
+    upper_bounds: list[float] = []
+    for cluster_index in range(cluster_count):
+        row = np.zeros(variable_count, dtype=float)
+        for split_index in range(split_count):
+            row[split_index * cluster_count + cluster_index] = 1.0
+        constraint_rows.append(row)
+        lower_bounds.append(1.0)
+        upper_bounds.append(1.0)
+
+    for split_index, split in enumerate(_SPLIT_NAMES):
+        start = split_index * cluster_count
+        stop = start + cluster_count
+        for values, target in (
+            (cluster_sizes, target_sequences[split]),
+            (np.ones(cluster_count, dtype=float), target_clusters[split]),
+            (cluster_lengths, target_total_lengths[split]),
+        ):
+            row = np.zeros(variable_count, dtype=float)
+            row[start:stop] = values
+            constraint_rows.append(row)
+            lower_bounds.append(float(target))
+            upper_bounds.append(float(target))
+
+    # The feasibility constraints define the requested distribution.  Stable
+    # seeded coefficients select one solution without using labels or outcomes.
+    rng = random.Random(seed)
+    objective = np.asarray([rng.random() for _ in range(variable_count)], dtype=float)
+    result = milp(
+        objective,
+        integrality=np.ones(variable_count, dtype=int),
+        bounds=Bounds(np.zeros(variable_count), np.ones(variable_count)),
+        constraints=LinearConstraint(
+            np.stack(constraint_rows),
+            np.asarray(lower_bounds),
+            np.asarray(upper_bounds),
+        ),
+    )
+    if not result.success or result.x is None:
+        raise ValueError(f"No feasible constrained cluster split: {result.message}")
+
+    assignment = result.x.reshape(split_count, cluster_count)
+    member_to_split: dict[str, str] = {}
+    cluster_ids = {name: [] for name in _SPLIT_NAMES}
+    for cluster_index, cluster in enumerate(clusters):
+        selected = [
+            split_index
+            for split_index in range(split_count)
+            if assignment[split_index, cluster_index] > 0.5
+        ]
+        if len(selected) != 1:
+            raise RuntimeError("Optimizer returned a non-integral cluster assignment")
+        split = _SPLIT_NAMES[selected[0]]
+        cluster_ids[split].append(cluster_index)
+        for member in cluster:
+            member_to_split[member] = split
+
+    for split in _SPLIT_NAMES:
+        selected_members = [member for member, value in member_to_split.items() if value == split]
+        if len(selected_members) != int(target_sequences[split]):
+            raise RuntimeError(f"Post-validation failed for {split} sequence count")
+        if len(cluster_ids[split]) != int(target_clusters[split]):
+            raise RuntimeError(f"Post-validation failed for {split} cluster count")
+        if sum(int(member_lengths[member]) for member in selected_members) != int(
+            target_total_lengths[split]
+        ):
+            raise RuntimeError(f"Post-validation failed for {split} total length")
+    return member_to_split, cluster_ids
+
+
 def _read_reference_mapping(path: Path) -> dict[str, dict[str, str]]:
     with path.open(encoding="utf-8-sig", newline="") as stream:
         rows = list(csv.DictReader(stream, delimiter="\t"))

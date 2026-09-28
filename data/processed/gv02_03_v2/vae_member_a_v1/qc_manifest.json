@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "seed": 42,
+  "config": {
+    "version": 1,
+    "seed": 42,
+    "inputs": {
+      "candidates": "data/generated/sequence_vae/member_a_v1_seed42/vae_candidates.fasta",
+      "generation_metadata": "data/generated/sequence_vae/member_a_v1_seed42/generation_metadata.tsv",
+      "training_fasta": "data/processed/gv02_03_v2/member_b_handoff/development_split/train.fasta",
+      "reference_fasta": "data/processed/gv02_03_v2/member_b_handoff/gvpa_training_eligible.fasta",
+      "family_classification": "data/processed/gv02_03_v2/vae_member_a_v1/family/candidate_family_classification.tsv"
+    },
+    "quality": {
+      "minimum_length": 50,
+      "maximum_length": 180,
+      "minimum_unique_residues": 8,
+      "maximum_single_residue_fraction": 0.35,
+      "generation_length_cap": null,
+      "exact_training_match_action": "exclude",
+      "exact_reference_match_action": "exclude",
+      "composition_outlier_quantile": 0.99,
+      "composition_outlier_action": "warn"
+    },
+    "outputs": {
+      "processed_dir": "data/processed/gv02_03_v2/vae_member_a_v1"
+    }
+  },
+  "inputs": {
+    "configs/vae_member_a_v1_candidates.yaml": "2c82d5c198fb917b60f7eaac79964628666c4a36b30d3d92351863371819d277",
+    "data/generated/sequence_vae/member_a_v1_seed42/vae_candidates.fasta": "d93b92170977fad475104f58c3a6579d2dd6bee4d99c935d94978db454af7d88",
+    "data/generated/sequence_vae/member_a_v1_seed42/generation_metadata.tsv": "60e95e6647b6e417bc32215f1e104e8eb37a5eba1c7692c9a8a0d143979e17a2",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/train.fasta": "9a61890554773212d763cf0cbc99248f7631a4375bbb43e89db79f5285a02239",
+    "data/processed/gv02_03_v2/member_b_handoff/gvpa_training_eligible.fasta": "9a38015ecd3aaf283af3501f354db3cc23ea4e89045cb75f53cc30a7f9635bc9"
+  },
+  "outputs": {
+    "data/processed/gv02_03_v2/vae_member_a_v1/candidate_qc.tsv": "d58a07dea1f6256ea6f91df531866a20048f22f7c043d24beeabbe3b558a2ee1",
+    "data/processed/gv02_03_v2/vae_member_a_v1/qc_pass.fasta": "602d39ca2e685e814b95aadfbe4882c7a4512b926a7e454c35b4f6aac9412ed7",
+    "data/processed/gv02_03_v2/vae_member_a_v1/qc_summary.json": "f5d3152b4d396e4494a01764a73d7d58754d3abbe8bfedf40516c14a885057a7"
+  }
+}

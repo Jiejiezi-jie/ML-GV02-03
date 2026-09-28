@@ -1,0 +1,6 @@
+variant	removed_metric	jaccard_with_full	mean_constraint_score	mean_conservation_score	mean_novelty_score	mean_uniqueness_score
+all_dimensions		1	0.8987704918	0.9847826087	0.3861251262	0.5253173691
+without_constraint_score	constraint_score	0.2121212121	0.4471311475	0.9630434783	0.4665960057	0.5992194496
+without_conservation_score	conservation_score	0.9047619048	0.8823770492	0.9739130435	0.3980531692	0.5351475632
+without_novelty_score	novelty_score	0.7391304348	0.9323770492	0.9913043478	0.3518777359	0.5000890506
+without_uniqueness_score	uniqueness_score	0.7391304348	0.9200819672	0.9891304348	0.3717640603	0.5044484489

@@ -1,0 +1,11 @@
+{
+  "input_count": 1000,
+  "pass_count": 1000,
+  "failure_count": 0,
+  "natural_eos_count": 972,
+  "generation_cap_count": 28,
+  "reason_counts": {
+    "composition_outlier_warning": 174,
+    "generation_cap_warning": 28
+  }
+}

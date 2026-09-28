@@ -1,0 +1,16 @@
+# hmmbuild :: profile HMM construction from multiple sequence alignments
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# input alignment file:             /home/user/wangyuhan/ML-GV02-03/models/family_profiles_vae_member_a_v1/gvpn.alignment.fasta
+# output HMM file:                  /home/user/wangyuhan/ML-GV02-03/models/family_profiles_vae_member_a_v1/gvpn.hmm
+# name (the single) HMM:            gvpn
+# number of worker threads:         1
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# idx name                  nseq  alen  mlen eff_nseq re/pos description
+#---- -------------------- ----- ----- ----- -------- ------ -----------
+1     gvpn                   230   916   384     1.92  0.590 
+
+# CPU time: 13.67u 0.01s 00:00:13.68 Elapsed: 00:00:00.26

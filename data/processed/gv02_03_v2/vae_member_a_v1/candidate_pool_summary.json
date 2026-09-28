@@ -1,0 +1,13 @@
+{
+  "input_count": 1000,
+  "pool_counts": {
+    "main_supported_gvpa": 147,
+    "ambiguous_exploration": 47,
+    "excluded": 806
+  },
+  "family_status_counts": {
+    "gvpa_gvpj_ambiguous": 47,
+    "supported_gvpa": 147,
+    "unsupported": 806
+  }
+}

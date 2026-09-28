@@ -1,0 +1,16 @@
+# hmmbuild :: profile HMM construction from multiple sequence alignments
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# input alignment file:             /home/user/wangyuhan/ML-GV02-03/models/family_profiles_vae_member_a_v1/gvpa.alignment.fasta
+# output HMM file:                  /home/user/wangyuhan/ML-GV02-03/models/family_profiles_vae_member_a_v1/gvpa.hmm
+# name (the single) HMM:            gvpa
+# number of worker threads:         1
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# idx name                  nseq  alen  mlen eff_nseq re/pos description
+#---- -------------------- ----- ----- ----- -------- ------ -----------
+1     gvpa                    11   149   111     0.86  0.589 
+
+# CPU time: 8.55u 0.00s 00:00:08.55 Elapsed: 00:00:00.08

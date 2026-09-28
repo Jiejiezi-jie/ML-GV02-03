@@ -1,0 +1,85 @@
+{
+  "format_version": 1,
+  "status": "development_provisional",
+  "warning": "This model used provisional nominal GvpA data and is not a formal V2 model.",
+  "seed": 42,
+  "device": "cuda:3",
+  "model_config": {
+    "vocab_size": 24,
+    "pad_id": 0,
+    "bos_id": 1,
+    "eos_id": 2,
+    "unk_id": 3,
+    "embedding_dim": 32,
+    "hidden_dim": 128,
+    "latent_dim": 32,
+    "encoder_layers": 1,
+    "decoder_layers": 1,
+    "dropout": 0.0
+  },
+  "training_config": {
+    "batch_size": 64,
+    "epochs": 100,
+    "learning_rate": 0.001,
+    "kl_beta": 0.1,
+    "kl_warmup_epochs": 20,
+    "early_stopping_patience": 15,
+    "gradient_clip_norm": 1.0,
+    "num_workers": 0,
+    "posterior_collapse_kl_threshold": 0.01
+  },
+  "data_verification_status": "pending_final_family_verification_member_a_v1_conservative_provisional",
+  "split_sizes": {
+    "train": 277,
+    "validation": 33,
+    "test": 36
+  },
+  "input_sha256": {
+    "configs/generation_member_a_v1.yaml": "0f169a1cb127e82216e0c1b1d95b7b6c235d9619d7b53e27312628716a3da32d",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/vocabulary.json": "4664cb809825b7023ad6a8a90b9492f757446b7b97890595c397504646aa55d4",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/train.fasta": "9a61890554773212d763cf0cbc99248f7631a4375bbb43e89db79f5285a02239",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/validation.fasta": "1713b8a31b509846354577b2b1c65be08ebf657b0229c271363489c7d4d88283",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/test.fasta": "64ce65c60b32e9b182808eb84131ca70bf39f39e7c97d2614f2a0641b9f9839f",
+    "data/processed/gv02_03_v2/member_b_handoff/release_manifest.json": "de51f46e05f6ac85e86df5535d18b325cb8b5f40df8942fdbdd651f46000ecde",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/split_manifest.json": "28e2c439d1946a789cb3a3812d4c54f1cce0502dbfa9429d77c238425b501f30"
+  },
+  "data_provenance": {
+    "release_id": "member_a_v1_conservative_provisional",
+    "split_manifest_sha256": "28e2c439d1946a789cb3a3812d4c54f1cce0502dbfa9429d77c238425b501f30",
+    "release_status": "provisional_not_scientifically_final",
+    "release_manifest_sha256": "de51f46e05f6ac85e86df5535d18b325cb8b5f40df8942fdbdd651f46000ecde"
+  },
+  "best_epoch": 60,
+  "stopped_epoch": 75,
+  "best_validation_loss": 1.576335072517395,
+  "test_evaluated": true,
+  "test_metrics": {
+    "loss": 1.255026936531067,
+    "reconstruction": 1.2548251152038574,
+    "kl": 0.002018257975578308,
+    "perplexity": 3.5072249603835353,
+    "token_accuracy": 0.6450579245748089,
+    "eos_accuracy": 0.5277777777777778,
+    "examples": 36.0,
+    "tokens": 4057.0
+  },
+  "posterior_collapse_diagnostic": {
+    "best_epoch_validation_kl": 0.002515933709219098,
+    "warning_threshold": 0.01,
+    "warning": true
+  },
+  "dependencies": {
+    "python": "3.10.20",
+    "torch": "2.8.0+cu128",
+    "cuda_runtime": "12.8",
+    "numpy": "1.26.4",
+    "PyYAML": "6.0.3",
+    "biopython": null
+  },
+  "artifacts_sha256": {
+    "best.pt": "d2801a2a130928739f44f9726bcb5bbd7be229fadfe2f05fba5d0f6cc87debdf",
+    "last.pt": "04bca4cdb4943d55ea777aba17ccd971d0b49ae5a92204d2741c817914092cc2",
+    "training_history.tsv": "d1c10033c5d2df45d12d79437b42551c710267ff4590c110c01267a04fc1f336",
+    "training_curve.png": "9ea3c4231b29b64433796658f4066bf7c6bdd7af2c5e9b0595508a5566d7c047"
+  }
+}

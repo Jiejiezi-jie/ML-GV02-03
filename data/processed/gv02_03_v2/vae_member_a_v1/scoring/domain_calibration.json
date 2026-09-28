@@ -1,0 +1,8 @@
+{
+  "domain_score_cutoff": 25.0,
+  "model_coverage_cutoff": 0.95,
+  "reference_score_min": 40.4,
+  "reference_score_median": 52.75,
+  "reference_score_max": 61.9,
+  "reference_hits": 122
+}

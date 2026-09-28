@@ -33,6 +33,7 @@ from .io import (
     STANDARD_AA,
     read_alignment,
     read_fasta,
+    sequence_sha256,
     sha256_file,
     write_fasta,
     write_json,
@@ -116,15 +117,48 @@ def run_pipeline(root: str | Path, config_path: str | Path) -> dict:
     tools = require_tools(["hmmsearch", "mafft", "blastp", "makeblastdb", "cd-hit"])
     candidates = {row.identifier: row for row in candidates_list}
 
-    reference_paths = [_path(root, value) for value in config["inputs"]["nominal_gvpa_sources"]]
-    reference, reference_mapping, reference_summary = build_clean_reference(
-        reference_paths,
-        required_label=config["reference"]["required_label"],
-        excluded_labels=config["reference"]["excluded_labels"],
-        excluded_header_terms=config["reference"]["excluded_header_terms"],
-        minimum_length=config["reference"]["min_length"],
-        maximum_length=config["reference"]["max_length"],
-    )
+    prevalidated_value = config["inputs"].get("prevalidated_reference_fasta")
+    if prevalidated_value is not None:
+        reference_paths = [_path(root, prevalidated_value)]
+        reference = list(read_fasta(reference_paths[0]))
+        if not reference or len({record.identifier for record in reference}) != len(reference):
+            raise ValueError("Prevalidated reference must be nonempty with unique identifiers")
+        if len({record.sequence for record in reference}) != len(reference):
+            raise ValueError("Prevalidated reference contains duplicate sequences")
+        for record in reference:
+            if set(record.sequence) - STANDARD_AA:
+                raise ValueError(f"Prevalidated reference contains non-standard residues: {record.identifier}")
+            if not config["reference"]["min_length"] <= len(record.sequence) <= config["reference"]["max_length"]:
+                raise ValueError(f"Prevalidated reference length is out of range: {record.identifier}")
+        reference_mapping = [
+            {
+                "reference_id": record.identifier,
+                "source_path": reference_paths[0].relative_to(root).as_posix(),
+                "source_id": record.identifier,
+                "source_header": record.description,
+                "sequence_sha256": sequence_sha256(record.sequence),
+                "length": len(record.sequence),
+                "accepted": True,
+                "unique_representative": True,
+                "status": "prevalidated_reference_input",
+            }
+            for record in reference
+        ]
+        reference_summary = {
+            "input_records": len(reference),
+            "accepted_unique": len(reference),
+            "mode": "prevalidated_reference_fasta",
+        }
+    else:
+        reference_paths = [_path(root, value) for value in config["inputs"]["nominal_gvpa_sources"]]
+        reference, reference_mapping, reference_summary = build_clean_reference(
+            reference_paths,
+            required_label=config["reference"]["required_label"],
+            excluded_labels=config["reference"]["excluded_labels"],
+            excluded_header_terms=config["reference"]["excluded_header_terms"],
+            minimum_length=config["reference"]["min_length"],
+            maximum_length=config["reference"]["max_length"],
+        )
     reference_clean = processed / "reference_clean.fasta"
     write_fasta(reference, reference_clean)
     write_tsv(processed / "reference_mapping.tsv", reference_mapping, list(reference_mapping[0]))
@@ -254,11 +288,29 @@ def run_pipeline(root: str | Path, config_path: str | Path) -> dict:
     metrics = list(config["selection"]["metrics"])
     _write_frame(frame, tables / "candidate_scores.tsv")
 
-    pearson, spearman = correlation_tables(frame, metrics)
+    if config["selection"].get("require_domain_pass", False):
+        ranking_indices = np.flatnonzero(frame["domain_pass"].to_numpy(dtype=bool))
+        ranking_frame = frame.iloc[ranking_indices].reset_index(drop=True)
+        ranking_distance = distance[np.ix_(ranking_indices, ranking_indices)]
+    else:
+        ranking_frame = frame
+        ranking_distance = distance
+    required_budget = max(2, *config["selection"]["budgets"], config["selection"]["primary_k"])
+    if len(ranking_frame) < required_budget:
+        raise ValueError(
+            f"Only {len(ranking_frame)} candidates satisfy ranking hard gates; "
+            f"the largest requested budget is {required_budget}"
+        )
+
+    pearson, spearman = correlation_tables(ranking_frame, metrics)
     pearson.to_csv(tables / "correlation_pearson.tsv", sep="\t", lineterminator="\n", float_format="%.10g")
     spearman.to_csv(tables / "correlation_spearman.tsv", sep="\t", lineterminator="\n", float_format="%.10g")
     selections, strategy_rows, overlap_rows = build_strategy_results(
-        frame, metrics, config["selection"]["equal_weights"], config["selection"]["budgets"], distance
+        ranking_frame,
+        metrics,
+        config["selection"]["equal_weights"],
+        config["selection"]["budgets"],
+        ranking_distance,
     )
     for (strategy, budget), selected in selections.items():
         _write_frame(selected, selections_dir / f"{strategy}_top{budget}.tsv")
@@ -270,13 +322,13 @@ def run_pipeline(root: str | Path, config_path: str | Path) -> dict:
 
     primary_k = config["selection"]["primary_k"]
     ablation_rows, ablation_selections = ablation_results(
-        frame, metrics, config["selection"]["equal_weights"], primary_k
+        ranking_frame, metrics, config["selection"]["equal_weights"], primary_k
     )
     _write_frame(pd.DataFrame(ablation_rows), tables / "ablation_summary.tsv")
     write_json(tables / "ablation_selections.json", ablation_selections)
 
     weight_rows, frequency = weight_robustness(
-        frame, metrics, config["selection"]["equal_weights"], primary_k,
+        ranking_frame, metrics, config["selection"]["equal_weights"], primary_k,
         config["robustness"]["weight_samples"], config["robustness"]["relative_weight_sigma"], config["seed"],
     )
     weight_frame = pd.DataFrame(weight_rows)
@@ -285,7 +337,7 @@ def run_pipeline(root: str | Path, config_path: str | Path) -> dict:
         pd.DataFrame([{"sequence_id": key, "selection_frequency": value} for key, value in sorted(frequency.items())]),
         tables / "weight_selection_frequency.tsv",
     )
-    weighted = weighted_ranking(frame, metrics, config["selection"]["equal_weights"])
+    weighted = weighted_ranking(ranking_frame, metrics, config["selection"]["equal_weights"])
     threshold_rows = threshold_robustness(
         weighted, primary_k, calibration["domain_score_cutoff"], calibration["model_coverage_cutoff"],
         config["robustness"]["domain_cutoff_multipliers"], config["robustness"]["coverage_offsets"],
@@ -294,18 +346,20 @@ def run_pipeline(root: str | Path, config_path: str | Path) -> dict:
     _write_frame(threshold_frame, tables / "threshold_robustness.tsv")
 
     random_rows, random_comparisons = random_baseline(
-        frame, strategy_rows, metrics, distance, primary_k,
+        ranking_frame, strategy_rows, metrics, ranking_distance, primary_k,
         config["robustness"]["random_baseline_samples"], config["seed"],
     )
     _write_frame(pd.DataFrame(random_rows), tables / "random_baseline_samples.tsv")
     _write_frame(pd.DataFrame(random_comparisons), tables / "random_baseline_comparison.tsv")
 
-    pareto = pareto_ranking(frame, metrics)
+    pareto = pareto_ranking(ranking_frame, metrics)
     _write_frame(pareto, tables / "pareto_ranking.tsv")
-    save_figures(frame, metrics, pearson, spearman, strategy_frame, overlap_frame, weight_frame, threshold_frame, figures)
+    save_figures(ranking_frame, metrics, pearson, spearman, strategy_frame, overlap_frame, weight_frame, threshold_frame, figures)
 
     summary = {
         "candidate_count": len(frame),
+        "ranking_candidate_count": len(ranking_frame),
+        "ranking_requires_domain_pass": bool(config["selection"].get("require_domain_pass", False)),
         "clean_reference_count": len(reference),
         "reference_representative_count": len(representatives),
         "conserved_site_count": len(sites),
@@ -314,8 +368,8 @@ def run_pipeline(root: str | Path, config_path: str | Path) -> dict:
         "domain_calibration": calibration,
         "metric_summary": {
             metric: {
-                "mean": float(frame[metric].mean()), "median": float(frame[metric].median()),
-                "min": float(frame[metric].min()), "max": float(frame[metric].max()),
+                "mean": float(ranking_frame[metric].mean()), "median": float(ranking_frame[metric].median()),
+                "min": float(ranking_frame[metric].min()), "max": float(ranking_frame[metric].max()),
             }
             for metric in metrics
         },

@@ -1,0 +1,60 @@
+{
+  "format_version": 1,
+  "status": "development_provisional",
+  "candidate_count": 1000,
+  "seed": 42,
+  "device": "cuda:3",
+  "generation_parameters": {
+    "minimum_sequence_length": 50,
+    "maximum_sequence_length": 180,
+    "temperature": 1.0,
+    "top_k": 0,
+    "top_p": 1.0,
+    "batch_size": 64
+  },
+  "input_sha256": {
+    "configs/generation_member_a_v1.yaml": "0f169a1cb127e82216e0c1b1d95b7b6c235d9619d7b53e27312628716a3da32d",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/vocabulary.json": "4664cb809825b7023ad6a8a90b9492f757446b7b97890595c397504646aa55d4",
+    "models/generator/sequence_vae/member_a_v1_seed42/best.pt": "d2801a2a130928739f44f9726bcb5bbd7be229fadfe2f05fba5d0f6cc87debdf",
+    "data/processed/gv02_03_v2/member_b_handoff/release_manifest.json": "de51f46e05f6ac85e86df5535d18b325cb8b5f40df8942fdbdd651f46000ecde",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/split_manifest.json": "28e2c439d1946a789cb3a3812d4c54f1cce0502dbfa9429d77c238425b501f30"
+  },
+  "data_provenance": {
+    "release_id": "member_a_v1_conservative_provisional",
+    "split_manifest_sha256": "28e2c439d1946a789cb3a3812d4c54f1cce0502dbfa9429d77c238425b501f30",
+    "release_status": "provisional_not_scientifically_final",
+    "release_manifest_sha256": "de51f46e05f6ac85e86df5535d18b325cb8b5f40df8942fdbdd651f46000ecde"
+  },
+  "output_sha256": {
+    "vae_candidates.fasta": "d93b92170977fad475104f58c3a6579d2dd6bee4d99c935d94978db454af7d88",
+    "generation_metadata.tsv": "60e95e6647b6e417bc32215f1e104e8eb37a5eba1c7692c9a8a0d143979e17a2"
+  },
+  "diagnostic_input_sha256": {
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/train.fasta": "9a61890554773212d763cf0cbc99248f7631a4375bbb43e89db79f5285a02239",
+    "data/processed/gv02_03_v2/member_b_handoff/gvpa_training_eligible.fasta": "9a38015ecd3aaf283af3501f354db3cc23ea4e89045cb75f53cc30a7f9635bc9"
+  },
+  "generation_diagnostics": {
+    "unique_sequence_count": 1000,
+    "unique_sequence_rate": 1.0,
+    "duplicate_candidate_count": 0,
+    "duplicate_sequence_groups": 0,
+    "empty_sequence_count": 0,
+    "minimum_length": 50,
+    "mean_length": 101.939,
+    "maximum_length": 180,
+    "nonstandard_sequence_count": 0,
+    "exact_training_match_count": 0,
+    "reference_match_checked": true,
+    "exact_reference_match_count": 0
+  },
+  "terminated_by_eos": 972,
+  "hit_generation_cap": 28,
+  "dependencies": {
+    "python": "3.10.20",
+    "torch": "2.8.0+cu128",
+    "cuda_runtime": "12.8",
+    "numpy": "1.26.4",
+    "PyYAML": "6.0.3",
+    "biopython": null
+  }
+}

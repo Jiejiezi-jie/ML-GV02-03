@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "seed": 42,
+  "config": {
+    "version": 1,
+    "seed": 42,
+    "inputs": {
+      "candidates": "data/generated/sequence_vae/member_a_v1_seed42/vae_candidates.fasta",
+      "generation_metadata": "data/generated/sequence_vae/member_a_v1_seed42/generation_metadata.tsv",
+      "training_fasta": "data/processed/gv02_03_v2/member_b_handoff/development_split/train.fasta",
+      "reference_fasta": "data/processed/gv02_03_v2/member_b_handoff/gvpa_training_eligible.fasta",
+      "family_classification": "data/processed/gv02_03_v2/vae_member_a_v1/family/candidate_family_classification.tsv"
+    },
+    "quality": {
+      "minimum_length": 50,
+      "maximum_length": 180,
+      "minimum_unique_residues": 8,
+      "maximum_single_residue_fraction": 0.35,
+      "generation_length_cap": null,
+      "exact_training_match_action": "exclude",
+      "exact_reference_match_action": "exclude",
+      "composition_outlier_quantile": 0.99,
+      "composition_outlier_action": "warn"
+    },
+    "outputs": {
+      "processed_dir": "data/processed/gv02_03_v2/vae_member_a_v1"
+    }
+  },
+  "inputs": {
+    "configs/vae_member_a_v1_candidates.yaml": "2c82d5c198fb917b60f7eaac79964628666c4a36b30d3d92351863371819d277",
+    "data/generated/sequence_vae/member_a_v1_seed42/vae_candidates.fasta": "d93b92170977fad475104f58c3a6579d2dd6bee4d99c935d94978db454af7d88",
+    "data/processed/gv02_03_v2/vae_member_a_v1/candidate_qc.tsv": "d58a07dea1f6256ea6f91df531866a20048f22f7c043d24beeabbe3b558a2ee1",
+    "data/processed/gv02_03_v2/vae_member_a_v1/family/candidate_family_classification.tsv": "c3cd28281f4d6c1c1d11f5f2f8ff66ba3448b9d25061393a2e1f263bcd9c8871"
+  },
+  "outputs": {
+    "data/processed/gv02_03_v2/vae_member_a_v1/main_supported_gvpa.fasta": "edab1bc4f73a432b7033c37979cbddbfac10e8ded71b03d82443e412e2cbafb7",
+    "data/processed/gv02_03_v2/vae_member_a_v1/ambiguous_exploration.fasta": "6c5ecc0d5c45b2aaa731643fff492e6f5d9abef1fe55aead43585ac1039c1755",
+    "data/processed/gv02_03_v2/vae_member_a_v1/excluded.fasta": "eac229c060d3995f06e79d49b783895f05a34c5c3988bb12c3f05e4080f9d827",
+    "data/processed/gv02_03_v2/vae_member_a_v1/candidate_pool_audit.tsv": "49fd057655b814b12688142985060fc9c7c554d51a65d563c3604bdc7c968e17",
+    "data/processed/gv02_03_v2/vae_member_a_v1/candidate_pool_summary.json": "dbb425a31f5ac1a0322c471deb71da00a151dd21c0d43da94fc8c38883506900"
+  }
+}
