@@ -7,6 +7,78 @@ import numpy as np
 import pandas as pd
 
 
+ELIGIBILITY_COLUMNS = ("sequence_id", "qc_pass", "family_status", "domain_pass")
+
+
+def _validate_boolean_column(frame: pd.DataFrame, column: str) -> None:
+    values = frame[column]
+    if values.isna().any() or not values.map(
+        lambda value: isinstance(value, (bool, np.bool_))
+    ).all():
+        raise ValueError(f"Eligibility column {column} must contain only booleans")
+
+
+def eligibility_mask(
+    frame: pd.DataFrame,
+    *,
+    required_family_status: str = "supported_gvpa",
+) -> pd.Series:
+    """Return the strict V2 eligibility mask for the primary GvpA analysis pool.
+
+    A candidate is eligible only when it passes sequence QC, is classified as
+    the required family, and passes the configured domain gate.  This function
+    intentionally does not infer or fill missing evidence.
+    """
+
+    missing = [column for column in ELIGIBILITY_COLUMNS if column not in frame]
+    if missing:
+        raise ValueError(f"Missing eligibility columns: {missing}")
+    if not isinstance(required_family_status, str) or not required_family_status:
+        raise ValueError("required_family_status must be a nonempty string")
+    sequence_ids = frame["sequence_id"]
+    if not sequence_ids.map(
+        lambda value: isinstance(value, str) and bool(value.strip())
+    ).all():
+        raise ValueError("Eligibility input requires nonempty string sequence identifiers")
+    if not frame["sequence_id"].is_unique:
+        raise ValueError("Eligibility input contains duplicate sequence identifiers")
+    _validate_boolean_column(frame, "qc_pass")
+    _validate_boolean_column(frame, "domain_pass")
+    if not frame["family_status"].map(
+        lambda value: isinstance(value, str) and bool(value.strip())
+    ).all():
+        raise ValueError("Eligibility column family_status requires nonempty strings")
+    return (
+        frame["qc_pass"]
+        & frame["family_status"].eq(required_family_status)
+        & frame["domain_pass"]
+    )
+
+
+def filter_eligible_candidates(
+    frame: pd.DataFrame,
+    *,
+    required_family_status: str = "supported_gvpa",
+) -> pd.DataFrame:
+    """Return only candidates allowed into the formal V2 GvpA ranking."""
+
+    mask = eligibility_mask(frame, required_family_status=required_family_status)
+    return frame.loc[mask].copy().reset_index(drop=True)
+
+
+def validate_selection_budget(candidate_count: int, budget: int) -> None:
+    """Reject invalid or infeasible Top-K requests instead of silently filling them."""
+
+    if isinstance(budget, (bool, np.bool_)) or not isinstance(budget, (int, np.integer)):
+        raise ValueError("Selection budget must be an integer")
+    if budget < 1:
+        raise ValueError("Selection budget must be positive")
+    if budget > candidate_count:
+        raise ValueError(
+            f"Insufficient eligible candidates for Top-{budget}: only {candidate_count} available"
+        )
+
+
 def validate_metrics(frame: pd.DataFrame, metrics: Iterable[str]) -> list[str]:
     metrics = list(metrics)
     missing = [column for column in metrics if column not in frame]
@@ -116,6 +188,7 @@ def round_robin_top_k(
     frame: pd.DataFrame, metrics: Iterable[str], k: int
 ) -> pd.DataFrame:
     metrics = validate_metrics(frame, metrics)
+    validate_selection_budget(len(frame), k)
     rankings = {
         metric: frame.sort_values(
             [metric, "sequence_id"], ascending=[False, True], kind="mergesort"
@@ -126,7 +199,7 @@ def round_robin_top_k(
     positions = defaultdict(int)
     selected: list[tuple[str, str, int]] = []
     seen: set[str] = set()
-    while len(selected) < min(k, len(frame)):
+    while len(selected) < k:
         progress = False
         for metric in metrics:
             ranking = rankings[metric]
@@ -139,7 +212,7 @@ def round_robin_top_k(
             seen.add(identifier)
             selected.append((identifier, metric, positions[metric]))
             progress = True
-            if len(selected) == min(k, len(frame)):
+            if len(selected) == k:
                 break
         if not progress:
             break
@@ -153,4 +226,3 @@ def jaccard(left: Iterable[str], right: Iterable[str]) -> float:
     a, b = set(left), set(right)
     union = a | b
     return len(a & b) / len(union) if union else 1.0
-

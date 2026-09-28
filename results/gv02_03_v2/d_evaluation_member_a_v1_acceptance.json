@@ -1,0 +1,28 @@
+{
+  "status": "passed_frozen_batch_engineering_acceptance",
+  "retrained": false,
+  "artifact_audit": {
+    "passed": true,
+    "hashed_artifacts": 44,
+    "candidate_count": 1000,
+    "hard_gate_count": 136,
+    "ranking_count": 114,
+    "selection_count": 9
+  },
+  "reproducibility": {
+    "passed": true,
+    "compared_artifact_count": 44,
+    "source_commits": {
+      "b": "10d9da8ef31cd8ec998ab53bec84252f331c64a6",
+      "c": "894f1fa80a8a0f5854e3816a9298c0c320197dbf"
+    },
+    "manifest_sha256": "abd4e0626f44bddf421333b16d1f795df7c8f49e16f9075a9c020686155da22c",
+    "scope": "Same frozen inputs, code, configuration and environment; all output hashes including figures match."
+  },
+  "integration_sha256": {
+    "experiments/run_full_experiment.py": "ff14029c46f68fcaae978a2972dec4b2ad65a919a2db4c516a7c8909271c86a6",
+    "src/gv_eval/release.py": "a263fc9479965f208596bc65eafe627e85816796da2f8a484ce452f5e983a50d"
+  },
+  "python": "3.11.16",
+  "scope": "Frozen upstream artifacts through scoring and selection. Does not replay VAE training or generation, or validate biological function."
+}
