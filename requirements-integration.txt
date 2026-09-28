@@ -1,0 +1,6 @@
+# Python 3.11 or 3.12. Frozen evaluation plus C QC/alignment and optional HMM tests.
+-r requirements-frozen-v2.txt
+biopython==1.88
+pyhmmer==0.12.3
+psutil==7.2.2
+# Install Torch separately for VAE tests/training (see README).

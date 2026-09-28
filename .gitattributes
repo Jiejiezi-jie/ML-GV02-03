@@ -10,6 +10,10 @@
 *.hmm text eol=lf
 *.clstr text eol=lf
 
+# Two historical TSVs were originally committed with CRLF; preserve their bytes.
+/data/processed/gv02_03/conserved_sites.tsv -text
+/data/processed/gv02_03/reference_mapping.tsv -text
+
 # Preserve exact bytes of generated audit artifacts, including CSV CRLF endings.
 /results/gv02_03_similarity_dev/* -text whitespace=-blank-at-eol,cr-at-eol
 /results/gv02_03_pattern_audit/* -text whitespace=-blank-at-eol,cr-at-eol
@@ -19,3 +23,4 @@
 /results/gv02_03_c_tm_member_a_v1/* -text whitespace=-blank-at-eol,cr-at-eol
 /results/gv02_03_c_domains_member_a_v1/* -text whitespace=-blank-at-eol,cr-at-eol
 /results/gv02_03_c_final_handoff_member_a_v1/* -text whitespace=-blank-at-eol,cr-at-eol
+/results/gv02_03_v2/integration_20260928/* -text whitespace=-blank-at-eol,cr-at-eol

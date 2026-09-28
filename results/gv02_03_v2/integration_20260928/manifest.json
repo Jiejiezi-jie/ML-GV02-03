@@ -1,0 +1,13 @@
+{
+  "scope": "Compact E acceptance records. replay_output_hashes.json inventories the separate replay directory; raw replay copies are regenerable with the recorded command.",
+  "output_sha256": {
+    "checkout_acceptance.json": "fa4ae52744d9ce931e42250e97eb37f544040e450e1032f320f0d27e88d45628",
+    "checkout_newlines.json": "69a136cf854d92aac5317299ae0f1f70c0e27f088b5f5488edc9b3aec55db54b",
+    "environment_freeze.txt": "aea8657c60c02f2a2cd915b38a846f8fadae6b6533688cb59dbd8fd6700b9112",
+    "integration_summary.json": "473dab3e65cc1c0d31ca21caf7bdade999703cf9b3f3517d6744a646904e91c0",
+    "pytest_results.xml": "7c9a49a1f09de989a112b51c72d95934b055d4e964de7788a32ffcf50213a90a",
+    "replay_output_hashes.json": "8a4f81439b05e94d2f3905532705bdf1b6cb8a954d72ef140d7ce474fe1e3f09",
+    "reproduction_report.json": "94455fad7bec5ae8df9770f0814eb9c8f723a34333741a930dd112b709fe762d",
+    "vae_smoke.json": "d5b673af167fe166749f7783bd10fbb66cf443c9320b9a674527e038a3a9551b"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "date": "2026-09-28",
+  "role": "E",
+  "source_branches": {
+    "main": {
+      "source_commit": "236c68a6178f29836185cf9614353eb1ef62b059",
+      "contained_in_integration": true
+    },
+    "feat/candidate-quality-control": {
+      "source_commit": "939b3bd053a7d0703ebe4382aa122b12822363c6",
+      "contained_in_integration": true
+    },
+    "feat/sequence-vae": {
+      "source_commit": "10d9da8ef31cd8ec998ab53bec84252f331c64a6",
+      "contained_in_integration": true
+    },
+    "feat/quality-similarity": {
+      "source_commit": "894f1fa80a8a0f5854e3816a9298c0c320197dbf",
+      "contained_in_integration": true
+    },
+    "feat/v2-evaluation": {
+      "source_commit": "6a54762192781caaee3db2e619a4abe7ea5c9bbb",
+      "contained_in_integration": true
+    }
+  },
+  "merge_strategy": "Preserve original commits using merge commits; retain remote contributor branches. Fast-forward main to the accepted integration.",
+  "pytest": {
+    "tests": "304",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "25.009"
+  },
+  "separate_checkout_tests_passed": true,
+  "frozen_reproduction_passed": true,
+  "candidate_funnel": [
+    1000,
+    147,
+    136,
+    114
+  ],
+  "same_environment_c_hashed_artifacts": 13,
+  "same_environment_d_hashed_artifacts": 44,
+  "d_published_byte_identical_artifacts": 42,
+  "d_published_rendering_differences": [
+    "metric_distributions.png",
+    "strategy_diversity.png"
+  ],
+  "original_vae_checkpoint_available": false,
+  "pending_scientific_limits": [
+    "Provisional reference; eight family annotation conflicts still ambiguous",
+    "Low latent KL warning in original B training",
+    "Candidate functionality not experimentally validated"
+  ],
+  "local_full_replay": "E:/machine/tmp/gv02-integration/project_replay",
+  "portable_replay_command": "python experiments/reproduce_project.py --output results/reproductions/project_run1"
+}

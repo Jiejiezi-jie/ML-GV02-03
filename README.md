@@ -1,284 +1,164 @@
-# GV02-03：GvpA 候选序列的多目标评价与筛选
+# GV02-03：GvpA 候选序列的生成、评价与筛选
 
-本仓库实现课程项目 Track 1 / GV02-03。系统接收已有蛋白质生成候选，使用约束满足度、统计保守性、新颖性和多样性四个目标进行可解释评价，对比等权加权、Pareto 和各维度轮转三种筛选策略，并完成消融、权重/阈值鲁棒性与随机基线实验。下列结果是首次汇报时的旧版基线；根据汇报后的教师意见，项目 V2 将增加序列 VAE 生成、质量控制和竞争性家族鉴定，实施计划见 [改进计划](docs/GV02-03_待做内容与改进计划.md)。
+课程项目 Track 1 / GV02-03。项目使用序列 VAE 生成蛋白候选，结合质量控制、GvpA/GvpJ 竞争性家族鉴定和四维评价，比较等权加权、Pareto、分维度轮转三种筛选策略。
 
-## 教师反馈后的 V2 进度
+**当前主线：`member_a_v1_seed42` 暂定参考批次。** A/B/C/D 的实现及交接已汇集到 `main`；E 完成合并后测试与冻结批次复现。这里的名单表示计算筛选结果，尚无结构、表达、组装或功能实验确认。
 
-- 已冻结首选模型为序列 VAE、随机种子 42、生成数 1000 以及 Top-10/20/50 预算；
-- 成员 A 交接的 346 条保守暂定 GvpA 参考已按 31 个 70% identity 同源簇划分为
-  训练 277 条/16 簇、验证 33 条/9 簇、测试 36 条/6 簇，同源簇无跨集合泄漏；
-- 旧版 1224 条/418 簇划分仅作历史开发基线，本轮 VAE 不再用它训练；
-- 已实现与冻结配置一致的 GRU 序列 VAE，包括 PAD-aware 编码、KL warm-up、验证/早停、
-  checkpoint 严格恢复、逐样本 EOS 生成及完整生成元数据；训练记录包含困惑度、token/EOS
-  准确率，生成Manifest包含唯一率、重复、长度和训练/参考完全匹配诊断；
-- 已在保守暂定数据上训练至早停并生成 1000 条候选：1000 条全部唯一，972 条自然 EOS；
-- QC 硬规则 1000/1000 通过；竞争性家族鉴定得到 147 条主池、47 条 A/J 歧义和 806 条排除；
-- 主池中 136 条通过严格域门槛，已完成等权、Pareto、维度轮转的 Top-10/20/50、消融、鲁棒性和随机基线。
-- A 已发布参考审计、竞争性家族鉴定与注释冲突复核；参考计算支持不等于功能实验确认。
-- B 的 `10d9da8` 提交已冻结基于 346 条暂定参考的 VAE 批次，共 1000 条候选；C 的 `894f1fa` 提交已交付该批次的 QC、全局比对、域与跨膜复核。
-- D 已沿用该批次完成评价：147 条家族支持、136 条通过联合门槛、114 条满足四维评分证据要求，三种策略 Top-10/20/50 均已生成。
-- 原 1224 条参考的生成数据准备保留为历史材料。本次没有重新训练，继续保留上游暂定版本的限定。
+## 1. 已完成的结果
 
-获取 B/C 源提交后，可从总入口运行冻结 V2 批次，无需切换或合并其分支：
+| 筛选步骤 | 数量 | 说明 |
+| --- | ---: | --- |
+| A 交给 B 的保守参考 | 346 | 仍为 `provisional_not_scientifically_final` |
+| 训练 / 验证 / 测试 | 277 / 33 / 36 | 按 31 个同源簇隔离；对应 16 / 9 / 6 簇 |
+| B 冻结 VAE 候选 | 1,000 | 全部唯一；972 条自然 EOS 结束，28 条触及生成上限 |
+| 基础 QC 通过 | 1,000 | 通过格式、长度等规则不等于家族或功能确认 |
+| GvpA 家族支持 | 147 | 另有 47 条 A/J 歧义、806 条排除 |
+| QC + 家族 + 域门槛通过 | 136 | PF00741 分数 ≥25 bits、模型覆盖 ≥0.95 |
+| 四维证据足够、可排名 | 114 | 其余 22 条评分证据不足，保留在审计表 |
+| 三种策略 | 9 份名单 | 每种输出 Top-10、Top-20、Top-50 的 TSV 和 FASTA |
 
-```bash
-git fetch origin
-python experiments/run_full_experiment.py --output /tmp/gv02_03_v2_run
-```
+已完成逐维消融、200 次权重扰动、27 组域/配对覆盖门槛组合、1,000 次同池随机基线，以及与 B 原局部比对版本的名单对比。
 
-已发布目录不会覆盖。核验现有结果并独立复跑：
+数据依据：[D 结果摘要](results/gv02_03_v2/d_evaluation_member_a_v1/summary.json)、[训练记录](models/generator/sequence_vae/member_a_v1_seed42/training_manifest.json)、[生成记录](data/generated/sequence_vae/member_a_v1_seed42/generation_manifest.json)。
 
-```bash
-python experiments/run_full_experiment.py --verify-existing
-```
-
-输入接口、未解析距离规则及 E 的集成说明见 [D 评价与筛选交接](docs/D_现有批次评价与筛选交接.md)。
-结果位于 `results/gv02_03_v2/d_evaluation_member_a_v1/`，复现证据位于同级 JSON 文件。
-最小已验收依赖见 `requirements-frozen-v2.txt`；工程集成和隔离副本检查见
-[冻结批次集成验收](docs/冻结批次集成验收.md)。
-
-阶段说明见 [M0–M1 生成数据准备](reports/M0_M1_生成数据准备.md)和
-[成员 B 的 VAE 开发版说明](reports/V2_B_VAE开发版.md)和
-[完整 VAE 实验报告](reports/V2_B_VAE完整实验.md)。成员 C 接续 QC 与相似度工作时，
-请使用 [成员 B → C 候选序列交接说明](reports/成员B_to_C_候选序列交接说明.md)中冻结的
-输入、字段约定、复现命令和验收清单。
-
-## 成员 B 的 VAE 参考代码
-
-组员提供的原始最小参考包保留在 `gv/`，仅作为来源记录。项目接入后的实现位于
-[`src/gv_eval/vae.py`](src/gv_eval/vae.py)和
-[`src/gv_eval/generation.py`](src/gv_eval/generation.py)，训练与生成入口分别为
-[`experiments/train_generator.py`](experiments/train_generator.py)和
-[`experiments/generate_candidates.py`](experiments/generate_candidates.py)。
-
-最新交接请先阅读 [成员 A 完整工作记录](reports/成员A_完整工作过程与交接记录.md)
-和 [成员 B 实施指南](reports/成员B_VAE实施与数据交接指南.md)。
-独立保守开发包位于 `data/processed/gv02_03_v2/member_b_handoff/`，346 条参考已按簇重新划分；
-它明确属于暂定开发版本，不能代替仍需核查的最终科学参考。
-
-成员 A 的参考核验和竞争分类入口为 `python -B experiments/run_family_classification.py`，
-验收入口为 `python -B experiments/verify_family_deliverables.py`。
-完整复现还须依次运行裁决、保守发布包和开发划分脚本，且**顺序不可调换**（验收表会被后续步骤按哈希钉住），
-六步顺序见下文方法文档。
-交付路径、PF00741 官方边界、规则、结果和未解决的负对照冲突详见
-[成员 A 方法与验收](reports/成员A_家族鉴定方法与验收.md)。
-当前为计算支持参考，科学验收仍有 14 条名义 GvpJ 对照冲突待核查；
-不能把现有生成训练划分视为已经完成高可信参考替换。
-
-训练脚本默认拒绝暂定数据；仅开发验证可显式加入 `--allow-provisional-data`。
-模型权重和临时候选不提交 Git，正式 checkpoint 必须等保守参考发布状态明确后重新训练。
-
-## 关键结果
-
-- 候选：T05 生成的 200 条序列；天然参考清洗后 1224 条，CD-HIT 90% 聚类为 418 条代表。
-- 资源：官方 PF00741.24 / Gas_vesicle profile；23 个仅由天然参考 MSA 定义的统计保守位点。
-- 域证据：37/200 条有可报告 PF00741 命中，27/200 条通过 GA 25 bits + 模型覆盖 0.95 门槛。
-- 目标冲突：约束–新颖性 Pearson -0.7961，保守性–新颖性 -0.9127；约束–保守性 0.7498。
-- Top-20 等权加权：约束 0.6626、保守性 0.8739、域通过率 100%，但集合多样性 0.6121。
-- Top-20 Pareto/轮转：集合多样性 0.8753/0.8857，新颖性 0.5971/0.5893，但域通过率降到 60%/50%。
-- 200 次±20%权重扰动：Top-20 Jaccard 均值 0.9064、最小 0.6667；完整排名 Spearman 均值 0.9959。
-- 自动化测试：当前全项目 95 项全部通过。
-
-这些都是计算代理结果，不是候选功能准确率或湿实验成功率。PF00741 也并非 GvpA 专一；候选进入下游前仍需结构与实验验证。
-
-## 数据
-
-唯一待筛选输入为 [generated_gvp.fasta](data/candidates/t05/generated_gvp.fasta)，共 200 条。天然参考来自：
-
-- `data/raw/t05/gvpa/GvpA_RefSeq.fasta`
-- `data/raw/t05/gvpa/GvpA_NotPartial.fasta`
-- `data/raw/t05/gvpa/rescued_GvpA_candidates.fasta`
-- `data/raw/design/GvpA.fasta`
-
-参考清洗要求显式 GvpA 标签，排除 GvpJ、partial/fragment/predicted、非标准氨基酸和 50–180 aa 以外记录。混合多家族的 `data/raw/t05/real_gvp.fasta` 不作为纯 GvpA 参考。详情见 [数据说明](data/README.md)和[参考映射](data/processed/gv02_03/reference_mapping.tsv)。
-
-## 环境与完整复现
-
-推荐使用仓库提供的 Conda 配置：
-
-```bash
-cd /home/user/wangyuhan/ML-GV02-03
-conda env create -f environment.yml
-conda activate ml-gv02-03
-python -B experiments/run_full_experiment.py --config configs/gv02_03.yaml
-python -m pytest -q
-```
-
-本次实际环境位于 `/home/user/wangyuhan/envs/ml-gv02-03`；未激活环境时可运行：
-
-```bash
-PATH=/home/user/wangyuhan/envs/ml-gv02-03/bin:$PATH \
-  /home/user/wangyuhan/envs/ml-gv02-03/bin/python -B \
-  experiments/run_full_experiment.py --config configs/gv02_03.yaml
-PYTHONPATH=src /home/user/wangyuhan/envs/ml-gv02-03/bin/python -m pytest -q
-```
-
-首次运行从 EMBL-EBI InterPro 官方接口下载 PF00741 HMM，下载失败或内容校验失败会停止，不会换成伪造分数。参数和随机种子 42 固定在 [配置文件](configs/gv02_03.yaml)，输入/输出哈希、工具与 profile 版本见 [实验清单](results/gv02_03/manifest.json)。流水线不会修改原始 FASTA。
-
-## 可选候选 QC（新增）
-
-运行 `python -B experiments/run_full_experiment.py --config configs/gv02_03_qc.yaml`
-可在评分前启用基础候选质控，输出到 `data/processed/gv02_03_qc/` 和
-`results/gv02_03_qc/`。原配置及上面的历史实验结果保持为旧版基线。
-
-QC 硬失败包括空序列、非法氨基酸、长度不在 50–180 aa、完全重复候选
-（重复组全部排除），以及低复杂度代理规则：不同残基少于 8 种或某一残基
-比例超过 0.35。这些是可配置的初始筛查阈值，尚未经过生物学校准。
-`generation_length_cap` 若设置，达到或超过该长度会产生警告而不单独排除；
-旧候选缺少生成上限记录，默认 `null` 表示未检查，不能据此认定没有截断。
-
-`candidate_qc.tsv` 保留所有候选的状态和原因，`eligible_candidates.fasta`
-保存通过者，评分和 Top-K 表携带 QC 字段。通过数量不足现有分析预算时
-明确报错并保留 QC 表，需调整预算后重新运行。原始 FASTA 不被修改。
-本次完成改进计划“工作二”的基础序列 QC、训练/参考完全匹配检查及组成偏离
-告警；疏水片段、额外结构域和生成 EOS 元数据检查仍待实现。QC 通过不代表 GvpA
-家族鉴定通过。完整 QC 实验仍需 HMMER、MAFFT、BLAST 和 CD-HIT 环境运行。
-
-### 训练集与天然参考完全匹配检查
-
-`inputs.qc_training_fasta` 和 `inputs.qc_reference_fasta` 分别指定比对 FASTA。
-QC 配置默认使用 V2 暂定训练集 `data/processed/gv02_03_v2/generator_data/train.fasta`
-以及天然参考 `data/processed/gv02_03/reference_clean.fasta`。
-旧 T05 生成模型的真实训练集未知，所以默认的训练匹配只表示“与指定 V2 训练集重复”，
-不能解释为旧模型记忆了训练数据。为新生成批次运行时，应指定实际使用的训练 FASTA。
-
-比较完整氨基酸序列（忽略大小写，不做近似匹配）。输出字段：
-
-- `exact_training_match` / `exact_reference_match`：是否找到完全相同的序列；
-- `training_match_ids` / `reference_match_ids`：所有匹配 ID 的有序 JSON 数组；
-- `training_match_checked` / `reference_match_checked`：是否实际执行了该项检查。
-
-在 `quality` 下独立设置 `exact_training_match_action` 和
-`exact_reference_match_action`，取值为 `warn`（默认，仅告警）或 `exclude`
-（将匹配者设为 `qc_pass=false`，不进入评分）。警告同样写入 `qc_reasons`。
-比对路径缺省或为 `null` 时标记未检查；此时不能启用 `exclude`。
-指定文件不存在、为空、含非法序列或重复 ID 时明确报错，不静默跳过。
-同一合法序列对应多个不同 ID 时全部保留。完整运行的摘要包含两类匹配数量，
-manifest 记录所用比对 FASTA 的 SHA-256；QC 字段随评分与筛选名单传递。
-
-### 氨基酸组成异常检查
-
-组成检查使用天然参考中每条序列的20种氨基酸频率，计算平均组成，并以
-Jensen–Shannon divergence 衡量每条序列相对该平均组成的偏离程度。阈值不是
-人工拍脑袋指定的固定距离，而是参考序列自身距离分布的可配置分位数；当前配置为
-99%分位数。超过阈值的候选写入 `composition_outlier_warning`，默认只警告，
-也可通过 `composition_outlier_action: exclude` 设置为硬失败。
-
-当前基线来自尚待 GvpA/GvpJ 竞争性核验的名义 GvpA 参考，因此这项结果只能作为
-异常组成筛查，不是家族或功能判断。完成最终高可信参考集后必须重新校准阈值。
-
-本配置已在旧版200条候选上完整运行：170条通过基础硬QC，30条因长度超过
-180 aa被排除；训练集和天然参考完全匹配均为0条。145条触发组成异常警告，
-但不会因此被排除。过滤后的170条中有37条PF00741命中、27条通过当前域门槛。
-正式产物位于 `data/processed/gv02_03_qc/` 和 `results/gv02_03_qc/`，具体解释和
-复现边界见 [候选质量控制增量报告](reports/M3_候选质量控制增量.md)。
-
-## C 模块：独立全局相似度与距离
-
-运行 `python -B experiments/run_similarity.py --config configs/similarity.yaml`，
-输出成对比对证据、双向覆盖率、距离矩阵和对应 ID 顺序。
-未通过覆盖率、identity、得分或最小比对长度门槛的序列对标记 `unresolved`，
-矩阵中保留 NaN，不赋最大距离。原版 BLAST 评分与结果保持不变。
-默认输入为旧 T05 混合候选，仅作开发验证；正式主分析池与歧义池需分别输入。
-方法、公式、可靠性门槛、缺失值处理及 D 的接入说明见
-[全局相似度模块说明](docs/similarity.md)。本阶段尚未实现快速检索和自动家族分池。
-
-## C：序列模式告警（QC-only）
-
-新增可配置的连续疏水片段、单残基重复、短 motif 串联重复告警，记录片段位置；
-`qc_warnings` 独立列出警告，旧 `qc_reasons` 保持兼容。新检测不新增淘汰条件。
-
-```bash
-python experiments/run_quality_audit.py --config configs/gv02_03_pattern_qc.yaml --output-dir results/my_qc_audit
-```
-
-输出目录须为空，运行不依赖外部生信工具。旧实验配置与结果不覆盖。
-阈值尚未正式校准，疏水告警不是跨膜预测；范围与字段见 [QC 模式告警说明](docs/qc-patterns.md)。
-
-## C：最近可靠参考匹配
-
-完整比较候选与指定参考库，在通过全局比对可靠性门槛的参考中选择最小距离，
-输出最近参考 ID、全部并列 ID、identity、双向覆盖率及距离；无可靠匹配保留 `unresolved`。
-
-```bash
-python experiments/run_nearest_reference.py --config configs/nearest_reference.yaml --output-dir results/my_nearest_reference
-```
-
-不改变旧 QC 或评分；默认输入仍是未正式确认家族的开发数据。
-字段、并列规则及边界见 [最近参考匹配说明](docs/nearest-reference.md)。
-
-## C：统一 QC 汇总与人工复核清单
-
-合并已生成的 QC 和最近参考证据，生成逐条总表、复核清单、中文 Markdown 报告及审计记录。
-输入先核验哈希、ID 和长度；保留原有 `qc_pass`，不新增淘汰条件。
-
-```bash
-python experiments/run_qc_report.py --config configs/qc_report.yaml --output-dir results/my_qc_report
-```
-
-需要先完成上面的 QC-only 与最近参考运行，详情见 [统一 QC 汇总说明](docs/qc-report.md)。
-
-## C：B 真实 VAE 批次交接
-
-对 B 的冻结批次（1,000 条候选）进行导出元数据/EOS 审计、基础 QC 复算与扩展警告、
-346 条参考的全局最近匹配，以及主池 147 / 模糊池 47 的独立距离矩阵。
-读取外部 B 快照，不改变原家族分池。原交接运行未纳入额外结构域和跨膜拓扑；
-后续已分别补充 [本地 Pfam 域架构复核](results/gv02_03_c_domains_member_a_v1/README.md)
-和 [本地跨膜预警检查](results/gv02_03_c_tm_member_a_v1/README.md)，均不改变 B 分池。
-运行方式与文件含义见 [真实批次 C 交接说明](docs/c-handoff.md)。
-三批证据的逐条汇总及下游边界见 [C→下游统一复核交接](docs/c-final-handoff.md)。
-
-## 四个指标（旧版基线）
-
-| 指标 | 实现 |
-| --- | --- |
-| 约束满足度 | PF00741 domain bit score 相对参考命中的经验百分位 × 模型覆盖因子；另报 GA+覆盖门槛通过状态 |
-| 保守性 | 参考 MSA 中 gap≤0.10、共识≥0.90 的 23 个列上，候选与共识一致的比例；缺口计 0 |
-| 新颖性 | `1 - max_reference(pident × alignment_length / max(lengths))` |
-| 独特性/集合多样性 | 候选到其他候选的平均距离 / 筛选子集平均两两距离 |
-
-完整逐条证据在 [candidate_scores.tsv](results/gv02_03/tables/candidate_scores.tsv)。
-
-## 目录
+## 2. 主流程与评价规则
 
 ```text
-ML-GV02-03/
-├── configs/gv02_03.yaml             # 冻结参数
-├── data/
-│   ├── candidates/                   # 原始候选
-│   ├── raw/                          # 原始天然来源（不覆盖）
-│   └── processed/gv02_03/            # 清洗参考、MSA、位点和距离矩阵
-├── models/pfam/                      # PF00741.24 profile 与来源元数据
-├── src/gv_eval/                      # I/O、工具封装、指标、策略、分析、流水线
-├── experiments/run_full_experiment.py
-├── results/gv02_03/
-│   ├── raw/                          # HMMER/BLAST 原始结果
-│   ├── tables/                       # 评分、相关、策略、消融、鲁棒性、随机基线
-│   ├── selections/                   # 三策略 K=10/20/50 的 TSV 与 FASTA
-│   ├── figures/                      # 论文图件
-│   ├── summary.json
-│   └── manifest.json
-├── reports/                          # M1–M5、最终 PDF 与答辩 PPT
-├── tests/                            # 自动化测试
-└── docs/project_management/          # 真实过程材料填写说明与模板
+A：参考来源审计、GvpA/GvpJ 竞争核验、保守参考发布
+  → B：按同源簇划分 → GRU 序列 VAE → 冻结 1000 条候选和生成元数据
+  → C：质量控制 → 全局参考比对 → 同类距离矩阵 → 域/跨膜预警
+  → D：QC、家族、域联合门槛 → 四维评分 → 三策略 Top-K → 鲁棒性分析
+  → E：接口/哈希校验 → 两次运行比较 → 独立副本测试 → main 集成
 ```
 
-`results/gv02_03/work/blastdb/` 和工具日志属于可重建中间文件，不纳入版本控制；正式评分、原始比对表、图件和名单均保留。
+四维含义：
 
-## 报告与答辩材料
+- **约束满足度**：PF00741 域模型的连续支持分数；该域同时覆盖部分 GvpJ，不能单独证明 GvpA 身份。
+- **保守性**：相对于暂定 GvpA 参考的 23 个统计保守位点的一致程度。
+- **新颖性**：与可靠天然参考的最近全局距离。
+- **候选独特性 / 集合多样性**：在同类、联合门槛合格池中比较候选距离；集合另外报告配对覆盖率和未知距离的上下界。
 
-- [M1 功能需求分析与任务建模](reports/M1_功能需求分析与任务建模报告.md)
-- [M2 探索性数据分析](reports/M2_探索性数据分析.md)
-- [M3 评价体系与初步筛选](reports/M3_评价体系与初步筛选.md)
-- [M4 完整实验与鲁棒性分析](reports/M4_完整实验与鲁棒性分析.md)
-- [M5 最终报告](reports/M5_最终报告.md)及 PDF
-- `reports/GV02-03_答辩PPT.pptx`
+未解析距离保留为 NaN，不能补为 1。排名要求可靠配对比例至少 50%，并检查 25%/50%/75% 的敏感性。人工复核警告保留在名单中；不从歧义或排除池补足 Top-K。
 
-过程评分还要求真实会议、分工、Git 贡献和照片。仓库只提供模板，不会代替成员编造这些证据；项目组应从现在起按 [过程材料说明](docs/project_management/README.md)持续补充。
+## 3. 快速复现评价与筛选
 
-## 主要限制
+需要 Git 和 **Python 3.11 或 3.12**。使用完整克隆，保留历史提交：冻结入口按 B 的 `10d9da8` 与 C 的 `894f1fa` 读取 Git 原始字节。ZIP 下载、仅复制源码或缺失历史对象的浅克隆不能直接使用该入口。
 
-- 大多数 T05 候选没有 PF00741 命中，说明输入是混合 Gvp 生成池，而非已确认的纯 GvpA 池。
-- 统计保守位点不是实验验证关键位点；PF00741 命中也不能区分全部 GvpA/GvpJ 情形。
-- BLAST 局部比对经过覆盖校正，但不是严格全局结构相似性。
-- 无功能真值，不能通过调参声称找到“最优蛋白”；推荐将等权质量组与 Pareto/轮转探索组交给独立结构和实验验证。
+```bash
+git clone https://github.com/Jiejiezi-jie/ML-GV02-03.git
+cd ML-GV02-03
+```
+
+Windows PowerShell：
+
+```powershell
+py -3.12 -m venv .venv
+.venv/Scripts/python.exe -m pip install -r requirements-frozen-v2.txt
+.venv/Scripts/python.exe experiments/run_full_experiment.py --output results/reproductions/evaluation_run1
+```
+
+Linux / WSL：
+
+```bash
+python3.12 -m venv .venv
+.venv/bin/python -m pip install -r requirements-frozen-v2.txt
+.venv/bin/python experiments/run_full_experiment.py --output results/reproductions/evaluation_run1
+```
+
+该命令核验冻结输入，重新评分、筛选和运行实验，再独立复跑比较全部 44 个产物。**输出目录必须是新的或空目录**；第二次手动运行请换目录。此模式无需 GPU、Torch 或原始 checkpoint。
+
+`--verify-existing` 用于相同代码和环境下严格比较已有运行，包含版本与图片哈希；跨环境核对发布结果请用下一节的 E 入口。
+
+## 4. E 的完整冻结批次复现
+
+在上一节的环境中安装扩展依赖，再执行（以下 `python` 指虚拟环境中的解释器）：
+
+```bash
+python -m pip install -r requirements-integration.txt
+python experiments/reproduce_project.py --output results/reproductions/project_run1
+```
+
+此入口会：
+
+1. 核验 A 参考/家族产物、保守发布包、B 的实际划分与冻结输入哈希。
+2. 两次重算 C 的基础/扩展 QC、346,000 次候选—参考全局比对及主池/歧义池距离。
+3. 结合已发布且经哈希核验的 Pfam / PureseqTM 表，重新汇总 C 复核名单。
+4. 两次运行 D 的四维评分、三策略筛选和鲁棒性实验。
+5. 与成员发布产物核对，保存 `reproduction_report.json` 和全目录 `manifest.json`。
+
+D 继续读取冻结的 B/C 提交；C 的本轮重算用于独立核对其等价性。改动当前工作区的数据不会自动创建新的研究批次。
+
+同一环境的两轮产物要求字节一致。跨环境先校验原始文件哈希，再核对 ID、顺序、整数计数、NaN 位置及科学数值；浮点容差为 `rtol=1e-9, atol=1e-12`，PNG 字节差异单列记录。
+
+**2026-09-28 实跑：** C 的 13 个产物两轮字节一致；D 的 44 个产物两轮字节一致。与 D 发布结果相比，42 个数据文件字节一致，仅 2 张 PNG 渲染字节不同。详见 [E 复现记录](reports/成员E_集成复现与合并记录.md)及[机器可读证据](results/gv02_03_v2/integration_20260928/)。
+
+## 5. 测试与模型重放
+
+全仓库测试还需要 Torch；本次使用 CPU 版 PyTorch 2.8.0：
+
+```bash
+python -m pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+python -m pytest tests -q
+python experiments/check_frozen_checkout.py --report results/reproductions/checkout_acceptance.json
+```
+
+本次 **304 项测试通过，无跳过**，独立 Git 副本中再次通过。隔离检查使用当前解释器及已安装依赖，清除 `PYTHONPATH`、禁用用户包和 pytest 外部插件，并校验科学产物；它不是另一次依赖安装。
+
+### 原始 checkpoint 的缺口
+
+B 的 `best.pt` 没有提交到 Git。原记录的 SHA-256：
+
+```text
+d2801a2a130928739f44f9726bcb5bbd7be229fadfe2f05fba5d0f6cc87debdf
+```
+
+因此上述验收不能证明 B 原训练或原始 1000 条采样已被重放。需从 B 取得匹配权重，并核对其环境：Python 3.10.20、Torch 2.8.0+cu128、CUDA 12.8、NumPy 1.26.4；跨设备采样不保证逐字节一致。
+
+为了检查模型入口，E 已用真实训练/验证划分完成 **2 epoch CPU 冒烟训练和两次 32 条采样**；两次候选、元数据和生成清单字节相同，未评估测试集，也未替换正式冻结输入。重跑该检查：
+
+```bash
+python experiments/train_generator.py --config configs/generation_member_a_v1.yaml --device cpu --allow-provisional-data --maximum-epochs 2 --skip-test-evaluation --output-dir results/reproductions/vae_smoke
+python experiments/generate_candidates.py --config configs/generation_member_a_v1.yaml --checkpoint results/reproductions/vae_smoke/best.pt --device cpu --allow-provisional-data --candidate-count 32 --output-dir results/reproductions/smoke_candidates
+```
+
+A 的外部家族建模、C 的全 Pfam 扫描与 PureseqTM 本轮只核验已有证据。独立重建这些步骤所需的工具/模型说明见下方交接文档。
+
+## 6. 从哪里读结果
+
+主要结果位于 [`results/gv02_03_v2/d_evaluation_member_a_v1/`](results/gv02_03_v2/d_evaluation_member_a_v1/)：
+
+| 文件 | 用途 |
+| --- | --- |
+| `candidate_audit.tsv` | 全部 1000 条的家族、QC、域、排名资格与排除原因 |
+| `eligible_pool_scores.tsv` | 136 条联合门槛合格候选；保留评分不足原因 |
+| `ranking_pool_scores.tsv` / `ranking_pool.fasta` | 114 条可参与四维排名的候选 |
+| `{weighted_sum,pareto,dimension_round_robin}_top{10,20,50}.{tsv,fasta}` | 三种策略的有序名单及序列 |
+| `ranking_distance.npy` / `ranking_distance_ids.json` | 按 ID 对齐的距离矩阵与缺失距离 |
+| `strategy_summary.tsv` / `strategy_overlap.tsv` | 策略指标、复核数量、多样性与名单重叠 |
+| `ablation_*` / `weight_robustness.tsv` / `threshold_coverage_sensitivity.tsv` / `random_*` | 消融、权重、阈值与随机基线实验 |
+| `summary.json` / `manifest.json` | 摘要、源提交、配置和输入输出 SHA-256 |
+
+## 7. 分工、分支与交接
+
+| 角色 | 来源 | 入口说明 |
+| --- | --- | --- |
+| A：参考与家族核验 | 原 `main`，`236c68a` | [A 工作过程](reports/成员A_完整工作过程与交接记录.md)；[方法与验收](reports/成员A_家族鉴定方法与验收.md) |
+| B：VAE 与候选 | `feat/sequence-vae`，`10d9da8` | [B→C 交接](reports/成员B_to_C_候选序列交接说明.md)；[训练实验](reports/V2_B_VAE完整实验.md) |
+| C：QC、相似度与预警 | `feat/quality-similarity`，`894f1fa` | [C 统一交接](docs/c-final-handoff.md)；[Pfam](results/gv02_03_c_domains_member_a_v1/README.md)；[跨膜](results/gv02_03_c_tm_member_a_v1/README.md) |
+| D：四维评价与筛选 | `feat/v2-evaluation`，`6a54762` | [D 交接](docs/D_现有批次评价与筛选交接.md) |
+| E（庆）：集成、复现与整理 | 本次 `main` 集成 | [E 验收记录](reports/成员E_集成复现与合并记录.md) |
+
+`feat/candidate-quality-control` 的 `939b3bd` 早已包含在主线。各功能分支的提交历史全部保留；原远端分支保留作协作记录，使用者直接从 `main` 获取完整工程。
+
+主要目录：`src/gv_eval/` 是实现，`experiments/` 是命令入口，`configs/` 是参数，`data/generated/` 保存 B 的冻结输入，`data/processed/gv02_03_v2/` 保存参考和候选证据，`results/` 保存结果，`reports/` 和 `docs/` 保存交接与方法。
+
+## 8. 结论边界与历史材料
+
+- 参考仍是暂定发布。A 的 14 条注释冲突中，6 条经数据库复核为旧标签问题，8 条仍歧义；没有据此自动恢复隔离簇。见[复核记录](results/gv02_03_v2/family/adjudication/summary.json)。
+- B 的训练记录存在潜变量 KL 偏低警告（posterior collapse）；生成唯一序列和通过 QC 均不能证明生成模型已学到有效功能空间。
+- C 的 915 条人工复核标记可与家族/评分池重叠；主池中 62 条有复核标记。预警不会被“测试通过”消除。
+- 旧 200 条 T05 候选及 `results/gv02_03/`、`results/gv02_03_qc/`、M1–M5 报告和 PPT 保留作历史基线。旧报告里的数字不代表当前 VAE 批次。
+- 旧流程入口为 `python experiments/run_full_experiment.py --workflow legacy --config configs/gv02_03.yaml`；需 Linux/WSL 的 HMMER、MAFFT、BLAST、CD-HIT 等工具，参考 `environment.yml`。本次没有重新验收该完整外部工具环境。
+- `gv/` 为早期 VAE 参考代码；当前模型实现是 `src/gv_eval/vae.py` 与 `generation.py`。
+
+当前已完成冻结批次的工程集成与复现。后续研究应补交原权重、解决参考身份歧义，并在新增正式参考或候选批次上完整重跑；功能结论仍需实验。

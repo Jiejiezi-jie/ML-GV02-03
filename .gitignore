@@ -3,6 +3,9 @@ __pycache__/
 .pytest_cache/
 .coverage
 .venv-frozen/
+.venv/
+# Local reruns have independent manifests; keep compact acceptance records in V2.
+results/reproductions/
 .DS_Store
 
 # Trained generator weights and development runs are reproducible but may be large.

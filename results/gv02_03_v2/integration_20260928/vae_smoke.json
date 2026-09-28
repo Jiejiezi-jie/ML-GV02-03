@@ -1,0 +1,41 @@
+{
+  "status": "passed_cpu_smoke_only",
+  "epochs": 2,
+  "best_epoch": 1,
+  "test_evaluated": false,
+  "split_sizes": {
+    "train": 277,
+    "validation": 33
+  },
+  "config": "configs/generation_member_a_v1.yaml",
+  "input_sha256": {
+    "configs/generation_member_a_v1.yaml": "0f169a1cb127e82216e0c1b1d95b7b6c235d9619d7b53e27312628716a3da32d",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/vocabulary.json": "4664cb809825b7023ad6a8a90b9492f757446b7b97890595c397504646aa55d4",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/train.fasta": "9a61890554773212d763cf0cbc99248f7631a4375bbb43e89db79f5285a02239",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/validation.fasta": "1713b8a31b509846354577b2b1c65be08ebf657b0229c271363489c7d4d88283",
+    "data/processed/gv02_03_v2/member_b_handoff/release_manifest.json": "de51f46e05f6ac85e86df5535d18b325cb8b5f40df8942fdbdd651f46000ecde",
+    "data/processed/gv02_03_v2/member_b_handoff/development_split/split_manifest.json": "28e2c439d1946a789cb3a3812d4c54f1cce0502dbfa9429d77c238425b501f30"
+  },
+  "dependencies": {
+    "python": "3.12.14",
+    "torch": "2.8.0+cpu",
+    "cuda_runtime": null,
+    "numpy": "2.4.6",
+    "PyYAML": "6.0.3",
+    "biopython": "1.88"
+  },
+  "candidate_count_per_run": 32,
+  "checkpoint_sha256": "80ed752aca95698d9f4d2105728286bd57e60e4b4cf0cd23069cb28c76e5deb2",
+  "repeat_identical": true,
+  "run_1_sha256": {
+    "vae_candidates.fasta": "27ef8731ba97dedeb201ab0907eecac57e978d3f60a908890ce16ee630153a04",
+    "generation_metadata.tsv": "347e066b5fd194d0722d30e5426a2abf2f086671480685426f0678127fd31f82",
+    "generation_manifest.json": "ce546377200ba967050c0bb9710255d80701b448e056e406236b277b70cd0ef8"
+  },
+  "run_2_sha256": {
+    "vae_candidates.fasta": "27ef8731ba97dedeb201ab0907eecac57e978d3f60a908890ce16ee630153a04",
+    "generation_metadata.tsv": "347e066b5fd194d0722d30e5426a2abf2f086671480685426f0678127fd31f82",
+    "generation_manifest.json": "ce546377200ba967050c0bb9710255d80701b448e056e406236b277b70cd0ef8"
+  },
+  "scope": "Two-epoch CPU smoke on actual provisional train/validation data; held-out test metrics not evaluated. Does not replay original B checkpoint or replace the frozen 1000 candidates."
+}
