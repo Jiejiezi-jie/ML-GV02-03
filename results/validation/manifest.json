@@ -1,0 +1,9 @@
+{
+  "output_sha256": {
+    "checkout_acceptance.json": "94f4574492bc5f9912b2206d58be756655749e33d672f2e4c0b9fe35cd978220",
+    "presentation_validation.json": "21215a941a56f3049a3a6514ad8379221f5ff5a207c1099b9fb6eb6dbe9c916e",
+    "pytest_results.xml": "d823962dedb07881df642423806dcf6472057563f385556abf401b8bc3b25501",
+    "reproduction_report.json": "0499a3c1bc03f9b65ea280dcbaf09637da4e6a90873f5a0808aab8c5c8ee5a41",
+    "summary.json": "a8f53f8051c2aacbc2ce9e09a684675fe873b5ba45b5f3e4230eae7b52cbd9d2"
+  }
+}

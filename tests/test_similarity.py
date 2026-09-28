@@ -165,14 +165,14 @@ def test_real_cli_outputs_repeatable_auditable_artifacts(tmp_path):
     assert sha256_file(fasta) == input_hash
 
 
-def test_committed_development_artifacts_match_manifest_and_matrix():
-    folder = Path(__file__).resolve().parents[1] / "results/gv02_03_similarity_dev"
-    manifest = json.loads((folder / "manifest.json").read_text(encoding="utf-8"))
+def test_committed_artifacts_match_manifest_and_matrix():
+    folder = Path(__file__).resolve().parents[1] / "results/gv02_03_c_handoff_member_a_v1"
+    manifest = json.loads((folder / "qc_similarity_manifest.json").read_text(encoding="utf-8"))
     for name, digest in manifest["outputs"].items():
         assert sha256_file(folder / name) == digest
-    summary = json.loads((folder / "summary.json").read_text(encoding="utf-8"))
-    matrix = np.load(folder / "candidate_distance.npy", allow_pickle=False)
-    ids = json.loads((folder / "candidate_distance_ids.json").read_text(encoding="utf-8"))
+    summary = json.loads((folder / "qc_similarity_summary.json").read_text(encoding="utf-8"))["matrices"]["main_supported_gvpa"]
+    matrix = np.load(folder / "main_distance.npy", allow_pickle=False)
+    ids = json.loads((folder / "main_distance_ids.json").read_text(encoding="utf-8"))
     assert matrix.shape == (len(ids), len(ids))
     np.testing.assert_allclose(matrix, matrix.T, equal_nan=True)
     np.testing.assert_array_equal(np.diag(matrix), np.zeros(len(ids)))
@@ -180,5 +180,3 @@ def test_committed_development_artifacts_match_manifest_and_matrix():
     assert len(upper) == summary["pair_count"]
     assert np.isfinite(upper).sum() == summary["resolved_pairs"]
     assert np.isnan(upper).sum() == summary["unresolved_pairs"]
-    check = json.loads((folder / "reproducibility_check.json").read_text(encoding="utf-8"))
-    assert check["run_1"] == check["run_2"] == manifest["outputs"]

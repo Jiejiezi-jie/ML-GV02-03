@@ -29,7 +29,7 @@ def main() -> None:
             parser.error("--output and --verify-existing apply only to frozen-v2")
         from gv_eval.pipeline import run_pipeline
 
-        summary = run_pipeline(ROOT, args.config or "configs/gv02_03.yaml")
+        summary = run_pipeline(ROOT, args.config or "configs/gv02_03_vae_member_a_v1.yaml")
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
 

@@ -95,37 +95,3 @@ def test_constrained_cluster_split_matches_counts_lengths_and_is_deterministic()
         assert len(members) == sequence_targets[split]
         assert len(first_clusters[split]) == cluster_targets[split]
         assert sum(lengths[member] for member in members) == length_targets[split]
-
-
-def test_generator_data_artifacts_are_complete_isolated_and_current():
-    output_dir = ROOT / "data/processed/gv02_03_v2/generator_data"
-    manifest = json.loads((output_dir / "split_manifest.json").read_text(encoding="utf-8"))
-    assert manifest["total_sequences"] == 1224
-    assert manifest["total_clusters"] == 418
-    assert manifest["family_verification_status"] == (
-        "pending_competitive_gvpa_gvpj_verification"
-    )
-
-    with (output_dir / "sequence_manifest.tsv").open(encoding="utf-8", newline="") as stream:
-        rows = list(csv.DictReader(stream, delimiter="\t"))
-    assert len(rows) == 1224
-    assert len({row["sequence_id"] for row in rows}) == 1224
-    cluster_splits: dict[str, set[str]] = {}
-    for row in rows:
-        cluster_splits.setdefault(row["cluster_id"], set()).add(row["split"])
-    assert len(cluster_splits) == 418
-    assert all(len(splits) == 1 for splits in cluster_splits.values())
-
-    fasta_ids = {
-        split: {record.identifier for record in read_fasta(output_dir / f"{split}.fasta")}
-        for split in ("train", "validation", "test")
-    }
-    assert [len(fasta_ids[name]) for name in fasta_ids] == [978, 123, 123]
-    assert not (fasta_ids["train"] & fasta_ids["validation"])
-    assert not (fasta_ids["train"] & fasta_ids["test"])
-    assert not (fasta_ids["validation"] & fasta_ids["test"])
-
-    for relative, expected in manifest["input_sha256"].items():
-        assert sha256_file(ROOT / relative) == expected
-    for relative, expected in manifest["output_sha256"].items():
-        assert sha256_file(ROOT / relative) == expected

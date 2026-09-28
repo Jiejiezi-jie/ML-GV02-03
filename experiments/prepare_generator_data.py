@@ -17,7 +17,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="Prepare cluster-isolated GvpA data for the V2 sequence generator"
     )
-    parser.add_argument("--config", default="configs/generation.yaml")
+    parser.add_argument("--config", required=True, help="Configuration for a new reference dataset")
     args = parser.parse_args()
     manifest = prepare_generator_data(ROOT, args.config)
     print(json.dumps(manifest, ensure_ascii=False, indent=2))

@@ -17,7 +17,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="Train the V2 GRU sequence VAE with validation and early stopping"
     )
-    parser.add_argument("--config", default="configs/generation.yaml")
+    parser.add_argument("--config", default="configs/generation_member_a_v1.yaml")
     parser.add_argument("--device", default="auto", help="auto, cpu, cuda, or cuda:N")
     parser.add_argument("--resume", default=None, help="Checkpoint used for exact resume")
     parser.add_argument("--maximum-epochs", type=int, default=None)

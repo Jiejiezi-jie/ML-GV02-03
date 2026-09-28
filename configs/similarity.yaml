@@ -1,8 +1,7 @@
-# Development input only: this is a mixed legacy pool, not verified GvpA.
-# For formal analysis, supply separate main/ambiguous-pool FASTAs and output dirs.
-input_fasta: data/candidates/t05/generated_gvp.fasta
-output_dir: results/gv02_03_similarity_dev
-pool_label: legacy_t05_mixed_development_only
+# Family-supported candidates; unresolved pair distances remain NaN.
+input_fasta: data/processed/gv02_03_v2/vae_member_a_v1/main_supported_gvpa.fasta
+output_dir: results/reproductions/pairwise
+pool_label: main_supported_gvpa
 alignment:
   gap_open_score: -10.0
   gap_extend_score: -0.5

@@ -192,19 +192,19 @@ def test_qc_only_command_is_reproducible_and_refuses_overwrite(tmp_path):
 
 def test_committed_pattern_audit_is_consistent_and_does_not_change_eligibility():
     root = Path(__file__).resolve().parents[1]
-    output = root / "results/gv02_03_pattern_audit"
-    manifest = json.loads((output / "manifest.json").read_text())
+    output = root / "results/gv02_03_c_handoff_member_a_v1"
+    manifest = json.loads((output / "qc_similarity_manifest.json").read_text())
     for name, expected in manifest["outputs"].items():
         assert sha256_file(output / name) == expected
-    with (output / "candidate_qc.tsv").open(encoding="utf-8", newline="") as stream:
+    with (output / "candidate_qc_extended.tsv").open(encoding="utf-8", newline="") as stream:
         rows = list(csv.DictReader(stream, delimiter="\t"))
-    with (root / "data/processed/gv02_03_qc/candidate_qc.tsv").open(encoding="utf-8", newline="") as stream:
+    with (root / "data/processed/gv02_03_v2/vae_member_a_v1/candidate_qc.tsv").open(encoding="utf-8", newline="") as stream:
         old_rows = list(csv.DictReader(stream, delimiter="\t"))
     assert {r["sequence_id"]: r["qc_pass"] for r in rows} == {
         r["sequence_id"]: r["qc_pass"] for r in old_rows
     }
-    summary = json.loads((output / "summary.json").read_text())
-    assert len(rows) == summary["input_count"] == 200
-    assert sum(r["qc_pass"] == "True" for r in rows) == summary["pass_count"] == 170
-    assert sum(r["homopolymer_warning"] == "True" for r in rows) == 10
-    assert summary["warning_counts"]["homopolymer_warning"] == 10
+    summary = json.loads((output / "qc_similarity_summary.json").read_text())
+    assert len(rows) == summary["candidate_count"] == 1000
+    assert sum(r["qc_pass"] == "True" for r in rows) == summary["qc_pass"] == 1000
+    assert sum(r["homopolymer_warning"] == "True" for r in rows) == 46
+    assert summary["warning_counts"]["homopolymer_warning"] == 46

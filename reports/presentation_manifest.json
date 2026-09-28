@@ -1,0 +1,9 @@
+{
+  "source_report_manifest_sha256": "b98cf7f81cef5ed30a0f950f18608bac70eaa52756d3c55feed7504f9a8792f7",
+  "source_evaluation_manifest_sha256": "abd4e0626f44bddf421333b16d1f795df7c8f49e16f9075a9c020686155da22c",
+  "builder_sha256": "d80193c9bf2f6dd4ee6bf5443f8ee913aab4bf2a75adbb36de813095c64ee23c",
+  "slide_count": 13,
+  "output_sha256": {
+    "PROJECT_PRESENTATION.pptx": "9d27a6d6c9892bd0312704b7223e0c2c6de84bb793da0a6276e3cf5e0c32bd4d"
+  }
+}

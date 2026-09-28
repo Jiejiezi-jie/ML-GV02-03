@@ -1,8 +1,8 @@
-# Development only: neither pool nor reference family membership is verified.
-candidate_fasta: data/candidates/t05/generated_gvp.fasta
-reference_fasta: data/processed/gv02_03/reference_clean.fasta
-pool_label: legacy_t05_mixed_development_only
-reference_label: provisional_nominal_gvpa_unverified
+# Current generated batch against the frozen provisional reference.
+candidate_fasta: data/generated/sequence_vae/member_a_v1_seed42/vae_candidates.fasta
+reference_fasta: data/processed/gv02_03_v2/member_b_handoff/gvpa_training_eligible.fasta
+pool_label: sequence_vae_seed42_full_batch
+reference_label: provisional_conservative_gvpa_346
 alignment:
   gap_open_score: -10.0
   gap_extend_score: -0.5

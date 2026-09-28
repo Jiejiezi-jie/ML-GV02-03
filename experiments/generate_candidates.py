@@ -17,9 +17,9 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="Generate auditable GvpA candidates from a trained sequence VAE"
     )
-    parser.add_argument("--config", default="configs/generation.yaml")
+    parser.add_argument("--config", default="configs/generation_member_a_v1.yaml")
     parser.add_argument(
-        "--checkpoint", default="models/generator/sequence_vae/best.pt"
+        "--checkpoint", required=True, help="Path to a trained sequence-VAE checkpoint"
     )
     parser.add_argument("--device", default="auto", help="auto, cpu, cuda, or cuda:N")
     parser.add_argument("--candidate-count", type=int, default=None)

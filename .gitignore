@@ -7,6 +7,7 @@ __pycache__/
 # Local reruns have independent manifests; keep compact acceptance records in V2.
 results/reproductions/
 .DS_Store
+.chart-data-*/
 
 # Trained generator weights and development runs are reproducible but may be large.
 models/generator/sequence_vae/*.pt
@@ -17,6 +18,10 @@ data/processed/gv02_03_v2/generated_candidates/
 results/*/work/blastdb/
 results/*/work/*.log
 results/gv02_03_v2/family/**/blastdb/
+results/gv02_03_v2/family/fold_*/
+results/gv02_03_v2/family/candidates/
+results/gv02_03_v2/family/**/*.log
+models/family_profiles*/*.log
 
 # VAE V2 rebuildable bioinformatics intermediates; keep summaries, tables,
 # selections and manifests, but do not version hundreds of MB of raw searches.

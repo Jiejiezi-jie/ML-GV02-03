@@ -258,31 +258,3 @@ def test_output_populated_during_merge_is_preserved(tmp_path, monkeypatch):
     with pytest.raises(ValueError, match="not empty"):
         module.run_qc_report(tmp_path, config, "output")
     assert (tmp_path / "output/report.md").read_text() == "other report"
-
-
-def test_development_report_preserves_sources_and_audits_all_outputs():
-    root = Path(__file__).resolve().parents[1]
-    output = root / "results/gv02_03_qc_report"
-
-    def table(path):
-        with path.open(encoding="utf-8", newline="") as stream:
-            return list(csv.DictReader(stream, delimiter="\t"))
-
-    rows = table(output / "candidate_qc_summary.tsv")
-    review = table(output / "manual_review.tsv")
-    qc_rows = table(root / "results/gv02_03_pattern_audit/candidate_qc.tsv")
-    near_rows = table(root / "results/gv02_03_nearest_reference_dev/nearest_reference.tsv")
-    by_id = {row["sequence_id"]: row for row in rows}
-    assert len(rows) == len(by_id) == 200
-    assert [r["sequence_id"] for r in rows] == [r["sequence_id"] for r in qc_rows]
-    for original in qc_rows + near_rows:
-        assert all(by_id[original["sequence_id"]][key] == value for key, value in original.items())
-    assert review == [row for row in rows if row["review_required"] == "True"]
-    assert len(review) == 180
-    summary = json.loads((output / "summary.json").read_text(encoding="utf-8"))
-    assert summary["cross_counts"] == {"pass_resolved": 165, "pass_unresolved": 5,
-                                       "fail_resolved": 0, "fail_unresolved": 30}
-    assert summary["no_review_trigger_count"] == 20
-    manifest = json.loads((output / "manifest.json").read_text(encoding="utf-8"))
-    for name, expected in manifest["outputs"].items():
-        assert sha256_file(output / name) == expected

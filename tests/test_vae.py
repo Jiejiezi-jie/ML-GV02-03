@@ -26,7 +26,7 @@ ROOT = Path(__file__).resolve().parents[1]
 @pytest.fixture
 def vocabulary() -> ProteinVocabulary:
     return ProteinVocabulary.from_json(
-        ROOT / "models/generator/sequence_vae/vocabulary.json"
+        ROOT / "data/processed/gv02_03_v2/member_b_handoff/development_split/vocabulary.json"
     )
 
 
@@ -156,7 +156,7 @@ def _write_tiny_training_project(root: Path) -> Path:
     (data_dir / "test.fasta").write_text(
         ">e1\nACDEFGHIM\n>e2\nLMNPQRSTY\n", encoding="utf-8"
     )
-    vocabulary_source = ROOT / "models/generator/sequence_vae/vocabulary.json"
+    vocabulary_source = ROOT / "data/processed/gv02_03_v2/member_b_handoff/development_split/vocabulary.json"
     vocabulary_path = root / "models/vocabulary.json"
     vocabulary_path.parent.mkdir(parents=True)
     vocabulary_path.write_text(vocabulary_source.read_text(encoding="utf-8"), encoding="utf-8")

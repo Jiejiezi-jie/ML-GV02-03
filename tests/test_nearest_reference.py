@@ -246,22 +246,23 @@ def test_source_change_during_alignment_prevents_publication(tmp_path, monkeypat
     assert not (tmp_path / "output/manifest.json").exists()
 
 
-def test_development_result_hashes_counts_and_selected_pair_evidence():
+def test_published_result_hashes_counts_and_selected_pair_evidence():
     root = Path(__file__).resolve().parents[1]
-    output = root / "results/gv02_03_nearest_reference_dev"
-    manifest = json.loads((output / "manifest.json").read_text(encoding="utf-8"))
+    output = root / "results/gv02_03_c_handoff_member_a_v1"
+    manifest = json.loads((output / "qc_similarity_manifest.json").read_text(encoding="utf-8"))
     for name, expected in manifest["outputs"].items():
         assert sha256_file(output / name) == expected
-    with (output / "nearest_reference.tsv").open(encoding="utf-8", newline="") as stream:
+    with (output / "trusted_similarity.tsv").open(encoding="utf-8", newline="") as stream:
         rows = list(csv.DictReader(stream, delimiter="\t"))
-    summary = json.loads((output / "summary.json").read_text(encoding="utf-8"))
-    assert len(rows) == summary["candidate_count"] == 200
-    assert sum(row["distance_status"] == "resolved" for row in rows) == summary["matched_candidates"] == 165
-    assert summary["unresolved_candidates"] == 35
-    assert sum(int(row["closest_reference_tie_count"]) > 1 for row in rows) == summary["tied_candidates"] == 55
-    queries = {r.identifier: r for r in read_fasta(root / manifest["config"]["candidate_fasta"])}
-    references = {r.identifier: r for r in read_fasta(root / manifest["config"]["reference_fasta"])}
-    settings = SimilarityConfig(**manifest["effective_alignment_parameters"])
+    summary = json.loads((output / "qc_similarity_summary.json").read_text(encoding="utf-8"))
+    assert len(rows) == summary["candidate_count"] == 1000
+    assert sum(row["distance_status"] == "resolved" for row in rows) == summary["nearest_reference"]["resolved"] == 801
+    assert summary["nearest_reference"]["unresolved"] == 199
+    assert sum(int(row["closest_reference_tie_count"]) > 1 for row in rows) == summary["nearest_reference"]["tied"] == 262
+    config = json.loads((root / "configs/c_handoff_member_a_v1.json").read_text())
+    queries = {r.identifier: r for r in read_fasta(root / config["inputs"]["candidates"]["path"])}
+    references = {r.identifier: r for r in read_fasta(root / config["inputs"]["reference_fasta"]["path"])}
+    settings = SimilarityConfig(**config["alignment"])
     assert list(queries) == [row["sequence_id"] for row in rows]
     for row in rows:
         ids = json.loads(row["closest_reference_ids"])
