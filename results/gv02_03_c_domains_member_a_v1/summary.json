@@ -1,0 +1,34 @@
+{
+  "method": "Local PyHMMER hmmsearch against all Pfam-A profiles with curated GA sequence and domain thresholds",
+  "pfam_source": "https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.hmm.gz",
+  "pfam_md5": "7ab3c4e215d0daaea3004e37c4e24f8a",
+  "pfam_profile_count": 30134,
+  "candidate_count": 1000,
+  "reference_count": 346,
+  "reference_max_pf00741_hit_segments": 1,
+  "reference_non_target_accessions": {},
+  "candidate_review_status_counts": {
+    "no_extra_domain_evidence": 575,
+    "no_pfam_hit": 395,
+    "manual_review": 30
+  },
+  "candidate_review_status_by_pool": {
+    "ambiguous_exploration": {
+      "no_extra_domain_evidence": 46,
+      "manual_review": 1
+    },
+    "excluded": {
+      "no_extra_domain_evidence": 382,
+      "no_pfam_hit": 395,
+      "manual_review": 29
+    },
+    "main_supported_gvpa": {
+      "no_extra_domain_evidence": 147
+    }
+  },
+  "warning_reason_counts": {
+    "multiple_pf00741_segments": 30
+  },
+  "decision_rule": "Non-target Pfam hit with no overlap to PF00741, any overlapping alternative-family hit, or PF00741 hit-segment count exceeding reference maximum triggers manual review only; B pool/QC unchanged.",
+  "limitations": "Multiple PF00741 hit segments may reflect repeat-like sequence or split/overlapping HMMER alignments, not proven extra domain copies. Pfam GA significance is family-specific, but absence of a hit does not establish absence of a domain. Reference set remains provisional."
+}

@@ -1,0 +1,21 @@
+{
+  "input_sha256": {
+    "candidates": "d93b92170977fad475104f58c3a6579d2dd6bee4d99c935d94978db454af7d88",
+    "reference_fasta": "9a38015ecd3aaf283af3501f354db3cc23ea4e89045cb75f53cc30a7f9635bc9",
+    "pool_audit": "49fd057655b814b12688142985060fc9c7c554d51a65d563c3604bdc7c968e17"
+  },
+  "config_sha256": "a861f8a205cde52cc52278ae0cf7a4451356b896212f7b8590bf91fcaf68e6e2",
+  "pfam_source": "https://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.hmm.gz",
+  "pfam_md5": "7ab3c4e215d0daaea3004e37c4e24f8a",
+  "pfam_sha256": "2d82087b6c5c60d762cc767f98e8260b273134c215ab7efccf7440614a4e5dab",
+  "pyhmmer_version": "0.12.3",
+  "python_version": "3.13.13",
+  "cpus": 4,
+  "output_sha256": {
+    "candidate_domains.tsv": "c8682b0ef57b83f5838b2f874e533160031df494c8fe6fb5ebece044e60fac64",
+    "reference_domains.tsv": "19ac3d605c29391543a06bc271537ed88e8474b075f316f48dbda216e8e5c96d",
+    "candidate_domain_hits.tsv": "4924eda1014b044752a11a7a346dad7d6937d9a117ca68e67d08c149ec045f97",
+    "reference_domain_hits.tsv": "1ac92ad8b206a8913a77cca543eb25674149a469f1d09ff3825fc141dd4fddb8",
+    "summary.json": "663a6cca53888b7f71dc6b7b9bf836e598b75706cedfd1f9a2dd0016e91e5468"
+  }
+}

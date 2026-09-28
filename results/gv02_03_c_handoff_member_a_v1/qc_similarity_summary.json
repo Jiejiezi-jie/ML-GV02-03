@@ -1,0 +1,51 @@
+{
+  "status": "development_provisional",
+  "candidate_count": 1000,
+  "reference_count": 346,
+  "qc_pass": 1000,
+  "qc_fail": 0,
+  "warning_candidates": 223,
+  "warning_counts": {
+    "composition_outlier_warning": 174,
+    "generation_cap_warning": 28,
+    "homopolymer_warning": 46
+  },
+  "terminated_by_eos": 972,
+  "hit_generation_cap": 28,
+  "eos_audit": "exported metadata/hash/length consistency only; checkpoint/raw token replay not performed",
+  "baseline_qc_reproduced": true,
+  "pool_counts": {
+    "main_supported_gvpa": 147,
+    "ambiguous_exploration": 47,
+    "excluded": 806
+  },
+  "pool_assignment": "B frozen labels preserved; not reclassified by C",
+  "nearest_reference": {
+    "pair_count": 346000,
+    "resolved": 801,
+    "unresolved": 199,
+    "tied": 262,
+    "exact": 0
+  },
+  "matrices": {
+    "main_supported_gvpa": {
+      "candidate_count": 147,
+      "pair_count": 10731,
+      "resolved_pairs": 7354,
+      "unresolved_pairs": 3377
+    },
+    "ambiguous_exploration": {
+      "candidate_count": 47,
+      "pair_count": 1081,
+      "resolved_pairs": 499,
+      "unresolved_pairs": 582
+    }
+  },
+  "manual_review_count": 915,
+  "not_assessed": [
+    "additional_domains",
+    "transmembrane_topology"
+  ],
+  "missing_distance_policy": "NaN in matrices; blank in TSV; never impute 1",
+  "interpretation": "QC pass is not family/function validation; hydrophobic runs are not TM predictions; no final selection"
+}

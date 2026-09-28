@@ -1,0 +1,22 @@
+{
+  "scope": "Core outputs only; output directories and config files differ between runs.",
+  "all_equal": true,
+  "run_1": {
+    "pairwise_similarity.tsv": "984b6c052e00cc89e31d17313cd667c99660e07bbe822aed15ec93a8913c1603",
+    "candidate_distance.npy": "64fc48b686df9c4b09ce276a025b88c6a6ceb6a1618536ea0e736b898d9bc73c",
+    "candidate_distance_ids.json": "e8074fcc40329583a290050c7beeb2fd380676efa61907e95aaaebd47a3bbf36",
+    "summary.json": "5e070928afc0625f5dc4375d3982643a770a1ea1d23ae095f029e64e5adf0b6c"
+  },
+  "run_2": {
+    "pairwise_similarity.tsv": "984b6c052e00cc89e31d17313cd667c99660e07bbe822aed15ec93a8913c1603",
+    "candidate_distance.npy": "64fc48b686df9c4b09ce276a025b88c6a6ceb6a1618536ea0e736b898d9bc73c",
+    "candidate_distance_ids.json": "e8074fcc40329583a290050c7beeb2fd380676efa61907e95aaaebd47a3bbf36",
+    "summary.json": "5e070928afc0625f5dc4375d3982643a770a1ea1d23ae095f029e64e5adf0b6c"
+  },
+  "fasta_sha256": "4be37ab575f7285035669955ed713dbcefb8fe2a1c2790de7ecd48e89cee9776",
+  "versions": {
+    "python": "3.13.13",
+    "biopython": "1.88",
+    "numpy": "2.5.3"
+  }
+}

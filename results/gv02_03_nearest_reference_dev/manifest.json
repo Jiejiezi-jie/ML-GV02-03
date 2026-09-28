@@ -1,0 +1,65 @@
+{
+  "module_version": "1.0.0",
+  "inputs": {
+    "candidate_fasta": {
+      "path": "D:\\HuaweiMoveData\\Users\\huawei\\Desktop\\AI知识库\\机器学习\\ML-GV02-03\\data\\candidates\\t05\\generated_gvp.fasta",
+      "sha256": "4be37ab575f7285035669955ed713dbcefb8fe2a1c2790de7ecd48e89cee9776"
+    },
+    "reference_fasta": {
+      "path": "D:\\HuaweiMoveData\\Users\\huawei\\Desktop\\AI知识库\\机器学习\\ML-GV02-03\\data\\processed\\gv02_03\\reference_clean.fasta",
+      "sha256": "559c274ddc726b63fa242ef16ba97155721793a4b219e9a04cd54135ee167cfc"
+    },
+    "config": {
+      "path": "D:\\HuaweiMoveData\\Users\\huawei\\Desktop\\AI知识库\\机器学习\\ML-GV02-03\\configs\\nearest_reference.yaml",
+      "sha256": "455d5697b499832fc3f71d6f25064bc5fd95b5509b5aec8f67bc15a303b5f33b"
+    }
+  },
+  "outputs": {
+    "nearest_reference.tsv": "2d0b45168ef86a31f314b8099ae8d2dc8a931462f9a87a2e6749bc1697a2820b",
+    "summary.json": "d8c6d10c57581f065efc3f648be099741b1cb100cfed2e013e9ba3031a3728d3"
+  },
+  "config": {
+    "candidate_fasta": "data/candidates/t05/generated_gvp.fasta",
+    "reference_fasta": "data/processed/gv02_03/reference_clean.fasta",
+    "pool_label": "legacy_t05_mixed_development_only",
+    "reference_label": "provisional_nominal_gvpa_unverified",
+    "alignment": {
+      "gap_open_score": -10.0,
+      "gap_extend_score": -0.5,
+      "minimum_coverage": 0.8,
+      "minimum_identity": 0.2,
+      "minimum_score": 0.0,
+      "minimum_aligned_residues": 20,
+      "maximum_sequence_length": 2000,
+      "maximum_pairs": 500000
+    }
+  },
+  "effective_alignment_parameters": {
+    "gap_open_score": -10.0,
+    "gap_extend_score": -0.5,
+    "minimum_coverage": 0.8,
+    "minimum_identity": 0.2,
+    "minimum_score": 0.0,
+    "minimum_aligned_residues": 20,
+    "maximum_sequence_length": 2000,
+    "maximum_pairs": 500000
+  },
+  "backend": {
+    "mode": "global",
+    "matrix": "BLOSUM62",
+    "epsilon": 1e-06,
+    "algorithm": "Gotoh global alignment algorithm",
+    "alignment_tie_policy": "lexicographic sequence orientation; first optimal alignment",
+    "reference_tie_policy": "exact rational effective identity; representative by lexicographic ID"
+  },
+  "versions": {
+    "python": "3.13.13",
+    "biopython": "1.88",
+    "pyyaml": "6.0.3"
+  },
+  "source_sha256": {
+    "nearest_reference.py": "d2f6266c46dbc4b7ab3eab775d677bc38a1ec82f6d958f9e74dab4d38cdfb717",
+    "similarity.py": "3b971af749aa6e302f7445711fab22f29fb52e779efee7e1f780850cb8c2bddf",
+    "io.py": "adc669cefd5f3fd495819c6cce35274eba3eb0e183e47fde61be243dca7a8873"
+  }
+}

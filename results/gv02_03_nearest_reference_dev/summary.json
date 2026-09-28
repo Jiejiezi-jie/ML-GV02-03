@@ -1,0 +1,14 @@
+{
+  "pool_label": "legacy_t05_mixed_development_only",
+  "reference_label": "provisional_nominal_gvpa_unverified",
+  "candidate_count": 200,
+  "reference_count": 1224,
+  "pair_count": 244800,
+  "matched_candidates": 165,
+  "unresolved_candidates": 35,
+  "tied_candidates": 55,
+  "exact_match_candidates": 0,
+  "family_verification": "not_performed_by_this_module",
+  "selection_policy": "minimum distance among reliable pairs; all exact ties; lexicographic ID representative",
+  "missing_distance_policy": "blank ID, metrics and distance when no reliable reference; never impute 1"
+}

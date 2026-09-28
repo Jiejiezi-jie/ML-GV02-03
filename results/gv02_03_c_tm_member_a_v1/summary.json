@@ -1,0 +1,27 @@
+{
+  "method": "PureseqTM fast mode (-m 0), local WSL/Ubuntu, warning-only",
+  "tool_url": "https://github.com/PureseqTM/PureseqTM_Package",
+  "tool_revision": "4bb463f5b973f6b7b48bdab55b5cfd150f1741e3",
+  "reference_tm_segment_histogram": {
+    "0": 346
+  },
+  "reference_max_tm_segments": 0,
+  "candidate_review_status_counts": {
+    "no_extra_tm_evidence": 993,
+    "extra_tm_manual_review": 7
+  },
+  "candidate_review_status_by_pool": {
+    "ambiguous_exploration": {
+      "no_extra_tm_evidence": 47
+    },
+    "excluded": {
+      "no_extra_tm_evidence": 799,
+      "extra_tm_manual_review": 7
+    },
+    "main_supported_gvpa": {
+      "no_extra_tm_evidence": 147
+    }
+  },
+  "decision_rule": "Manual review only when predicted TM segment count exceeds maximum of 346 frozen references; no exclusion or pool changes.",
+  "limitations": "Predicted 2-state topology is not experimental evidence. Reference set is provisional; absence of a warning does not prove absence of abnormal TM regions."
+}

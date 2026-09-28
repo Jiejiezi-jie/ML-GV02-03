@@ -1,0 +1,14 @@
+# Development input only: this is a mixed legacy pool, not verified GvpA.
+# For formal analysis, supply separate main/ambiguous-pool FASTAs and output dirs.
+input_fasta: data/candidates/t05/generated_gvp.fasta
+output_dir: results/gv02_03_similarity_dev
+pool_label: legacy_t05_mixed_development_only
+alignment:
+  gap_open_score: -10.0
+  gap_extend_score: -0.5
+  minimum_coverage: 0.80
+  minimum_identity: 0.20
+  minimum_score: 0.0
+  minimum_aligned_residues: 20
+  maximum_sequence_length: 2000
+  maximum_pairs: 500000

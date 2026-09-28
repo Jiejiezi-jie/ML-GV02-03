@@ -1,0 +1,23 @@
+{
+  "status": "warning_only_provisional",
+  "candidate_count": 1000,
+  "pool_counts": {
+    "ambiguous_exploration": 47,
+    "excluded": 806,
+    "main_supported_gvpa": 147
+  },
+  "base_manual_review_count": 915,
+  "domain_manual_review_count": 30,
+  "domain_no_pfam_hit_count": 395,
+  "tm_manual_review_count": 7,
+  "domain_tm_warning_overlap_count": 0,
+  "new_warning_id_count": 37,
+  "c_manual_review_count": 915,
+  "newly_added_review_count": 0,
+  "c_manual_review_by_pool": {
+    "ambiguous_exploration": 47,
+    "excluded": 806,
+    "main_supported_gvpa": 62
+  },
+  "interpretation": "Review flags are a union of existing C review, Pfam warnings/no-hit uncertainty, and TM warnings; no B pool, QC, family or functional verdict changes."
+}

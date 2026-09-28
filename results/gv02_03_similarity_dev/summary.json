@@ -1,0 +1,10 @@
+{
+  "pool_label": "legacy_t05_mixed_development_only",
+  "candidate_count": 200,
+  "pair_count": 19900,
+  "resolved_pairs": 6710,
+  "unresolved_pairs": 13190,
+  "resolved_fraction": 0.3371859296482412,
+  "missing_distance_policy": "NaN in NPY; blank in TSV; never impute 1 or silently drop",
+  "family_verification": "not_performed_by_this_module"
+}

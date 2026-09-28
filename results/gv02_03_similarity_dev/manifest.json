@@ -1,0 +1,60 @@
+{
+  "module_version": "1.0.0",
+  "inputs": {
+    "fasta": {
+      "path": "data/candidates/t05/generated_gvp.fasta",
+      "sha256": "4be37ab575f7285035669955ed713dbcefb8fe2a1c2790de7ecd48e89cee9776"
+    },
+    "config": {
+      "path": "D:\\HuaweiMoveData\\Users\\huawei\\Desktop\\AI知识库\\机器学习\\ML-GV02-03\\configs\\similarity.yaml",
+      "sha256": "a941d24826ec4dad60c9484b2174ca2993d4ebb035f62275440caa1fa0635603"
+    }
+  },
+  "outputs": {
+    "pairwise_similarity.tsv": "984b6c052e00cc89e31d17313cd667c99660e07bbe822aed15ec93a8913c1603",
+    "candidate_distance.npy": "64fc48b686df9c4b09ce276a025b88c6a6ceb6a1618536ea0e736b898d9bc73c",
+    "candidate_distance_ids.json": "e8074fcc40329583a290050c7beeb2fd380676efa61907e95aaaebd47a3bbf36",
+    "summary.json": "5e070928afc0625f5dc4375d3982643a770a1ea1d23ae095f029e64e5adf0b6c"
+  },
+  "config": {
+    "input_fasta": "data/candidates/t05/generated_gvp.fasta",
+    "output_dir": "results/gv02_03_similarity_dev",
+    "pool_label": "legacy_t05_mixed_development_only",
+    "alignment": {
+      "gap_open_score": -10.0,
+      "gap_extend_score": -0.5,
+      "minimum_coverage": 0.8,
+      "minimum_identity": 0.2,
+      "minimum_score": 0.0,
+      "minimum_aligned_residues": 20,
+      "maximum_sequence_length": 2000,
+      "maximum_pairs": 500000
+    }
+  },
+  "effective_alignment_parameters": {
+    "gap_open_score": -10.0,
+    "gap_extend_score": -0.5,
+    "minimum_coverage": 0.8,
+    "minimum_identity": 0.2,
+    "minimum_score": 0.0,
+    "minimum_aligned_residues": 20,
+    "maximum_sequence_length": 2000,
+    "maximum_pairs": 500000
+  },
+  "backend": {
+    "mode": "global",
+    "matrix": "BLOSUM62",
+    "epsilon": 1e-06,
+    "algorithm": "Gotoh global alignment algorithm",
+    "tie_policy": "lexicographic sequence orientation; first optimal alignment"
+  },
+  "versions": {
+    "python": "3.13.13",
+    "biopython": "1.88",
+    "numpy": "2.5.3"
+  },
+  "source_sha256": {
+    "similarity.py": "3b971af749aa6e302f7445711fab22f29fb52e779efee7e1f780850cb8c2bddf",
+    "io.py": "adc669cefd5f3fd495819c6cce35274eba3eb0e183e47fde61be243dca7a8873"
+  }
+}

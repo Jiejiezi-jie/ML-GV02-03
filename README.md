@@ -151,6 +151,61 @@ Jensen–Shannon divergence 衡量每条序列相对该平均组成的偏离程�
 正式产物位于 `data/processed/gv02_03_qc/` 和 `results/gv02_03_qc/`，具体解释和
 复现边界见 [候选质量控制增量报告](reports/M3_候选质量控制增量.md)。
 
+## C 模块：独立全局相似度与距离
+
+运行 `python -B experiments/run_similarity.py --config configs/similarity.yaml`，
+输出成对比对证据、双向覆盖率、距离矩阵和对应 ID 顺序。
+未通过覆盖率、identity、得分或最小比对长度门槛的序列对标记 `unresolved`，
+矩阵中保留 NaN，不赋最大距离。原版 BLAST 评分与结果保持不变。
+默认输入为旧 T05 混合候选，仅作开发验证；正式主分析池与歧义池需分别输入。
+方法、公式、可靠性门槛、缺失值处理及 D 的接入说明见
+[全局相似度模块说明](docs/similarity.md)。本阶段尚未实现快速检索和自动家族分池。
+
+## C：序列模式告警（QC-only）
+
+新增可配置的连续疏水片段、单残基重复、短 motif 串联重复告警，记录片段位置；
+`qc_warnings` 独立列出警告，旧 `qc_reasons` 保持兼容。新检测不新增淘汰条件。
+
+```bash
+python experiments/run_quality_audit.py --config configs/gv02_03_pattern_qc.yaml --output-dir results/my_qc_audit
+```
+
+输出目录须为空，运行不依赖外部生信工具。旧实验配置与结果不覆盖。
+阈值尚未正式校准，疏水告警不是跨膜预测；范围与字段见 [QC 模式告警说明](docs/qc-patterns.md)。
+
+## C：最近可靠参考匹配
+
+完整比较候选与指定参考库，在通过全局比对可靠性门槛的参考中选择最小距离，
+输出最近参考 ID、全部并列 ID、identity、双向覆盖率及距离；无可靠匹配保留 `unresolved`。
+
+```bash
+python experiments/run_nearest_reference.py --config configs/nearest_reference.yaml --output-dir results/my_nearest_reference
+```
+
+不改变旧 QC 或评分；默认输入仍是未正式确认家族的开发数据。
+字段、并列规则及边界见 [最近参考匹配说明](docs/nearest-reference.md)。
+
+## C：统一 QC 汇总与人工复核清单
+
+合并已生成的 QC 和最近参考证据，生成逐条总表、复核清单、中文 Markdown 报告及审计记录。
+输入先核验哈希、ID 和长度；保留原有 `qc_pass`，不新增淘汰条件。
+
+```bash
+python experiments/run_qc_report.py --config configs/qc_report.yaml --output-dir results/my_qc_report
+```
+
+需要先完成上面的 QC-only 与最近参考运行，详情见 [统一 QC 汇总说明](docs/qc-report.md)。
+
+## C：B 真实 VAE 批次交接
+
+对 B 的冻结批次（1,000 条候选）进行导出元数据/EOS 审计、基础 QC 复算与扩展警告、
+346 条参考的全局最近匹配，以及主池 147 / 模糊池 47 的独立距离矩阵。
+读取外部 B 快照，不改变原家族分池。原交接运行未纳入额外结构域和跨膜拓扑；
+后续已分别补充 [本地 Pfam 域架构复核](results/gv02_03_c_domains_member_a_v1/README.md)
+和 [本地跨膜预警检查](results/gv02_03_c_tm_member_a_v1/README.md)，均不改变 B 分池。
+运行方式与文件含义见 [真实批次 C 交接说明](docs/c-handoff.md)。
+三批证据的逐条汇总及下游边界见 [C→下游统一复核交接](docs/c-final-handoff.md)。
+
 ## 四个指标（旧版基线）
 
 | 指标 | 实现 |

@@ -1,0 +1,219 @@
+{
+  "module_version": "1.0.0",
+  "config": {
+    "inputs": {
+      "candidates": {
+        "path": "data/generated/sequence_vae/member_a_v1_seed42/vae_candidates.fasta",
+        "sha256": "d93b92170977fad475104f58c3a6579d2dd6bee4d99c935d94978db454af7d88"
+      },
+      "generation_metadata": {
+        "path": "data/generated/sequence_vae/member_a_v1_seed42/generation_metadata.tsv",
+        "sha256": "60e95e6647b6e417bc32215f1e104e8eb37a5eba1c7692c9a8a0d143979e17a2"
+      },
+      "generation_manifest": {
+        "path": "data/generated/sequence_vae/member_a_v1_seed42/generation_manifest.json",
+        "sha256": "415fd5a1339440ea1cf94de49faa3ca55680e82fec3d3ea16389e23d04876c72"
+      },
+      "training_fasta": {
+        "path": "data/processed/gv02_03_v2/member_b_handoff/development_split/train.fasta",
+        "sha256": "9a61890554773212d763cf0cbc99248f7631a4375bbb43e89db79f5285a02239"
+      },
+      "reference_fasta": {
+        "path": "data/processed/gv02_03_v2/member_b_handoff/gvpa_training_eligible.fasta",
+        "sha256": "9a38015ecd3aaf283af3501f354db3cc23ea4e89045cb75f53cc30a7f9635bc9"
+      },
+      "b_config": {
+        "path": "configs/vae_member_a_v1_candidates.yaml",
+        "sha256": "2c82d5c198fb917b60f7eaac79964628666c4a36b30d3d92351863371819d277"
+      },
+      "candidate_qc": {
+        "path": "data/processed/gv02_03_v2/vae_member_a_v1/candidate_qc.tsv",
+        "sha256": "d58a07dea1f6256ea6f91df531866a20048f22f7c043d24beeabbe3b558a2ee1"
+      },
+      "family_classification": {
+        "path": "data/processed/gv02_03_v2/vae_member_a_v1/family/candidate_family_classification.tsv",
+        "sha256": "c3cd28281f4d6c1c1d11f5f2f8ff66ba3448b9d25061393a2e1f263bcd9c8871"
+      },
+      "pool_audit": {
+        "path": "data/processed/gv02_03_v2/vae_member_a_v1/candidate_pool_audit.tsv",
+        "sha256": "49fd057655b814b12688142985060fc9c7c554d51a65d563c3604bdc7c968e17"
+      },
+      "main_supported_gvpa": {
+        "path": "data/processed/gv02_03_v2/vae_member_a_v1/main_supported_gvpa.fasta",
+        "sha256": "edab1bc4f73a432b7033c37979cbddbfac10e8ded71b03d82443e412e2cbafb7"
+      },
+      "ambiguous_exploration": {
+        "path": "data/processed/gv02_03_v2/vae_member_a_v1/ambiguous_exploration.fasta",
+        "sha256": "6c5ecc0d5c45b2aaa731643fff492e6f5d9abef1fe55aead43585ac1039c1755"
+      },
+      "excluded": {
+        "path": "data/processed/gv02_03_v2/vae_member_a_v1/excluded.fasta",
+        "sha256": "eac229c060d3995f06e79d49b783895f05a34c5c3988bb12c3f05e4080f9d827"
+      },
+      "qc_manifest": {
+        "path": "data/processed/gv02_03_v2/vae_member_a_v1/qc_manifest.json",
+        "sha256": "2286b26a79f3c0131784b9302743b086d7dda976b1eaa65e0e92bd20538835d8"
+      },
+      "pool_manifest": {
+        "path": "data/processed/gv02_03_v2/vae_member_a_v1/candidate_pool_manifest.json",
+        "sha256": "6b9802f26c05619085bb35c93312f9551bcd8d71438c36f94db4f1224a14e2e4"
+      },
+      "release_manifest": {
+        "path": "data/processed/gv02_03_v2/member_b_handoff/release_manifest.json",
+        "sha256": "de51f46e05f6ac85e86df5535d18b325cb8b5f40df8942fdbdd651f46000ecde"
+      },
+      "split_manifest": {
+        "path": "data/processed/gv02_03_v2/member_b_handoff/development_split/split_manifest.json",
+        "sha256": "28e2c439d1946a789cb3a3812d4c54f1cce0502dbfa9429d77c238425b501f30"
+      }
+    },
+    "expected_counts": {
+      "candidates": 1000,
+      "references": 346,
+      "main_supported_gvpa": 147,
+      "ambiguous_exploration": 47,
+      "excluded": 806
+    },
+    "patterns": {
+      "hydrophobic_run_minimum": 18,
+      "homopolymer_minimum": 6,
+      "tandem_repeat_minimum_length": 12,
+      "tandem_repeat_minimum_copies": 3,
+      "tandem_repeat_maximum_motif_length": 6
+    },
+    "alignment": {
+      "gap_open_score": -10.0,
+      "gap_extend_score": -0.5,
+      "minimum_coverage": 0.8,
+      "minimum_identity": 0.2,
+      "minimum_score": 0.0,
+      "minimum_aligned_residues": 20,
+      "maximum_sequence_length": 2000,
+      "maximum_pairs": 500000
+    }
+  },
+  "config_sha256": "a861f8a205cde52cc52278ae0cf7a4451356b896212f7b8590bf91fcaf68e6e2",
+  "inputs": {
+    "candidates": {
+      "path": "data/generated/sequence_vae/member_a_v1_seed42/vae_candidates.fasta",
+      "sha256": "d93b92170977fad475104f58c3a6579d2dd6bee4d99c935d94978db454af7d88"
+    },
+    "generation_metadata": {
+      "path": "data/generated/sequence_vae/member_a_v1_seed42/generation_metadata.tsv",
+      "sha256": "60e95e6647b6e417bc32215f1e104e8eb37a5eba1c7692c9a8a0d143979e17a2"
+    },
+    "generation_manifest": {
+      "path": "data/generated/sequence_vae/member_a_v1_seed42/generation_manifest.json",
+      "sha256": "415fd5a1339440ea1cf94de49faa3ca55680e82fec3d3ea16389e23d04876c72"
+    },
+    "training_fasta": {
+      "path": "data/processed/gv02_03_v2/member_b_handoff/development_split/train.fasta",
+      "sha256": "9a61890554773212d763cf0cbc99248f7631a4375bbb43e89db79f5285a02239"
+    },
+    "reference_fasta": {
+      "path": "data/processed/gv02_03_v2/member_b_handoff/gvpa_training_eligible.fasta",
+      "sha256": "9a38015ecd3aaf283af3501f354db3cc23ea4e89045cb75f53cc30a7f9635bc9"
+    },
+    "b_config": {
+      "path": "configs/vae_member_a_v1_candidates.yaml",
+      "sha256": "2c82d5c198fb917b60f7eaac79964628666c4a36b30d3d92351863371819d277"
+    },
+    "candidate_qc": {
+      "path": "data/processed/gv02_03_v2/vae_member_a_v1/candidate_qc.tsv",
+      "sha256": "d58a07dea1f6256ea6f91df531866a20048f22f7c043d24beeabbe3b558a2ee1"
+    },
+    "family_classification": {
+      "path": "data/processed/gv02_03_v2/vae_member_a_v1/family/candidate_family_classification.tsv",
+      "sha256": "c3cd28281f4d6c1c1d11f5f2f8ff66ba3448b9d25061393a2e1f263bcd9c8871"
+    },
+    "pool_audit": {
+      "path": "data/processed/gv02_03_v2/vae_member_a_v1/candidate_pool_audit.tsv",
+      "sha256": "49fd057655b814b12688142985060fc9c7c554d51a65d563c3604bdc7c968e17"
+    },
+    "main_supported_gvpa": {
+      "path": "data/processed/gv02_03_v2/vae_member_a_v1/main_supported_gvpa.fasta",
+      "sha256": "edab1bc4f73a432b7033c37979cbddbfac10e8ded71b03d82443e412e2cbafb7"
+    },
+    "ambiguous_exploration": {
+      "path": "data/processed/gv02_03_v2/vae_member_a_v1/ambiguous_exploration.fasta",
+      "sha256": "6c5ecc0d5c45b2aaa731643fff492e6f5d9abef1fe55aead43585ac1039c1755"
+    },
+    "excluded": {
+      "path": "data/processed/gv02_03_v2/vae_member_a_v1/excluded.fasta",
+      "sha256": "eac229c060d3995f06e79d49b783895f05a34c5c3988bb12c3f05e4080f9d827"
+    },
+    "qc_manifest": {
+      "path": "data/processed/gv02_03_v2/vae_member_a_v1/qc_manifest.json",
+      "sha256": "2286b26a79f3c0131784b9302743b086d7dda976b1eaa65e0e92bd20538835d8"
+    },
+    "pool_manifest": {
+      "path": "data/processed/gv02_03_v2/vae_member_a_v1/candidate_pool_manifest.json",
+      "sha256": "6b9802f26c05619085bb35c93312f9551bcd8d71438c36f94db4f1224a14e2e4"
+    },
+    "release_manifest": {
+      "path": "data/processed/gv02_03_v2/member_b_handoff/release_manifest.json",
+      "sha256": "de51f46e05f6ac85e86df5535d18b325cb8b5f40df8942fdbdd651f46000ecde"
+    },
+    "split_manifest": {
+      "path": "data/processed/gv02_03_v2/member_b_handoff/development_split/split_manifest.json",
+      "sha256": "28e2c439d1946a789cb3a3812d4c54f1cce0502dbfa9429d77c238425b501f30"
+    }
+  },
+  "outputs": {
+    "ambiguous_distance.npy": "e6846e4d797afc4d472fe2cc916fd6def323dc13ba7803fbe36e720d2da2c21f",
+    "ambiguous_distance_ids.json": "43c82aced6b6162a51ca81ca69930bf4a4f2d77bed7bfcddd2d74a48adc21a61",
+    "ambiguous_pairwise.tsv": "0b5e24d5b487646846b74473093f41356be26fc51f2ea9c299d00afab51ba0ab",
+    "candidate_audit.tsv": "5c9dd7963eb813154753985a759e946f649a6f4a6bbc351e36c0abce813a7159",
+    "candidate_qc_extended.tsv": "794f57a783a275f761983e43b9deb5da4c18c835801797da4ab43805eabaae9c",
+    "main_distance.npy": "0bedbe8fc6269db8a488a4c598ef8ab315da6d1eab46e883e5802c32efcbaf2b",
+    "main_distance_ids.json": "b30dabf95520e5c6b0305d37ac929312339ddea751f6eac6fe0b38741560a10a",
+    "main_pairwise.tsv": "7b4382aba58de0c7db0be7f36c30fa9e5e2e30b381022214315886e7a7ed6a4d",
+    "manual_review.tsv": "6a313d15b2538678a08fd51317807259b32e2dc4de2e70be5f85028dff599f1b",
+    "qc_pass_extended.fasta": "602d39ca2e685e814b95aadfbe4882c7a4512b926a7e454c35b4f6aac9412ed7",
+    "qc_similarity_summary.json": "75ddab6b0327baa6d6857725028d15d6a78dee439f28064b9979a9bea19aa23a",
+    "report.md": "3b7906ddd2003733d4cb7b9869afefa0aae7304198235109cd5060e4c7ddfb38",
+    "trusted_similarity.tsv": "40f9d33b71481534a34dace09321d44dd4b764e3819848ffa2b9c3df76b86d89"
+  },
+  "source_sha256": {
+    "c_handoff.py": "5bc45b96c1075e9a5c1a763ee591072ffeffe09b699d52ab55f1fc018bba3468",
+    "quality.py": "5b033af169bddda91b3c6926ea791be24658b50d4a837d3d264a01adb6031e49",
+    "sequence_patterns.py": "925386dbca3bc7c2757fc60359928eb53d4c6354381d4403b8489b2093634f2f",
+    "nearest_reference.py": "d2f6266c46dbc4b7ab3eab775d677bc38a1ec82f6d958f9e74dab4d38cdfb717",
+    "similarity.py": "3b971af749aa6e302f7445711fab22f29fb52e779efee7e1f780850cb8c2bddf",
+    "io.py": "adc669cefd5f3fd495819c6cce35274eba3eb0e183e47fde61be243dca7a8873"
+  },
+  "effective_quality": {
+    "minimum_length": 50,
+    "maximum_length": 180,
+    "minimum_unique_residues": 8,
+    "maximum_single_residue_fraction": 0.35,
+    "generation_length_cap": null,
+    "exact_training_match_action": "exclude",
+    "exact_reference_match_action": "exclude",
+    "composition_outlier_quantile": 0.99,
+    "composition_outlier_action": "warn"
+  },
+  "effective_alignment": {
+    "gap_open_score": -10.0,
+    "gap_extend_score": -0.5,
+    "minimum_coverage": 0.8,
+    "minimum_identity": 0.2,
+    "minimum_score": 0.0,
+    "minimum_aligned_residues": 20,
+    "maximum_sequence_length": 2000,
+    "maximum_pairs": 500000
+  },
+  "backend": {
+    "mode": "global",
+    "matrix": "BLOSUM62",
+    "epsilon": 1e-06,
+    "alignment_tie_policy": "lexicographic sequence orientation; first optimal alignment",
+    "reference_tie_policy": "exact rational effective identity; lexicographic ID representative"
+  },
+  "versions": {
+    "python": "3.13.13",
+    "biopython": "1.88",
+    "numpy": "2.5.3",
+    "pyyaml": "6.0.3"
+  }
+}

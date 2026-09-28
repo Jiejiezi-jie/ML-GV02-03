@@ -1,0 +1,14 @@
+# Development only: neither pool nor reference family membership is verified.
+candidate_fasta: data/candidates/t05/generated_gvp.fasta
+reference_fasta: data/processed/gv02_03/reference_clean.fasta
+pool_label: legacy_t05_mixed_development_only
+reference_label: provisional_nominal_gvpa_unverified
+alignment:
+  gap_open_score: -10.0
+  gap_extend_score: -0.5
+  minimum_coverage: 0.80
+  minimum_identity: 0.20
+  minimum_score: 0.0
+  minimum_aligned_residues: 20
+  maximum_sequence_length: 2000
+  maximum_pairs: 500000

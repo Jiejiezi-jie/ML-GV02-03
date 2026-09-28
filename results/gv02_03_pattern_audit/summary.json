@@ -1,0 +1,15 @@
+{
+  "analysis_scope": "QC only; no family, topology, domain or functional validation",
+  "input_count": 200,
+  "pass_count": 170,
+  "failure_count": 30,
+  "warning_counts": {
+    "composition_outlier_warning": 145,
+    "homopolymer_warning": 10
+  },
+  "pattern_checked_counts": {
+    "hydrophobic": 200,
+    "homopolymer": 200,
+    "tandem_repeat": 200
+  }
+}
