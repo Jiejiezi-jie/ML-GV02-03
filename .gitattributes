@@ -9,3 +9,4 @@
 *.faa text eol=lf
 *.hmm text eol=lf
 *.clstr text eol=lf
+*.pt binary

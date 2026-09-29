@@ -104,8 +104,10 @@ Spearman 均值为 0.9933。Pareto 更偏向新颖性和集合多样性，等权
 - 复现性检查没有再次评估测试集。
 - 最终全项目自动化回归为 95 项全部通过。
 
-checkpoint 文件按仓库策略保留在本地、不提交 Git；最佳 checkpoint SHA-256 为
-`d2801a2a130928739f44f9726bcb5bbd7be229fadfe2f05fba5d0f6cc87debdf`，模型参数内容哈希如上。
+为方便组内复现，`best.pt` 和 `last.pt` 已提交至当前实验目录。最佳 checkpoint SHA-256 为
+`d2801a2a130928739f44f9726bcb5bbd7be229fadfe2f05fba5d0f6cc87debdf`，最后一轮 checkpoint
+SHA-256 为 `04bca4cdb4943d55ea777aba17ccd971d0b49ae5a92204d2741c817914092cc2`；
+模型参数内容哈希如上。它们属于暂定开发批次，不能称为最终科学模型。
 
 ## 8. 主要产物
 

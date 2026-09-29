@@ -34,8 +34,9 @@ Manifest 开始质量控制，不需要 checkpoint，也不需要重新训练或
 - 最佳 checkpoint SHA-256：
   `d2801a2a130928739f44f9726bcb5bbd7be229fadfe2f05fba5d0f6cc87debdf`。
 
-checkpoint 本身按仓库策略不提交 Git，但 C 的工作不依赖 checkpoint。候选 FASTA、元数据和
-Manifest 已提交，足以对本批次进行逐条审计。
+为方便组内复现，`best.pt` 和 `last.pt` 已提交至
+`models/generator/sequence_vae/member_a_v1_seed42/`，但 C 的工作不依赖 checkpoint。
+候选 FASTA、元数据和 Manifest 足以对本批次进行逐条审计。
 
 ## 3. 元数据字段
 

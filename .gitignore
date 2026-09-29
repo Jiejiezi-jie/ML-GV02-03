@@ -4,9 +4,12 @@ __pycache__/
 .coverage
 .DS_Store
 
-# Trained generator weights and development runs are reproducible but may be large.
+# Trained generator weights and development runs may be large. Ignore them by
+# default, but retain the frozen member_a_v1_seed42 checkpoints for team reuse.
 models/generator/sequence_vae/*.pt
 models/generator/sequence_vae/**/*.pt
+!models/generator/sequence_vae/member_a_v1_seed42/best.pt
+!models/generator/sequence_vae/member_a_v1_seed42/last.pt
 data/processed/gv02_03_v2/generated_candidates/
 
 # Rebuildable local BLAST databases and transient logs for every experiment variant.
