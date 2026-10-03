@@ -4,6 +4,8 @@
 
 [项目讲解](docs/PROJECT_GUIDE.md) · [项目报告](reports/PROJECT_REPORT.md) · [演示文稿](reports/PROJECT_PRESENTATION.pptx) · [复现说明](docs/REPRODUCIBILITY.md) · [方法说明](docs/METHODS.md) · [课程要求对应表](docs/COURSE_REQUIREMENTS.md)
 
+中期汇报材料：[汇报 PPT](reports/midterm/机器学习中期汇报.pptx) · [10 分钟逐页演讲稿](reports/midterm/GV02-03_逐页演讲稿_10分钟.docx)
+
 ## 功能
 
 - **候选审计**：保留每条序列的来源、SHA-256、质量检查、家族归属及人工复核标记。
