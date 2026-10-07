@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "artifact_count": 24,
+  "scope": "Same source, code, environment and seed; all table, report, figure and manifest bytes identical.",
+  "source_manifest_sha256": "abd4e0626f44bddf421333b16d1f795df7c8f49e16f9075a9c020686155da22c",
+  "implementation_sha256": {
+    "experiments/run_pareto_analysis.py": "52e11e30d5877b54b2ed06777e93755919b9eaa180cf3832260e657746e7f8dd",
+    "src/gv_eval/pareto_features.py": "d8976c78ce74721e88fdb856b295b910cb72254092aaeff203abe3ab07b9d465",
+    "src/gv_eval/selection.py": "fc5b593f822fc9a09f59d237336d35eecd7545013bf741b2fd3c5536dcd6572d"
+  }
+}

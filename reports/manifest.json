@@ -1,6 +1,7 @@
 {
   "source_manifest_sha256": "abd4e0626f44bddf421333b16d1f795df7c8f49e16f9075a9c020686155da22c",
-  "builder_sha256": "0f3765d8a3f15777b72a3ef5e163a22f2e2a8161eb4457e24799e5d74083aa4a",
+  "pareto_analysis_manifest_sha256": "a0a2bb43174501c356f3329cf44cbe17b787bb7cd71fa8f97b53dfd9e162d27e",
+  "builder_sha256": "f195d7e1148ccb4f76d8133aad9dc25998511efddc706a45e34e565d1f5c2152",
   "output_sha256": {
     "figures/correlations.png": "571dc2323b3d49c2d9dca0a7f1fae125015d9019b92002fe1d140323a0460c59",
     "figures/metric_scatter_matrix.png": "efc0b2d157f10342159ecafcd884d28a6d5bf520eb8724c2b4861ecb04baf6a8",
@@ -8,7 +9,7 @@
     "figures/strategy_comparison.png": "a2418cd04f961507fd7d376d764a1702d714b5f85c176f60d60c6ea74d5dcd0b",
     "pareto_front_summary.tsv": "dc1d56343d9f5aae67f07477cca9679d15c7dbc93eced51307065e9849d5f99d",
     "pareto_ranking.tsv": "49b2fb25af7666dc9e8d8a3d4f38a308f2b3cb95c1123cb837f2efe5712a5cb6",
-    "PROJECT_REPORT.md": "6f33ccf4515b6c02dcc8f7bdc8bc9169962a63fea04280894c5caa2b894f0435",
-    "statistics.json": "8bd3a90dc7e82b817d5403be20c61daaffa4558609258d36a9b0355162169500"
+    "PROJECT_REPORT.md": "8732747070fc79bb69f72e6102b4b04a73b4925688b134b0d40f456c7546d05e",
+    "statistics.json": "277199cd2b60f79783799940a747c2c2cc3ff99c6ba92620713166ce035058bc"
   }
 }

@@ -2,15 +2,16 @@
 
 ## 环境
 
-最小评价依赖固定在 `requirements-frozen-v2.txt`；QC、全局比对及证据校验使用 `requirements-integration.txt`。本机验证环境为 Python 3.12.14，VAE 测试使用 PyTorch 2.8.0 CPU。GPU 训练可在匹配 PyTorch CUDA 的独立环境执行。
+最小评价及前沿特征分析依赖固定在 `requirements-frozen-v2.txt`；QC、全局比对及证据校验使用 `requirements-integration.txt`。2026-09-28 发布验证环境为 Python 3.12.14，VAE 测试使用 PyTorch 2.8.0 CPU；各次运行的实际版本以相应清单为准。GPU 训练可在匹配 PyTorch CUDA 的独立环境执行。
 
 仓库使用 LF 行尾。已经发布的原始证据目录在 `.gitattributes` 中保留精确字节，以免 Windows 检出改变哈希。
 
-## 三种验证范围
+## 验证范围
 
 | 命令 | 实际执行 | 输入条件 |
 | --- | --- | --- |
 | `experiments/run_full_experiment.py --output <新目录>` | 四维评分、九份名单、消融、鲁棒性、随机基线、两次输出一致性检查 | 最小依赖、完整 Git 历史 |
+| `experiments/run_pareto_analysis.py --output <新目录>` | 核验发布评价后，计算四维前沿、序列特征、长度匹配、等价匹配敏感性及专项报告 | 最小依赖、完整的发布评价结果 |
 | `experiments/reproduce_project.py --output <新目录>` | 上述评价，另加两次 QC/全局比对、复核表汇总、与发布数据比较 | 扩展依赖、完整 Git 历史 |
 | `experiments/check_frozen_checkout.py --report <新文件>` | 独立 Git 副本中的评价复现和全套测试 | 扩展依赖及 PyTorch |
 
@@ -19,6 +20,27 @@
 同环境重复要求全部输出字节相同。跨环境比较先验证原清单，再核对 ID、行序、NaN 位置与数值（rtol=1e-9、atol=1e-12）；图片渲染的字节差异单独记录。
 
 `--verify-existing` 是同代码、配置、环境下的严格验证，包含版本与图片哈希。不同环境核验发布批次使用扩展复现入口。
+
+## Pareto 前沿分析
+
+```bash
+python experiments/run_pareto_analysis.py --output results/reproductions/pareto_analysis
+```
+
+该入口先核验 `results/gv02_03_v2/d_evaluation_member_a_v1/manifest.json` 中的 44 个发布输出，再从 `ranking_pool_scores.tsv`、`ranking_pool.fasta` 重算前沿并核对发布 Top-20。分析保持 114 条排名池和原始四维分数不变；输出目录必须为新的或空目录。
+
+选做实验 6 的发布目录为 `results/gv02_03_v2/pareto_analysis_member_a_v1/`，包含：
+
+- 六项预定特征和全部 20 种氨基酸频率、10 条前沿逐候选解释及全部 13 层摘要。
+- 10 条前沿对 104 条非前沿的完整描述；最小总长度差的一对一匹配及逐对差值。
+- 固定种子 42 的 100 次等价最优匹配检查：原始总长度差固定为 2，以次级随机代价检查多个最优解的影响。
+- Markdown 报告、图表，以及记录来源、代码、依赖版本和输出哈希的独立 `manifest.json`。
+
+一次调用生成一次结果；它不自动执行第二次比较。核对同环境可重复性时，使用两个空目录分别运行，再按清单逐项比较输出哈希。图表受软件及字体版本影响，跨环境需先区分数值结果与渲染字节。匹配敏感性不是 Bootstrap 或独立实验重复，全部特征比较保持描述性解释。
+
+2026-10-07 在同一环境中独立运行两次，24 个表格、报告和图表产物及其清单全部逐字节一致；核验记录见 [experiment6_20261007](../results/validation/experiment6_20261007/README.md)。本次全套 333 项测试通过。Windows 运行测试时设置 `PYTHONUTF8=1`、`PYTHONIOENCODING=utf-8`，使子进程输出也使用 UTF-8，避免系统默认编码导致日志解码警告。
+
+三份新图同时提供可编辑文本的 SVG/PDF 和 300 dpi PNG。图表检查记录位于实验目录的 `qa/`，检查工具不属于运行实验的必需依赖。
 
 ## 冻结来源
 
@@ -37,7 +59,7 @@
 
 原始 VAE checkpoint 应位于 `models/generator/sequence_vae/member_a_v1_seed42/best.pt`，当前未交付。训练和生成的记录保留原权重 SHA-256。重新训练会建立新权重、新批次，不能自动视作原始 1,000 条候选的重放。
 
-集成复现原始记录位于 `results/gv02_03_v2/integration_20260928/`。其中 304 项测试及源码哈希属于清理前快照；交付整理后的检查见 `results/validation/`。
+集成复现原始记录位于 `results/gv02_03_v2/integration_20260928/`。其中 304 项测试及源码哈希属于清理前快照；2026-09-28 交付整理后的 302 项测试、完整复现与独立副本检查见 `results/validation/`。2026-10-07 补充前沿分析后的测试为 333 项通过，原 44 个评价输出保持不变。保留历史验证日期，不能把旧复现记录解读为本次重新执行家族建模或完整外部扫描。
 
 ## 报告再生成
 
@@ -45,7 +67,9 @@
 python experiments/build_project_report.py --output results/reproductions/report
 ```
 
-入口验证冻结评价产物后，生成散点矩阵、相关图、策略图、鲁棒性图、Pareto 全池排名及 Markdown 报告。发布版本位于 `reports/`。演示材料内容同源于 `reports/statistics.json`。
+入口验证冻结评价及实验 6 的产物后，生成散点矩阵、相关图、策略图、鲁棒性图、Pareto 全池排名及包含实验 6 结论的 Markdown 报告。发布版本位于 `reports/`。实验 6 的专项报告与图表由 `run_pareto_analysis.py` 单独生成；已有演示稿尚未同步该扩展。
+
+更新已发布报告使用 `python experiments/build_project_report.py --replace-published`。入口先校验已有清单，再仅更新八项生成报告产物及清单，保留演示稿等其他文件。演示生成清单记录的是当时报告快照，不代表新增实验 6 已进入原演示。
 
 `experiments/build_presentation.mjs` 保留演示的生成源码，使用 `@oai/artifact-tool` 和演示文稿技能运行时。运行时需设置 `ARTIFACT_TOOL_MODULE`、`RUNTIME_NODE_MODULES`、`PRESENTATIONS_SKILL_DIR`、`PRESENTATION_PYTHON` 为实际安装路径，再通过 Node.js 执行脚本。发布 PPTX 的图表和表格可直接在 PowerPoint 编辑；查看项目与复现实验不依赖此演示生成运行时。
 
@@ -58,3 +82,5 @@ git show archive/pre-delivery-cleanup-20260928:reports/M5_最终报告.md
 ```
 
 原始数据和所有当前清单引用的模型、输入及输出继续保留。重建家族模型需要 Linux/WSL 中的 HMMER、MAFFT、CD-HIT 和 BLAST+，详见方法说明。
+
+课程评分与工程要求原件 `docs/course/course-introduction.pdf` 按原始字节从上述标签的 `intro-mlproj.pdf` 恢复；项目题目原件与过程要求分别位于同目录的 `project-pool.pdf`、`process-requirements.docx`。

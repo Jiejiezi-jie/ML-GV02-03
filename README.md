@@ -11,7 +11,7 @@
 - **候选审计**：保留每条序列的来源、SHA-256、质量检查、家族归属及人工复核标记。
 - **四维评价**：计算结构域支持、统计保守位点一致性、天然参考距离与候选独特性。
 - **多目标筛选**：比较等权加权、Pareto 非支配排序和分维度轮转，导出 Top-10/20/50 的 TSV 与 FASTA。
-- **实验分析**：相关性与散点矩阵、Pareto 前沿、逐维消融、权重及门槛敏感性、同池随机基线。
+- **实验分析**：相关性与散点矩阵、逐维消融、权重及门槛敏感性、同池随机基线，以及 Pareto 前沿的四维取舍和序列特征对照。
 - **可复现运行**：固定输入版本，校验文件哈希，独立复跑比较输出，并保留软件版本和审计清单。
 - **候选生成扩展**：提供 GRU 序列 VAE 的训练、断点恢复、采样与元数据记录代码。
 
@@ -54,6 +54,12 @@
 
 等权加权更侧重约束支持，Pareto 保留更高的新颖性和候选独特性。200 次 ±20% 权重扰动的 Top-20 Jaccard 均值为 **0.9385**；27 组门槛组合的 Jaccard 范围为 **0.6000–1.0000**。完整分析与 1,000 次随机对照见[项目报告](reports/PROJECT_REPORT.md)。
 
+### 实验完成情况
+
+四项必做实验均已完成。选做采用 **实验 6：Pareto 前沿分析**和**实验 7：与随机筛选对比**，符合至多两项的要求；实验 5 下游性质预测未做。
+
+前沿分析比较 10 条前沿与 104 条非前沿，完整报告六项预定序列特征及 20 种氨基酸组成，并增加一对一长度匹配和 100 次等价最优匹配检查。前沿平均更长（103.1 对 94.33 个残基）；长度匹配后，组成熵较高、最高单一残基比例较低的方向在这 100 个解中保留，G/P 比例差则出现正负变化。这些结果描述当前序列组成与目标取舍，不构成功能验证。详见[实验 6 报告](results/gv02_03_v2/pareto_analysis_member_a_v1/EXPERIMENT_6_REPORT.md)。
+
 ![三种策略的质量与集合多样性](reports/figures/strategy_comparison.png)
 
 ## 快速开始
@@ -85,7 +91,15 @@ python -m pip install -r requirements-frozen-v2.txt
 python experiments/run_full_experiment.py --output results/reproductions/evaluation
 ```
 
-该入口核验冻结输入，重算评分、筛选与全部实验，再独立重复运行，比较 44 个输出产物。评价复现使用 CPU，不需要生成模型权重。每次运行请使用新的或空的输出目录。
+该入口核验冻结输入，重算四项必做实验及随机筛选对照，再独立重复运行，比较 44 个输出产物。评价复现使用 CPU，不需要生成模型权重。每次运行请使用新的或空的输出目录。
+
+复现 Pareto 前沿序列特征分析：
+
+```bash
+python experiments/run_pareto_analysis.py --output results/reproductions/pareto_analysis
+```
+
+该入口核验发布评价清单，重算前沿、特征、长度匹配及等价匹配敏感性，生成独立报告、图表和哈希清单。
 
 ### 扩展复现与测试
 
@@ -136,6 +150,8 @@ tests/          单元测试、数据完整性和端到端测试
 | `strategy_summary.tsv`、`strategy_overlap.tsv` | 策略质量、覆盖率与名单重叠 |
 | `ablation_summary.tsv`、`weight_robustness.tsv`、`threshold_coverage_sensitivity.tsv` | 消融及敏感性实验 |
 | `random_comparison.tsv`、`manifest.json` | 随机对照与文件哈希 |
+
+选做实验 6 位于 [`results/gv02_03_v2/pareto_analysis_member_a_v1/`](results/gv02_03_v2/pareto_analysis_member_a_v1/)，包含逐候选优势、完整特征表、匹配关系及等价匹配敏感性结果。已有演示稿介绍原评价实验，实验 6 的新增内容以报告为准。
 
 ## 结果适用范围
 

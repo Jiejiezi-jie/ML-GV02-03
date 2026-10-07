@@ -1,0 +1,175 @@
+{
+  "candidate_count": 114,
+  "front_count": 10,
+  "nonfront_count": 104,
+  "pareto_layer_count": 13,
+  "front_ids": [
+    "vae_candidate_000061",
+    "vae_candidate_000108",
+    "vae_candidate_000212",
+    "vae_candidate_000216",
+    "vae_candidate_000293",
+    "vae_candidate_000523",
+    "vae_candidate_000588",
+    "vae_candidate_000633",
+    "vae_candidate_000818",
+    "vae_candidate_000959"
+  ],
+  "metrics": [
+    "constraint_score",
+    "conservation_score",
+    "novelty_score",
+    "uniqueness_score"
+  ],
+  "predefined_features": [
+    "length",
+    "shannon_entropy_bits",
+    "max_residue_fraction",
+    "charged_fraction",
+    "gly_pro_fraction",
+    "longest_homopolymer"
+  ],
+  "composition_features": [
+    "aa_A",
+    "aa_C",
+    "aa_D",
+    "aa_E",
+    "aa_F",
+    "aa_G",
+    "aa_H",
+    "aa_I",
+    "aa_K",
+    "aa_L",
+    "aa_M",
+    "aa_N",
+    "aa_P",
+    "aa_Q",
+    "aa_R",
+    "aa_S",
+    "aa_T",
+    "aa_V",
+    "aa_W",
+    "aa_Y"
+  ],
+  "percentile_definition": "100 * average ascending rank / pool size; all ties retained",
+  "cliffs_delta_definition": "P(front > control) - P(front < control); ties contribute zero",
+  "quantile_definition": "pandas linear interpolation at probabilities 0.25, 0.5 and 0.75",
+  "layer_trend_spearman": {
+    "constraint_score": -0.008337519309958784,
+    "conservation_score": 0.32152530287722203,
+    "novelty_score": -0.8666038191342823,
+    "uniqueness_score": -0.8170162323483199,
+    "length": -0.08874359634340578,
+    "shannon_entropy_bits": -0.25211821649772115,
+    "max_residue_fraction": 0.2960662557164265,
+    "charged_fraction": 0.20271452021558847,
+    "gly_pro_fraction": -0.1612870860906722,
+    "longest_homopolymer": -0.10999813363712056,
+    "aa_A": -0.08817018144008726,
+    "aa_C": -0.3519915493721653,
+    "aa_D": -0.19910126609618012,
+    "aa_E": 0.607136925702159,
+    "aa_F": -0.0449555737526532,
+    "aa_G": -0.46927378582869006,
+    "aa_H": 0.09290811248397535,
+    "aa_I": -0.007543739890562555,
+    "aa_K": -0.21911696720773557,
+    "aa_L": 0.3259907788106376,
+    "aa_M": -0.20223711254172286,
+    "aa_N": -0.4287320870424847,
+    "aa_P": 0.26033251002597146,
+    "aa_Q": 0.17322728735034784,
+    "aa_R": -0.22918813984795727,
+    "aa_S": 0.04549264870107179,
+    "aa_T": -0.0421745988703075,
+    "aa_V": 0.014887965944458752,
+    "aa_W": 0.13314876648669507,
+    "aa_Y": -0.14835594665653953
+  },
+  "layer_trend_note": "Descriptive pooled Spearman with zero-based Pareto layer; positive means increasing in worse layers. No p-values.",
+  "evidence": {
+    "front": {
+      "n": 10,
+      "manual_review_counts": {
+        "manual_review": 2,
+        "c_manual_review": 2
+      },
+      "uniqueness_resolved_fraction": {
+        "n": 10,
+        "mean": 0.7074074074074,
+        "median": 0.7444444444445,
+        "q1": 0.596296296296,
+        "q3": 0.814814814815,
+        "min": 0.525925925926,
+        "max": 0.822222222222
+      }
+    },
+    "rest": {
+      "n": 104,
+      "manual_review_counts": {
+        "manual_review": 48,
+        "c_manual_review": 48
+      },
+      "uniqueness_resolved_fraction": {
+        "n": 104,
+        "mean": 0.8150997150996636,
+        "median": 0.8333333333335,
+        "q1": 0.8,
+        "q3": 0.851851851852,
+        "min": 0.6,
+        "max": 0.888888888889
+      }
+    },
+    "length_matched": {
+      "n": 10,
+      "manual_review_counts": {
+        "manual_review": 6,
+        "c_manual_review": 6
+      },
+      "uniqueness_resolved_fraction": {
+        "n": 10,
+        "mean": 0.7755555555555,
+        "median": 0.8111111111114999,
+        "q1": 0.6999999999997499,
+        "q3": 0.85,
+        "min": 0.6,
+        "max": 0.888888888889
+      }
+    }
+  },
+  "length_matching": {
+    "method": "Minimum total absolute length gap in one-to-one matching; scipy.optimize.linear_sum_assignment after ascending ID sort; no control reuse",
+    "pairs": 10,
+    "total_gap": 2,
+    "mean_gap": 0.2,
+    "max_gap": 1,
+    "exact_match_count": 8,
+    "front_length_range": [
+      93,
+      111
+    ],
+    "available_control_length_range": [
+      81,
+      111
+    ],
+    "front_outside_control_length_range": 0
+  },
+  "length_match_sensitivity": {
+    "runs": 100,
+    "seed": 42,
+    "baseline_total_gap": 2,
+    "unique_assignments": 100,
+    "unique_control_sets": 94,
+    "sign_zero_tolerance": 1e-12,
+    "method": "Edge cost = absolute_length_gap * (front_count + 1) + Uniform[0,1); each run must retain the original minimum total gap; ascending ID order before perturbation",
+    "scope": "Post-hoc sensitivity to equivalent optimal control selection. All runs retained without selection by result. These are not bootstrap samples, independent experiments, significance tests, or uniform enumeration; ranges and sign counts apply only to sampled optimal assignments."
+  },
+  "scope": [
+    "Descriptive analysis of a frozen, selected pool; no p-values or causal/functional claims.",
+    "The first front is defined by the same objectives being summarized; score differences are expected by selection.",
+    "Length matching addresses length balance only; inspect saved gaps and coverage before interpreting feature differences.",
+    "Amino acid frequencies sum to one; the 20 residue differences are not independent effects.",
+    "Manual-review flags and unresolved-pair coverage remain part of the candidate evidence.",
+    "GP fraction and DEKR fraction are composition summaries, not predictions of protein function or structure."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "source_manifest_sha256": "abd4e0626f44bddf421333b16d1f795df7c8f49e16f9075a9c020686155da22c",
+  "input_sha256": {
+    "ranking_pool_scores.tsv": "05d52d7375520ed34b2c1ac036d9db0d5245bef778907f44fe34cc7ea30dd76d",
+    "ranking_pool.fasta": "94ddee988ddde20e15107106b5542c4841184333293391fa1e5947313cbc3f88",
+    "pareto_top20.tsv": "a7af2aff8ac11fdd705a15447cedadf2cf079df0034555fd552c7282578055b7"
+  },
+  "implementation_sha256": {
+    "experiments/run_pareto_analysis.py": "52e11e30d5877b54b2ed06777e93755919b9eaa180cf3832260e657746e7f8dd",
+    "src/gv_eval/pareto_features.py": "d8976c78ce74721e88fdb856b295b910cb72254092aaeff203abe3ab07b9d465",
+    "src/gv_eval/selection.py": "fc5b593f822fc9a09f59d237336d35eecd7545013bf741b2fd3c5536dcd6572d"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scipy": "1.17.1",
+    "matplotlib": "3.11.1"
+  },
+  "output_sha256": {
+    "candidate_features.tsv": "b77544a995c4556d6fa4d5324a4310fabdd07a6afd9269caec0ade4e5bc9978a",
+    "EXPERIMENT_6_REPORT.md": "833a737575cc9fb37174cd0ad18adde26cfd60a738405381ff50309fd522ae7d",
+    "figures/amino_acid_composition.geometry.json": "90f682a32eea3c41971d47587d897315b5c2f269aaac23cf91c469106b7c5e84",
+    "figures/amino_acid_composition.pdf": "1a29b82dc416432a89daa7526b128f934dc4507ee8876180be25c6a128d39fda",
+    "figures/amino_acid_composition.png": "c4820a896ad03249e02b3f04189ed0320c9014ba7abbce7db9c4be1e33e86600",
+    "figures/amino_acid_composition.svg": "b9bf04b18b376156cbd1eb55efd8ee83334c106390a17521be1156110e00bc73",
+    "figures/frontier_objectives.geometry.json": "9283540ff7a8450072dd7d8f4250cf78e822f352108a0953714b8522b5bbab86",
+    "figures/frontier_objectives.pdf": "9e0a56f154defeba1ccc3472462931bdf88d6b562df02490a70dfcfd99dba79f",
+    "figures/frontier_objectives.png": "c0618d88afea14d42a999e21438658170ca063eef2e8dfbbaf83ca96f1067277",
+    "figures/frontier_objectives.svg": "97cb38a2aefebddf8244513574b08a03f4d7013e70eecc25905932c343c6eb62",
+    "figures/sequence_features.geometry.json": "40384a4706f60b7461dbf75ca04cc0951a0879502bb4d55e5550d95690e31b37",
+    "figures/sequence_features.pdf": "351a177846d7d391449ce6531e113f8cd27a2549d9f259bc655fc33f9a3dc8a6",
+    "figures/sequence_features.png": "765b4ccf97760115a7a2ddf37fa963fb5e16359a7703ac64f4b71408bbf44267",
+    "figures/sequence_features.svg": "468735b94b9d19dad120ba719f864845cbb3f6e84c95fabc8954eae4721cf7c1",
+    "front_details.tsv": "13dd8791883f92e40f484f4a414f286aa74408f3a7c817bdfea89608718fef64",
+    "group_comparison.tsv": "7dd51c50f7c0056345fef88aa2d4a65bc80127305bec68298881b4ee67010dac",
+    "layer_summary.tsv": "221d739b7398c0f63a0cdebff68645c0bd868b5114f6fb1b6b9162af25935e4d",
+    "matched_difference_summary.tsv": "987b4bd485d1c9ee16d1143257218f003a0b7f74f65ec5ea2aa9165d2f089795",
+    "matched_feature_differences.tsv": "6c64d2507bbad20f98f2ca9a0d48a42b31dd64f9d13ae702d49c9b6af55bd9e0",
+    "matched_pairs.tsv": "aff2ed31f2a0d63c9a6531c134862d360d250b1ce257ef8504fb25845da84d75",
+    "summary.json": "358a7ab68f6389d5258aea3ef2267772b5906f6c3a41ede007fe587104e877bb",
+    "tie_match_differences.tsv": "b0d2d3070ed63703cd5c2fe6c617861da00f73990858e1a451af466c0070620c",
+    "tie_match_pairs.tsv": "4b8382950e430330b902aa833007f8a28ce0d3a729c2e5114660fb0eced5cb8c",
+    "tie_match_summary.tsv": "47ab66b9b3d30425a6890091e975466588bef7d29dacf8d0f67e9daa8645af2f"
+  }
+}

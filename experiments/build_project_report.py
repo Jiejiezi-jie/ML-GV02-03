@@ -25,6 +25,11 @@ NAMES = ["约束满足度", "保守性", "新颖性", "候选独特性"]
 LABELS = ["Constraint", "Conservation", "Novelty", "Uniqueness"]
 STRATEGIES = {"weighted_sum": "等权加权", "pareto": "Pareto", "dimension_round_robin": "分维度轮转"}
 COLORS = ["#2563a6", "#14918b", "#d98532"]
+REPORT_ARTIFACTS = (
+    "figures/correlations.png", "figures/metric_scatter_matrix.png",
+    "figures/robustness.png", "figures/strategy_comparison.png",
+    "pareto_front_summary.tsv", "pareto_ranking.tsv", "PROJECT_REPORT.md", "statistics.json",
+)
 
 
 def markdown_table(headers, rows):
@@ -33,12 +38,26 @@ def markdown_table(headers, rows):
                        *["| " + " | ".join(map(str, row)) + " |" for row in rows]])
 
 
-def build(source: Path, output: Path):
+def build(source: Path, output: Path, pareto_analysis: Path, replace_published: bool = False):
     source, output = source.resolve(), output.resolve()
     if output.exists() and any(output.iterdir()):
-        raise ValueError("Report output must be a new or empty directory")
+        if not replace_published:
+            raise ValueError("Report output must be new or empty, or use --replace-published")
+        previous_manifest = json.loads((output / "manifest.json").read_text(encoding="utf-8"))
+        if set(previous_manifest["output_sha256"]) != set(REPORT_ARTIFACTS):
+            raise ValueError("Existing manifest must describe exactly the generated report artifacts")
+        verify_hashes(output, previous_manifest["output_sha256"])
     manifest = json.loads((source / "manifest.json").read_text(encoding="utf-8"))
     verify_hashes(source, manifest["output_sha256"])
+    pareto_manifest = json.loads((pareto_analysis / "manifest.json").read_text(encoding="utf-8"))
+    verify_hashes(pareto_analysis, pareto_manifest["output_sha256"])
+    if pareto_manifest["source_manifest_sha256"] != sha256_file(source / "manifest.json"):
+        raise ValueError("Pareto analysis and main report use different evaluation batches")
+    pareto_summary = json.loads((pareto_analysis / "summary.json").read_text(encoding="utf-8"))
+    pareto_comparison = pd.read_csv(pareto_analysis / "group_comparison.tsv", sep="\t")
+    pareto_primary = pareto_comparison[pareto_comparison.comparison.eq("front_vs_rest")].set_index("feature")
+    pareto_matched = pareto_comparison[pareto_comparison.comparison.eq("front_vs_length_matched")].set_index("feature")
+    pareto_ties = pd.read_csv(pareto_analysis / "tie_match_summary.tsv", sep="\t").set_index("feature")
     read = lambda name: pd.read_csv(source / f"{name}.tsv", sep="\t")
     pool, summary = read("ranking_pool_scores"), json.loads((source / "summary.json").read_text())
     strategy, ablation = read("strategy_summary"), read("ablation_summary")
@@ -57,7 +76,7 @@ def build(source: Path, output: Path):
         raise ValueError("Stored score precision changes Pareto ordering")
     output.mkdir(parents=True, exist_ok=True)
     figures = output / "figures"
-    figures.mkdir()
+    figures.mkdir(exist_ok=True)
     ranked[["sequence_id", *METRICS, "pareto_rank", "crowding_distance"]].to_csv(
         output / "pareto_ranking.tsv", sep="\t", index=False, lineterminator="\n")
     front_stats = []
@@ -144,6 +163,8 @@ def build(source: Path, output: Path):
         "top20": top20.reset_index().to_dict(orient="records"), "front_by_strategy": front_stats,
         "ablation": ablation.fillna("").to_dict(orient="records"),
         "pearson": pearson.to_dict(), "spearman": spearman.to_dict(),
+        "pareto_analysis_manifest_sha256": sha256_file(pareto_analysis / "manifest.json"),
+        "optional_experiments": {"5": "not_done", "6": "completed", "7": "completed"},
     }
     write_json(output / "statistics.json", stats)
     quality_rows = [[STRATEGIES[name], *[f"{row['mean_'+m]:.4f}" for m in METRICS],
@@ -178,7 +199,7 @@ def build(source: Path, output: Path):
 - RQ2：在同一候选池、同一预算下，三种聚合策略如何改变名单和质量？
 - RQ3：权重与门槛的局部扰动是否导致明显变化？
 
-课程原文见 [项目要求第 20–22 页](../docs/course/project-pool.pdf)。GV02-03 要求构建评价系统，不要求训练新模型。仓库中的 GRU-VAE 是候选来源扩展；评价和筛选可直接使用已冻结序列。选做实验采用同池随机筛选对照。
+课程原文见 [项目要求第 20–22 页](../docs/course/project-pool.pdf)。GV02-03 要求构建评价系统，不要求训练新模型。仓库中的 GRU-VAE 是候选来源扩展；评价和筛选可直接使用已冻结序列。选做采用实验 6（前沿目标取舍与序列特征）和实验 7（同池随机筛选对照），共两项；实验 5 下游性质预测未做。
 
 ## 2. 数据与筛选流程
 
@@ -254,7 +275,21 @@ PF00741 也覆盖部分 GvpJ，家族身份采用竞争性证据单独判定。�
 
 三种策略均提高本批次的新颖性和候选独特性，但 Pareto 与轮转的约束均值低于随机均值，配对覆盖率也低于随机。因此多目标筛选并非每一维都优于随机。经验比例采用加一修正，仅描述固定候选池上的随机抽样对照，未做多重比较校正，不代表生物学功能显著改善。
 
-## 8. 适用场景、复现与边界
+## 8. 选做实验 6：前沿取舍与序列共同特征
+
+在固定的 114 条候选上重算四维前沿，对全部 10 条成员列出原始分数、同池百分位和复核证据，并与 104 条非前沿比较。分析前固定长度、组成熵、最高单一残基比例、DEKR 比例、G/P 比例及最长同聚物六项描述，完整报告 20 种残基的组成。另用最小总绝对长度差的一对一匹配建立 10 条对照，8 对等长，其余各差 1 个残基。
+
+![四维前沿及逐条取舍](../results/gv02_03_v2/pareto_analysis_member_a_v1/figures/frontier_objectives.png)
+
+`vae_candidate_000959` 的约束分为 1.0000；`vae_candidate_000061` 的新颖性和独特性分别为 0.5818 与 0.6248，但约束分为 0.2787。两者体现不同目标取舍，前沿成员不代表功能最优。
+
+前沿长度均值为 {pareto_primary.loc['length','front_mean']:.1f} 个残基，其余为 {pareto_primary.loc['length','control_mean']:.2f}。长度匹配后，组成熵均值差为 {pareto_matched.loc['shannon_entropy_bits','mean_difference']:+.5f} bits，最高单一残基比例差为 {100*pareto_matched.loc['max_residue_fraction','mean_difference']:+.3f} 个百分点。G/P 比例的组间均值差由 {100*pareto_primary.loc['gly_pro_fraction','mean_difference']:+.3f} 变为 {100*pareto_matched.loc['gly_pro_fraction','mean_difference']:+.3f} 个百分点，说明这一差异依赖对照选择。
+
+进一步检查 {pareto_summary['length_match_sensitivity']['runs']} 组等价最优匹配，每组总长度差均为 2。组成熵差始终为正（{pareto_ties.loc['shannon_entropy_bits','min_mean_difference']:+.5f} 至 {pareto_ties.loc['shannon_entropy_bits','max_mean_difference']:+.5f} bits），最高单一残基比例差始终为负。G/P 差异有 {int(pareto_ties.loc['gly_pro_fraction','negative_count'])} 组为负、{int(pareto_ties.loc['gly_pro_fraction','positive_count'])} 组为正，因此不能把更高 G/P 比例作为稳健的前沿共同特征。这是事后增加的对照选择敏感性检查，不是独立重复或显著性检验。
+
+前沿仍有 {pareto_summary['evidence']['front']['manual_review_counts']['c_manual_review']}/10 条需人工复核，逐候选可靠配对比例均值为 {pareto_summary['evidence']['front']['uniqueness_resolved_fraction']['mean']:.2%}，其余为 {pareto_summary['evidence']['rest']['uniqueness_resolved_fraction']['mean']:.2%}。组成特征仅作当前批次的描述，不是下游性质预测或功能验证。完整特征、长度匹配及等价匹配敏感性结果见[实验 6 报告](../results/gv02_03_v2/pareto_analysis_member_a_v1/EXPERIMENT_6_REPORT.md)。
+
+## 9. 适用场景、复现与边界
 
 - 验证预算有限、重视域支持时：以加权名单为起点，根据需求预先设定权重，并逐条审阅预警。
 - 希望探索目标间取舍时：查看 Pareto 前沿及原始四维证据，关注新颖性提升伴随的约束下降和未知距离。
@@ -266,7 +301,7 @@ PF00741 也覆盖部分 GvpJ，家族身份采用竞争性证据单独判定。�
 
 ### 数据来源
 
-所有结果取自 `results/gv02_03_v2/d_evaluation_member_a_v1/` 的冻结产物，其输入来自已固定的生成与全局比对提交。本文及图表由 `experiments/build_project_report.py` 读取经过 SHA-256 校验的文件生成。本文对应源清单 SHA-256：`{stats['source_manifest_sha256']}`。
+基础结果取自 `results/gv02_03_v2/d_evaluation_member_a_v1/` 的冻结产物，其输入来自已固定的生成与全局比对提交；实验 6 取自同批次的 `pareto_analysis_member_a_v1/`。本文及图表由 `experiments/build_project_report.py` 读取经过 SHA-256 校验的文件生成。基础源清单 SHA-256：`{stats['source_manifest_sha256']}`；实验 6 清单 SHA-256：`{stats['pareto_analysis_manifest_sha256']}`。
 '''
     root_link = Path(os.path.relpath(ROOT, output)).as_posix()
     for directory in ("docs", "results"):
@@ -274,8 +309,9 @@ PF00741 也覆盖部分 GvpJ，家族身份采用竞争性证据单独判定。�
     (output / "PROJECT_REPORT.md").write_text(report, encoding="utf-8", newline="\n")
     write_json(output / "manifest.json", {
         "source_manifest_sha256": stats["source_manifest_sha256"],
+        "pareto_analysis_manifest_sha256": stats["pareto_analysis_manifest_sha256"],
         "builder_sha256": sha256_file(Path(__file__)),
-        "output_sha256": {p.relative_to(output).as_posix(): sha256_file(p) for p in sorted(output.rglob('*')) if p.is_file()},
+        "output_sha256": {name: sha256_file(output / name) for name in REPORT_ARTIFACTS},
     })
     print(json.dumps({"report": str(output / 'PROJECT_REPORT.md'), "pareto_front_size": len(frontier),
                       "weight_jaccard": stats['weight_jaccard']}, ensure_ascii=False, indent=2))
@@ -285,5 +321,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", type=Path, default=ROOT / "results/gv02_03_v2/d_evaluation_member_a_v1")
     parser.add_argument("--output", type=Path, default=ROOT / "reports")
+    parser.add_argument("--pareto-analysis", type=Path, default=ROOT / "results/gv02_03_v2/pareto_analysis_member_a_v1")
+    parser.add_argument("--replace-published", action="store_true", help="Verify the existing report manifest, then replace only generated report artifacts")
     args = parser.parse_args()
-    build(args.source, args.output)
+    build(args.source, args.output, args.pareto_analysis, args.replace_published)

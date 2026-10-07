@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-07",
+  "tests": {
+    "passed": 333,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 27.056
+  },
+  "source_outputs_verified": 44,
+  "new_outputs_verified": 24,
+  "new_outputs_repeated_identically": true,
+  "main_report_outputs_verified": 8,
+  "report_replace_preserves_unrelated_files": true,
+  "source_manifest_sha256": "abd4e0626f44bddf421333b16d1f795df7c8f49e16f9075a9c020686155da22c",
+  "experiment6_manifest_sha256": "a0a2bb43174501c356f3329cf44cbe17b787bb7cd71fa8f97b53dfd9e162d27e",
+  "report_manifest_sha256": "771da9313601a616e6e6c4b3b82bed975a4f02656cb58010b0f51acd1995002f",
+  "links_checked": 71,
+  "figure_qa": {
+    "pdf_count": 3,
+    "collision_failures": 0,
+    "collision_warnings": 0,
+    "minimum_pdf_font_pt": 8,
+    "source_failures": 0,
+    "source_warnings_reviewed": 5,
+    "pdf_render_visual_review": "passed"
+  },
+  "scope": "New experiment, full tests, report regeneration and frozen artifact verification. Original model training, sampling, external family/Pfam/TM scans and historical upstream reproduction were not rerun."
+}

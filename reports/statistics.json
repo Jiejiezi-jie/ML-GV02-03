@@ -223,5 +223,11 @@
       "novelty_score": 0.9694125788337549,
       "uniqueness_score": 1.0
     }
+  },
+  "pareto_analysis_manifest_sha256": "a0a2bb43174501c356f3329cf44cbe17b787bb7cd71fa8f97b53dfd9e162d27e",
+  "optional_experiments": {
+    "5": "not_done",
+    "6": "completed",
+    "7": "completed"
   }
 }

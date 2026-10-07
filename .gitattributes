@@ -17,4 +17,6 @@
 /results/gv02_03_c_final_handoff_member_a_v1/* -text whitespace=-blank-at-eol,cr-at-eol
 /results/gv02_03_v2/integration_20260928/* -text whitespace=-blank-at-eol,cr-at-eol
 /results/validation/* -text whitespace=-blank-at-eol,cr-at-eol
+# Preserve Matplotlib SVG bytes, including its path-command whitespace.
+/results/gv02_03_v2/pareto_analysis_member_a_v1/figures/*.svg -text whitespace=-blank-at-eol,cr-at-eol
 *.mjs text eol=lf

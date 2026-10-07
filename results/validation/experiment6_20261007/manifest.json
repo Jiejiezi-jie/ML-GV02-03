@@ -1,0 +1,20 @@
+{
+  "root": "repository",
+  "output_sha256": {
+    "results/gv02_03_v2/pareto_analysis_member_a_v1/qa/amino_acid_composition.alignment.json": "5f31e5cb73725c2d04b09f53dd80318e6eb9b4396ca0a9406f237168488d427c",
+    "results/gv02_03_v2/pareto_analysis_member_a_v1/qa/amino_acid_composition.collision.json": "6d9cba6fc834e86428271a6f576ee822b9dbe3d53db1ac4ccb72221cdc2564be",
+    "results/gv02_03_v2/pareto_analysis_member_a_v1/qa/amino_acid_composition.text.json": "4d9ae64958f6d1edf990983b57a435a3019463502fbd255e3138923ea5547a31",
+    "results/gv02_03_v2/pareto_analysis_member_a_v1/qa/frontier_objectives.alignment.json": "9508911aacf428ed84581096e0e5010da6a2223bedf488b9dcd9bf707361bc70",
+    "results/gv02_03_v2/pareto_analysis_member_a_v1/qa/frontier_objectives.collision.json": "ba070d5094b9df997302d41737706b6dc733e4a3ae14f4aa1ceaaf36fccecbc6",
+    "results/gv02_03_v2/pareto_analysis_member_a_v1/qa/frontier_objectives.text.json": "ec4594848760f0e58e34d1c5f227fd9600c36392f91964f0df557a516406910b",
+    "results/gv02_03_v2/pareto_analysis_member_a_v1/qa/README.md": "6f610466df05bf69b1b8068bda3753e5933764e0fb2245971168e3f7c2d6246f",
+    "results/gv02_03_v2/pareto_analysis_member_a_v1/qa/sequence_features.alignment.json": "79d878d7a27b263e703f370c55896ea3093d1a19b5e8a5c287eae5f12c70423c",
+    "results/gv02_03_v2/pareto_analysis_member_a_v1/qa/sequence_features.collision.json": "99991f16fd68922c44fd3ee49c9714ac56adbb8e4696cae18c71caffeebbf4b5",
+    "results/gv02_03_v2/pareto_analysis_member_a_v1/qa/sequence_features.text.json": "aaa2c56fadaaa48e7de011190aef1f5332079159554c4f380681cecd1d0fd1ec",
+    "results/gv02_03_v2/pareto_analysis_member_a_v1/qa/source_preflight.json": "c2996ffd70899d5aa92f611140836e46618c9d71629e554b9dbe95033e3c406c",
+    "results/validation/experiment6_20261007/pytest_results.xml": "d96d8061fd17d16c993944c97a40aa2de38c91c0bbb60c7bb0dc5687dc09355e",
+    "results/validation/experiment6_20261007/README.md": "c735620b70b2d070eeeccce8b5aa802827057e8e3a77a128d1c3fb6597607683",
+    "results/validation/experiment6_20261007/reproducibility.json": "2bc2be1dae317412296666760b5372e62f01e44c69229003cce526acc365c5d6",
+    "results/validation/experiment6_20261007/summary.json": "ceb1e97ee26c5e0c8e6b8519ffd4dce333fdc50290378aa362e476f391c7f113"
+  }
+}
