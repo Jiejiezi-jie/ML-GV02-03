@@ -59,7 +59,7 @@ python experiments/run_pareto_analysis.py --output results/reproductions/pareto_
 
 原始 VAE checkpoint 应位于 `models/generator/sequence_vae/member_a_v1_seed42/best.pt`，当前未交付。训练和生成的记录保留原权重 SHA-256。重新训练会建立新权重、新批次，不能自动视作原始 1,000 条候选的重放。
 
-集成复现原始记录位于 `results/gv02_03_v2/integration_20260928/`。其中 304 项测试及源码哈希属于清理前快照；2026-09-28 交付整理后的 302 项测试、完整复现与独立副本检查见 `results/validation/`。2026-10-07 补充前沿分析后的测试为 333 项通过，原 44 个评价输出保持不变。保留历史验证日期，不能把旧复现记录解读为本次重新执行家族建模或完整外部扫描。
+清理前的 304 项测试及集成记录已归档，可在标签 `archive/pre-final-delivery-20261007` 下的 `results/gv02_03_v2/integration_20260928/` 查看。2026-09-28 交付整理后的 302 项测试、完整复现与独立副本检查保留在 `results/validation/`；2026-10-07 的前沿分析验证见其 `experiment6_20261007/` 子目录，333 项测试通过。原 44 个评价输出保持不变。历史记录保留原始日期和范围，不代表本次重新执行了外部建模或扫描。
 
 ## 报告再生成
 
@@ -67,11 +67,15 @@ python experiments/run_pareto_analysis.py --output results/reproductions/pareto_
 python experiments/build_project_report.py --output results/reproductions/report
 ```
 
-入口验证冻结评价及实验 6 的产物后，生成散点矩阵、相关图、策略图、鲁棒性图、Pareto 全池排名及包含实验 6 结论的 Markdown 报告。发布版本位于 `reports/`。实验 6 的专项报告与图表由 `run_pareto_analysis.py` 单独生成；已有演示稿尚未同步该扩展。
+入口验证冻结评价及实验 6 的产物后，生成散点矩阵、相关图、策略图、鲁棒性图、Pareto 全池排名及包含实验 6 结论的 Markdown 报告。发布版本位于 `reports/`。实验 6 的专项报告与图表由 `run_pareto_analysis.py` 单独生成，正式报告已纳入该扩展。中期演示保留当时范围，结题答辩 PPT 尚未制作。
 
-更新已发布报告使用 `python experiments/build_project_report.py --replace-published`。入口先校验已有清单，再仅更新八项生成报告产物及清单，保留演示稿等其他文件。演示生成清单记录的是当时报告快照，不代表新增实验 6 已进入原演示。
+更新已发布报告使用 `python experiments/build_project_report.py --replace-published`。入口先校验已有清单，再仅更新八项生成报告产物及清单，保留演示稿等其他文件。正式报告清单不覆盖中期材料；重新生成报告不会改动中期演示。
 
-`experiments/build_presentation.mjs` 保留演示的生成源码，使用 `@oai/artifact-tool` 和演示文稿技能运行时。运行时需设置 `ARTIFACT_TOOL_MODULE`、`RUNTIME_NODE_MODULES`、`PRESENTATIONS_SKILL_DIR`、`PRESENTATION_PYTHON` 为实际安装路径，再通过 Node.js 执行脚本。发布 PPTX 的图表和表格可直接在 PowerPoint 编辑；查看项目与复现实验不依赖此演示生成运行时。
+### 中期演示与结题状态
+
+中期答辩 PPT、逐页讲稿和已有项目概览保存在 [reports/midterm/](../reports/midterm/README.md)，原始文件字节保持不变。用户修改过的 13 页概览来自提交 `7482dcac254c30f84f2ea147300b3200c1ed8a84`，当前文件名为 `PROJECT_OVERVIEW.pptx`。
+
+结题答辩 PPT 尚未制作。中期材料采用当时的实验范围，不作为涵盖选做 6 新分析的结题演示。历史演示生成源码可从 `archive/pre-final-delivery-20261007:experiments/build_presentation.mjs` 查看；数值实验和报告复现不依赖该演示运行时。
 
 ## 历史材料
 
@@ -84,3 +88,12 @@ git show archive/pre-delivery-cleanup-20260928:reports/M5_最终报告.md
 原始数据和所有当前清单引用的模型、输入及输出继续保留。重建家族模型需要 Linux/WSL 中的 HMMER、MAFFT、CD-HIT 和 BLAST+，详见方法说明。
 
 课程评分与工程要求原件 `docs/course/course-introduction.pdf` 按原始字节从上述标签的 `intro-mlproj.pdf` 恢复；项目题目原件与过程要求分别位于同目录的 `project-pool.pdf`、`process-requirements.docx`。
+
+2026-10-07 的目录整理另保存标签 `archive/pre-final-delivery-20261007`，对应 `8aa3c81`。清理前集成快照已退出当前目录，可通过该标签恢复。中期演示与讲稿保留在 `reports/midterm/`，不参与数值实验运行。已有 13 页项目概览的本地修改稿另保存在提交 `7482dcac254c30f84f2ea147300b3200c1ed8a84`。
+
+```bash
+git ls-tree -r --name-only archive/pre-final-delivery-20261007 reports/midterm
+git show archive/pre-final-delivery-20261007:results/gv02_03_v2/integration_20260928/reproduction_report.json
+```
+
+当前仍保留的家族、域、比对和生成证据均被配置、清单或测试引用。目录名中的历史批次标识不影响其作为正式输入证据的用途，不能按名称批量删除。

@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-07",
+  "status": "passed_computational_delivery_and_documentation",
+  "git_base": "7482dcac254c30f84f2ea147300b3200c1ed8a84",
+  "archive_tag": "archive/pre-final-delivery-20261007",
+  "scientific_source_changed_since_isolated_test": false,
+  "isolated_checkout_passed": true,
+  "tests_passed": 333,
+  "published_manifest_output_counts_verified": {
+    "results/gv02_03_v2/d_evaluation_member_a_v1": 44,
+    "results/gv02_03_v2/pareto_analysis_member_a_v1": 24,
+    "reports": 8,
+    "reports/midterm": 4,
+    "results/validation": 5
+  },
+  "evaluation_comparison": {
+    "passed": true,
+    "compared_artifact_count": 44,
+    "byte_identical_count": 42,
+    "rendering_byte_differences": [
+      "metric_distributions.png",
+      "strategy_diversity.png"
+    ],
+    "failed": []
+  },
+  "pareto_repeat": {
+    "artifact_count": 24,
+    "all_bytes_identical": true,
+    "manifest_identical": true
+  },
+  "documentation": {
+    "local_links_checked": 86,
+    "learning_chapters": 18,
+    "learning_lines": 927,
+    "learning_characters": 24124,
+    "independent_method_and_result_review": "passed",
+    "embedded_pandas_example": "executed successfully",
+    "sha256": {
+      "README.md": "d35bee803cca1e2d8155c22163d6ad8c3f7566c42314d4133d14e5dee5eb98b8",
+      "results/README.md": "688a141ef869d5ab4fffdf6d35372fd302cc3e5a79ed7a89fe8628cf13844f57",
+      "reports/PROJECT_REPORT.md": "8732747070fc79bb69f72e6102b4b04a73b4925688b134b0d40f456c7546d05e",
+      "reports/midterm/README.md": "4b42da7e4331b725c40619448af2ee218eb147a6961e2632496978d823ef4d1c",
+      "results/validation/README.md": "7586e9e71b129eb0212d26111cea0a2f19c8b980f425e3c99958037dbc292e8f",
+      "results/validation/delivery_20261007/README.md": "eba0834073e80fc7a3c241719e19e03d2117d751db4ebfec65c3cc97c3df0dcf",
+      "docs/COURSE_REQUIREMENTS.md": "d3ca363f3d228cb79d7997f5dcaafd0470412e5fd1dc6ec35c7ee3d57639aab6",
+      "docs/EXPERIMENT_6_PROTOCOL.md": "5c397f38ff50c75c19023978c11818be51c9847f1ad4619fc4df307db81f2166",
+      "docs/METHODS.md": "87ac030bbd514e63f49cb202aff8f493fdc5affd883f71c2dcdea1bcda493b97",
+      "docs/PROJECT_GUIDE.md": "e8793eb31d47dbad52244a3e5a9a33dff0bb0b0bd106a90db0b03fa80800a40b",
+      "docs/REPRODUCIBILITY.md": "a57734eefd0e2db4dad5973c31e999dffe93e88fa0d7e60ef4e6a86b21c6c8c3"
+    }
+  },
+  "midterm_materials_preserved": true,
+  "midterm_manifest_sha256": "8d842725971f0b87a7c7a61b19db8bfa9307b813f81849a844506800b102017e",
+  "cleanup": {
+    "archived_snapshot": "results/gv02_03_v2/integration_20260928",
+    "archived_obsolete_presentation_builder": true,
+    "old_presentation_manifest_removed": true,
+    "overview_moved_to": "reports/midterm/PROJECT_OVERVIEW.pptx",
+    "rerun_outputs_and_caches_moved_outside_repository": true
+  },
+  "course_status": {
+    "required_experiments": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_optional_experiments": [
+      6,
+      7
+    ],
+    "unselected_optional_experiments": [
+      5
+    ],
+    "final_defense_slides": "not delivered; deferred at user request",
+    "actual_process_participation_and_defense": "outside automatic verification scope"
+  },
+  "scope": "Frozen evaluation and all tests in a separate checkout; repeated Pareto analysis; final document and file checks. Original VAE training/sampling and external family/Pfam/TM scans were not rerun."
+}

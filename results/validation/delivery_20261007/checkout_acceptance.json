@@ -65,13 +65,23 @@
   "python": "3.12.14",
   "isolation": "Separate Git checkout; selected interpreter and its installed dependencies; PYTHONPATH and user-site packages disabled. This check does not install dependencies.",
   "snapshot_sha256": {
-    ".gitattributes": "5649dec874892014c0c7fd47349fbc39e9da6a502983e057ce3cddd0747a786f",
-    "experiments/check_frozen_checkout.py": "db88649e758573e127e5a142d4b38e624cc6d0b5eda7f4bf0b6f1795ca14494c",
-    "experiments/reproduce_project.py": "5362ab7210402d635dc56df4e082fe7bd8b83126469164d192465e338fa6a066",
-    "requirements-integration.txt": "5395aaf4729499f1b772082ae5ac3d84630fc21cf6e6da059c52e31676bbe138",
-    "src/gv_eval/reproducibility.py": "33d827c3c8d3f09f2ce8ee6d22941514dace17c35d157570179732ae3047da29",
-    "tests/test_reproducibility.py": "76440eb9f083d05f279f9438373ce9be71f054d5d6669923c18ed62d34810f95"
+    "README.md": "2bf8ec728cd1cde5f9449641a8fc4a65370f701dcbb2430da93dcaec27056adc",
+    "docs/METHODS.md": "87ac030bbd514e63f49cb202aff8f493fdc5affd883f71c2dcdea1bcda493b97",
+    "docs/REPRODUCIBILITY.md": "18716e81bbcef444291c7098d1958b4b9b8ed3d92b4e5ec92eeb6d76f787da97",
+    "results/README.md": "a16a261e195a0b5a94213d8776117c266d4758d5e1aef30bc2277368350ae112"
   },
-  "deleted_paths": [],
+  "deleted_paths": [
+    "reports/midterm/GV02-03_逐页演讲稿_10分钟.docx",
+    "reports/midterm/机器学习中期汇报.pptx",
+    "results/gv02_03_v2/integration_20260928/checkout_acceptance.json",
+    "results/gv02_03_v2/integration_20260928/checkout_newlines.json",
+    "results/gv02_03_v2/integration_20260928/environment_freeze.txt",
+    "results/gv02_03_v2/integration_20260928/integration_summary.json",
+    "results/gv02_03_v2/integration_20260928/manifest.json",
+    "results/gv02_03_v2/integration_20260928/pytest_results.xml",
+    "results/gv02_03_v2/integration_20260928/replay_output_hashes.json",
+    "results/gv02_03_v2/integration_20260928/reproduction_report.json",
+    "results/gv02_03_v2/integration_20260928/vae_smoke.json"
+  ],
   "scope": "Frozen B/C artifacts through evaluation, selection and the full repository test suite."
 }

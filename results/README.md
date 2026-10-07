@@ -4,7 +4,7 @@
 
 - [`gv02_03_v2/d_evaluation_member_a_v1/`](gv02_03_v2/d_evaluation_member_a_v1/)：1,000 条审计记录、114 条排名候选、三策略 Top-10/20/50、相关性、消融、鲁棒性及随机对照。
 - [`gv02_03_v2/pareto_analysis_member_a_v1/`](gv02_03_v2/pareto_analysis_member_a_v1/)：选做实验 6，四维前沿、10 对 104 的序列特征对照、长度匹配及 100 次等价最优匹配敏感性。入口为 [EXPERIMENT_6_REPORT.md](gv02_03_v2/pareto_analysis_member_a_v1/EXPERIMENT_6_REPORT.md)。
-- [`validation/`](validation/)：2026-09-28 交付整理后的测试、完整复现、独立副本验收及 PPT 校验记录，入口为 `summary.json`。
+- [`validation/README.md`](validation/README.md)：验证记录索引；最新目录验收位于 [`delivery_20261007/`](validation/delivery_20261007/)，新增前沿分析验证位于 [`experiment6_20261007/`](validation/experiment6_20261007/)。每份记录都保留实际执行范围。
 - 正式解读及图表位于 [`../reports/`](../reports/)，阅读入口为 [PROJECT_REPORT.md](../reports/PROJECT_REPORT.md)。
 
 四项必做及选做实验 6、7 均已完成；实验 5 下游性质预测未做。两个正式实验目录使用独立清单，新增特征分析不改变原来的 44 个评价输出。
@@ -31,9 +31,10 @@
 | `gv02_03_c_domains_member_a_v1/` | Pfam 结构域复核证据 |
 | `gv02_03_c_tm_member_a_v1/` | 跨膜扫描复核证据 |
 | `gv02_03_c_final_handoff_member_a_v1/` | 汇总域、跨膜与序列质量的统一审计 |
-| `gv02_03_v2/integration_20260928/` | 清理前集成快照的复现和 304 项测试记录 |
 
 证据目录的原名称用于关联冻结源提交与哈希清单，因此保留不变。最终筛选分数以 `d_evaluation_member_a_v1/ranking_pool_scores.tsv` 为准。2026-09-28 整理后为 302 项测试，清理时移除了两个旧批次快照测试；2026-10-07 新增前沿分析后，333 项测试通过。日期较早的复现记录保留原始范围，不代表新增实验或外部扫描在该次验证中执行过。
+
+清理前 304 项测试对应的旧集成快照已移至 Git 标签 `archive/pre-final-delivery-20261007`，在当前工作树中不再重复保存。恢复方式见[历史材料说明](../docs/REPRODUCIBILITY.md#历史材料)。
 
 重新生成前沿分析：
 

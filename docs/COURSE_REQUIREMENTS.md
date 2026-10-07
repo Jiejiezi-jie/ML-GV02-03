@@ -1,6 +1,10 @@
 # GV02-03 要求与交付文件
 
-依据：[project-pool.pdf](course/project-pool.pdf) 第 20–22 页的 GV02-03，及其引用的代码仓库要求。2026-10-07 核对结果：四项必做及选做实验 6、7 已完成，选做实验 5 未做。本表核对技术内容与交付文件；课程成绩、实际答辩和真实过程记录由课程安排确定。
+依据：[project-pool.pdf](course/project-pool.pdf) 第 20–22 页的 GV02-03，及其引用的代码仓库要求。核对日期：2026-10-07。
+
+**计算实验状态：已完成。** 四项必做及选做实验 6、7 均有实现、结果和复现证据。实验 5 未选择，不属于缺交的必做项。
+
+**课程过程与答辩：由团队按课程安排提交。** 本表核验仓库材料。真实会议、成员参与、在线协作记录及现场答辩不由代码验收替代，也不能仅凭仓库判断它们已经完成或缺失。
 
 ## 必做实验
 
@@ -33,10 +37,10 @@
 | 完整报告，回答 RQ1–RQ3 并给出适用场景 | [PROJECT_REPORT.md](../reports/PROJECT_REPORT.md)及[实验 6 专项报告](../results/gv02_03_v2/pareto_analysis_member_a_v1/EXPERIMENT_6_REPORT.md) |
 | 评价工具代码与筛选数据 | `src/`、`experiments/`、`results/` |
 | 可复现仓库与 README 环境、运行说明 | [README](../README.md)、[复现说明](REPRODUCIBILITY.md)、`requirements-*.txt` |
-| 答辩 PPT | [PROJECT_PRESENTATION.pptx](../reports/PROJECT_PRESENTATION.pptx) |
+| 结题答辩 PPT | 待制作；已有[中期 PPT 和讲稿](../reports/midterm/README.md)保留原版本，不替代结题演示 |
 | 清晰的 data/preprocessing/models/experiments/results 结构 | 根目录同名文件夹 |
 
-报告和 PPT 均基于当前 1,000 条生成候选的批次；新补充的实验 6 已进入报告，已有演示稿尚未同步该扩展。早期 M1–M5 过程文件与旧演示可在 `archive/pre-delivery-cleanup-20260928` 标签查看，不与当前报告混用。
+正式实验报告基于当前 1,000 条生成候选，已同步四项必做及选做 6、7。结题答辩 PPT 留待后续准备，因此课程最终提交尚不能称为全部结束。中期材料完整保留；早期 M1–M5 文件在 `archive/pre-delivery-cleanup-20260928` 标签中，清理前集成快照在 `archive/pre-final-delivery-20261007` 标签中。
 
 ## 评分与过程材料
 

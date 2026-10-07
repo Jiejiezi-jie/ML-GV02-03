@@ -1,0 +1,23 @@
+{
+  "scope": "Midterm materials and existing project overview, preserved without content edits. Final defense slides have not been prepared.",
+  "source_git": {
+    "机器学习中期汇报.pptx": {
+      "revision": "9a650d7",
+      "path": "reports/midterm/机器学习中期汇报.pptx"
+    },
+    "GV02-03_逐页演讲稿_10分钟.docx": {
+      "revision": "9a650d7",
+      "path": "reports/midterm/GV02-03_逐页演讲稿_10分钟.docx"
+    },
+    "PROJECT_OVERVIEW.pptx": {
+      "revision": "7482dcac254c30f84f2ea147300b3200c1ed8a84",
+      "path": "reports/PROJECT_PRESENTATION.pptx"
+    }
+  },
+  "output_sha256": {
+    "机器学习中期汇报.pptx": "ea193f67df270fd2b4ec399541b41e3cb84759ff2e4d9d8ab8b5b2291ff056c9",
+    "GV02-03_逐页演讲稿_10分钟.docx": "f83b545485ff95fe9a9a0910af5678d5b362e85e1f969cfc15a8558d93c86f7f",
+    "PROJECT_OVERVIEW.pptx": "958ab988477fb243c6e3fc1b141fb37e45e59d3fed04c99421d91c6f4ffae66d",
+    "README.md": "4b42da7e4331b725c40619448af2ee218eb147a6961e2632496978d823ef4d1c"
+  }
+}
